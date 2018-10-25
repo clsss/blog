@@ -12,17 +12,22 @@
     
     
     <item>
-      <title>Hugo</title>
+      <title>Hugo 搭建博客</title>
       <link>https://clsss.github.io/blog/post/hugo/</link>
       <pubDate>Thu, 25 Oct 2018 20:54:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/post/hugo/</guid>
-      <description>  如何使用hugo 搭建自己blog
- 本地运行 hugo server --theme=hyde --buildDrafts  访问： http://localhost:1313/blog/ (因为地址是https://clsss.github.io/blog/)
-部署  在github创建仓库并复制地址
- 在根目录下执行命令，所有静态页面都会生成到 public 目录
-  hugo --theme=hyde --baseUrl=&amp;quot;https://clsss.github.io/blog&amp;quot;  如果将theme，baseUrl写入了config.toml 则直接运行
-hugo  提交到github cd public git add . git commit -m &amp;quot;描述&amp;quot; git push  </description>
+      <description>基于 Hogo 快速搭建静态网站  本来使用 Hexo, 也是极好的，素材也很多。但是文章一旦多了。慢速度又怎么让人心安，所以使用 Hugo 作一次尝试。一起来看看如何使用 hugo 搭建自己 blog. 附上中文网
+
+ 
+安装 Hugo 工欲兴其事必先利器。
+ 安装 Git 安装 Go 安装 Mercurial 安装 Hugo 具体步骤官网很详细   使用 Windows 的小伙伴就有点难受了。 &amp;gt; 注意：由于地址是国外的，所以没有翻墙的小伙伴，下载靠运气   请确保安装好后添加全局路径
+ 
+在本地创建自己的站点 在你想创建站点的地方下执行
+$ hugo new site [文件夹] # 进入创建的站点 $ cd [文件夹]  
+新建一个页面/文章 在进入的站点根目录下执行
+$ hugo new page1.md  新创建的文件在目录 content/ 里:
++++ date = &amp;quot;2018-10-08T08:36:54-07:00&amp;quot; draft = true title = &amp;quot;page1&amp;quot; +++ # 编辑自己.</description>
     </item>
     
     <item>
