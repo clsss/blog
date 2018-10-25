@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Collin Blog</title>
-    <link>https://clsss.github.io/blog/</link>
-    <description>Recent content on Collin Blog</description>
+    <title>Posts on Collin Blog</title>
+    <link>https://clsss.github.io/blog/post/</link>
+    <description>Recent content in Posts on Collin Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 25 Oct 2018 20:54:11 +0800</lastBuildDate>
     
-	<atom:link href="https://clsss.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://clsss.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,15 +23,6 @@
  在根目录下执行命令，所有静态页面都会生成到 public 目录
   hugo --theme=hyde --baseUrl=&amp;quot;https://clsss.github.io/blog&amp;quot;  如果将theme，baseUrl写入了config.toml 则直接运行
 hugo  提交到github cd public git add . git commit -m &amp;quot;描述&amp;quot; git push  </description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://clsss.github.io/blog/about/</link>
-      <pubDate>Thu, 25 Oct 2018 20:52:23 +0800</pubDate>
-      
-      <guid>https://clsss.github.io/blog/about/</guid>
-      <description>这是关于</description>
     </item>
     
   </channel>

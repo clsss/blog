@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Collin Blog</title>
+  <title>Hugo &middot; Collin Blog</title>
 
   
   <link type="text/css" rel="stylesheet" href="https://clsss.github.io/blog/css/print.css" media="print">
@@ -23,7 +23,7 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="https://clsss.github.io/blog/index.xml" rel="alternate" type="application/rss+xml" title="Collin Blog" />
+  <link href="" rel="alternate" type="application/rss+xml" title="Collin Blog" />
 
   
 </head>
@@ -50,28 +50,50 @@
 </aside>
 
     <main class="content container">
-    <div class="posts">
-<article class="post">
-  <h1 class="post-title">
-    <a href="https://clsss.github.io/blog/post/hugo/">Hugo</a>
-  </h1>
-  <time datetime="2018-10-25T20:54:11&#43;0800" class="post-date">Thu, Oct 25, 2018</time>
-   hello hugo！
-本地运行 hugo server --theme=hyde --buildDrafts  访问： http://localhost:1313/blog/ (因为地址是https://clsss.github.io/blog/)
-部署  在github创建仓库并复制地址
- 在根目录下执行命令，所有静态页面都会生成到 public 目录
-  hugo --theme=hyde --baseUrl=&quot;https://clsss.github.io/blog&quot;  如果将theme，baseUrl写入了config.toml 则直接运行
-hugo  提交到github cd public git add . git commit -m &quot;描述&quot; git push  
+    <div class="post">
+  <h1>Hugo</h1>
+  <time datetime=2018-10-25T20:54:11&#43;0800 class="post-date">Thu, Oct 25, 2018</time>
   
-</article><article class="post">
-  <h1 class="post-title">
-    <a href="https://clsss.github.io/blog/about/">About</a>
-  </h1>
-  <time datetime="2018-10-25T20:52:23&#43;0800" class="post-date">Thu, Oct 25, 2018</time>
-  这是关于
-  
-</article>
+
+<p>hello hugo！</p>
+
+<h2 id="本地运行">本地运行</h2>
+
+<pre><code class="language-bush">hugo server --theme=hyde --buildDrafts
+</code></pre>
+
+<p>访问：
+<a href="http://localhost:1313/blog/">http://localhost:1313/blog/</a>
+(因为地址是<a href="https://clsss.github.io/blog/">https://clsss.github.io/blog/</a>)</p>
+
+<h2 id="部署">部署</h2>
+
+<ol>
+<li><p>在github创建仓库并复制地址</p></li>
+
+<li><p>在根目录下执行命令，所有静态页面都会生成到 public 目录</p></li>
+</ol>
+
+<pre><code class="language-bush">hugo --theme=hyde --baseUrl=&quot;https://clsss.github.io/blog&quot;
+</code></pre>
+
+<p>如果将theme，baseUrl写入了config.toml
+则直接运行</p>
+
+<pre><code class="language-bush">hugo
+</code></pre>
+
+<h2 id="提交到github">提交到github</h2>
+
+<pre><code class="language-bush">cd public
+git add .
+git commit -m &quot;描述&quot;
+git push
+</code></pre>
+
 </div>
+
+
     </main>
 
     
