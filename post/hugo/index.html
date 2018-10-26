@@ -1,59 +1,85 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
-<head>
-  <link href="//gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.49" />
+<html lang="en-us">
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Hugo 搭建博客 &middot; Collin Blog</title>
+    <meta name="author" content="Collin">
+    <meta name="description" content="https://clsss.github.io/blog/">
+    <meta name="keywords" content="blog, developer, personal, web">
+    
+    <meta property="og:site_name" content="Collin&#39;s Blog">
+    <meta property="og:title" content="
+  Hugo 搭建博客 - Collin&#39;s Blog
+">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clsss.github.io/blog/post/hugo/">
+    <meta property="og:image" content="https://clsss.github.io/blog/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://clsss.github.io/blog/post/hugo/">
+    <meta name="twitter:image" content="https://clsss.github.io/blog/">
 
-  
-  <link type="text/css" rel="stylesheet" href="https://clsss.github.io/blog/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://clsss.github.io/blog/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://clsss.github.io/blog/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://clsss.github.io/blog/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+    <base href="https://clsss.github.io/blog/">
+    <title>
+  Hugo 搭建博客 - Collin&#39;s Blog
+</title>
 
+    <link rel="canonical" href="https://clsss.github.io/blog/post/hugo/">
+    
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://clsss.github.io/blog/css/style.min.css">
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    
 
-  
-  <link href="" rel="alternate" type="application/rss+xml" title="Collin Blog" />
+    
 
-  
-</head>
+    <link rel="icon" type="image/png" href="https://clsss.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://clsss.github.io/images/favicon-16x16.png" sizes="16x16">
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://clsss.github.io/blog/"><h1>Collin Blog</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
-      </p>
-    </div>
+    
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://clsss.github.io/blog/">Home</a> </li>
+    <meta name="generator" content="Hugo 0.49" />
+  </head>
+
+  <body class="">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/blog/">Collin&#39;s Blog</a>
+    <input type="checkbox" id="menu-control"/>
+    <label class="menu-mobile  float-right " for="menu-control">
+      <span class="btn-mobile  float-right ">&#9776;</span>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="https://clsss.github.io/blog/post">Blog</a>
+            </li>
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="https://clsss.github.io/blog/about">About</a>
+            </li>
+          
+        
         
       </ul>
-    </nav>
+    </label>
+  </section>
+</nav>
 
-    <p>&copy; 2018. All rights reserved. </p>
-  </div>
-</aside>
 
-    <main class="content container">
-    <div class="post">
-  <h1>Hugo 搭建博客</h1>
-  <time datetime=2018-10-25T20:54:11&#43;0800 class="post-date">Thu, Oct 25, 2018</time>
-  
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Hugo 搭建博客</h1>
+    </header>
+
+    
 
 <p><br/></p>
 
@@ -81,8 +107,7 @@
 <hr />
 
 <ul>
-<li>使用 Windows 的小伙伴就有点难受了。
-&gt; 注意：由于地址是国外的，所以没有翻墙的小伙伴，下载靠运气</li>
+<li>使用 Windows 的小伙伴就有点难受了。由于地址是国外的，所以没有翻墙的小伙伴，下载靠运气</li>
 </ul>
 
 <blockquote>
@@ -94,40 +119,28 @@
 <h3 id="在本地创建自己的站点">在本地创建自己的站点</h3>
 
 <p>在你想创建站点的地方下执行</p>
-
-<pre><code class="language-bash">$ hugo new site [文件夹]
-# 进入创建的站点
-$ cd [文件夹]
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ hugo new site <span class="o">[</span>文件夹<span class="o">]</span>
+<span class="c1"># 进入创建的站点
+</span><span class="c1"></span>$ <span class="nb">cd</span> <span class="o">[</span>文件夹<span class="o">]</span></code></pre></div>
 <p><br/></p>
 
 <h3 id="新建一个页面-文章">新建一个页面/文章</h3>
 
 <p>在进入的站点根目录下执行</p>
-
-<pre><code class="language-bash">$ hugo new page1.md
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ hugo new page1.md</code></pre></div>
 <p>新创建的文件在目录 content/ 里:</p>
-
-<pre><code class="language-bash">+++
-date = &quot;2018-10-08T08:36:54-07:00&quot;
-draft = true
-title = &quot;page1&quot;
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">+++
+<span class="nv">date</span> <span class="o">=</span> <span class="s2">&#34;2018-10-08T08:36:54-07:00&#34;</span>
+<span class="nv">draft</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="nv">title</span> <span class="o">=</span> <span class="s2">&#34;page1&#34;</span>
 
 +++
 
-# 编辑自己.md文件吧~~~
-</code></pre>
-
+# 编辑自己.md文件吧~~~</code></pre></div>
 <p><br/></p>
 
 <h3 id="本地运行">本地运行</h3>
-
-<pre><code class="language-bash">$ hugo server --theme=hyde --buildDrafts
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ hugo server --theme<span class="o">=</span>hyde --buildDrafts</code></pre></div>
 <p>两个参数：</p>
 
 <ul>
@@ -150,35 +163,32 @@ title = &quot;page1&quot;
 
 <li><p>在根目录下执行命令，所有静态页面都会生成到 public 目录</p></li>
 </ol>
-
-<pre><code class="language-bash">$ hugo --theme=hyde --baseUrl=&quot;【你的github仓库地址】&quot;
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ hugo --theme<span class="o">=</span>hyde --baseUrl<span class="o">=</span><span class="s2">&#34;【你的github仓库地址】&#34;</span></code></pre></div>
 <p>如果将 theme，baseUrl 写入了 config.toml
 则直接运行</p>
-
-<pre><code class="language-bash">$ hugo
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ hugo</code></pre></div>
 <p><br/></p>
 
 <h3 id="提交到-github">提交到 github</h3>
 
-<p>这里一定是进入public</p>
-
-<pre><code class="language-bash">$ cd public
+<p>这里只需要上传public下的静态资源，所以进入public</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">cd</span> public
 $ git init
 $ git remote add origin 【你的github地址】
 $ git add -A
-$ git commit -m &quot;描述&quot;
-$ git push -u origin master
-</code></pre>
+$ git commit -m <span class="s2">&#34;描述&#34;</span>
+$ git push -u origin master</code></pre></div>
+  </article>
+</section>
 
-</div>
 
-
+      </div>
+      
     </main>
 
     
+
+  <script src="https://clsss.github.io/blog/js/app.js"></script>
+  
   </body>
 </html>
