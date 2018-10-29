@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/series/</link>
+    <description>Recent content in Series on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Wed, 25 Oct 2017 20:54:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Example</title>
+      <link>https://clsss.github.io/blog/series/example/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/series/example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://clsss.github.io/blog/series/hugo/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/series/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>https://clsss.github.io/blog/series/web/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/series/web/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

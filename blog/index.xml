@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/blog/</link>
+    <description>Recent content in Blogs on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Wed, 25 Oct 2017 20:54:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo 搭建博客</title>
+      <link>https://clsss.github.io/blog/blog/2017-10/hugo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/2017-10/hugo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>基于 Hogo 快速搭建静态网站 本来使用 Hexo, 也是极好的，素材也很多。但是文章一旦多了。慢速度又怎么让人心安，所以使用 Hugo 作一次尝试。一起来看看如何使用 hugo 搭建自己 blog. 附上中文网 安装 Hugo 工欲兴其事必先利器。 安装 Git 安装 Go 安装 Mercurial 安装 Hugo 具体步骤官网很详细 使用 Windows 的小伙伴就有点难受了。由于地址是国外的，所以没有翻墙的小伙伴，下载靠运气 请确保安装好后添加全局路径 在本地创建自己的站点 在你想创建站点的地方下执行 $ hugo new site [文件夹] # 进入</description>
+    </item>
+    
+    <item>
+      <title>前端构建分享（入门篇）</title>
+      <link>https://clsss.github.io/blog/blog/2017-10/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%88%86%E4%BA%AB%E5%85%A5%E9%97%A8%E7%AF%87/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/2017-10/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%88%86%E4%BA%AB%E5%85%A5%E9%97%A8%E7%AF%87/</guid>
+      <description>vue-cli 前提 node.js, vue-cli 全局安装脚手架 npm install -g -vue-cli 你需要了解npm/yarn的相关知识，还有淘宝镜像cnpm（主要是用在资源被墙） 尤其是： cnpm install node-sass sass-loader -D 新建一个vue 项目流程： vue init webpack &amp;lt;项目名称&amp;gt; cd .. npm install npm run dev 注意：要使用npm包管理器就必须安装node（原因：包含关系 ———— nodejs中含有npm，安装好nodejs后，你打开cmd输入npm -v会发现npm的版本号，说明npm已经安装好） node.js是</description>
+    </item>
+    
+    <item>
+      <title>设计模式-设计原则</title>
+      <link>https://clsss.github.io/blog/blog/2017-10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/2017-10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</guid>
+      <description>设计模式-设计原则 这是一种思想 1. 单一职责原则（S） 就像.then().then()每个 then 只做一件事 2. 开发封闭原则（O） 新增代码，以前的代码不变 3. 李氏置换原则（L） 子类能覆盖父类 父类出现的地方，子类就能出现 4. 接口独立原则（I） 保持接口独立 5. 依赖导致原则（D） 面向接口编程，依赖于抽象而不依赖于具体 使用方只关注接口不关注具体实现 js 中更多的是关注（S, O） 设计模式-设计模式 这是一种模板 3 大类型： 创建型 工厂</description>
+    </item>
+    
+    <item>
+      <title>Gulp工具</title>
+      <link>https://clsss.github.io/blog/blog/1-01/gulp%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/1-01/gulp%E5%B7%A5%E5%85%B7/</guid>
+      <description>Gulp是什么？ Gulp</description>
+    </item>
+    
+    <item>
+      <title>docker探索</title>
+      <link>https://clsss.github.io/blog/blog/1-01/docker%E6%8E%A2%E7%B4%A2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/1-01/docker%E6%8E%A2%E7%B4%A2/</guid>
+      <description>docker 镜像（Image）+ 容器（Container）+ 仓库（Repository） 下载： linux： sudo wget -qO- http:get.docker.com | sh sudo usermod -aG docker xbf // 不用sodu windows： 官网下载：https://docs.docker.com/engine/installation/ 命令行： #是否docker安装成功 $ docker run hello-world #查看docker信息 $ docker info $ docker -v #获取镜像（使用别人的镜像） $ docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标</description>
+    </item>
+    
+    <item>
+      <title>mongoDB环境搭建（window）-8，服务器端</title>
+      <link>https://clsss.github.io/blog/blog/1-01/mongodb%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAwindow-8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/1-01/mongodb%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAwindow-8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/</guid>
+      <description>一. MongoDB安装（windows）与环境配置 优点： 高可扩展性 分布式存储 低成本 结构灵活 安装注意事项 需要db存储和日志存储文件夹 添加服务，配置环境变量，启动mongod 启动方式： 启动后返回链接的端口 通过命令行传参启动： ``` &amp;lt;!&amp;ndash; dbpath：指定db存储到哪里 &amp;ndash;journal：32位服务器——指定使用journal输出日志 默认存储引擎不能使用： &amp;ndash;&amp;gt; mongod -dbpath F:\mongoDB\data &amp;ndash;journal &amp;ndash;storageEngine=mmapv1 ``` 通过配置文件启动： &amp;lt;!-- 新建的mon</description>
+    </item>
+    
+    <item>
+      <title>pm2</title>
+      <link>https://clsss.github.io/blog/blog/1-01/pm2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/1-01/pm2/</guid>
+      <description>pm2是什么？ pm2是一个进程管理工具,可以用它来管理你的node进程，并查看node进程的状态，当然也支持性能监控，进程守护，负载均衡等功能。 官网：http://pm2.keymetrics.io/docs/usage/quick-start/ 需要小心.ssh和一些翻墙问题 安装（全局） npm install -g pm2 启动进程/应用 pm2 start 【bin/www】 pm2 start app.js --name wb123 pm2 start bin/www --watch // 也可以通过配置文件监听 { &amp;quot;watch&amp;quot;: [&amp;quot;server&amp;quot;, &amp;quot;client&amp;quot;], //要监视的文件 &amp;quot;ignore_watch&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>前端模块化</title>
+      <link>https://clsss.github.io/blog/blog/1-01/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/1-01/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+      <description>1.为什么前端需要模块化 随着前端的不断发展，前端已经不仅仅是一个简单依据需求完成网页开发的过程，如何提高网页开发效率，提高代码复用率，降低块与块之间的耦合性是我们需要思考的问题，而前端的组件化、模块化正是解决这样的问题。 2.1 什么是前端模块化 模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成一个个具有特定功能的的模块 模块可以通过传递参数的不</description>
+    </item>
+    
+  </channel>
+</rss>

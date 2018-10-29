@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue Cli on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/tags/vue-cli/</link>
+    <description>Recent content in Vue Cli on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Wed, 25 Oct 2017 20:54:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/tags/vue-cli/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>前端构建分享（入门篇）</title>
+      <link>https://clsss.github.io/blog/blog/2017-10/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%88%86%E4%BA%AB%E5%85%A5%E9%97%A8%E7%AF%87/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/2017-10/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%88%86%E4%BA%AB%E5%85%A5%E9%97%A8%E7%AF%87/</guid>
+      <description>vue-cli 前提 node.js, vue-cli 全局安装脚手架 npm install -g -vue-cli 你需要了解npm/yarn的相关知识，还有淘宝镜像cnpm（主要是用在资源被墙） 尤其是： cnpm install node-sass sass-loader -D 新建一个vue 项目流程： vue init webpack &amp;lt;项目名称&amp;gt; cd .. npm install npm run dev 注意：要使用npm包管理器就必须安装node（原因：包含关系 ———— nodejs中含有npm，安装好nodejs后，你打开cmd输入npm -v会发现npm的版本号，说明npm已经安装好） node.js是</description>
+    </item>
+    
+  </channel>
+</rss>

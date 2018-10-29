@@ -3,17 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://clsss.github.io/blog/about/</loc>
+    <loc>https://clsss.github.io/blog/about/about/</loc>
     <lastmod>2018-10-25T20:52:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/post/hugo/</loc>
+    <loc>https://clsss.github.io/blog/life/life/</loc>
+    <lastmod>2018-10-25T20:52:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blog/2017-10/hugo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2017-10-25T20:54:11+08:00</lastmod>
   </url>
   
   <url>
+    <loc>https://clsss.github.io/blog/blog/2017-10/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%88%86%E4%BA%AB%E5%85%A5%E9%97%A8%E7%AF%87/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blog/2017-10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/about/</loc>
+    <lastmod>2018-10-25T20:52:23+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clsss.github.io/blog/tags/blog/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blog/</loc>
     <lastmod>2017-10-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -30,13 +57,83 @@
   </url>
   
   <url>
+    <loc>https://clsss.github.io/blog/tags/css/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/example/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/gulp/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/gulp/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blog/1-01/gulp%E5%B7%A5%E5%85%B7/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/hugo/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clsss.github.io/blog/tags/hugo/</loc>
     <lastmod>2017-10-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/post/</loc>
+    <loc>https://clsss.github.io/blog/life/</loc>
+    <lastmod>2018-10-25T20:52:23+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/module/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/module/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/pm2/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/pm2/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/sci/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/skill/</loc>
     <lastmod>2017-10-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -45,6 +142,52 @@
     <loc>https://clsss.github.io/blog/tags/</loc>
     <lastmod>2017-10-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/vue/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/vue/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/vue-cli/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/web/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/web/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blog/1-01/docker%E6%8E%A2%E7%B4%A2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blog/1-01/mongodb%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAwindow-8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blog/1-01/pm2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blog/1-01/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</loc>
   </url>
   
 </urlset>
