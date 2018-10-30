@@ -13,10 +13,10 @@
     
     <item>
       <title>webpack-prerenderer</title>
-      <link>https://clsss.github.io/blog/blog/2017-10/webpack-prerenderer/</link>
+      <link>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack-prerendererpuppeteer%E7%89%88/</link>
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/2017-10/webpack-prerenderer/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack-prerendererpuppeteer%E7%89%88/</guid>
       <description>预渲染 1.run build生成打包html和资源上传cdn 2.利用生成的html 启动本地服务 3.使用puppeteer爬去启动的服务页面的html 4.生成预渲染后的html 命令行： &amp;quot;build-pre&amp;quot;: &amp;quot;npm run clean &amp;amp;&amp;amp; node build/build.js --pre --e&amp;quot;, // --pre为Boolean，设置了则启动预渲染模式 build.js ``` console.log(chalk.magentaBright(&amp;rsquo; Build Complete.And coding in ./dist \n &amp;lsquo;)) // 预渲染 const prerenderPromise = await prerender() if (isPre &amp;amp;&amp;amp; prerenderPromise) { prerenderPromise .then(() =&amp;gt; { spinner.stop() console.log(chalk.cyan(&amp;rsquo; Prerender complete.\n&amp;rsquo;)) }) .catch((e) =&amp;gt; { console.log(chalk.red(Prerender failed with errors.\n${e})) process.exit(1) }) } 2. prerender.js /* * config/index.js文件中配置了assetsPubli</description>
     </item>
     

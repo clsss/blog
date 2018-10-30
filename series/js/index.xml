@@ -6,17 +6,17 @@
     <description>Recent content in Js on Collin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Wed, 25 Oct 2017 20:54:11 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 25 May 2018 20:54:11 +0800</lastBuildDate>
     
 	<atom:link href="https://clsss.github.io/blog/series/js/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>设计模式-设计原则</title>
-      <link>https://clsss.github.io/blog/blog/2017-10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</link>
-      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      <link>https://clsss.github.io/blog/blogs/2018-5/design/designmode/</link>
+      <pubDate>Fri, 25 May 2018 20:54:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/2017-10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2018-5/design/designmode/</guid>
       <description>设计模式-设计原则 这是一种思想 1. 单一职责原则（S） 就像.then().then()每个 then 只做一件事 2. 开发封闭原则（O） 新增代码，以前的代码不变 3. 李氏置换原则（L） 子类能覆盖父类 父类出现的地方，子类就能出现 4. 接口独立原则（I） 保持接口独立 5. 依赖导致原则（D） 面向接口编程，依赖于抽象而不依赖于具体 使用方只关注接口不关注具体实现 js 中更多的是关注（S, O） 设计模式-设计模式 这是一种模板 3 大类型： 创建型 工厂</description>
     </item>
     

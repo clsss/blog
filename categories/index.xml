@@ -22,7 +22,7 @@
     <item>
       <title>Docker</title>
       <link>https://clsss.github.io/blog/categories/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Jun 2018 20:42:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/categories/docker/</guid>
       <description></description>
@@ -31,25 +31,43 @@
     <item>
       <title>Gulp</title>
       <link>https://clsss.github.io/blog/categories/gulp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 25 Apr 2017 20:54:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/categories/gulp/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Http</title>
+      <link>https://clsss.github.io/blog/categories/http/</link>
+      <pubDate>Tue, 25 Jul 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/categories/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Learn</title>
       <link>https://clsss.github.io/blog/categories/learn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Jun 2018 20:24:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/categories/learn/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Mobile</title>
+      <link>https://clsss.github.io/blog/categories/mobile/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/categories/mobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Model</title>
       <link>https://clsss.github.io/blog/categories/model/</link>
-      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      <pubDate>Fri, 25 May 2018 20:54:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/categories/model/</guid>
       <description></description>
@@ -58,7 +76,7 @@
     <item>
       <title>Module</title>
       <link>https://clsss.github.io/blog/categories/module/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/categories/module/</guid>
       <description></description>
@@ -67,7 +85,7 @@
     <item>
       <title>Pm2</title>
       <link>https://clsss.github.io/blog/categories/pm2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 25 May 2017 22:13:01 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/categories/pm2/</guid>
       <description></description>
@@ -101,6 +119,15 @@
     </item>
     
     <item>
+      <title>Test</title>
+      <link>https://clsss.github.io/blog/categories/test/</link>
+      <pubDate>Wed, 25 Apr 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/categories/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Vue Cli</title>
       <link>https://clsss.github.io/blog/categories/vue-cli/</link>
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
@@ -115,6 +142,24 @@
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/categories/webpack4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>插件</title>
+      <link>https://clsss.github.io/blog/categories/%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/categories/%E6%8F%92%E4%BB%B6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>第三方登录</title>
+      <link>https://clsss.github.io/blog/categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/</link>
+      <pubDate>Fri, 25 Aug 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/</guid>
       <description></description>
     </item>
     

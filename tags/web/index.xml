@@ -6,90 +6,162 @@
     <description>Recent content in Web on Collin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Wed, 25 Oct 2017 20:54:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Apr 2018 20:54:11 +0800</lastBuildDate>
     
 	<atom:link href="https://clsss.github.io/blog/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>测试&amp;持续构建</title>
+      <link>https://clsss.github.io/blog/blogs/2018-4/mocka/</link>
+      <pubDate>Wed, 25 Apr 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-4/mocka/</guid>
+      <description>测试&amp;amp;持续构建 一. api 测试 频繁地将代码集成到主干 每次集成都通过自动化的构建来验证 优点： 1. 尽早发现错误 防止分支大幅度偏离主干 工具 egg—— https://github.com/eggjs/egg 持续构建： https://travis-ci.org/eggjs/egg 文档： https://docs.travis-ci.com/ benchmark 性能测试 benchmark.js suite .add(&#39;parseInt()&#39;, () =&amp;gt; { num1(&#39;123465&#39;); }) .add(&#39;Number&#39;, () =&amp;gt; { num2(&#39;123456&#39;); }) .on(&#39;cycle&#39;, event =&amp;gt; { console.log(String(event.target)); }) .on(&#39;complete&#39;, function() { console.log(&#39;Fastest is &#39; + this.filter(&#39;fastest&#39;).map(&#39;name&#39;)); }) .run({async: true}); 二. UI 测试 jest 三 爬虫 爬虫: 按照一定的需求自动抓取网络信息 反爬虫: user-agent，referer, 验证码 单位时间访问次数 关键信息用图片混淆 异步加载 使用：suppe</description>
+    </item>
+    
+    <item>
       <title>Hugo 搭建博客</title>
-      <link>https://clsss.github.io/blog/blog/2017-10/hugo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://clsss.github.io/blog/blogs/2017-10/hugo/</link>
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/2017-10/hugo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2017-10/hugo/</guid>
       <description>基于 Hogo 快速搭建静态网站 本来使用 Hexo, 也是极好的，素材也很多。但是文章一旦多了。慢速度又怎么让人心安，所以使用 Hugo 作一次尝试。一起来看看如何使用 hugo 搭建自己 blog. 附上中文网 安装 Hugo 工欲兴其事必先利器。 安装 Git 安装 Go 安装 Mercurial 安装 Hugo 具体步骤官网很详细 使用 Windows 的小伙伴就有点难受了。由于地址是国外的，所以没有翻墙的小伙伴，下载靠运气 请确保安装好后添加全局路径 在本地创建自己的站点 在你想创建站点的地方下执行 $ hugo new site [文件夹] # 进入</description>
     </item>
     
     <item>
       <title>webpack-css处理</title>
-      <link>https://clsss.github.io/blog/blog/2017-10/webpack-css%E5%A4%84%E7%90%86/</link>
+      <link>https://clsss.github.io/blog/blogs/2018-4/webpack/css/</link>
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/2017-10/webpack-css%E5%A4%84%E7%90%86/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2018-4/webpack/css/</guid>
       <description>css 处理 webpack 是如何引入 css？ style-loader（2. 创建 link 标签） a. style-loader b. style-loader/url（file-loader） c. style-loader/useable（ user()，unuser() ） options:{ insertInto: &#39;#app&#39;， // 插入到app节点 singleton: true, // 是否重用 transform: &#39;./css.transform.js&#39; // 可以做样式的修改 } css-loader（1.import css） option:{ minimize: true, // 压缩css modules: true // 开启css模块化开发 } css modules &amp;gt; 配置 less/sass rules: [ { test: /\.less$/, use:ExtractTextWebpackPlugin.extract([ {},</description>
     </item>
     
     <item>
       <title>webpack-prerenderer</title>
-      <link>https://clsss.github.io/blog/blog/2017-10/webpack-prerenderer/</link>
+      <link>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack-prerendererpuppeteer%E7%89%88/</link>
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/2017-10/webpack-prerenderer/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack-prerendererpuppeteer%E7%89%88/</guid>
       <description>预渲染 1.run build生成打包html和资源上传cdn 2.利用生成的html 启动本地服务 3.使用puppeteer爬去启动的服务页面的html 4.生成预渲染后的html 命令行： &amp;quot;build-pre&amp;quot;: &amp;quot;npm run clean &amp;amp;&amp;amp; node build/build.js --pre --e&amp;quot;, // --pre为Boolean，设置了则启动预渲染模式 build.js ``` console.log(chalk.magentaBright(&amp;rsquo; Build Complete.And coding in ./dist \n &amp;lsquo;)) // 预渲染 const prerenderPromise = await prerender() if (isPre &amp;amp;&amp;amp; prerenderPromise) { prerenderPromise .then(() =&amp;gt; { spinner.stop() console.log(chalk.cyan(&amp;rsquo; Prerender complete.\n&amp;rsquo;)) }) .catch((e) =&amp;gt; { console.log(chalk.red(Prerender failed with errors.\n${e})) process.exit(1) }) } 2. prerender.js /* * config/index.js文件中配置了assetsPubli</description>
     </item>
     
     <item>
       <title>webpack-ssr</title>
-      <link>https://clsss.github.io/blog/blog/2017-10/webpack-ssr/</link>
+      <link>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack-ssr/</link>
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/2017-10/webpack-ssr/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack-ssr/</guid>
       <description>webpack-ssr webpack.server.conf.js 不用关心测试环境还是正式环境 只需要再服务端能跑起来，不需要压缩等.. /* * @Author: _collin【collinssem@126.com】 * @Date: 2018-04-28 09:26:38 * @Last Modified by: _collin * @Last Modified time: 2018-04-28 09:47:53 * 服务端渲染配置文件 */ const path = require(&#39;path&#39;) const ExtractPlugin = require(&#39;extract-text-webpack-plugin&#39;) const webpack = require(&#39;webpack&#39;) const merge = require(&#39;webpack-merge&#39;) const baseConf = require(&#39;./webpack.base.conf&#39;) // const VueServerPlugin = require(&#39;vue-server-renderer/server-plugin&#39;) let config const isDev = process.env.NODE_ENV === &#39;development&#39; const plugins = [ new ExtractPlugin(&#39;styles.[Hash:8].css&#39;), new webpack.DefinePlugin({ &#39;process.env.NODE_ENV&#39;: JSON.stringify(process.env.NODE_ENV || &#39;development&#39;), &#39;process.env.VUE_ENV&#39;: &#39;&amp;quot;server&amp;quot;&#39; }) ] if (isDev) { // 这个插件，让我们服务端打包后无.js文件而是.json文件 // 这个包会帮我们做很多事情 plugins.push(new VueServerPlugin()) } config = merge(baseConf, { target: &#39;node&#39;, // nod</description>
     </item>
     
     <item>
       <title>webpack4升级</title>
-      <link>https://clsss.github.io/blog/blog/2017-10/webpack4%E5%8D%87%E7%BA%A7/</link>
+      <link>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack4%E5%8D%87%E7%BA%A7/</link>
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/2017-10/webpack4%E5%8D%87%E7%BA%A7/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack4%E5%8D%87%E7%BA%A7/</guid>
       <description>webpack4升级 webpack升级（4.6版） 一、dev-server 本地运行一个静态服务 1. 添加了mode，直接区分development和production 2. 插件的替换： a. webpack.DefinePlugin（不用了，已经有mode了） b. webpack.CommonsChunkPlugin 被替代成: optimization配置中配置splitChunks(指定vendor在这个配置里)和runtimeChunk c. UglifyJsPlugin --&amp;gt; optimizat</description>
     </item>
     
     <item>
       <title>前端构建分享（入门篇）</title>
-      <link>https://clsss.github.io/blog/blog/2017-10/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%88%86%E4%BA%AB%E5%85%A5%E9%97%A8%E7%AF%87/</link>
+      <link>https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/</link>
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/2017-10/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%88%86%E4%BA%AB%E5%85%A5%E9%97%A8%E7%AF%87/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/</guid>
       <description>vue-cli 前提 node.js, vue-cli 全局安装脚手架 npm install -g -vue-cli 你需要了解npm/yarn的相关知识，还有淘宝镜像cnpm（主要是用在资源被墙） 尤其是： cnpm install node-sass sass-loader -D 新建一个vue 项目流程： vue init webpack &amp;lt;项目名称&amp;gt; cd .. npm install npm run dev 注意：要使用npm包管理器就必须安装node（原因：包含关系 ———— nodejs中含有npm，安装好nodejs后，你打开cmd输入npm -v会发现npm的版本号，说明npm已经安装好） node.js是</description>
     </item>
     
     <item>
-      <title>Gulp工具</title>
-      <link>https://clsss.github.io/blog/blog/1-01/gulp%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>REM</title>
+      <link>https://clsss.github.io/blog/blogs/2017-9/m_adapter/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/1-01/gulp%E5%B7%A5%E5%85%B7/</guid>
-      <description>Gulp是什么？ Gulp</description>
+      <guid>https://clsss.github.io/blog/blogs/2017-9/m_adapter/</guid>
+      <description>rem ( font size of root element) html &amp;gt; html{font-size:100px;} //100px对应的就是625%，因为默认的1em=16px，这里设置为100px是为了计算方便，将1rem=100px viewport &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1, maximum-scale=1&amp;quot;&amp;gt; &amp;gt; 在移动开发时我们都会有上面这段代码 viewport :虚拟窗口大小 width: 控制viewport大小 可以自己设定值如320px(很少用) 一般设置为device-width(设备宽度) initial-scale 初始缩放比例 即页面初次加载时的缩放比例默认为1 maximum-scale：用户可缩放到</description>
     </item>
     
     <item>
-      <title>pm2</title>
-      <link>https://clsss.github.io/blog/blog/1-01/pm2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>移动端_性能优化</title>
+      <link>https://clsss.github.io/blog/blogs/2017-9/m_performance/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/1-01/pm2/</guid>
-      <description>pm2是什么？ pm2是一个进程管理工具,可以用它来管理你的node进程，并查看node进程的状态，当然也支持性能监控，进程守护，负载均衡等功能。 官网：http://pm2.keymetrics.io/docs/usage/quick-start/ 需要小心.ssh和一些翻墙问题 安装（全局） npm install -g pm2 启动进程/应用 pm2 start 【bin/www】 pm2 start app.js --name wb123 pm2 start bin/www --watch // 也可以通过配置文件监听 { &amp;quot;watch&amp;quot;: [&amp;quot;server&amp;quot;, &amp;quot;client&amp;quot;], //要监视的文件 &amp;quot;ignore_watch&amp;quot;</description>
+      <guid>https://clsss.github.io/blog/blogs/2017-9/m_performance/</guid>
+      <description>【scroll】 实际上，Safari 真的用了原生控件来实现，对于有-webkit-overflow-scrolling 的网页，会创建一个 UIScrollView，提供子 layer 给渲染模块使用 IOS（safari）： -webkit-overflow-scrolling: touch; // 弹簧效果 安卓： overflow:auto; // winphone8 和 android4+ bug： 当你给一个元素设置过 position:absolute;或者 position:relative;后再增加-webkit-overflow-scrollin</description>
+    </item>
+    
+    <item>
+      <title>移动端_机型判断</title>
+      <link>https://clsss.github.io/blog/blogs/2017-9/m_useragent/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-9/m_useragent/</guid>
+      <description>判断机型（Ios/Android） function getBrowserVersion() { var ua = navigator.userAgent || navigator.vendor || window.opera; var uaInfo = { ios: !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/i), android: ua.match(/Android/i) || ua.match(/Linux/i) }; var browserVersion = { isIos: function () { return uaInfo.ios; }, isAndroid: function () { return uaInfo.android; } }; return browserVersion; } 相应的机型发送相应的请求 if (openId) { if (browserVersion.isIos()) { window.webkit.messageHandlers.jumpToVerify.postMessage(&#39;verifyProspr&#39;); } else if (browserVersion.isAndroid()) { android.jumpPage(-9); } } else { goDownload(); } 相应的机型跳转相应的链接 if (browserVersion.isIos()) { location.href = &#39;http://app.appsflyer.com/id873518909?pid=web&amp;amp;c=index&#39;; } else if (browserVersion.isAndroid()) { location.href = &#39;http://app.appsflyer.com/com.luxy?pid=web&amp;amp;c=index&#39;; } 通知客户端修改右上角 feedback 图标 if (browserVersion.isIos()) { window.webkit.messageHandlers.JSMessage_shouldShowFeedbackButton.postMessage(); } else if (browserVersion.isAndroid()) { android.forceShowFeedbackOnTitleBar(); } 包括电脑跳转链接 $(&#39;.btn&#39;).click(function(){ var ua = navigator.userAgent.toLowerCase(); var userAgent = navigator.userAgent var t = Date.now(); var info = window.location.search.substr(1); var info2 = window.location.search.substr(1); if (/ipad|iphone|mac/i.test(ua)){ if (userAgent.indexOf(&amp;quot;Safari&amp;quot;) &amp;gt; -1) { window.location = &amp;quot;OMGmart://&amp;quot; + info; setTimeout(&amp;quot;window.location.href = &#39; &#39;,3000); }else{ alert(&#39;</description>
+    </item>
+    
+    <item>
+      <title>移动端_禁止竖屏</title>
+      <link>https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/</guid>
+      <description>禁止竖屏 (function rotate(){ var orientation=window.orientation; //当屏幕方向改变时 if(orientation==90||orientation==-90){ document.body.style.display=&amp;lsquo;none&amp;rsquo;; alert(&amp;ldquo;请使用竖屏访问！&amp;rdquo;); } window.onorientationchange=function(){ document.body.style.display=&amp;ldquo;block&amp;rdquo;; rotate(); }; })() // 禁止选择 &amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; .user_select_none { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5); -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } &amp;lt;/style&amp;gt; ```</description>
+    </item>
+    
+    <item>
+      <title>第三方登录——微信登录</title>
+      <link>https://clsss.github.io/blog/blogs/2017-8/wx/</link>
+      <pubDate>Fri, 25 Aug 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-8/wx/</guid>
+      <description>微信登录 内嵌二维码 微信官方文档： https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;amp;t=resource/res_list&amp;amp;verify=1&amp;amp;id=open1419316505&amp;amp;token=&amp;amp;lang=zh_CN 1.前端引入引入如下JS文件（支持https）【微信提供】 http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js 2.内嵌二维码(signIn.vue) html: &amp;lt;div id=&amp;quot;login-wx&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; js: 生成二维码 需要new WxLogin({}) 实例 appid：微信AppID redirect_uri：扫码后重定向地址 href：控制二维码样式（https://blog.csdn.net/j_bleach/article/details/77112827） # encodeURIComp</description>
+    </item>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://clsss.github.io/blog/blogs/2017-7/http/</link>
+      <pubDate>Tue, 25 Jul 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-7/http/</guid>
+      <description>1.HTTP 1.定义： 超文本传输协议（HT5TP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。 所有的 WWW 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一种发布和接收 HTML 页面的方法。 HTTP 是一个客户端和服务器端请求和应答的标准（TCP） HTTP 协议（HyperText Transfer Protocol，超文本传输协议）是用于从 WWW 服务器传输超文本到本地浏览器的传输协议。它可以使浏览器更加高效，使网络传输减</description>
+    </item>
+    
+    <item>
+      <title>v-distpicker城市插件</title>
+      <link>https://clsss.github.io/blog/blogs/2017-6/v-distpicker/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-6/v-distpicker/</guid>
+      <description>千万注意: :province=&amp;lsquo;==province==&amp;rsquo;,中绑定的省, 不能通过@province=&amp;ldquo;==selectProvince==&amp;ldquo;方法直接修改(市和区同理). 用于显示与用于绑定的值是2个不同的值 方式1：无默认选中的城市 &amp;lt;!-- html --&amp;gt; &amp;lt;v-distpicker @province=&amp;quot;selectProvince&amp;quot; @city=&amp;quot;selectCity&amp;quot; @area=&amp;quot;selectArea&amp;quot;&amp;gt;&amp;lt;/v-distpicker&amp;gt; &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;{{ select }}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;!-- js --&amp;gt; export default { components: { VDistpicker }, data() { return { showCode: false, select: { province: &#39;&#39;, city: &#39;&#39;, area: &#39;&#39; }, } }, methods: { selectProvince(value) { this.select.province = value console.log(value); }, selectCity(value) { this.select.city = value console.log(value); }, selectArea(value) { this.select.area = value console.log(value); }, }, }</description>
     </item>
     
     <item>
       <title>前端模块化</title>
-      <link>https://clsss.github.io/blog/blog/1-01/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>https://clsss.github.io/blog/blogs/2017-6/module/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/1-01/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2017-6/module/</guid>
       <description>1.为什么前端需要模块化 随着前端的不断发展，前端已经不仅仅是一个简单依据需求完成网页开发的过程，如何提高网页开发效率，提高代码复用率，降低块与块之间的耦合性是我们需要思考的问题，而前端的组件化、模块化正是解决这样的问题。 2.1 什么是前端模块化 模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成一个个具有特定功能的的模块 模块可以通过传递参数的不</description>
+    </item>
+    
+    <item>
+      <title>pm2</title>
+      <link>https://clsss.github.io/blog/blogs/2017-5/pm2/</link>
+      <pubDate>Thu, 25 May 2017 22:13:01 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-5/pm2/</guid>
+      <description>pm2是什么？ pm2是一个进程管理工具,可以用它来管理你的node进程，并查看node进程的状态，当然也支持性能监控，进程守护，负载均衡等功能。 官网：http://pm2.keymetrics.io/docs/usage/quick-start/ 需要小心.ssh和一些翻墙问题 安装（全局） npm install -g pm2 启动进程/应用 pm2 start 【bin/www】 pm2 start app.js --name wb123 pm2 start bin/www --watch // 也可以通过配置文件监听 { &amp;quot;watch&amp;quot;: [&amp;quot;server&amp;quot;, &amp;quot;client&amp;quot;], //要监视的文件 &amp;quot;ignore_watch&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Gulp工具</title>
+      <link>https://clsss.github.io/blog/blogs/2017-4/gulp/</link>
+      <pubDate>Tue, 25 Apr 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-4/gulp/</guid>
+      <description>Gulp是什么？ Gulp</description>
     </item>
     
   </channel>

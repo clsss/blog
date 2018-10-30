@@ -6,16 +6,17 @@
     <description>Recent content in Pm2 on Collin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
+    <lastBuildDate>Thu, 25 May 2017 22:13:01 +0800</lastBuildDate>
     
 	<atom:link href="https://clsss.github.io/blog/categories/pm2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>pm2</title>
-      <link>https://clsss.github.io/blog/blog/1-01/pm2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>https://clsss.github.io/blog/blogs/2017-5/pm2/</link>
+      <pubDate>Thu, 25 May 2017 22:13:01 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/1-01/pm2/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2017-5/pm2/</guid>
       <description>pm2是什么？ pm2是一个进程管理工具,可以用它来管理你的node进程，并查看node进程的状态，当然也支持性能监控，进程守护，负载均衡等功能。 官网：http://pm2.keymetrics.io/docs/usage/quick-start/ 需要小心.ssh和一些翻墙问题 安装（全局） npm install -g pm2 启动进程/应用 pm2 start 【bin/www】 pm2 start app.js --name wb123 pm2 start bin/www --watch // 也可以通过配置文件监听 { &amp;quot;watch&amp;quot;: [&amp;quot;server&amp;quot;, &amp;quot;client&amp;quot;], //要监视的文件 &amp;quot;ignore_watch&amp;quot;</description>
     </item>
     

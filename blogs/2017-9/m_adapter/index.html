@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="Collin">
+  <meta name="description" content="rem ( font size of root element) html &gt; html{font-size:100px;} //100px对应的就是625%，因为默认的1em=16px，这里设置为100px是为了计算方便，将1rem=100px viewport &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;&gt; &gt; 在移动开发时我们都会有上面这段代码 viewport :虚拟窗口大小 width: 控制viewport大小 可以自己设定值如320px(很少用) 一般设置为device-width(设备宽度) initial-scale 初始缩放比例 即页面初次加载时的缩放比例默认为1 maximum-scale：用户可缩放到">
+  
+  <meta property="og:title" content="REM" />
+<meta property="og:description" content="rem ( font size of root element) html &gt; html{font-size:100px;} //100px对应的就是625%，因为默认的1em=16px，这里设置为100px是为了计算方便，将1rem=100px viewport &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;&gt; &gt; 在移动开发时我们都会有上面这段代码 viewport :虚拟窗口大小 width: 控制viewport大小 可以自己设定值如320px(很少用) 一般设置为device-width(设备宽度) initial-scale 初始缩放比例 即页面初次加载时的缩放比例默认为1 maximum-scale：用户可缩放到" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://clsss.github.io/blog/blogs/2017-9/m_adapter/" /><meta property="article:published_time" content="2017-09-25T23:54:11&#43;08:00"/>
+<meta property="article:modified_time" content="2017-09-25T23:54:11&#43;08:00"/><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_performance/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_useragent/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-8/wx/" />
+
+
+
+  <title>
+  
+       REM | Collin&#39;s Blog 
+  
+  </title>
+
+  <link rel="canonical" href="https://clsss.github.io/blog/blogs/2017-9/m_adapter/">
+
+  
+  
+
+  
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://clsss.github.io/blog/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://clsss.github.io/blog/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://clsss.github.io/blog/images/favicon_cl.ico"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://clsss.github.io/blog/">
+          
+        <img class="avatar" src="https://clsss.github.io/blog/images/favicon_cl.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        
+        
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://clsss.github.io/blog/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/blogs/" >Blogs  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/life/" >Life  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides/banner1.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner2.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner3.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner4.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://clsss.github.io/blog/">
+          
+            <img class="pull-right avatar avatar-md" src="https://clsss.github.io/blog/images/avatar.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://clsss.github.io/blog/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Collin&#39;s Blog</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/you" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//instagram.com/you" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+                <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+    
+        
+            
+                <a href="mailto:you@email.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://clsss.github.io/blog/categories/mobile"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> mobile </a></li>
+      
+    
+    
+      
+        <li><a href="https://clsss.github.io/blog/series/web"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>web</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">REM</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Sep 25, 2017</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>6 minutes read</li>
+    
+  </ul>
+  
+    <div class="view">
+      <img src="https://clsss.github.io/blog/images/blog/img.jpg" />
+    </div>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h2 id="rem-font-size-of-root-element">rem ( font size of root element)</h2>
+
+<ol>
+<li>html
+&gt; html{font-size:100px;}    //100px对应的就是625%，因为默认的1em=16px，这里设置为100px是为了计算方便，将1rem=100px</li>
+<li>viewport
+<code>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;&gt;
+</code>
+&gt; 在移动开发时我们都会有上面这段代码</li>
+<li>viewport :虚拟窗口大小</li>
+<li>width: 控制viewport大小 可以自己设定值如320px(很少用) 一般设置为device-width(设备宽度)</li>
+<li>initial-scale 初始缩放比例 即页面初次加载时的缩放比例默认为1</li>
+<li>maximum-scale：用户可缩放到的最大比例</li>
+
+<li><p>dpr(device pixel ratio)</p></li>
+
+<li><p>设备的物理像素
+&gt; 通俗的讲设备屏幕有多少个可以闪烁的点 是一个具体的概念 比如iphone6横向就有750个可以改变颜色的点 类   似与电视机 如果家里有10年前买的大头电视，你趴在屏幕前仔细看能看到一个个RGB的点 这就是设备的物理像素</p></li>
+
+<li><p>设备独立像素</p>
+
+<pre><code>dpr = 设备物理像素/设备独立像素
+</code></pre>
+
+<p>程序中的1px占据设备上的几个最小物理点可以这么理解
+iphone3G 设备物理像素320个点 设备独立像素320px 那么dpr就是1
+iphone6 设备物理像素750个点 设备独立像素375px 那么dpr就是2
+也就是我们css中写的1px其实不等于设备实际上的那1px 也可能等于设备上的2px
+根据dpr我们就可以灵活的在移动端缩放页面比例
+可以通过window.devicePixelRatio来获取dpr</p></li>
+
+<li><p>使用sass:mixin方法把px转成rem</p>
+
+<pre><code>@function px2rem( $px ){
+	@return $px*750/$designWidth/20 + rem; //这句是不是感觉很熟悉 这句其实跟上面的那段js是对应的 
+}
+@import 'px2rem.scss';
+如果设计图是750：
+$designWidth : 750; 
+.banner{width:px2rem(300)} //如设计稿上的banner是300px 就免去计算环节
+</code></pre></li>
+
+<li><p>动态rem</p>
+
+<pre><code>(function (doc, win) {
+console.log(&quot;dpr:&quot;+win.devicePixelRatio); 
+var docEle = doc.documentElement,
+isIos = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+dpr=Math.min(win.devicePixelRatio, 3);
+scale = 1 / dpr,
+
+resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+docEle.dataset.dpr = dpr;
+
+var metaEle = doc.createElement('meta');
+metaEle.name = 'viewport';
+metaEle.content = 'initial-scale=' + scale + ',maximum-scale=' + scale;
+docEle.firstElementChild.appendChild(metaEle);
+ 
+var recalCulate = function  {
+    var width = docEle.clientWidth;
+    if (width / dpr &gt; 640) {
+        width = 640 * dpr;
+    }
+    docEle.style.fontSize = 20 * (width / 750) + 'px';
+};
+
+recalCulate
+if (!doc.addEventListener) return;
+win.addEventListener(resizeEvent, recalCulate, false);
+})(document, window);
+</code></pre>
+
+<p>获取设备dpr
+算出缩放比例 scale = 1/dpr
+创建meta以及属性
+将scale值赋给initial-scale，maximum-scale
+meta插入到文档中
+创建屏幕大小改变重新计算函数并监听</p></li>
+</ol>
+
+<p>==============================================================</p>
+
+<p>以下来自微信公众好前端大全:
+主要是总结一下，我在移动端布局用过的方法。有三种，
+第一种是响应式布局，利用@meida判断各个size；
+第二种是REM；
+第三种是设置viewport中的width。</p>
+
+<h4 id="一丶-响应式布局">一丶 响应式布局</h4>
+
+<p>这种感觉是最好理解了，利用@media进行断点，在每个断点中编写css。
+@media (max-width:768px){
+    //css
+}
+上面这段代码，在浏览器的宽度低于768时有效。同理，如果把max换成min，就会变成高于768时有效。可以设置宽度，也可以设置高度，也可以同时设置多个值。
+在MDN,@media上，发现很多值都可以做判断的。宽，高，宽高比，颜色（这个是指定输出设备每个像素单位的比特值），是否横屏或竖屏，还有很多，可以去MDN看看。
+1.媒体类型:
+@meida还可以根据媒体类型进行断点。
+all，所有设备
+print，打印
+screen，彩色的电脑屏幕
+speech，不知道什么来的。
+2.关键字
+@media (max-width:1000px){
+    div{background:blue;}
+}
+@media (min-width:1000px) and (max-width:1150px){
+    div{background: yellow;}
+}
+@media only screen and (max-width:1150px){
+    div{border:solid 1px;}
+}
+@media not print and (max-width:1150px){
+    div{border-radius:50%;}
+}
+and，就是‘和’的意思，前后两个条件都达到时
+only，唯一
+not，除了这个之外
+3.按需‘加载’css
+@media还可以用在link标签上。
+<link rel="stylesheet" href="css/1.css" media="(max-width:500px)"/></p>
+
+<h4 id="二丶-rem">二丶 REM</h4>
+
+<p>REM这个单位，会根据html的font-size大小进行转换。
+html{font-size:100px;}
+p{padding-top:.5rem;}
+转换后p的padding-top就是50px了。只要我们进行适当的计算，当前屏幕的宽度，html的font-size是多少px就OK了。
+px&lt;==&gt;rem<br />
+<a href="http://pxtoem.com/">http://pxtoem.com/</a></p>
+
+<p>1.如何计算当前html的font-size值
+比如，我们拿到的设计稿是750px，那就设置成当屏幕宽度是750的时候，html的font-size就是100px（当然这个100px你可以随意设置的，我设置成100px只是方便我计算），然后就根据当前屏幕的宽度 / 750 * 100，就得到了当前屏幕宽度的font-size值。
+//当前屏幕宽度 / 750 = 当前屏幕宽度的font-size / 100
+//代码如下
+(function (doc, win) {
+    var docEl = doc.documentElement,
+    resizeEvt = &lsquo;orientationchange&rsquo; in window ? &lsquo;orientationchange&rsquo; : &lsquo;resize&rsquo;,（获取浏览器支持的改变方向的函数，如果&rsquo;orientationchange&rsquo;存在，就使用 docEl.style.fontSize 这个改变字体的尺寸）
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 100 * (clientWidth / 750) + &lsquo;px&rsquo;;
+    };
+    if (!doc.addEventListener) return;
+       win.addEventListener(resizeEvt, recalc, false);  // resizeEvt 用于这里监听放向改变
+       doc.addEventListener(&lsquo;DOMContentLoaded&rsquo;, recalc, false); //dom 结构完就开始计算
+})(document, window);
+上面这段代码，是直接根据屏幕宽度进行计算font-size的。而淘宝移动端REM方案，还根据你的dpr去计算，而且会进行整体的缩放。淘宝的这种方案，比上面的代码会好很多。淘宝的方案，解决了另一个问题：边框1px的问题。</p>
+
+<p>2.淘宝移动端REM
+这个很简单，只需要加载js就好了</p>
+
+<pre><code>&lt;script src=&quot;http://g.tbcdn.cn/mtb/lib-flexible/%7B%7Bversion%7D%7D/??flexible_css.js,flexible.js&quot;/&gt;
+</code></pre>
+
+<p>然后在css中，将px转为rem就好了。我是用scss的，所以写个函数就好了。</p>
+
+<pre><code>@function s($px) {
+    &lt;a href=&quot;http://www.jobbole.com/members/wx1409399284&quot;&gt;@return&lt;/a&gt; ($px / 75) * 1rem;
+}
+
+p{
+    font-size:s(40);padding-left: s(52);
+}
+</code></pre>
+
+<p>比如p的font-size在750的设计稿是40px，然后s(40)就OK了。</p>
+
+<ol>
+<li>一些移动端设备的font-size
+html{font-size:625%}
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+html { font-size: 703%; }
+}
+@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
+html { font-size: 732.4%; }
+}
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+html { font-size: 750%; }
+}
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+html { font-size: 781.25%; }
+}
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){
+html { font-size: 808.6%; }
+}
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){
+html { font-size: 843.75%; }
+}</li>
+</ol>
+
+<h4 id="三丶-设置viewport中的width">三丶 设置viewport中的width</h4>
+
+<p>这种方案，就是定死viewport中的width大小。
+比如设计稿是750的，然后就在代码上写：
+<meta name="viewport" content="width=750"/></p>
+
+<p>对比三种方式
+响应式的优缺点
+优点：兼容性好，@media在ie9以上是支持的，PC和MOBILE是同一套代码的，不用分开。
+缺点：要写得css相对另外两个多很多，而且各个断点都要做好。css样式会稍微大点，更麻烦。</p>
+
+<p>REM优缺点
+优点：能维持能整体的布局效果，移动端兼容性好，不用写多个css代码，而且还可以利用@media进行优化。
+缺点：开头要引入一段js代码，单位都要改成rem(font-size可以用px)，计算rem比较麻烦(可以引用预处理器，但是增加了编译过程，相对麻烦了点)。pc和mobile要分开。</p>
+
+<p>设置viewport中的width
+优点：和REM相同，而且不用写rem，直接使用px，更加快捷。
+缺点：效果可能没rem的好，图片可能会相对模糊，而且无法使用@media进行断点，不同size的手机上显示，高度间距可能会相差很大。</p>
+
+<p>还是看项目需求，再决定使用哪种方案，如果就手机站的话，我使用REM比较多。如果对距离比较精确的话，大量css3动画的，就使用第三种。</p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://clsss.github.io/blog/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://clsss.github.io/blog/tags/mobile" role="button">mobile </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/web" role="button">web </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/css" role="button">css </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://clsss.github.io/blog/blogs/2017-9/m_performance/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>移动端_性能优化</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>前端构建分享（入门篇）</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#rem-font-size-of-root-element">
+												 rem ( font size of root element)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%80%e4%b8%b6-%e5%93%8d%e5%ba%94%e5%bc%8f%e5%b8%83%e5%b1%80">
+												 一丶 响应式布局
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%ba%8c%e4%b8%b6-rem">
+												 二丶 REM
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%89%e4%b8%b6-%e8%ae%be%e7%bd%aeviewport%e4%b8%ad%e7%9a%84width">
+												 三丶 设置viewport中的width
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/you " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+      <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+    
+
+    
+      <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+    <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus-g mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//instagram.com/you" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+    
+
+
+    
+        <a href="mailto:you@email.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2018 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/main.js"></script>
+
+
+
+  
+  <script src="https://clsss.github.io/blog/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://clsss.github.io/blog/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://clsss.github.io/blog/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>
