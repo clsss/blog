@@ -21,6 +21,42 @@
     </item>
     
     <item>
+      <title>webpack-css处理</title>
+      <link>https://clsss.github.io/blog/blog/2017-10/webpack-css%E5%A4%84%E7%90%86/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/2017-10/webpack-css%E5%A4%84%E7%90%86/</guid>
+      <description>css 处理 webpack 是如何引入 css？ style-loader（2. 创建 link 标签） a. style-loader b. style-loader/url（file-loader） c. style-loader/useable（ user()，unuser() ） options:{ insertInto: &#39;#app&#39;， // 插入到app节点 singleton: true, // 是否重用 transform: &#39;./css.transform.js&#39; // 可以做样式的修改 } css-loader（1.import css） option:{ minimize: true, // 压缩css modules: true // 开启css模块化开发 } css modules &amp;gt; 配置 less/sass rules: [ { test: /\.less$/, use:ExtractTextWebpackPlugin.extract([ {},</description>
+    </item>
+    
+    <item>
+      <title>webpack-prerenderer</title>
+      <link>https://clsss.github.io/blog/blog/2017-10/webpack-prerenderer/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/2017-10/webpack-prerenderer/</guid>
+      <description>预渲染 1.run build生成打包html和资源上传cdn 2.利用生成的html 启动本地服务 3.使用puppeteer爬去启动的服务页面的html 4.生成预渲染后的html 命令行： &amp;quot;build-pre&amp;quot;: &amp;quot;npm run clean &amp;amp;&amp;amp; node build/build.js --pre --e&amp;quot;, // --pre为Boolean，设置了则启动预渲染模式 build.js ``` console.log(chalk.magentaBright(&amp;rsquo; Build Complete.And coding in ./dist \n &amp;lsquo;)) // 预渲染 const prerenderPromise = await prerender() if (isPre &amp;amp;&amp;amp; prerenderPromise) { prerenderPromise .then(() =&amp;gt; { spinner.stop() console.log(chalk.cyan(&amp;rsquo; Prerender complete.\n&amp;rsquo;)) }) .catch((e) =&amp;gt; { console.log(chalk.red(Prerender failed with errors.\n${e})) process.exit(1) }) } 2. prerender.js /* * config/index.js文件中配置了assetsPubli</description>
+    </item>
+    
+    <item>
+      <title>webpack-ssr</title>
+      <link>https://clsss.github.io/blog/blog/2017-10/webpack-ssr/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/2017-10/webpack-ssr/</guid>
+      <description>webpack-ssr webpack.server.conf.js 不用关心测试环境还是正式环境 只需要再服务端能跑起来，不需要压缩等.. /* * @Author: _collin【collinssem@126.com】 * @Date: 2018-04-28 09:26:38 * @Last Modified by: _collin * @Last Modified time: 2018-04-28 09:47:53 * 服务端渲染配置文件 */ const path = require(&#39;path&#39;) const ExtractPlugin = require(&#39;extract-text-webpack-plugin&#39;) const webpack = require(&#39;webpack&#39;) const merge = require(&#39;webpack-merge&#39;) const baseConf = require(&#39;./webpack.base.conf&#39;) // const VueServerPlugin = require(&#39;vue-server-renderer/server-plugin&#39;) let config const isDev = process.env.NODE_ENV === &#39;development&#39; const plugins = [ new ExtractPlugin(&#39;styles.[Hash:8].css&#39;), new webpack.DefinePlugin({ &#39;process.env.NODE_ENV&#39;: JSON.stringify(process.env.NODE_ENV || &#39;development&#39;), &#39;process.env.VUE_ENV&#39;: &#39;&amp;quot;server&amp;quot;&#39; }) ] if (isDev) { // 这个插件，让我们服务端打包后无.js文件而是.json文件 // 这个包会帮我们做很多事情 plugins.push(new VueServerPlugin()) } config = merge(baseConf, { target: &#39;node&#39;, // nod</description>
+    </item>
+    
+    <item>
+      <title>webpack4升级</title>
+      <link>https://clsss.github.io/blog/blog/2017-10/webpack4%E5%8D%87%E7%BA%A7/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/2017-10/webpack4%E5%8D%87%E7%BA%A7/</guid>
+      <description>webpack4升级 webpack升级（4.6版） 一、dev-server 本地运行一个静态服务 1. 添加了mode，直接区分development和production 2. 插件的替换： a. webpack.DefinePlugin（不用了，已经有mode了） b. webpack.CommonsChunkPlugin 被替代成: optimization配置中配置splitChunks(指定vendor在这个配置里)和runtimeChunk c. UglifyJsPlugin --&amp;gt; optimizat</description>
+    </item>
+    
+    <item>
       <title>前端构建分享（入门篇）</title>
       <link>https://clsss.github.io/blog/blog/2017-10/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%88%86%E4%BA%AB%E5%85%A5%E9%97%A8%E7%AF%87/</link>
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>

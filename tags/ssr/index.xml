@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssr on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/tags/ssr/</link>
+    <description>Recent content in Ssr on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Wed, 25 Oct 2017 20:54:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/tags/ssr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>webpack-ssr</title>
+      <link>https://clsss.github.io/blog/blog/2017-10/webpack-ssr/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blog/2017-10/webpack-ssr/</guid>
+      <description>webpack-ssr webpack.server.conf.js 不用关心测试环境还是正式环境 只需要再服务端能跑起来，不需要压缩等.. /* * @Author: _collin【collinssem@126.com】 * @Date: 2018-04-28 09:26:38 * @Last Modified by: _collin * @Last Modified time: 2018-04-28 09:47:53 * 服务端渲染配置文件 */ const path = require(&#39;path&#39;) const ExtractPlugin = require(&#39;extract-text-webpack-plugin&#39;) const webpack = require(&#39;webpack&#39;) const merge = require(&#39;webpack-merge&#39;) const baseConf = require(&#39;./webpack.base.conf&#39;) // const VueServerPlugin = require(&#39;vue-server-renderer/server-plugin&#39;) let config const isDev = process.env.NODE_ENV === &#39;development&#39; const plugins = [ new ExtractPlugin(&#39;styles.[Hash:8].css&#39;), new webpack.DefinePlugin({ &#39;process.env.NODE_ENV&#39;: JSON.stringify(process.env.NODE_ENV || &#39;development&#39;), &#39;process.env.VUE_ENV&#39;: &#39;&amp;quot;server&amp;quot;&#39; }) ] if (isDev) { // 这个插件，让我们服务端打包后无.js文件而是.json文件 // 这个包会帮我们做很多事情 plugins.push(new VueServerPlugin()) } config = merge(baseConf, { target: &#39;node&#39;, // nod</description>
+    </item>
+    
+  </channel>
+</rss>
