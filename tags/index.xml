@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Collin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Wed, 20 Jun 2018 20:24:11 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 25 Oct 2016 20:52:23 +0800</lastBuildDate>
     
 	<atom:link href="https://clsss.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://clsss.github.io/blog/tags/about/</link>
+      <pubDate>Tue, 25 Oct 2016 20:52:23 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/tags/about/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Blog</title>
@@ -71,6 +80,15 @@
       <pubDate>Fri, 25 May 2018 20:54:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lift</title>
+      <link>https://clsss.github.io/blog/tags/lift/</link>
+      <pubDate>Tue, 25 Oct 2016 20:52:23 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/tags/lift/</guid>
       <description></description>
     </item>
     
