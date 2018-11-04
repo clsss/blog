@@ -13,8 +13,13 @@
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/blogs/2018-5/design/designmode/</loc>
-    <lastmod>2018-05-25T20:54:11+08:00</lastmod>
+    <loc>https://clsss.github.io/blog/blogs/2018-5/design/designmode2/</loc>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-5/design/designmode1/</loc>
+    <lastmod>2018-05-05T20:54:11+08:00</lastmod>
   </url>
   
   <url>
@@ -173,6 +178,18 @@
   </url>
   
   <url>
+    <loc>https://clsss.github.io/blog/tags/design-patterns/</loc>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/design-patterns/</loc>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clsss.github.io/blog/tags/docker/</loc>
     <lastmod>2018-06-10T20:42:11+08:00</lastmod>
     <priority>0</priority>
@@ -222,13 +239,13 @@
   
   <url>
     <loc>https://clsss.github.io/blog/tags/js/</loc>
-    <lastmod>2018-05-25T20:54:11+08:00</lastmod>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://clsss.github.io/blog/series/js/</loc>
-    <lastmod>2018-05-25T20:54:11+08:00</lastmod>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -288,7 +305,7 @@
   
   <url>
     <loc>https://clsss.github.io/blog/categories/model/</loc>
-    <lastmod>2018-05-25T20:54:11+08:00</lastmod>
+    <lastmod>2018-05-05T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   

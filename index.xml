@@ -30,12 +30,21 @@
     </item>
     
     <item>
-      <title>设计模式-设计原则</title>
-      <link>https://clsss.github.io/blog/blogs/2018-5/design/designmode/</link>
-      <pubDate>Fri, 25 May 2018 20:54:11 +0800</pubDate>
+      <title>设计模式-设计模式</title>
+      <link>https://clsss.github.io/blog/blogs/2018-5/design/designmode2/</link>
+      <pubDate>Mon, 07 May 2018 20:54:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blogs/2018-5/design/designmode/</guid>
-      <description>设计模式-设计原则 这是一种思想 1. 单一职责原则（S） 就像.then().then()每个 then 只做一件事 2. 开发封闭原则（O） 新增代码，以前的代码不变 3. 李氏置换原则（L） 子类能覆盖父类 父类出现的地方，子类就能出现 4. 接口独立原则（I） 保持接口独立 5. 依赖导致原则（D） 面向接口编程，依赖于抽象而不依赖于具体 使用方只关注接口不关注具体实现 js 中更多的是关注（S, O） 设计模式-设计模式 这是一种模板 三大类型（23 种模式</description>
+      <guid>https://clsss.github.io/blog/blogs/2018-5/design/designmode2/</guid>
+      <description>设计模式-设计模式 这是一种模板 三大类型（23 种模式）： 创建型 工厂模式 单列模式 原型模式 组合型 适配器模式 修饰器模式 代理模式 外观模式 桥接模式 组合模式 享元模式 行为型 策略模式 模板方法模式 观察者模式（重） 迭代器模式（重） 职责连模式 命令模式 备忘录模式 状态模式（重） 访问者模式 中介则模式 解释器模式 1. 工厂模式： 将 new 操作单独封装 构造器的名字不能乱改=。= 例 1： 买东西，你传入钱，东西名 ==&amp;gt; 最后就返东西。至于中间的东西是哪里</description>
+    </item>
+    
+    <item>
+      <title>设计模式-设计原则</title>
+      <link>https://clsss.github.io/blog/blogs/2018-5/design/designmode1/</link>
+      <pubDate>Sat, 05 May 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-5/design/designmode1/</guid>
+      <description>设计模式-设计原则（五大原则） 这是一种思想。 1. 单一职责原则（S） 就像.then().then()每个 then 只做一件事 2. 开发封闭原则（O） 新增代码，以前的代码不变 3. 李氏置换原则（L） 子类能覆盖父类 父类出现的地方，子类就能出现 4. 接口独立原则（I） 保持接口独立 5. 依赖导致原则（D） 面向接口编程，依赖于抽象而不依赖于具体 使用方只关注接口不关注具体实现 js 中更多的是关注（S, O）</description>
     </item>
     
     <item>
