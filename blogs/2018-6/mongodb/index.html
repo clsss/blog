@@ -7,10 +7,10 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Collin">
-  <meta name="description" content="一. MongoDB安装（windows）与环境配置 优点： 高可扩展性 分布式存储 低成本 结构灵活 安装注意事项 需要db存储和日志存储文件夹 添加服务，配置环境变量，启动mongod 启动方式： 启动后返回链接的端口 通过命令行传参启动： ``` &lt;!&ndash; dbpath：指定db存储到哪里 &ndash;journal：32位服务器——指定使用journal输出日志 默认存储引擎不能使用： &ndash;&gt; mongod -dbpath F:\mongoDB\data &ndash;journal &ndash;storageEngine=mmapv1 ``` 通过配置文件启动： &lt;!-- 新建的mon">
+  <meta name="description" content="一. MongoDB 安装（windows）与环境配置 优点： 高可扩展性 分布式存储 低成本 结构灵活 安装注意事项 需要 db 存储和日志存储文件夹 添加服务，配置环境变量，启动 mongod 启动方式： 启动后返回链接的端口 通过命令行传参启动： &lt;!-- 1. dbpath：指定db存储到哪里 2. --journal：32位服务器——指定使用journal输出日志 3. 默认存储引擎不能使用： --&gt; mongod -dbpath F:\mongoDB\data --journal --storageEngine=mmapv1 通过配置文件启动： &lt;!-- 新建的mongo.conf: --&gt; #数据库路径 dbpath=F:\mongoDB\data">
   
-  <meta property="og:title" content="mongoDB环境搭建（window），服务器端" />
-<meta property="og:description" content="一. MongoDB安装（windows）与环境配置 优点： 高可扩展性 分布式存储 低成本 结构灵活 安装注意事项 需要db存储和日志存储文件夹 添加服务，配置环境变量，启动mongod 启动方式： 启动后返回链接的端口 通过命令行传参启动： ``` &lt;!&ndash; dbpath：指定db存储到哪里 &ndash;journal：32位服务器——指定使用journal输出日志 默认存储引擎不能使用： &ndash;&gt; mongod -dbpath F:\mongoDB\data &ndash;journal &ndash;storageEngine=mmapv1 ``` 通过配置文件启动： &lt;!-- 新建的mon" />
+  <meta property="og:title" content="mongoDB环境搭建，服务器端" />
+<meta property="og:description" content="一. MongoDB 安装（windows）与环境配置 优点： 高可扩展性 分布式存储 低成本 结构灵活 安装注意事项 需要 db 存储和日志存储文件夹 添加服务，配置环境变量，启动 mongod 启动方式： 启动后返回链接的端口 通过命令行传参启动： &lt;!-- 1. dbpath：指定db存储到哪里 2. --journal：32位服务器——指定使用journal输出日志 3. 默认存储引擎不能使用： --&gt; mongod -dbpath F:\mongoDB\data --journal --storageEngine=mmapv1 通过配置文件启动： &lt;!-- 新建的mongo.conf: --&gt; #数据库路径 dbpath=F:\mongoDB\data" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://clsss.github.io/blog/blogs/2018-6/mongodb/" /><meta property="article:published_time" content="2018-06-20T20:24:11&#43;08:00"/>
 <meta property="article:modified_time" content="2018-06-20T20:24:11&#43;08:00"/>
@@ -19,7 +19,7 @@
 
   <title>
   
-       mongoDB环境搭建（window），服务器端 | Collin&#39;s Blog 
+       mongoDB环境搭建，服务器端 | Collin&#39;s Blog 
   
   </title>
 
@@ -335,7 +335,7 @@
     
   </ul>
 
-  <div class="px-4 post-heading">mongoDB环境搭建（window），服务器端</div>
+  <div class="px-4 post-heading">mongoDB环境搭建，服务器端</div>
 
   <ul class="post-meta li-x mt-1">
     
@@ -355,9 +355,9 @@
           <div class="post-content markdown">
             
 
-<h4 id="一-mongodb安装-windows-与环境配置">一. MongoDB安装（windows）与环境配置</h4>
+<h2 id="一-mongodb-安装-windows-与环境配置">一. MongoDB 安装（windows）与环境配置</h2>
 
-<h5 id="优点">优点：</h5>
+<h4 id="优点">优点：</h4>
 
 <ol>
 <li>高可扩展性</li>
@@ -366,33 +366,34 @@
 <li>结构灵活</li>
 </ol>
 
-<h5 id="安装注意事项">安装注意事项</h5>
+<h4 id="安装注意事项">安装注意事项</h4>
 
-<p>需要db存储和日志存储文件夹
-添加服务，配置环境变量，启动mongod</p>
+<p>需要 db 存储和日志存储文件夹
+添加服务，配置环境变量，启动 mongod</p>
 
-<h5 id="启动方式">启动方式：</h5>
+<h4 id="启动方式">启动方式：</h4>
 
 <blockquote>
 <p>启动后返回链接的端口</p>
 </blockquote>
 
 <ol>
-<li>通过命令行传参启动：
-```
-&lt;!&ndash;</li>
-<li>dbpath：指定db存储到哪里</li>
-<li>&ndash;journal：32位服务器——指定使用journal输出日志</li>
-
-<li><p>默认存储引擎不能使用：
-&ndash;&gt;
-mongod -dbpath F:\mongoDB\data &ndash;journal &ndash;storageEngine=mmapv1
-```</p></li>
-
-<li><p>通过配置文件启动：</p></li>
+<li>通过命令行传参启动：</li>
 </ol>
 
-<pre><code>&lt;!-- 新建的mongo.conf: --&gt;
+<pre><code class="language-bash">&lt;!--
+	1. dbpath：指定db存储到哪里
+	2. --journal：32位服务器——指定使用journal输出日志
+	3. 默认存储引擎不能使用：
+--&gt;
+mongod -dbpath F:\mongoDB\data --journal --storageEngine=mmapv1
+</code></pre>
+
+<ol>
+<li>通过配置文件启动：</li>
+</ol>
+
+<pre><code class="language-bash">&lt;!-- 新建的mongo.conf: --&gt;
 #数据库路径
 dbpath=F:\mongoDB\data
 #日志输出文件路径
@@ -417,26 +418,25 @@ mongod --config f:\mongoDB\etc\mongodb.conf
 mongod --config f:\mongoDB\etc\mongo\mongodb.conf -- install --serviceName &quot;MongoDB&quot;
 
 &lt;!-- 为了方便，配置环境变量 --&gt;
-
 </code></pre>
 
-<h4 id="安装mongodbvue">安装mongodbVUE</h4>
+<h2 id="安装-mongodbvue">安装 mongodbVUE</h2>
 
 <blockquote>
 <p>教程：<a href="https://www.cnblogs.com/xll1025/p/6443786.html">https://www.cnblogs.com/xll1025/p/6443786.html</a></p>
 </blockquote>
 
-<pre><code>1. 启动mongo.exe
+<pre><code class="language-bash">1. 启动mongo.exe
 mongo
 2. 命令行use（创建数据库），并要插入数据，否则无数据
 user demo
-// 这里不像mysql(直接insert)，而是直接的json对象操作形式【goods表】插入一条数据
+# 这里不像mysql(直接insert)，而是直接的json对象操作形式【goods表】插入一条数据
 db.goods.insert({id:101,&quot;name&quot;:&quot;mi8&quot;,&quot;salePrice&quot;:2699})
-
 </code></pre>
 
-<pre><code>遇到问题：
-在网上查了之后有的人说是MongoDB版本的原因，换成2就可以了，懒得换了，继续找方法最终，切换存储引擎，MongoDB在3.2之后默认的是wiredTiger引擎，而管理软件匹配的还是之前的引擎，所以无法使用，必须重置存在引擎。
+<p>遇到的问题：</p>
+
+<pre><code class="language-bash">在网上查了之后有的人说是MongoDB版本的原因，换成2就可以了，懒得换了，继续找方法最终，切换存储引擎，MongoDB在3.2之后默认的是wiredTiger引擎，而管理软件匹配的还是之前的引擎，所以无法使用，必须重置存在引擎。
 二、原因：
 在2015/3/17以前，MongoDB只有一个存储引擎，叫做MMAP，MongoDB3.0的推出使得MongoDB有了两个引擎：MMAPv1和WiredTiger。
 MMAPv1：适应于所有MongoDB版本，MongoDB3.0的默认引擎
@@ -444,35 +444,40 @@ WiredTiger：仅支持64位MongoDB
 MongoDB两种引擎可以互相切换，我们可以在创建服务的时候指定引擎类型。
 </code></pre>
 
-<h3 id="服务器环境">服务器环境</h3>
+<h2 id="服务器环境">服务器环境</h2>
 
 <ol>
-<li>登录阿里云服务器
-shell
-```
-// 127.0.0.1替换成服务器地址
-ssh root@127.0.0.1
-password: xxx</li>
+<li>登录阿里云服务器 shell</li>
 </ol>
 
-<p>cd /
-ls</p>
+<pre><code class="language-bash">// 127.0.0.1替换成服务器地址
+ssh root@127.0.0.1
+password: xxx
 
-<pre><code>2. 向服务器发送 mongodb安装包,文件（文件名）/ 文件夹（/r）
+cd /
+ls
 </code></pre>
 
-<p>scp /cl_tool/mongodb-xxx-xx.tgz root@127.0.0.1:/【传送位置(根目录)】
-password: xxx</p>
+<ol>
+<li>向服务器发送 mongodb 安装包,文件（文件名）/ 文件夹（/r）</li>
+</ol>
 
-<pre><code>3. 在服务器端解压
+<pre><code class="language-bash">scp /cl_tool/mongodb-xxx-xx.tgz root@127.0.0.1:/【传送位置(根目录)】
+password: xxx
 </code></pre>
 
-<p>tar -zxvf mongodb-xxx-xx.tgz</p>
+<ol>
+<li>在服务器端解压</li>
+</ol>
 
-<pre><code>4. 存放日志等
+<pre><code class="language-bash">tar -zxvf mongodb-xxx-xx.tgz
 </code></pre>
 
-<p>mkdir mongodb
+<ol>
+<li>存放日志等</li>
+</ol>
+
+<pre><code class="language-bash">mkdir mongodb
 mv 【加压文件】mongodb
 cd mongdb
 mkdir data
@@ -483,16 +488,21 @@ cd ..
 mkdir etc
 cd etc
 touch mongo.conf
-vi mongo.conf (编辑mongo.conf)</p>
-
-<pre><code>5. 建立一些软连接(就像本地的环境配置)
+vi mongo.conf (编辑mongo.conf)
 </code></pre>
 
-<p>ln -s /mongodb/mongdb-xx-xx/bin/mongod /usr/local/bin/mongod</p>
+<ol>
+<li>建立一些软连接(就像本地的环境配置)</li>
+</ol>
 
-<p>mongod -f(不同于windows的&ndash;config) /mongodb/etc/mongo.conf
-```
-6. 还需要一个跟mongoVue一样的工具mongoHub (mongo客户端)</p>
+<pre><code class="language-bash">ln -s /mongodb/mongdb-xx-xx/bin/mongod /usr/local/bin/mongod
+
+mongod -f(不同于windows的--config) /mongodb/etc/mongo.conf
+</code></pre>
+
+<ol>
+<li>还需要一个跟 mongoVue 一样的工具 mongoHub (mongo 客户端)</li>
+</ol>
 
           </div>
 
@@ -580,6 +590,28 @@ vi mongo.conf (编辑mongo.conf)</p>
 								
 									<ul class="nav">
 								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%80-mongodb-%e5%ae%89%e8%a3%85-windows-%e4%b8%8e%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%ae">
+												 一. MongoDB 安装（windows）与环境配置
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
 									<ul class="nav">
 								
 									<ul class="nav">
@@ -587,8 +619,8 @@ vi mongo.conf (编辑mongo.conf)</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%b8%80-mongodb%e5%ae%89%e8%a3%85-windows-%e4%b8%8e%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%ae">
-												 一. MongoDB安装（windows）与环境配置
+						 					<a class="nav-link" href="#%e4%bc%98%e7%82%b9">
+												 优点：
 											</a>
 										</li>
 						 
@@ -617,8 +649,8 @@ vi mongo.conf (编辑mongo.conf)</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%ae%89%e8%a3%85mongodbvue">
-												 安装mongodbVUE
+						 					<a class="nav-link" href="#%e5%ae%89%e8%a3%85%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9">
+												 安装注意事项
 											</a>
 										</li>
 						 
@@ -639,6 +671,56 @@ vi mongo.conf (编辑mongo.conf)</p>
 								
 								
 									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%90%af%e5%8a%a8%e6%96%b9%e5%bc%8f">
+												 启动方式：
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%ae%89%e8%a3%85-mongodbvue">
+												 安装 mongodbVUE
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
 								
 									<ul class="nav">
 								
@@ -651,8 +733,6 @@ vi mongo.conf (编辑mongo.conf)</p>
 										</li>
 						 
 								
-								
-									</ul>
 								
 									</ul>
 								

@@ -17,7 +17,7 @@
       <pubDate>Sun, 10 Jun 2018 20:42:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2018-6/docker/</guid>
-      <description>docker 镜像（Image）+ 容器（Container）+ 仓库（Repository） 下载： linux： sudo wget -qO- http:get.docker.com | sh sudo usermod -aG docker xbf // 不用sodu windows： 官网下载：https://docs.docker.com/engine/installation/ 命令行： #是否docker安装成功 $ docker run hello-world #查看docker信息 $ docker info $ docker -v #获取镜像（使用别人的镜像） $ docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标</description>
+      <description>docker 镜像（Image）+ 容器（Container）+ 仓库（Repository） 下载： linux： sudo wget -qO- http:get.docker.com | sh sudo usermod -aG docker xbf // 不用 sodu windows： 官网下载：https://docs.docker.com/engine/installation/ 命令行： #是否docker安装成功 $ docker run hello-world #查看docker信息 $ docker info $ docker -v #获取镜像（使用别人的镜像） $ docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签] #</description>
     </item>
     
   </channel>

@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Blog</title>
-      <link>https://clsss.github.io/blog/series/blog/</link>
+      <title>About</title>
+      <link>https://clsss.github.io/blog/series/about/</link>
       <pubDate>Tue, 25 Oct 2016 20:52:23 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/series/blog/</guid>
+      <guid>https://clsss.github.io/blog/series/about/</guid>
       <description></description>
     </item>
     
@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>Mobile</title>
+      <link>https://clsss.github.io/blog/series/mobile/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/series/mobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Mocha</title>
       <link>https://clsss.github.io/blog/series/mocha/</link>
       <pubDate>Wed, 25 Apr 2018 20:54:11 +0800</pubDate>
@@ -71,6 +80,15 @@
       <pubDate>Sun, 10 Jun 2018 20:42:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/series/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>https://clsss.github.io/blog/series/vue/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/series/vue/</guid>
       <description></description>
     </item>
     

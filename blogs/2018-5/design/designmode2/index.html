@@ -616,10 +616,13 @@ emitter1.emit('fn1', 'xxx')
 <ul>
 <li>顺序访问一个集合（有序的列表）</li>
 <li>使用者无需了解集合中的结构，长度（封装）</li>
+</ul>
+
+<ol>
 <li>迭代器对象与目标对象分离</li>
 <li>迭代器将使用者与目标对象合理开</li>
 <li>符合开放封闭原则</li>
-</ul>
+</ol>
 
 <p>场景： 获取 li 列表</p>
 
@@ -698,7 +701,7 @@ while(interator.hasNext()) {
     }
 }
 ===
-for of就是迭代器。只能对含有data[Symbol.iterator]的集合使用 
+for of就是迭代器。只能对含有data[Symbol.iterator]的集合使用
 </code></pre>
 
           </div>

@@ -7,13 +7,13 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Collin">
-  <meta name="description" content="1.为什么前端需要模块化 随着前端的不断发展，前端已经不仅仅是一个简单依据需求完成网页开发的过程，如何提高网页开发效率，提高代码复用率，降低块与块之间的耦合性是我们需要思考的问题，而前端的组件化、模块化正是解决这样的问题。 2.1 什么是前端模块化 模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成一个个具有特定功能的的模块 模块可以通过传递参数的不">
+  <meta name="description" content="一.为什么前端需要模块化 随着前端的不断发展，前端已经不仅仅是一个简单依据需求完成网页开发的过程，如何提高网页开发效率，提高代码复用率，降低块与块之间的耦合性是我们需要思考的问题，而前端的组件化、模块化正是解决这样的问题。 二.模块化与组件化 1. 什么是前端模块化 模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成一个个具有特定功能的的模块 模块可">
   
   <meta property="og:title" content="前端模块化" />
-<meta property="og:description" content="1.为什么前端需要模块化 随着前端的不断发展，前端已经不仅仅是一个简单依据需求完成网页开发的过程，如何提高网页开发效率，提高代码复用率，降低块与块之间的耦合性是我们需要思考的问题，而前端的组件化、模块化正是解决这样的问题。 2.1 什么是前端模块化 模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成一个个具有特定功能的的模块 模块可以通过传递参数的不" />
+<meta property="og:description" content="一.为什么前端需要模块化 随着前端的不断发展，前端已经不仅仅是一个简单依据需求完成网页开发的过程，如何提高网页开发效率，提高代码复用率，降低块与块之间的耦合性是我们需要思考的问题，而前端的组件化、模块化正是解决这样的问题。 二.模块化与组件化 1. 什么是前端模块化 模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成一个个具有特定功能的的模块 模块可" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://clsss.github.io/blog/blogs/2017-6/module/" /><meta property="article:published_time" content="2017-06-25T23:54:11&#43;08:00"/>
-<meta property="article:modified_time" content="2017-06-25T23:54:11&#43;08:00"/><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_adapter/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_performance/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_useragent/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-8/wx/" />
+<meta property="article:modified_time" content="2017-06-25T23:54:11&#43;08:00"/><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_performance/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_useragent/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-8/wx/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-7/http/" />
 
 
 
@@ -325,7 +325,7 @@
   <ul class="post-meta li-x">
     
       
-        <li><a href="https://clsss.github.io/blog/categories/module"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> module </a></li>
+        <li><a href="https://clsss.github.io/blog/categories/%E6%A8%A1%E5%9D%97%E5%8C%96"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 模块化 </a></li>
       
     
     
@@ -344,7 +344,7 @@
 
     
       <li class="middot"></li>
-      <li>3 minutes read</li>
+      <li>5 minutes read</li>
     
   </ul>
   
@@ -359,15 +359,16 @@
           <div class="post-content markdown">
             
 
-<h2 id="1-为什么前端需要模块化">1.为什么前端需要模块化</h2>
+<h2 id="一-为什么前端需要模块化">一.为什么前端需要模块化</h2>
 
 <blockquote>
 <p>随着前端的不断发展，前端已经不仅仅是一个简单依据需求完成网页开发的过程，如何提高网页开发效率，提高代码复用率，降低块与块之间的耦合性是我们需要思考的问题，而前端的<strong>组件化、模块化</strong>正是解决这样的问题。</p>
 </blockquote>
 
-<h2 id="2-1-什么是前端模块化">2.1 什么是前端模块化</h2>
+<h2 id="二-模块化与组件化">二.模块化与组件化</h2>
 
-<blockquote>
+<h4 id="1-什么是前端模块化">1. 什么是前端模块化</h4>
+
 <ol>
 <li><p>模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成一个个具有特定功能的的模块</p></li>
 
@@ -375,22 +376,27 @@
 
 <li><p>一个模块的实现可以依赖其它模块。</p></li>
 </ol>
-</blockquote>
 
-<h2 id="2-2-什么是组件化">2.2 什么是组件化</h2>
+<h4 id="2-什么是组件化">2. 什么是组件化</h4>
 
 <blockquote>
 <p>组件化更多关注的UI部分，页面的每个部件，比如头部，内容区，弹出框甚至确认按钮都可以成为一个组件，每个组件有独立的HTML、css、js代码。
 可以根据需要把它放在页面的任意部位，也可以和其他组件一起形成新的组件。一个页面是各个组件的结合，可以根据需要进行组装</p>
 </blockquote>
 
-<h3 id="一-amd-cmd-commonjs和es6">一. AMD,CMD,CommonJs和ES6</h3>
+<h2 id="三-amd-cmd-commonjs和es6">三. AMD,CMD,CommonJs和ES6</h2>
 
 <ol>
-<li><p>AMD,CMD,CommonJs和ES6是什么？
-&gt; AMD,CMD,CommonJs和ES6都是前端模块开发的规范（标准）</p></li>
+<li>AMD,CMD,CommonJs和ES6是什么？</li>
+</ol>
 
-<li><p>它们之间有什么区别？</p></li>
+<blockquote>
+<p>AMD,CMD,CommonJs和ES6都是前端模块开发的规范（标准）
+CMD: CMD规范全称Common Module Definition，该规范明确了模块的基本书写格式和基本交互规则，即定义了一组模块化开发的接口</p>
+</blockquote>
+
+<ol>
+<li>它们之间有什么区别？</li>
 </ol>
 
 <table>
@@ -429,38 +435,71 @@
 
 <p>demo:</p>
 
-<pre><code>&lt;!-- AMD --&gt;
-// 1.异步加载类库,
-// 2.依赖前置: 需要的时候在最前面先加载，加载完成后再执行回调(不过 RequireJS 从 2.0 开始，也改成可以延迟执行)
+<p>AMD</p>
+
+<pre><code class="language-bash"># 1.异步加载类库,
+# 2.依赖前置: 需要的时候在最前面先加载，加载完成后再执行回调(不过 RequireJS 从 2.0 开始，也改成可以延迟执行)
+# 3.依赖文件jq，只有成功加载后，回调才会执行
 define(['jquery.js', '', ...], function($) {
     ...
     $('xx').val()
 })
 </code></pre>
 
-<pre><code>&lt;!-- CMD --&gt;
-// 1.异步加载类库,
-// 2.依赖就进: 需要的时候再引入
+<p>CMD</p>
+
+<pre><code class="language-bash"># 1.异步加载类库,
+# 2.依赖就进: 需要的时候再引入
 define(function(require, exports, module) {
     var $ = require('jquery'); // 引入依赖
     $('xx').val()
 })
+
+1、从seajs.use方法入口，开始加载use到的模块。
+2、use到的模块这时mod缓存当中一定是不存在的。seajs创建一个新的mod,赋予一些初始的状态。
+3、执行mod.load方法
+4、一堆逻辑之后走到seajs.request方法，请求模块文件。模块加载完成之后，执行define方法。
+5、define方法分析提取模块的依赖模块，保存起来。缓存factory但不执行。
+6、模块的依赖模块再被加载，如果继续有依赖模块，则继续加载。直至所有被依赖的模块都加载完毕。
+7、所有的模块加载完毕之后，执行use方法的callback.
+8、模块内部逻辑从callback开始执行。require方法在这个过程当中才被执行。
 </code></pre>
 
-<pre><code>&lt;!-- CommonJs --&gt;
-// 1.同步(服务端使用,即NodeJs)
+<p>CommonJs</p>
+
+<pre><code class="language-bash">// 1.同步(服务端使用,即NodeJs)
 var $ = require('jquery');
 // 必须等待jquery加载完成，下面执行才有意义
 $('xx').val()
 </code></pre>
 
-<pre><code>&lt;!-- ES6 --&gt;
+<p>ES6</p>
+
+<pre><code class="language-bash"># 1.每一个模块只加载一次， 每一个JS只执行一次， 如果下次再去加载同目录下同文件，直接从内存中读取。一个模块就是一个单例，或者说就是一个对象；
+# 2.每一个模块内声明的变量都是局部变量， 不会污染全局作用域；
+# 3.模块内部的变量或者函数可以通过export导出；
+# 4.一个模块可以导入别的模块
+例1：
+#导出：
+export default $
+#引入：
 import $ from 'jquery'
 $('xx').val()
-export default $
+
+例2：
+# a.js
+export const text = 'hello';
+//导出函数
+export function square(x) {
+    return x * x;
+}
+# main.js
+import { text, square } from 'a.js';
+console.log(text, square(2))
+
 </code></pre>
 
-<h6 id="区别amd和cmd">区别AMD和CMD</h6>
+<h2 id="四-区别amd和cmd">四.区别AMD和CMD</h2>
 
 <ol>
 <li>对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy aspossible.</li>
@@ -468,7 +507,11 @@ export default $
 <li>AMD 的 API 默认是一个当多个用，CMD 的 API 严格区分，推崇职责单一。比如 AMD 里，require 分全局 require 和局部 require，都叫 require。CMD 里，没有全局 require，而是根据模块系统的完备性，提供 seajs.use 来实现模块系统的加载启动。CMD 里，每个 API 都简单纯粹。</li>
 </ol>
 
-<p><br><br></p>
+<p><br></p>
+
+<h2 id="五-个人理解">五.个人理解</h2>
+
+<p>其实我是这样理解的: 异步加载模块就是加载模块的过程不阻塞，同步就是一个文件一个文件的加载，会阻塞（第一个文件未加载完成就会等待）。不管是异步加载还是同步加载，等这些文件加载完成了，才有下一步的执行代码的说法。</p>
 
           </div>
 
@@ -482,10 +525,22 @@ export default $
   <li class="pr-0"><a href="https://clsss.github.io/blog/tags/"><i class="fas fa-tags"></i></a></li>
   <div class="tags-sm">
     
-      <li><a href="https://clsss.github.io/blog/tags/module" role="button">module </a></li>
+      <li><a href="https://clsss.github.io/blog/tags/%E6%A8%A1%E5%9D%97%E5%8C%96" role="button">模块化 </a></li>
       
     
       <li><a href="https://clsss.github.io/blog/tags/web" role="button">web </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/amd" role="button">AMD </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/cmd" role="button">CMD </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/es6" role="button">ES6 </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/commonjs" role="button">CommonJs </a></li>
       
     
   </div>
@@ -563,8 +618,8 @@ export default $
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e5%89%8d%e7%ab%af%e9%9c%80%e8%a6%81%e6%a8%a1%e5%9d%97%e5%8c%96">
-												 1.为什么前端需要模块化
+						 					<a class="nav-link" href="#%e4%b8%80-%e4%b8%ba%e4%bb%80%e4%b9%88%e5%89%8d%e7%ab%af%e9%9c%80%e8%a6%81%e6%a8%a1%e5%9d%97%e5%8c%96">
+												 一.为什么前端需要模块化
 											</a>
 										</li>
 						 
@@ -585,8 +640,90 @@ export default $
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#2-1-%e4%bb%80%e4%b9%88%e6%98%af%e5%89%8d%e7%ab%af%e6%a8%a1%e5%9d%97%e5%8c%96">
-												 2.1 什么是前端模块化
+						 					<a class="nav-link" href="#%e4%ba%8c-%e6%a8%a1%e5%9d%97%e5%8c%96%e4%b8%8e%e7%bb%84%e4%bb%b6%e5%8c%96">
+												 二.模块化与组件化
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-%e4%bb%80%e4%b9%88%e6%98%af%e5%89%8d%e7%ab%af%e6%a8%a1%e5%9d%97%e5%8c%96">
+												 1. 什么是前端模块化
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-%e4%bb%80%e4%b9%88%e6%98%af%e7%bb%84%e4%bb%b6%e5%8c%96">
+												 2. 什么是组件化
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%89-amd-cmd-commonjs%e5%92%8ces6">
+												 三. AMD,CMD,CommonJs和ES6
 											</a>
 										</li>
 						 
@@ -607,8 +744,8 @@ export default $
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#2-2-%e4%bb%80%e4%b9%88%e6%98%af%e7%bb%84%e4%bb%b6%e5%8c%96">
-												 2.2 什么是组件化
+						 					<a class="nav-link" href="#%e5%9b%9b-%e5%8c%ba%e5%88%abamd%e5%92%8ccmd">
+												 四.区别AMD和CMD
 											</a>
 										</li>
 						 
@@ -626,19 +763,15 @@ export default $
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%b8%80-amd-cmd-commonjs%e5%92%8ces6">
-												 一. AMD,CMD,CommonJs和ES6
+						 					<a class="nav-link" href="#%e4%ba%94-%e4%b8%aa%e4%ba%ba%e7%90%86%e8%a7%a3">
+												 五.个人理解
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
 								
 									</ul>
 								

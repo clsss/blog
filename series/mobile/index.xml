@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/series/mobile/</link>
+    <description>Recent content in Mobile on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Mon, 25 Sep 2017 23:12:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/series/mobile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>移动端——响应式布局</title>
+      <link>https://clsss.github.io/blog/blogs/2017-9/m_adapter/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-9/m_adapter/</guid>
+      <description>一、rem/em 单位 rem ( font size of root element) 相对长度单位。相对于根元素(即 html 元素)font-size 计算值的倍数 栗子： &amp;lt;style&amp;gt; html{ font-size: 12px; } p { font-size: 2rem; } &amp;lt;/style&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt;我是html定义的12px的2倍，字体大小为24px&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; # 如上如果我们设定html的字体大小为12px，有一段文字设置了font-size：2rem # 那么意思就是这段文字的font-siez是根元素的2倍，则12*2 = 24px; # 当然一般情</description>
+    </item>
+    
+  </channel>
+</rss>

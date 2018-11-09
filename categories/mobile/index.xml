@@ -12,21 +12,12 @@
     
     
     <item>
-      <title>REM</title>
-      <link>https://clsss.github.io/blog/blogs/2017-9/m_adapter/</link>
-      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
-      
-      <guid>https://clsss.github.io/blog/blogs/2017-9/m_adapter/</guid>
-      <description>rem ( font size of root element) html &amp;gt; html{font-size:100px;} //100px对应的就是625%，因为默认的1em=16px，这里设置为100px是为了计算方便，将1rem=100px viewport &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1, maximum-scale=1&amp;quot;&amp;gt; &amp;gt; 在移动开发时我们都会有上面这段代码 viewport :虚拟窗口大小 width: 控制viewport大小 可以自己设定值如320px(很少用) 一般设置为device-width(设备宽度) initial-scale 初始缩放比例 即页面初次加载时的缩放比例默认为1 maximum-scale：用户可缩放到</description>
-    </item>
-    
-    <item>
       <title>移动端_性能优化</title>
       <link>https://clsss.github.io/blog/blogs/2017-9/m_performance/</link>
       <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-9/m_performance/</guid>
-      <description>【scroll】 实际上，Safari 真的用了原生控件来实现，对于有-webkit-overflow-scrolling 的网页，会创建一个 UIScrollView，提供子 layer 给渲染模块使用 IOS（safari）： -webkit-overflow-scrolling: touch; // 弹簧效果 安卓： overflow:auto; // winphone8 和 android4+ bug： 当你给一个元素设置过 position:absolute;或者 position:relative;后再增加-webkit-overflow-scrollin</description>
+      <description>scroll 实际上，Safari 真的用了原生控件来实现，对于有-webkit-overflow-scrolling 的网页，会创建一个 UIScrollView，提供子 layer 给渲染模块使用 IOS（safari）： -webkit-overflow-scrolling: touch; // 弹簧效果 安卓： overflow:auto; // winphone8 和 android4+ bug： 当你给一个元素设置过 position:absolute;或者 position:relative;后再增加-webkit-overflow-scrolling: touch</description>
     </item>
     
     <item>
@@ -35,7 +26,7 @@
       <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-9/m_useragent/</guid>
-      <description>判断机型（Ios/Android） function getBrowserVersion() { var ua = navigator.userAgent || navigator.vendor || window.opera; var uaInfo = { ios: !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/i), android: ua.match(/Android/i) || ua.match(/Linux/i) }; var browserVersion = { isIos: function () { return uaInfo.ios; }, isAndroid: function () { return uaInfo.android; } }; return browserVersion; } 相应的机型发送相应的请求 if (openId) { if (browserVersion.isIos()) { window.webkit.messageHandlers.jumpToVerify.postMessage(&#39;verifyProspr&#39;); } else if (browserVersion.isAndroid()) { android.jumpPage(-9); } } else { goDownload(); } 相应的机型跳转相应的链接 if (browserVersion.isIos()) { location.href = &#39;http://app.appsflyer.com/id873518909?pid=web&amp;amp;c=index&#39;; } else if (browserVersion.isAndroid()) { location.href = &#39;http://app.appsflyer.com/com.luxy?pid=web&amp;amp;c=index&#39;; } 通知客户端修改右上角 feedback 图标 if (browserVersion.isIos()) { window.webkit.messageHandlers.JSMessage_shouldShowFeedbackButton.postMessage(); } else if (browserVersion.isAndroid()) { android.forceShowFeedbackOnTitleBar(); } 包括电脑跳转链接 $(&#39;.btn&#39;).click(function(){ var ua = navigator.userAgent.toLowerCase(); var userAgent = navigator.userAgent var t = Date.now(); var info = window.location.search.substr(1); var info2 = window.location.search.substr(1); if (/ipad|iphone|mac/i.test(ua)){ if (userAgent.indexOf(&amp;quot;Safari&amp;quot;) &amp;gt; -1) { window.location = &amp;quot;OMGmart://&amp;quot; + info; setTimeout(&amp;quot;window.location.href = &#39; &#39;,3000); }else{ alert(&#39;</description>
+      <description>判断机型（Ios/Android） function getBrowserVersion() { var ua = navigator.userAgent || navigator.vendor || window.opera; var uaInfo = { ios: !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/i), android: ua.match(/Android/i) || ua.match(/Linux/i) }; var browserVersion = { isIos: function () { return uaInfo.ios; }, isAndroid: function () { return uaInfo.android; } }; return browserVersion; } 相应的机型发送相应的请求 if (openId) { if (browserVersion.isIos()) { window.webkit.messageHandlers.jumpToVerify.postMessage(&#39;verifyProspr&#39;); } else if (browserVersion.isAndroid()) { android.jumpPage(-9); } } else { goDownload(); } 相应的机型跳转相应的链接 if (browserVersion.isIos()) { location.href = &#39;http://app.appsflyer.com/id873518909?pid=web&amp;amp;c=index&#39;; } else if (browserVersion.isAndroid()) { location.href = &#39;http://app.appsflyer.com/com.luxy?pid=web&amp;amp;c=index&#39;; } 通知客户端修改右上角 feedback 图标 if (browserVersion.isIos()) { window.webkit.messageHandlers.JSMessage_shouldShowFeedbackButton.postMessage(); } else if (browserVersion.isAndroid()) { android.forceShowFeedbackOnTitleBar(); } 包括电脑跳转链接 $(&#39;.btn&#39;).click(function(){ var ua = navigator.userAgent.toLowerCase(); var userAgent = navigator.userAgent var t = Date.now(); var info = window.location.search.substr(1); var info2 = window.location.search.substr(1); if (/ipad|iphone|mac/i.test(ua)){ if (userAgent.indexOf(&amp;quot;Safari&amp;quot;) &amp;gt; -1) { window.location = &amp;quot;OMGmart://&amp;quot; + info; setTimeout(&amp;quot;window.location.href = &#39; &#39;,3000); } else { alert</description>
     </item>
     
     <item>
@@ -44,7 +35,7 @@
       <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/</guid>
-      <description>禁止竖屏 (function rotate(){ var orientation=window.orientation; //当屏幕方向改变时 if(orientation==90||orientation==-90){ document.body.style.display=&amp;lsquo;none&amp;rsquo;; alert(&amp;ldquo;请使用竖屏访问！&amp;rdquo;); } window.onorientationchange=function(){ document.body.style.display=&amp;ldquo;block&amp;rdquo;; rotate(); }; })() // 禁止选择 &amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; .user_select_none { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5); -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } &amp;lt;/style&amp;gt; ```</description>
+      <description>禁止竖屏 (function rotate(){ var orientation=window.orientation; //当屏幕方向改变时 if(orientation==90||orientation==-90){ document.body.style.display=&#39;none&#39;; alert(&amp;quot;请使用竖屏访问！&amp;quot;); } window.onorientationchange=function(){ document.body.style.display=&amp;quot;block&amp;quot;; rotate(); }; })() 禁止选择 &amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; .user_select_none { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5); -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } &amp;lt;/style&amp;gt;</description>
     </item>
     
   </channel>

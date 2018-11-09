@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/series/vue/</link>
+    <description>Recent content in Vue on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Sun, 25 Jun 2017 23:12:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/series/vue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>v-distpicker城市插件</title>
+      <link>https://clsss.github.io/blog/blogs/2017-6/v-distpicker/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-6/v-distpicker/</guid>
+      <description>v-distpicker城市插件 官网 安装 npm install v-distpicker --save 或者 yarn add v-distpicker --save 使用方式 import VDistpicker from &#39;v-distpicker&#39; Vue.component(&#39;v-distpicker&#39;, VDistpicker) 千万注意: :province=&amp;lsquo;==province==&amp;rsquo;,中绑定的省, 不能通过@province=&amp;ldquo;==selectProvince==&amp;ldquo;方法直接修改(市和区同理). 用于显示与用于绑定的值是2个不同的值 Demo 方式1：无默认选中的城市 &amp;lt;!-- html --&amp;gt; &amp;lt;v-distpicker @province=&amp;quot;selectProvince&amp;quot; @city=&amp;quot;selectCity&amp;quot; @area=&amp;quot;selectArea&amp;quot;&amp;gt;&amp;lt;/v-distpicker&amp;gt; &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;{{ select }}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;!-- js --&amp;gt; export default { components: { VDistpicker }, data()</description>
+    </item>
+    
+  </channel>
+</rss>

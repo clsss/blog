@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>HTTP</title>
+      <title>HTTP超文本传输协议</title>
       <link>https://clsss.github.io/blog/blogs/2017-7/http/</link>
       <pubDate>Tue, 25 Jul 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-7/http/</guid>
-      <description>1.HTTP 1.定义： 超文本传输协议（HT5TP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。 所有的 WWW 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一种发布和接收 HTML 页面的方法。 HTTP 是一个客户端和服务器端请求和应答的标准（TCP） HTTP 协议（HyperText Transfer Protocol，超文本传输协议）是用于从 WWW 服务器传输超文本到本地浏览器的传输协议。它可以使浏览器更加高效，使网络传输减</description>
+      <description>HTTP超文本传输协议 1.定义： 超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。 所有的 WWW 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一种发布和接收 HTML 页面的方法。 HTTP 是一个客户端和服务器端请求和应答的标准（TCP） HTTP 协议（HyperText Transfer Protocol，超文本传输协议）是用于从 WWW 服务器传输超文本到本地浏览器的传输协议。它可以使浏览器更加</description>
     </item>
     
   </channel>

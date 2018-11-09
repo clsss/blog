@@ -7,13 +7,13 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Collin">
-  <meta name="description" content="微信登录 内嵌二维码 微信官方文档： https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN 1.前端引入引入如下JS文件（支持https）【微信提供】 http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js 2.内嵌二维码(signIn.vue) html: &lt;div id=&quot;login-wx&quot;&gt;&lt;/div&gt; js: 生成二维码 需要new WxLogin({}) 实例 appid：微信AppID redirect_uri：扫码后重定向地址 href：控制二维码样式（https://blog.csdn.net/j_bleach/article/details/77112827） # encodeURIComp">
+  <meta name="description" content="微信登录 微信官方文档 一、引入微信 SDK，前端引入引入如下 JS 文件（支持 https）【微信提供】 http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js 二、生成二维码(signIn.vue) html: &lt;div id=&quot;login-wx&quot;&gt;&lt;/div&gt; js: 生成二维码 需要 new WxLogin({}) 实例 appid：微信 AppID redirect_uri：扫码后重定向地址 href：控制二维码样式 # encodeURIComponent会把 http:// 编码成 http%3A%2F%2F 而 encodeURI却不会 # 这里是使用node生成一段微信二维码样式 // eslint-disable-next-line const WX_CODE_STYLE = &#39;data:text/css;base64,&#39; &#43; &#39;LmltcG93ZXJCb3ggLnFyY29kZSB7d2lkdGg6IDIwMHB4O30NCi5pbXBvd&#39; &#43; &#39;2VyQm94IC50aXRsZSB7ZGlzcGxheTogbm9uZTt9DQoua&#39; &#43; &#39;W1wb3dlckJveCAuaW5mbyB7d2lkdGg6IDIwMHB4O30NCi5zdGF0dXNfaW&#39; &#43; &#39;NvbiB7ZGlzcGxheTpub25lfQ0KLmltcG93ZXJCb3ggLnN0YXR1cyB7dGV4dC1hbGlnbjogY2VudGVyO30=&#39; const WX_APPID =">
   
   <meta property="og:title" content="第三方登录——微信登录" />
-<meta property="og:description" content="微信登录 内嵌二维码 微信官方文档： https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN 1.前端引入引入如下JS文件（支持https）【微信提供】 http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js 2.内嵌二维码(signIn.vue) html: &lt;div id=&quot;login-wx&quot;&gt;&lt;/div&gt; js: 生成二维码 需要new WxLogin({}) 实例 appid：微信AppID redirect_uri：扫码后重定向地址 href：控制二维码样式（https://blog.csdn.net/j_bleach/article/details/77112827） # encodeURIComp" />
+<meta property="og:description" content="微信登录 微信官方文档 一、引入微信 SDK，前端引入引入如下 JS 文件（支持 https）【微信提供】 http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js 二、生成二维码(signIn.vue) html: &lt;div id=&quot;login-wx&quot;&gt;&lt;/div&gt; js: 生成二维码 需要 new WxLogin({}) 实例 appid：微信 AppID redirect_uri：扫码后重定向地址 href：控制二维码样式 # encodeURIComponent会把 http:// 编码成 http%3A%2F%2F 而 encodeURI却不会 # 这里是使用node生成一段微信二维码样式 // eslint-disable-next-line const WX_CODE_STYLE = &#39;data:text/css;base64,&#39; &#43; &#39;LmltcG93ZXJCb3ggLnFyY29kZSB7d2lkdGg6IDIwMHB4O30NCi5pbXBvd&#39; &#43; &#39;2VyQm94IC50aXRsZSB7ZGlzcGxheTogbm9uZTt9DQoua&#39; &#43; &#39;W1wb3dlckJveCAuaW5mbyB7d2lkdGg6IDIwMHB4O30NCi5zdGF0dXNfaW&#39; &#43; &#39;NvbiB7ZGlzcGxheTpub25lfQ0KLmltcG93ZXJCb3ggLnN0YXR1cyB7dGV4dC1hbGlnbjogY2VudGVyO30=&#39; const WX_APPID =" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://clsss.github.io/blog/blogs/2017-8/wx/" /><meta property="article:published_time" content="2017-08-25T23:54:11&#43;08:00"/>
-<meta property="article:modified_time" content="2017-08-25T23:54:11&#43;08:00"/><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_adapter/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_performance/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_useragent/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/" />
+<meta property="article:modified_time" content="2017-08-25T23:54:11&#43;08:00"/><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_performance/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_useragent/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-7/http/" />
 
 
 
@@ -325,7 +325,7 @@
   <ul class="post-meta li-x">
     
       
-        <li><a href="https://clsss.github.io/blog/categories/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 第三方登录 </a></li>
+        <li><a href="https://clsss.github.io/blog/categories/%E5%BE%AE%E4%BF%A1"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 微信 </a></li>
       
     
     
@@ -361,38 +361,36 @@
 
 <h2 id="微信登录">微信登录</h2>
 
-<h4 id="内嵌二维码">内嵌二维码</h4>
+<p><a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN">微信官方文档</a></p>
 
-<p>微信官方文档：
-<a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN">https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN</a></p>
-
-<blockquote>
-<p>1.前端引入引入如下JS文件（支持https）【微信提供】</p>
-</blockquote>
+<h4 id="一-引入微信-sdk-前端引入引入如下-js-文件-支持-https-微信提供">一、引入微信 SDK，前端引入引入如下 JS 文件（支持 https）【微信提供】</h4>
 
 <pre><code>http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js
 </code></pre>
 
-<blockquote>
-<p>2.内嵌二维码(signIn.vue)</p>
-</blockquote>
+<h4 id="二-生成二维码-signin-vue">二、生成二维码(signIn.vue)</h4>
 
-<h5 id="html">html:</h5>
+<ul>
+<li>html:</li>
+</ul>
 
 <pre><code class="language-bash">&lt;div id=&quot;login-wx&quot;&gt;&lt;/div&gt;
 </code></pre>
 
-<h5 id="js">js:</h5>
+<ul>
+<li>js:</li>
+</ul>
 
 <ol>
-<li>生成二维码 需要new WxLogin({}) 实例</li>
-<li>appid：微信AppID</li>
+<li>生成二维码 需要 new WxLogin({}) 实例</li>
+<li>appid：微信 AppID</li>
 <li>redirect_uri：扫码后重定向地址</li>
-<li>href：控制二维码样式（<a href="https://blog.csdn.net/j_bleach/article/details/77112827）">https://blog.csdn.net/j_bleach/article/details/77112827）</a></li>
+<li>href：<a href="https://blog.csdn.net/j_bleach/article/details/77112827">控制二维码样式</a></li>
 </ol>
 
 <pre><code class="language-bash"># encodeURIComponent会把 http:// 编码成  http%3A%2F%2F 而 encodeURI却不会
 
+# 这里是使用node生成一段微信二维码样式
 // eslint-disable-next-line
 const WX_CODE_STYLE = 'data:text/css;base64,'
   + 'LmltcG93ZXJCb3ggLnFyY29kZSB7d2lkdGg6IDIwMHB4O30NCi5pbXBvd'
@@ -409,27 +407,32 @@ getWxCode() {
     const origin = window.location.origin
     const routerName = '/login/thirdParty'
     const next = encodeURIComponent(`${origin}/#${routerName}`)
-    const redirectUri = encodeURIComponent(`http://uc.zhuzi.me/weixin/callback?version=v2&amp;next=${next}`)
-    console.log(redirectUri) 
+    # 扫码后重定向的地址（一般为第三方登录页面）
+    const redirectUri = encodeURIComponent(`http://xxx.test.com/weixin/callback?version=v2&amp;next=${next}`)
+    console.log(redirectUri)
     */
 
     # 核心
     var obj = new WxLogin({
-    // self_redirect: true,
-    id: &quot;login-wx&quot;,
-    appid: WX_APPID,
-    scope: &quot;snsapi_login&quot;,
-    redirect_uri,
-    state: 'v2',
-    style: 'black',
-    href: WX_CODE_STYLE
+      // self_redirect: true,
+      id: &quot;login-wx&quot;,
+      appid: WX_APPID,
+      scope: &quot;snsapi_login&quot;,
+      redirect_uri,
+      state: 'v2',
+      style: 'black',
+      href: WX_CODE_STYLE
     });
 },
-
 </code></pre>
 
-<pre><code class="language-bash">// node.js
-const fs = require('fs');
+<h4 id="三-修改微信二维码样式">三、修改微信二维码样式：</h4>
+
+<ol>
+<li>node.js</li>
+</ol>
+
+<pre><code class="language-bash">const fs = require('fs');
 const path = require('path')
 
 function resolve(dir) {
@@ -447,8 +450,11 @@ function base64Encode(file) {
 console.log(base64Encode('./wx_qrcode.css'))
 </code></pre>
 
-<pre><code class="language-bash">// css
-# 微信样式修改
+<ol>
+<li>css</li>
+</ol>
+
+<pre><code class="language-bash"># 微信样式修改
 .impowerBox .qrcode {width: 120px;border: none}
 .impowerBox .title {display: none;}
 .impowerBox .info {width: 200px;}
@@ -456,13 +462,21 @@ console.log(base64Encode('./wx_qrcode.css'))
 .impowerBox .status {text-align: center;}
 </code></pre>
 
-<blockquote>
-<p>3.前端定义第三方登录路由页面</p>
-</blockquote>
+<h4 id="总结一下">总结一下</h4>
 
-<p>跳转后链接：<a href="http://localhost:8082/#/login/thirdParty?version=v2&amp;next===http%3A%2F%2Flocalhost%3A8082%2F%23%2Flogin%2FthirdParty==&amp;==code=061LzaAZ0lkNb0221LAZ0DtTzZ0LzaAc==&amp;state=v2">http://localhost:8082/#/login/thirdParty?version=v2&amp;next===http%3A%2F%2Flocalhost%3A8082%2F%23%2Flogin%2FthirdParty==&amp;==code=061LzaAZ0lkNb0221LAZ0DtTzZ0LzaAc==&amp;state=v2</a></p>
+<p>流程：</p>
 
-<pre><code>例如：ThirdParty.vue文件, path: '/login/thirdParty'
+<ol>
+<li>使用微信提供的方式，生成微信二维码（包含重定向地址等）</li>
+<li>扫码跳转到重定向地址</li>
+</ol>
+
+<p>跳转后链接(即重定向地址)：</p>
+
+<pre><code class="language-bash">#例如，自己写的第三方平台页面如下
+ThirdParty.vue文件, path: '/login/thirdParty'
+则重定向地址如下
+http://localhost:8082/#/login/thirdParty?version=v2&amp;next===http%3A%2F%2Flocalhost%3A8082%2F%23%2Flogin%2FthirdParty==&amp;==code=061LzaAZ0lkNb0221LAZ0DtTzZ0LzaAc==&amp;state=v2
 
 通过链接上的code换取token，正常登录
 </code></pre>
@@ -479,7 +493,7 @@ console.log(base64Encode('./wx_qrcode.css'))
   <li class="pr-0"><a href="https://clsss.github.io/blog/tags/"><i class="fas fa-tags"></i></a></li>
   <div class="tags-sm">
     
-      <li><a href="https://clsss.github.io/blog/tags/wx" role="button">wx </a></li>
+      <li><a href="https://clsss.github.io/blog/tags/%E5%BE%AE%E4%BF%A1" role="button">微信 </a></li>
       
     
       <li><a href="https://clsss.github.io/blog/tags/web" role="button">web </a></li>
@@ -504,7 +518,7 @@ console.log(base64Encode('./wx_qrcode.css'))
                 <a href=https://clsss.github.io/blog/blogs/2017-7/http/ class="post-meta">Previous
                   <div class="pt-2 pb-5 d-flex">
                     <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                    <span>HTTP</span>
+                    <span>HTTP超文本传输协议</span>
                   </div>
                 </a>
               
@@ -512,10 +526,10 @@ console.log(base64Encode('./wx_qrcode.css'))
             
             <div class="col-md-6 text-right" >
               
-                <a href=https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/ class="post-meta">Next
+                <a href=https://clsss.github.io/blog/blogs/2017-9/m_adapter/ class="post-meta">Next
                   <div class="pt-2 pb-5 flex-reverse">
                     <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                    <span>移动端_禁止竖屏</span>
+                    <span>移动端——响应式布局</span>
                   </div>
                 </a>
               
@@ -589,8 +603,98 @@ console.log(base64Encode('./wx_qrcode.css'))
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%86%85%e5%b5%8c%e4%ba%8c%e7%bb%b4%e7%a0%81">
-												 内嵌二维码
+						 					<a class="nav-link" href="#%e4%b8%80-%e5%bc%95%e5%85%a5%e5%be%ae%e4%bf%a1-sdk-%e5%89%8d%e7%ab%af%e5%bc%95%e5%85%a5%e5%bc%95%e5%85%a5%e5%a6%82%e4%b8%8b-js-%e6%96%87%e4%bb%b6-%e6%94%af%e6%8c%81-https-%e5%be%ae%e4%bf%a1%e6%8f%90%e4%be%9b">
+												 一、引入微信 SDK，前端引入引入如下 JS 文件（支持 https）【微信提供】
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%ba%8c-%e7%94%9f%e6%88%90%e4%ba%8c%e7%bb%b4%e7%a0%81-signin-vue">
+												 二、生成二维码(signIn.vue)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%89-%e4%bf%ae%e6%94%b9%e5%be%ae%e4%bf%a1%e4%ba%8c%e7%bb%b4%e7%a0%81%e6%a0%b7%e5%bc%8f">
+												 三、修改微信二维码样式：
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%80%bb%e7%bb%93%e4%b8%80%e4%b8%8b">
+												 总结一下
 											</a>
 										</li>
 						 

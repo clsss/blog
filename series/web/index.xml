@@ -21,21 +21,12 @@
     </item>
     
     <item>
-      <title>REM</title>
-      <link>https://clsss.github.io/blog/blogs/2017-9/m_adapter/</link>
-      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
-      
-      <guid>https://clsss.github.io/blog/blogs/2017-9/m_adapter/</guid>
-      <description>rem ( font size of root element) html &amp;gt; html{font-size:100px;} //100px对应的就是625%，因为默认的1em=16px，这里设置为100px是为了计算方便，将1rem=100px viewport &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1, maximum-scale=1&amp;quot;&amp;gt; &amp;gt; 在移动开发时我们都会有上面这段代码 viewport :虚拟窗口大小 width: 控制viewport大小 可以自己设定值如320px(很少用) 一般设置为device-width(设备宽度) initial-scale 初始缩放比例 即页面初次加载时的缩放比例默认为1 maximum-scale：用户可缩放到</description>
-    </item>
-    
-    <item>
       <title>移动端_性能优化</title>
       <link>https://clsss.github.io/blog/blogs/2017-9/m_performance/</link>
       <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-9/m_performance/</guid>
-      <description>【scroll】 实际上，Safari 真的用了原生控件来实现，对于有-webkit-overflow-scrolling 的网页，会创建一个 UIScrollView，提供子 layer 给渲染模块使用 IOS（safari）： -webkit-overflow-scrolling: touch; // 弹簧效果 安卓： overflow:auto; // winphone8 和 android4+ bug： 当你给一个元素设置过 position:absolute;或者 position:relative;后再增加-webkit-overflow-scrollin</description>
+      <description>scroll 实际上，Safari 真的用了原生控件来实现，对于有-webkit-overflow-scrolling 的网页，会创建一个 UIScrollView，提供子 layer 给渲染模块使用 IOS（safari）： -webkit-overflow-scrolling: touch; // 弹簧效果 安卓： overflow:auto; // winphone8 和 android4+ bug： 当你给一个元素设置过 position:absolute;或者 position:relative;后再增加-webkit-overflow-scrolling: touch</description>
     </item>
     
     <item>
@@ -44,7 +35,7 @@
       <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-9/m_useragent/</guid>
-      <description>判断机型（Ios/Android） function getBrowserVersion() { var ua = navigator.userAgent || navigator.vendor || window.opera; var uaInfo = { ios: !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/i), android: ua.match(/Android/i) || ua.match(/Linux/i) }; var browserVersion = { isIos: function () { return uaInfo.ios; }, isAndroid: function () { return uaInfo.android; } }; return browserVersion; } 相应的机型发送相应的请求 if (openId) { if (browserVersion.isIos()) { window.webkit.messageHandlers.jumpToVerify.postMessage(&#39;verifyProspr&#39;); } else if (browserVersion.isAndroid()) { android.jumpPage(-9); } } else { goDownload(); } 相应的机型跳转相应的链接 if (browserVersion.isIos()) { location.href = &#39;http://app.appsflyer.com/id873518909?pid=web&amp;amp;c=index&#39;; } else if (browserVersion.isAndroid()) { location.href = &#39;http://app.appsflyer.com/com.luxy?pid=web&amp;amp;c=index&#39;; } 通知客户端修改右上角 feedback 图标 if (browserVersion.isIos()) { window.webkit.messageHandlers.JSMessage_shouldShowFeedbackButton.postMessage(); } else if (browserVersion.isAndroid()) { android.forceShowFeedbackOnTitleBar(); } 包括电脑跳转链接 $(&#39;.btn&#39;).click(function(){ var ua = navigator.userAgent.toLowerCase(); var userAgent = navigator.userAgent var t = Date.now(); var info = window.location.search.substr(1); var info2 = window.location.search.substr(1); if (/ipad|iphone|mac/i.test(ua)){ if (userAgent.indexOf(&amp;quot;Safari&amp;quot;) &amp;gt; -1) { window.location = &amp;quot;OMGmart://&amp;quot; + info; setTimeout(&amp;quot;window.location.href = &#39; &#39;,3000); }else{ alert(&#39;</description>
+      <description>判断机型（Ios/Android） function getBrowserVersion() { var ua = navigator.userAgent || navigator.vendor || window.opera; var uaInfo = { ios: !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/i), android: ua.match(/Android/i) || ua.match(/Linux/i) }; var browserVersion = { isIos: function () { return uaInfo.ios; }, isAndroid: function () { return uaInfo.android; } }; return browserVersion; } 相应的机型发送相应的请求 if (openId) { if (browserVersion.isIos()) { window.webkit.messageHandlers.jumpToVerify.postMessage(&#39;verifyProspr&#39;); } else if (browserVersion.isAndroid()) { android.jumpPage(-9); } } else { goDownload(); } 相应的机型跳转相应的链接 if (browserVersion.isIos()) { location.href = &#39;http://app.appsflyer.com/id873518909?pid=web&amp;amp;c=index&#39;; } else if (browserVersion.isAndroid()) { location.href = &#39;http://app.appsflyer.com/com.luxy?pid=web&amp;amp;c=index&#39;; } 通知客户端修改右上角 feedback 图标 if (browserVersion.isIos()) { window.webkit.messageHandlers.JSMessage_shouldShowFeedbackButton.postMessage(); } else if (browserVersion.isAndroid()) { android.forceShowFeedbackOnTitleBar(); } 包括电脑跳转链接 $(&#39;.btn&#39;).click(function(){ var ua = navigator.userAgent.toLowerCase(); var userAgent = navigator.userAgent var t = Date.now(); var info = window.location.search.substr(1); var info2 = window.location.search.substr(1); if (/ipad|iphone|mac/i.test(ua)){ if (userAgent.indexOf(&amp;quot;Safari&amp;quot;) &amp;gt; -1) { window.location = &amp;quot;OMGmart://&amp;quot; + info; setTimeout(&amp;quot;window.location.href = &#39; &#39;,3000); } else { alert</description>
     </item>
     
     <item>
@@ -53,7 +44,7 @@
       <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/</guid>
-      <description>禁止竖屏 (function rotate(){ var orientation=window.orientation; //当屏幕方向改变时 if(orientation==90||orientation==-90){ document.body.style.display=&amp;lsquo;none&amp;rsquo;; alert(&amp;ldquo;请使用竖屏访问！&amp;rdquo;); } window.onorientationchange=function(){ document.body.style.display=&amp;ldquo;block&amp;rdquo;; rotate(); }; })() // 禁止选择 &amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; .user_select_none { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5); -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } &amp;lt;/style&amp;gt; ```</description>
+      <description>禁止竖屏 (function rotate(){ var orientation=window.orientation; //当屏幕方向改变时 if(orientation==90||orientation==-90){ document.body.style.display=&#39;none&#39;; alert(&amp;quot;请使用竖屏访问！&amp;quot;); } window.onorientationchange=function(){ document.body.style.display=&amp;quot;block&amp;quot;; rotate(); }; })() 禁止选择 &amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt; .user_select_none { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5); -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } &amp;lt;/style&amp;gt;</description>
     </item>
     
     <item>
@@ -62,25 +53,16 @@
       <pubDate>Fri, 25 Aug 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-8/wx/</guid>
-      <description>微信登录 内嵌二维码 微信官方文档： https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;amp;t=resource/res_list&amp;amp;verify=1&amp;amp;id=open1419316505&amp;amp;token=&amp;amp;lang=zh_CN 1.前端引入引入如下JS文件（支持https）【微信提供】 http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js 2.内嵌二维码(signIn.vue) html: &amp;lt;div id=&amp;quot;login-wx&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; js: 生成二维码 需要new WxLogin({}) 实例 appid：微信AppID redirect_uri：扫码后重定向地址 href：控制二维码样式（https://blog.csdn.net/j_bleach/article/details/77112827） # encodeURIComp</description>
+      <description>微信登录 微信官方文档 一、引入微信 SDK，前端引入引入如下 JS 文件（支持 https）【微信提供】 http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js 二、生成二维码(signIn.vue) html: &amp;lt;div id=&amp;quot;login-wx&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; js: 生成二维码 需要 new WxLogin({}) 实例 appid：微信 AppID redirect_uri：扫码后重定向地址 href：控制二维码样式 # encodeURIComponent会把 http:// 编码成 http%3A%2F%2F 而 encodeURI却不会 # 这里是使用node生成一段微信二维码样式 // eslint-disable-next-line const WX_CODE_STYLE = &#39;data:text/css;base64,&#39; + &#39;LmltcG93ZXJCb3ggLnFyY29kZSB7d2lkdGg6IDIwMHB4O30NCi5pbXBvd&#39; + &#39;2VyQm94IC50aXRsZSB7ZGlzcGxheTogbm9uZTt9DQoua&#39; + &#39;W1wb3dlckJveCAuaW5mbyB7d2lkdGg6IDIwMHB4O30NCi5zdGF0dXNfaW&#39; + &#39;NvbiB7ZGlzcGxheTpub25lfQ0KLmltcG93ZXJCb3ggLnN0YXR1cyB7dGV4dC1hbGlnbjogY2VudGVyO30=&#39; const WX_APPID =</description>
     </item>
     
     <item>
-      <title>HTTP</title>
+      <title>HTTP超文本传输协议</title>
       <link>https://clsss.github.io/blog/blogs/2017-7/http/</link>
       <pubDate>Tue, 25 Jul 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-7/http/</guid>
-      <description>1.HTTP 1.定义： 超文本传输协议（HT5TP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。 所有的 WWW 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一种发布和接收 HTML 页面的方法。 HTTP 是一个客户端和服务器端请求和应答的标准（TCP） HTTP 协议（HyperText Transfer Protocol，超文本传输协议）是用于从 WWW 服务器传输超文本到本地浏览器的传输协议。它可以使浏览器更加高效，使网络传输减</description>
-    </item>
-    
-    <item>
-      <title>v-distpicker城市插件</title>
-      <link>https://clsss.github.io/blog/blogs/2017-6/v-distpicker/</link>
-      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
-      
-      <guid>https://clsss.github.io/blog/blogs/2017-6/v-distpicker/</guid>
-      <description>千万注意: :province=&amp;lsquo;==province==&amp;rsquo;,中绑定的省, 不能通过@province=&amp;ldquo;==selectProvince==&amp;ldquo;方法直接修改(市和区同理). 用于显示与用于绑定的值是2个不同的值 方式1：无默认选中的城市 &amp;lt;!-- html --&amp;gt; &amp;lt;v-distpicker @province=&amp;quot;selectProvince&amp;quot; @city=&amp;quot;selectCity&amp;quot; @area=&amp;quot;selectArea&amp;quot;&amp;gt;&amp;lt;/v-distpicker&amp;gt; &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;{{ select }}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;!-- js --&amp;gt; export default { components: { VDistpicker }, data() { return { showCode: false, select: { province: &#39;&#39;, city: &#39;&#39;, area: &#39;&#39; }, } }, methods: { selectProvince(value) { this.select.province = value console.log(value); }, selectCity(value) { this.select.city = value console.log(value); }, selectArea(value) { this.select.area = value console.log(value); }, }, }</description>
+      <description>HTTP超文本传输协议 1.定义： 超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。 所有的 WWW 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一种发布和接收 HTML 页面的方法。 HTTP 是一个客户端和服务器端请求和应答的标准（TCP） HTTP 协议（HyperText Transfer Protocol，超文本传输协议）是用于从 WWW 服务器传输超文本到本地浏览器的传输协议。它可以使浏览器更加</description>
     </item>
     
     <item>
@@ -89,7 +71,7 @@
       <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-6/module/</guid>
-      <description>1.为什么前端需要模块化 随着前端的不断发展，前端已经不仅仅是一个简单依据需求完成网页开发的过程，如何提高网页开发效率，提高代码复用率，降低块与块之间的耦合性是我们需要思考的问题，而前端的组件化、模块化正是解决这样的问题。 2.1 什么是前端模块化 模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成一个个具有特定功能的的模块 模块可以通过传递参数的不</description>
+      <description>一.为什么前端需要模块化 随着前端的不断发展，前端已经不仅仅是一个简单依据需求完成网页开发的过程，如何提高网页开发效率，提高代码复用率，降低块与块之间的耦合性是我们需要思考的问题，而前端的组件化、模块化正是解决这样的问题。 二.模块化与组件化 1. 什么是前端模块化 模块化侧重的功能的封装，主要是针对Javascript代码，隔离、组织复制的javascript代码，将它封装成一个个具有特定功能的的模块 模块可</description>
     </item>
     
     <item>
@@ -98,7 +80,7 @@
       <pubDate>Thu, 25 May 2017 22:13:01 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-5/pm2/</guid>
-      <description>pm2是什么？ pm2是一个进程管理工具,可以用它来管理你的node进程，并查看node进程的状态，当然也支持性能监控，进程守护，负载均衡等功能。 官网：http://pm2.keymetrics.io/docs/usage/quick-start/ 需要小心.ssh和一些翻墙问题 安装（全局） npm install -g pm2 启动进程/应用 pm2 start 【bin/www】 pm2 start app.js --name wb123 pm2 start bin/www --watch // 也可以通过配置文件监听 { &amp;quot;watch&amp;quot;: [&amp;quot;server&amp;quot;, &amp;quot;client&amp;quot;], //要监视的文件 &amp;quot;ignore_watch&amp;quot;</description>
+      <description>pm2 是什么？ pm2 是一个带有负载均衡功能的 Node 应用的进程管理器.当然也支持性能监控，进程守护，负载均衡等功能。当你要把你的独立代码利用到全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载， PM2 是完美的。它非常适合 IaaS 结构，但不要把它用于 PaaS 方案（随后将开发 Paas 的解决方案）. 官网：http://pm2.keymetrics.io/docs/usage/quick-start/ 需要小心.ssh 和一些翻墙问题</description>
     </item>
     
     <item>
@@ -107,7 +89,7 @@
       <pubDate>Tue, 25 Apr 2017 20:54:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-4/gulp/</guid>
-      <description>Gulp是什么？ Gulp</description>
+      <description>Gulp 是什么？ Gulp 用自动化构建工具增强你的工作流程！ 1.易于使用: 通过代码优于配置的策略，Gulp 让简单的任务简单，复杂的任务可管理。 2.构建快速: 利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。 3.插件高质: Gulp 严格的插件指南确保插件如你期望的那样简洁高质得工作。 4.易于学习: 通过最少的 API，掌握 Gulp 毫不费力，构建工作尽在掌握：如同一系列流管道。 中文文档地址. var gulp = require(&#39;gulp&#39;); var less = require(&#39;gulp-less&#39;); var browserSync = require(&#39;browser-sync&#39;).create(); // 静态服务器 var</description>
     </item>
     
   </channel>

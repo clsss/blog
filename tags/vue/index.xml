@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>mongoDB环境搭建（window），服务器端</title>
+      <title>mongoDB环境搭建，服务器端</title>
       <link>https://clsss.github.io/blog/blogs/2018-6/mongodb/</link>
       <pubDate>Wed, 20 Jun 2018 20:24:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2018-6/mongodb/</guid>
-      <description>一. MongoDB安装（windows）与环境配置 优点： 高可扩展性 分布式存储 低成本 结构灵活 安装注意事项 需要db存储和日志存储文件夹 添加服务，配置环境变量，启动mongod 启动方式： 启动后返回链接的端口 通过命令行传参启动： ``` &amp;lt;!&amp;ndash; dbpath：指定db存储到哪里 &amp;ndash;journal：32位服务器——指定使用journal输出日志 默认存储引擎不能使用： &amp;ndash;&amp;gt; mongod -dbpath F:\mongoDB\data &amp;ndash;journal &amp;ndash;storageEngine=mmapv1 ``` 通过配置文件启动： &amp;lt;!-- 新建的mon</description>
+      <description>一. MongoDB 安装（windows）与环境配置 优点： 高可扩展性 分布式存储 低成本 结构灵活 安装注意事项 需要 db 存储和日志存储文件夹 添加服务，配置环境变量，启动 mongod 启动方式： 启动后返回链接的端口 通过命令行传参启动： &amp;lt;!-- 1. dbpath：指定db存储到哪里 2. --journal：32位服务器——指定使用journal输出日志 3. 默认存储引擎不能使用： --&amp;gt; mongod -dbpath F:\mongoDB\data --journal --storageEngine=mmapv1 通过配置文件启动： &amp;lt;!-- 新建的mongo.conf: --&amp;gt; #数据库路径 dbpath=F:\mongoDB\data</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2017-6/v-distpicker/</guid>
-      <description>千万注意: :province=&amp;lsquo;==province==&amp;rsquo;,中绑定的省, 不能通过@province=&amp;ldquo;==selectProvince==&amp;ldquo;方法直接修改(市和区同理). 用于显示与用于绑定的值是2个不同的值 方式1：无默认选中的城市 &amp;lt;!-- html --&amp;gt; &amp;lt;v-distpicker @province=&amp;quot;selectProvince&amp;quot; @city=&amp;quot;selectCity&amp;quot; @area=&amp;quot;selectArea&amp;quot;&amp;gt;&amp;lt;/v-distpicker&amp;gt; &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;{{ select }}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;!-- js --&amp;gt; export default { components: { VDistpicker }, data() { return { showCode: false, select: { province: &#39;&#39;, city: &#39;&#39;, area: &#39;&#39; }, } }, methods: { selectProvince(value) { this.select.province = value console.log(value); }, selectCity(value) { this.select.city = value console.log(value); }, selectArea(value) { this.select.area = value console.log(value); }, }, }</description>
+      <description>v-distpicker城市插件 官网 安装 npm install v-distpicker --save 或者 yarn add v-distpicker --save 使用方式 import VDistpicker from &#39;v-distpicker&#39; Vue.component(&#39;v-distpicker&#39;, VDistpicker) 千万注意: :province=&amp;lsquo;==province==&amp;rsquo;,中绑定的省, 不能通过@province=&amp;ldquo;==selectProvince==&amp;ldquo;方法直接修改(市和区同理). 用于显示与用于绑定的值是2个不同的值 Demo 方式1：无默认选中的城市 &amp;lt;!-- html --&amp;gt; &amp;lt;v-distpicker @province=&amp;quot;selectProvince&amp;quot; @city=&amp;quot;selectCity&amp;quot; @area=&amp;quot;selectArea&amp;quot;&amp;gt;&amp;lt;/v-distpicker&amp;gt; &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;{{ select }}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; &amp;lt;!-- js --&amp;gt; export default { components: { VDistpicker }, data()</description>
     </item>
     
   </channel>

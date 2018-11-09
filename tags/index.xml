@@ -21,11 +21,38 @@
     </item>
     
     <item>
+      <title>Amd</title>
+      <link>https://clsss.github.io/blog/tags/amd/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/tags/amd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Blog</title>
       <link>https://clsss.github.io/blog/tags/blog/</link>
       <pubDate>Wed, 20 Jun 2018 20:24:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cmd</title>
+      <link>https://clsss.github.io/blog/tags/cmd/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/tags/cmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Commonjs</title>
+      <link>https://clsss.github.io/blog/tags/commonjs/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/tags/commonjs/</guid>
       <description></description>
     </item>
     
@@ -53,6 +80,15 @@
       <pubDate>Sun, 10 Jun 2018 20:42:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Es6</title>
+      <link>https://clsss.github.io/blog/tags/es6/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/tags/es6/</guid>
       <description></description>
     </item>
     
@@ -116,15 +152,6 @@
       <pubDate>Wed, 25 Apr 2018 20:54:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/tags/mocha/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Module</title>
-      <link>https://clsss.github.io/blog/tags/module/</link>
-      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
-      
-      <guid>https://clsss.github.io/blog/tags/module/</guid>
       <description></description>
     </item>
     
@@ -228,11 +255,11 @@
     </item>
     
     <item>
-      <title>Wx</title>
-      <link>https://clsss.github.io/blog/tags/wx/</link>
+      <title>微信</title>
+      <link>https://clsss.github.io/blog/tags/%E5%BE%AE%E4%BF%A1/</link>
       <pubDate>Fri, 25 Aug 2017 23:12:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/tags/wx/</guid>
+      <guid>https://clsss.github.io/blog/tags/%E5%BE%AE%E4%BF%A1/</guid>
       <description></description>
     </item>
     
@@ -242,6 +269,15 @@
       <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/tags/%E6%8F%92%E4%BB%B6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>模块化</title>
+      <link>https://clsss.github.io/blog/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/</guid>
       <description></description>
     </item>
     
