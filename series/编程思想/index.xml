@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程思想 on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/series/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</link>
+    <description>Recent content in 编程思想 on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Sun, 15 Jul 2018 20:42:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/series/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>编程思想-函数式编程</title>
+      <link>https://clsss.github.io/blog/blogs/2018-7/programmingideas/</link>
+      <pubDate>Sun, 15 Jul 2018 20:42:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-7/programmingideas/</guid>
+      <description>编程的思想 函数式编程,所属于声明式编程 面向对象编程(OOP)通过封装变化使得代码更易理解。 函数式编程(FP)通过最小化变化使得代码更易理解。 &amp;ndash; Michacel Feathers（Twitter） 设计原则： 可扩展性&amp;ndash;添加新功能是否需要修改以前的代码？ 易模块化&amp;ndash;修改了一个模块，另一个模块是否会受到影响？ 可重用性&amp;ndash;是否有很多重复的代码？ 可测性&amp;ndash;给函数添加单元测试是否让你难</description>
+    </item>
+    
+  </channel>
+</rss>
