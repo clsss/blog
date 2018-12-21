@@ -39,12 +39,12 @@
     </item>
     
     <item>
-      <title>移动端_Web如何调起App</title>
+      <title>jsonp跨域原理</title>
       <link>https://clsss.github.io/blog/blogs/2018-8/cross_domain/</link>
       <pubDate>Sat, 25 Aug 2018 23:12:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2018-8/cross_domain/</guid>
-      <description>一. 跨域: 浏览器对于 javascript 的同源策略的限制,例如 a.cn 下面的 js 不能调用 b.cn 中的 js,对象或数据(因为 a.cn 和 b.cn 是不同域),所以跨域就出现了 同源策略: 请求的 url 地址,必须与浏览器上的 url 地址处于同域上,也就是域名,端口,协议相同. 比如:我在本地上的域名是 study.cn,请求另外一个域名一段数据 1.1 jsonp 例子 # page1： &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; var message = function(data) { alert(data[1].title); }; &amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://web.cn/js/message.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; # message.js message([ {&amp;quot;id&amp;quot;:&amp;quot;1&amp;quot;, &amp;quot;title&amp;quot;:&amp;quot;aaa&amp;quot;}, {&amp;quot;id&amp;quot;:&amp;quot;2&amp;quot;, &amp;quot;title&amp;quot;:&amp;quot;bbb&amp;quot;}, ]);</description>
+      <description>一. 跨域: 浏览器对于 javascript 的同源策略的限制,例如 a.cn 下面的 js 不能调用 b.cn 中的 js,对象或数据(因为 a.cn 和 b.cn 是不同域),所以跨域就出现了 同源策略: 请求的 url 地址,必须与浏览器上的 url 地址处于同域上,也就是域名,端口,协议相同. 比如:我在本地上的域名是 study.cn,请求另外一个域名一段数据 JSONP的优点是：它不像XMLHttpRequest对象实现的Ajax请求那样受到同源策略的限制；它的兼容性更好，在更加古</description>
     </item>
     
     <item>
