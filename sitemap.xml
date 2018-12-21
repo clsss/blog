@@ -8,7 +8,22 @@
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/blogs/2018-7/programmingideas/</loc>
+    <loc>https://clsss.github.io/blog/blogs/2017-9/m_communicate_app/</loc>
+    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-10/restful/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-8/cross_domain/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-7/programming_ideas/</loc>
     <lastmod>2018-07-15T20:42:11+08:00</lastmod>
   </url>
   
@@ -153,7 +168,7 @@
   
   <url>
     <loc>https://clsss.github.io/blog/blogs/</loc>
-    <lastmod>2018-07-15T20:42:11+08:00</lastmod>
+    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -309,7 +324,7 @@
   
   <url>
     <loc>https://clsss.github.io/blog/tags/mobile/</loc>
-    <lastmod>2017-09-25T23:54:11+08:00</lastmod>
+    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -321,7 +336,7 @@
   
   <url>
     <loc>https://clsss.github.io/blog/categories/mobile/</loc>
-    <lastmod>2017-09-25T23:54:11+08:00</lastmod>
+    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -376,6 +391,18 @@
   <url>
     <loc>https://clsss.github.io/blog/tags/puppeteer/</loc>
     <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/restful/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/restful/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -453,13 +480,13 @@
   
   <url>
     <loc>https://clsss.github.io/blog/tags/web/</loc>
-    <lastmod>2018-04-25T20:54:11+08:00</lastmod>
+    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://clsss.github.io/blog/series/web/</loc>
-    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -556,6 +583,18 @@
   <url>
     <loc>https://clsss.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</loc>
     <lastmod>2018-07-15T20:42:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/%E8%B7%A8%E5%9F%9F/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/%E8%B7%A8%E5%9F%9F/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   

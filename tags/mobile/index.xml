@@ -6,10 +6,19 @@
     <description>Recent content in Mobile on Collin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Mon, 25 Sep 2017 23:12:11 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 25 Sep 2018 23:12:11 +0800</lastBuildDate>
     
 	<atom:link href="https://clsss.github.io/blog/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>移动端_Web如何调起App</title>
+      <link>https://clsss.github.io/blog/blogs/2017-9/m_communicate_app/</link>
+      <pubDate>Tue, 25 Sep 2018 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-9/m_communicate_app/</guid>
+      <description>一. 判断机型（Ios/Android） /* * 设备检测 * @return {{isIos:Function, isAndroid:Function}} */ export function getBrowserVersion() { const ua = navigator.userAgent || navigator.vendor || window.opera const uaInfo = { ios: /\(i[^;]+;( U;)? CPU.+Mac OS X/i.test(ua), android: /Android/i.test(ua) || /Linux/i.test(ua) } return { isIos() { return uaInfo.ios }, isAndroid() { return uaInfo.android } } } 二. 分类套路 1. Android 安卓有 2 种常用方式： a.自定义 Scheme b.Chrome Intent 自定义 Scheme scheme 协议在 app 注册之后，与前端进行统一约定，通过 H5 页面访问某个具体的协议地址，即可打开对应的 app 客户端页面。 1. 通过a标签打开，点击标签是启动 &amp;lt;a href=&amp;quot;m://app.com?openid=1</description>
+    </item>
     
     <item>
       <title>移动端_性能优化</title>

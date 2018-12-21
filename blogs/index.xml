@@ -6,17 +6,44 @@
     <description>Recent content in Blogs on Collin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Sun, 15 Jul 2018 20:42:11 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 25 Sep 2018 23:12:11 +0800</lastBuildDate>
     
 	<atom:link href="https://clsss.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>移动端_Web如何调起App</title>
+      <link>https://clsss.github.io/blog/blogs/2017-9/m_communicate_app/</link>
+      <pubDate>Tue, 25 Sep 2018 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-9/m_communicate_app/</guid>
+      <description>一. 判断机型（Ios/Android） /* * 设备检测 * @return {{isIos:Function, isAndroid:Function}} */ export function getBrowserVersion() { const ua = navigator.userAgent || navigator.vendor || window.opera const uaInfo = { ios: /\(i[^;]+;( U;)? CPU.+Mac OS X/i.test(ua), android: /Android/i.test(ua) || /Linux/i.test(ua) } return { isIos() { return uaInfo.ios }, isAndroid() { return uaInfo.android } } } 二. 分类套路 1. Android 安卓有 2 种常用方式： a.自定义 Scheme b.Chrome Intent 自定义 Scheme scheme 协议在 app 注册之后，与前端进行统一约定，通过 H5 页面访问某个具体的协议地址，即可打开对应的 app 客户端页面。 1. 通过a标签打开，点击标签是启动 &amp;lt;a href=&amp;quot;m://app.com?openid=1</description>
+    </item>
+    
+    <item>
+      <title>RESTful</title>
+      <link>https://clsss.github.io/blog/blogs/2018-10/restful/</link>
+      <pubDate>Sat, 25 Aug 2018 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-10/restful/</guid>
+      <description>RESTful API 这里我就直接把阮一峰老师的文章 copy 过来了。 引用：阮一峰 RESTful API 最佳实践 RESTful 是什么？ RESTful 是目前最流行的 API 设计规范，用于 Web 数据接口的设计。 它的大原则容易把握，但是细节不容易做对。本文总结 RESTful 的设计细节，介绍如何设计出易于理解和使用的 API。 RESTful 的核心思想就是，客户端发出的数据操作指令都是&amp;rdquo;动词 + 宾语&amp;rdquo;的结构。比如，GET /articles 这个命令，GET 是动词，/articles 是宾语。 一、URL 设计 1.1</description>
+    </item>
+    
+    <item>
+      <title>移动端_Web如何调起App</title>
+      <link>https://clsss.github.io/blog/blogs/2018-8/cross_domain/</link>
+      <pubDate>Sat, 25 Aug 2018 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-8/cross_domain/</guid>
+      <description>一. 跨域: 浏览器对于 javascript 的同源策略的限制,例如 a.cn 下面的 js 不能调用 b.cn 中的 js,对象或数据(因为 a.cn 和 b.cn 是不同域),所以跨域就出现了 同源策略: 请求的 url 地址,必须与浏览器上的 url 地址处于同域上,也就是域名,端口,协议相同. 比如:我在本地上的域名是 study.cn,请求另外一个域名一段数据 1.1 jsonp 例子 # page1： &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; var message = function(data) { alert(data[1].title); }; &amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://web.cn/js/message.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; # message.js message([ {&amp;quot;id&amp;quot;:&amp;quot;1&amp;quot;, &amp;quot;title&amp;quot;:&amp;quot;aaa&amp;quot;}, {&amp;quot;id&amp;quot;:&amp;quot;2&amp;quot;, &amp;quot;title&amp;quot;:&amp;quot;bbb&amp;quot;}, ]);</description>
+    </item>
+    
+    <item>
       <title>编程思想-函数式编程</title>
-      <link>https://clsss.github.io/blog/blogs/2018-7/programmingideas/</link>
+      <link>https://clsss.github.io/blog/blogs/2018-7/programming_ideas/</link>
       <pubDate>Sun, 15 Jul 2018 20:42:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blogs/2018-7/programmingideas/</guid>
+      <guid>https://clsss.github.io/blog/blogs/2018-7/programming_ideas/</guid>
       <description>编程的思想 函数式编程,所属于声明式编程 面向对象编程(OOP)通过封装变化使得代码更易理解。 函数式编程(FP)通过最小化变化使得代码更易理解。 &amp;ndash; Michacel Feathers（Twitter） 设计原则： 可扩展性&amp;ndash;添加新功能是否需要修改以前的代码？ 易模块化&amp;ndash;修改了一个模块，另一个模块是否会受到影响？ 可重用性&amp;ndash;是否有很多重复的代码？ 可测性&amp;ndash;给函数添加单元测试是否让你难</description>
     </item>
     
