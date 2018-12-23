@@ -7,10 +7,10 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Collin">
-  <meta name="description" content="一. MongoDB 安装（windows）与环境配置 优点： 高可扩展性 分布式存储 低成本 结构灵活 安装注意事项 需要 db 存储和日志存储文件夹 添加服务，配置环境变量，启动 mongod 启动方式： 启动后返回链接的端口 通过命令行传参启动： &lt;!-- 1. dbpath：指定db存储到哪里 2. --journal：32位服务器——指定使用journal输出日志 3. 默认存储引擎不能使用： --&gt; mongod -dbpath F:\mongoDB\data --journal --storageEngine=mmapv1 通过配置文件启动： &lt;!-- 新建的mongo.conf: --&gt; #数据库路径 dbpath=F:\mongoDB\data">
+  <meta name="description" content="一. MongoDB 介绍 MongoDB 是一个基于分布式文件存储的数据库。由 C&#43;&#43; 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。 优点： 高可扩展性 分布式存储 低成本 结构灵活 二. 使用 mongoDB 1. 安装 安装方式 # 执行后会返回安装后的路径 which mongod 2. 启动方式： 安装注意事项 需要 db 存储和日志存储文件夹 添加服务，配置环境变量，启动 mongod 方式 1： 打开 cmd 输入 services.msc 查">
   
   <meta property="og:title" content="mongoDB环境搭建，服务器端" />
-<meta property="og:description" content="一. MongoDB 安装（windows）与环境配置 优点： 高可扩展性 分布式存储 低成本 结构灵活 安装注意事项 需要 db 存储和日志存储文件夹 添加服务，配置环境变量，启动 mongod 启动方式： 启动后返回链接的端口 通过命令行传参启动： &lt;!-- 1. dbpath：指定db存储到哪里 2. --journal：32位服务器——指定使用journal输出日志 3. 默认存储引擎不能使用： --&gt; mongod -dbpath F:\mongoDB\data --journal --storageEngine=mmapv1 通过配置文件启动： &lt;!-- 新建的mongo.conf: --&gt; #数据库路径 dbpath=F:\mongoDB\data" />
+<meta property="og:description" content="一. MongoDB 介绍 MongoDB 是一个基于分布式文件存储的数据库。由 C&#43;&#43; 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。 优点： 高可扩展性 分布式存储 低成本 结构灵活 二. 使用 mongoDB 1. 安装 安装方式 # 执行后会返回安装后的路径 which mongod 2. 启动方式： 安装注意事项 需要 db 存储和日志存储文件夹 添加服务，配置环境变量，启动 mongod 方式 1： 打开 cmd 输入 services.msc 查" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://clsss.github.io/blog/blogs/2018-6/mongodb/" /><meta property="article:published_time" content="2018-06-20T20:24:11&#43;08:00"/>
 <meta property="article:modified_time" content="2018-06-20T20:24:11&#43;08:00"/>
@@ -344,7 +344,7 @@
 
     
       <li class="middot"></li>
-      <li>3 minutes read</li>
+      <li>4 minutes read</li>
     
   </ul>
   
@@ -355,7 +355,13 @@
           <div class="post-content markdown">
             
 
-<h2 id="一-mongodb-安装-windows-与环境配置">一. MongoDB 安装（windows）与环境配置</h2>
+<h2 id="一-mongodb-介绍">一. MongoDB 介绍</h2>
+
+<blockquote>
+<p>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。</p>
+
+<p>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
+</blockquote>
 
 <h4 id="优点">优点：</h4>
 
@@ -366,31 +372,52 @@
 <li>结构灵活</li>
 </ol>
 
-<h4 id="安装注意事项">安装注意事项</h4>
+<h2 id="二-使用-mongodb">二. 使用 mongoDB</h2>
 
-<p>需要 db 存储和日志存储文件夹
-添加服务，配置环境变量，启动 mongod</p>
+<h4 id="1-安装">1. 安装</h4>
 
-<h4 id="启动方式">启动方式：</h4>
+<p><a href="http://www.runoob.com/mongodb/mongodb-window-install.html">安装方式</a></p>
+
+<pre><code class="language-bash"># 执行后会返回安装后的路径
+which mongod
+</code></pre>
+
+<h4 id="2-启动方式">2. 启动方式：</h4>
 
 <blockquote>
-<p>启动后返回链接的端口</p>
+<p>安装注意事项</p>
+
+<ul>
+<li>需要 db 存储和日志存储文件夹</li>
+<li>添加服务，配置环境变量，启动 mongod</li>
+</ul>
 </blockquote>
 
 <ol>
-<li>通过命令行传参启动：</li>
+<li><p>方式 1： 打开 cmd 输入 services.msc 查看服务可以看到 MongoDB 服务
+推荐将启动方式设置为手动.等什么时候用数据库的时候再手动通过 windows 服务,或者命令行的形式进行启动.</p></li>
+
+<li><p>方式 2： 以管理员身份打开命令提示符,进入 C:\MongoDB\bin,然后输入下面的命令</p></li>
 </ol>
 
 <pre><code class="language-bash">&lt;!--
-	1. dbpath：指定db存储到哪里
-	2. --journal：32位服务器——指定使用journal输出日志
-	3. 默认存储引擎不能使用：
+1. dbpath：指定db存储到哪里
+2. --journal：32位服务器——指定使用journal输出日志
+3. 默认存储引擎不能使用：
 --&gt;
 mongod -dbpath F:\mongoDB\data --journal --storageEngine=mmapv1
 </code></pre>
 
+<pre><code class="language-bash">sc delete MongoDB
+
+mongod --dbpath &quot;F:\mongoDB\data\db&quot; --logpath &quot;F:\mongoDB\logs\mongodb.log&quot; --install --serviceName &quot;MongoDB&quot;
+
+net start MongoDB
+
+</code></pre>
+
 <ol>
-<li>通过配置文件启动：</li>
+<li>方式 3：通过配置文件启动</li>
 </ol>
 
 <pre><code class="language-bash">&lt;!-- 新建的mongo.conf: --&gt;
@@ -417,10 +444,11 @@ mongod --config f:\mongoDB\etc\mongodb.conf
 &lt;!-- 本地服务添加 --&gt;
 mongod --config f:\mongoDB\etc\mongo\mongodb.conf -- install --serviceName &quot;MongoDB&quot;
 
-&lt;!-- 为了方便，配置环境变量 --&gt;
 </code></pre>
 
-<h2 id="安装-mongodbvue">安装 mongodbVUE</h2>
+<h2 id="三-数据库可视化工具">三. 数据库可视化工具</h2>
+
+<h3 id="1-安装-mongodbvue">1. 安装 mongodbVUE</h3>
 
 <blockquote>
 <p>教程：<a href="https://www.cnblogs.com/xll1025/p/6443786.html">https://www.cnblogs.com/xll1025/p/6443786.html</a></p>
@@ -444,33 +472,19 @@ WiredTiger：仅支持64位MongoDB
 MongoDB两种引擎可以互相切换，我们可以在创建服务的时候指定引擎类型。
 </code></pre>
 
-<h2 id="服务器环境">服务器环境</h2>
+<h3 id="2-安装-studio-3t-数据库可视化工具">2. 安装 Studio 3T（数据库可视化工具）</h3>
 
-<ol>
-<li>登录阿里云服务器 shell</li>
-</ol>
+<blockquote>
+<p>官网：<a href="https://robomongo.org/">https://robomongo.org/</a></p>
+</blockquote>
 
-<pre><code class="language-bash">// 127.0.0.1替换成服务器地址
-ssh root@127.0.0.1
-password: xxx
+<h3 id="扩展">扩展</h3>
 
-cd /
-ls
-</code></pre>
+<p>1 .建立一些软连接(就像本地的环境配置)</p>
 
-<ol>
-<li>向服务器发送 mongodb 安装包,文件（文件名）/ 文件夹（/r）</li>
-</ol>
+<pre><code class="language-bash">ln -s /mongodb/mongdb-xx-xx/bin/mongod /usr/local/bin/mongod
 
-<pre><code class="language-bash">scp /cl_tool/mongodb-xxx-xx.tgz root@127.0.0.1:/【传送位置(根目录)】
-password: xxx
-</code></pre>
-
-<ol>
-<li>在服务器端解压</li>
-</ol>
-
-<pre><code class="language-bash">tar -zxvf mongodb-xxx-xx.tgz
+mongod -f(不同于windows的--config) /mongodb/etc/mongodb.conf
 </code></pre>
 
 <ol>
@@ -491,18 +505,132 @@ touch mongo.conf
 vi mongo.conf (编辑mongo.conf)
 </code></pre>
 
+<h2 id="四-koa2-测试代码">四. koa2 测试代码</h2>
+
 <ol>
-<li>建立一些软连接(就像本地的环境配置)</li>
+<li>app.js</li>
 </ol>
 
-<pre><code class="language-bash">ln -s /mongodb/mongdb-xx-xx/bin/mongod /usr/local/bin/mongod
+<pre><code class="language-bash">// MongoDB
+const mongoose = require('mongoose')
+const dbConfig = require('./dbs/config.js')
 
-mongod -f(不同于windows的--config) /mongodb/etc/mongo.conf
+// 链接数据库
+mongoose.connect(dbConfig.dbs, {
+  useNewUrlParser: true
+})
 </code></pre>
 
 <ol>
-<li>还需要一个跟 mongoVue 一样的工具 mongoHub (mongo 客户端)</li>
+<li>dbs/config.js</li>
 </ol>
+
+<pre><code class="language-bash"># 数据库的配置选项
+const config = {
+  dbs: 'mongodb://127.0.0.1:27017/dbs'
+}
+
+module.exports = config
+</code></pre>
+
+<ol>
+<li>dbs/models/user.js</li>
+</ol>
+
+<pre><code class="language-bash"># 模型
+const mongoose = require('mongoose')
+// 模式
+let userScheme = new mongoose.Schema({
+  name: String,
+  age: Number,
+})
+
+// 导出模型
+module.exports = mongoose.model('User', userScheme);
+</code></pre>
+
+<ol>
+<li>router.js</li>
+</ol>
+
+<pre><code class="language-bash"># 接口
+const router = require('koa-router')()
+const Users = require('../dbs/models/user')
+
+// 前缀
+router.prefix('/users')
+
+router.get('/', function (ctx, next) {
+  ctx.body = 'this is a users response!'
+})
+
+// 新增用户
+router.post('/addUser', async function (ctx, next) {
+  let code
+  const user = new Users({
+    name: ctx.request.body.name,
+    age: ctx.request.body.age,
+  })
+  try {
+    await user.save()
+    code = 0
+  } catch (error) {
+    code = -1
+  }
+  ctx.body = {
+    code
+  }
+})
+
+// 获取用户(by name)
+router.post('/getUser', async function (ctx) {
+  // let code
+  const result = await Users.findOne({
+    name: ctx.request.body.name,
+  })
+  const results = await Users.find({
+    name: ctx.request.body.name,
+  })
+  // try {
+  //   code = 0
+  // } catch (error) {
+  //   code = -1
+  // }
+  ctx.body = {
+    code: 0,
+    result,
+    results,
+  }
+})
+
+// 更新用户(by name)
+router.post('/updateUser', async function (ctx) {
+  // let code
+  const result = await Users.where({
+    name: ctx.request.body.name,
+  }).updateOne({
+    age: ctx.request.body.age,
+  })
+
+  ctx.body = {
+    code: 0,
+  }
+})
+
+// 删除用户(by name)
+router.post('/removeUser', async function (ctx) {
+  // let code
+  const result = await Users.where({
+    name: ctx.request.body.name,
+  }).remove()
+
+  ctx.body = {
+    code: 0,
+  }
+})
+
+module.exports = router
+</code></pre>
 
           </div>
 
@@ -600,8 +728,8 @@ mongod -f(不同于windows的--config) /mongodb/etc/mongo.conf
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%b8%80-mongodb-%e5%ae%89%e8%a3%85-windows-%e4%b8%8e%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%ae">
-												 一. MongoDB 安装（windows）与环境配置
+						 					<a class="nav-link" href="#%e4%b8%80-mongodb-%e4%bb%8b%e7%bb%8d">
+												 一. MongoDB 介绍
 											</a>
 										</li>
 						 
@@ -649,6 +777,28 @@ mongod -f(不同于windows的--config) /mongodb/etc/mongo.conf
 								
 									<ul class="nav">
 								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%ba%8c-%e4%bd%bf%e7%94%a8-mongodb">
+												 二. 使用 mongoDB
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
 									<ul class="nav">
 								
 									<ul class="nav">
@@ -656,8 +806,8 @@ mongod -f(不同于windows的--config) /mongodb/etc/mongo.conf
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%ae%89%e8%a3%85%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9">
-												 安装注意事项
+						 					<a class="nav-link" href="#1-%e5%ae%89%e8%a3%85">
+												 1. 安装
 											</a>
 										</li>
 						 
@@ -686,8 +836,8 @@ mongod -f(不同于windows的--config) /mongodb/etc/mongo.conf
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%90%af%e5%8a%a8%e6%96%b9%e5%bc%8f">
-												 启动方式：
+						 					<a class="nav-link" href="#2-%e5%90%af%e5%8a%a8%e6%96%b9%e5%bc%8f">
+												 2. 启动方式：
 											</a>
 										</li>
 						 
@@ -712,8 +862,8 @@ mongod -f(不同于windows的--config) /mongodb/etc/mongo.conf
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%ae%89%e8%a3%85-mongodbvue">
-												 安装 mongodbVUE
+						 					<a class="nav-link" href="#%e4%b8%89-%e6%95%b0%e6%8d%ae%e5%ba%93%e5%8f%af%e8%a7%86%e5%8c%96%e5%b7%a5%e5%85%b7">
+												 三. 数据库可视化工具
 											</a>
 										</li>
 						 
@@ -731,11 +881,89 @@ mongod -f(不同于windows的--config) /mongodb/etc/mongo.conf
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%8e%af%e5%a2%83">
-												 服务器环境
+						 					<a class="nav-link" href="#1-%e5%ae%89%e8%a3%85-mongodbvue">
+												 1. 安装 mongodbVUE
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-%e5%ae%89%e8%a3%85-studio-3t-%e6%95%b0%e6%8d%ae%e5%ba%93%e5%8f%af%e8%a7%86%e5%8c%96%e5%b7%a5%e5%85%b7">
+												 2. 安装 Studio 3T（数据库可视化工具）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%89%a9%e5%b1%95">
+												 扩展
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%9b%9b-koa2-%e6%b5%8b%e8%af%95%e4%bb%a3%e7%a0%81">
+												 四. koa2 测试代码
 											</a>
 										</li>
 						 
