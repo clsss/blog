@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Server on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/categories/server/</link>
+    <description>Recent content in Server on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Sun, 23 Dec 2018 20:24:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/categories/server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Redis</title>
+      <link>https://clsss.github.io/blog/blogs/2018-6/redis/</link>
+      <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-6/redis/</guid>
+      <description>一. Redis 介绍 Redis 是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。从 2010 年 3 月 15 日起，Redis 的开发工作由 VMware 主持。从 2013 年 5 月开始，Redis 的开发由 Pivotal 赞助。 快速读写 性能： 测试完成了 50 个并发执行 100000 个请求。 设置和获取的值是一个 256 字节字符串。 Linux box 是运行 Linux 2.6,这是 X3320 Xeon 2.5 ghz。 文本执行使用 loopback 接口(127.0.0.1)。 结果:读的速度是 110000</description>
+    </item>
+    
+    <item>
+      <title>mongoDB环境搭建，服务器端</title>
+      <link>https://clsss.github.io/blog/blogs/2018-6/mongodb/</link>
+      <pubDate>Wed, 20 Jun 2018 20:24:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-6/mongodb/</guid>
+      <description>一. MongoDB 介绍 MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。 优点： 高可扩展性 分布式存储 低成本 结构灵活 二. 使用 mongoDB 1. 安装 安装方式 # 执行后会返回安装后的路径 which mongod 2. 启动方式： 安装注意事项 需要 db 存储和日志存储文件夹 添加服务，配置环境变量，启动 mongod 方式 1： 打开 cmd 输入 services.msc 查</description>
+    </item>
+    
+  </channel>
+</rss>

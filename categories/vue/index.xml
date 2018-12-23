@@ -6,18 +6,18 @@
     <description>Recent content in Vue on Collin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Wed, 25 Oct 2017 20:54:11 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Dec 2018 20:24:11 +0800</lastBuildDate>
     
 	<atom:link href="https://clsss.github.io/blog/categories/vue/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>前端构建分享（入门篇）</title>
-      <link>https://clsss.github.io/blog/blog/2017-10/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%88%86%E4%BA%AB%E5%85%A5%E9%97%A8%E7%AF%87/</link>
-      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      <title>Nuxt.js</title>
+      <link>https://clsss.github.io/blog/blogs/2018-12/nuxt/</link>
+      <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
       
-      <guid>https://clsss.github.io/blog/blog/2017-10/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%88%86%E4%BA%AB%E5%85%A5%E9%97%A8%E7%AF%87/</guid>
-      <description>vue-cli 前提 node.js, vue-cli 全局安装脚手架 npm install -g -vue-cli 你需要了解npm/yarn的相关知识，还有淘宝镜像cnpm（主要是用在资源被墙） 尤其是： cnpm install node-sass sass-loader -D 新建一个vue 项目流程： vue init webpack &amp;lt;项目名称&amp;gt; cd .. npm install npm run dev 注意：要使用npm包管理器就必须安装node（原因：包含关系 ———— nodejs中含有npm，安装好nodejs后，你打开cmd输入npm -v会发现npm的版本号，说明npm已经安装好） node.js是</description>
+      <guid>https://clsss.github.io/blog/blogs/2018-12/nuxt/</guid>
+      <description>一. Nuxt.js 介绍 vue + vuex + vue-router + SSR + vue-meta 官网 Nuxt.js 是一个基于 Vue.js 的通用应用框架。 通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI 渲染。 我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。 特性 基于 Vue.js 自动代码分层 服务端渲染 强大的路由功能，支持异步数据 静态文件服务 ES6/ES7 语法支持 打包和压缩 JS 和 CSS HTML 头部标签管理 本地开发支持热加载 集成 ESLint 支持各种</description>
     </item>
     
   </channel>

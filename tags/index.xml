@@ -23,7 +23,7 @@
     <item>
       <title>Blog</title>
       <link>https://clsss.github.io/blog/tags/blog/</link>
-      <pubDate>Wed, 20 Jun 2018 20:24:11 +0800</pubDate>
+      <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/tags/blog/</guid>
       <description></description>
@@ -156,6 +156,15 @@
     </item>
     
     <item>
+      <title>Nuxt.js</title>
+      <link>https://clsss.github.io/blog/tags/nuxt.js/</link>
+      <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/tags/nuxt.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pm2</title>
       <link>https://clsss.github.io/blog/tags/pm2/</link>
       <pubDate>Thu, 25 May 2017 22:13:01 +0800</pubDate>
@@ -170,6 +179,15 @@
       <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/tags/puppeteer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redis</title>
+      <link>https://clsss.github.io/blog/tags/redis/</link>
+      <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/tags/redis/</guid>
       <description></description>
     </item>
     
@@ -212,7 +230,7 @@
     <item>
       <title>Vue</title>
       <link>https://clsss.github.io/blog/tags/vue/</link>
-      <pubDate>Wed, 20 Jun 2018 20:24:11 +0800</pubDate>
+      <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/tags/vue/</guid>
       <description></description>
