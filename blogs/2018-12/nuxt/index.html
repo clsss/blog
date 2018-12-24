@@ -7,10 +7,10 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Collin">
-  <meta name="description" content="一. Nuxt.js 介绍 vue &#43; vuex &#43; vue-router &#43; SSR &#43; vue-meta 官网 Nuxt.js 是一个基于 Vue.js 的通用应用框架。 通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI 渲染。 我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。 特性 基于 Vue.js 自动代码分层 服务端渲染 强大的路由功能，支持异步数据 静态文件服务 ES6/ES7 语法支持 打包和压缩 JS 和 CSS HTML 头部标签管理 本地开发支持热加载 集成 ESLint 支持各种">
+  <meta name="description" content="一. Nuxt.js 介绍 vue &#43; vuex &#43; vue-router &#43; SSR &#43; vue-meta 创建即配置。方便 官网 Nuxt.js 是一个基于 Vue.js 的通用应用框架。 通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI 渲染。 我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。 特性 基于 Vue.js 自动代码分层 服务端渲染 强大的路由功能，支持异步数据 静态文件服务 ES6/ES7 语法支持 打包和压缩 JS 和 CSS HTML 头部标签管理 本地开发支持热加">
   
   <meta property="og:title" content="Nuxt.js" />
-<meta property="og:description" content="一. Nuxt.js 介绍 vue &#43; vuex &#43; vue-router &#43; SSR &#43; vue-meta 官网 Nuxt.js 是一个基于 Vue.js 的通用应用框架。 通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI 渲染。 我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。 特性 基于 Vue.js 自动代码分层 服务端渲染 强大的路由功能，支持异步数据 静态文件服务 ES6/ES7 语法支持 打包和压缩 JS 和 CSS HTML 头部标签管理 本地开发支持热加载 集成 ESLint 支持各种" />
+<meta property="og:description" content="一. Nuxt.js 介绍 vue &#43; vuex &#43; vue-router &#43; SSR &#43; vue-meta 创建即配置。方便 官网 Nuxt.js 是一个基于 Vue.js 的通用应用框架。 通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI 渲染。 我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。 特性 基于 Vue.js 自动代码分层 服务端渲染 强大的路由功能，支持异步数据 静态文件服务 ES6/ES7 语法支持 打包和压缩 JS 和 CSS HTML 头部标签管理 本地开发支持热加" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://clsss.github.io/blog/blogs/2018-12/nuxt/" /><meta property="article:published_time" content="2018-12-23T20:24:11&#43;08:00"/>
 <meta property="article:modified_time" content="2018-12-23T20:24:11&#43;08:00"/><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-6/v-distpicker/" />
@@ -346,7 +346,7 @@
 
     
       <li class="middot"></li>
-      <li>One minute read</li>
+      <li>3 minutes read</li>
     
   </ul>
   
@@ -360,7 +360,8 @@
 <h2 id="一-nuxt-js-介绍">一. Nuxt.js 介绍</h2>
 
 <blockquote>
-<p>vue + vuex + vue-router + SSR + vue-meta</p>
+<p>vue + vuex + vue-router + SSR + vue-meta
+创建即配置。方便</p>
 </blockquote>
 
 <p><a href="https://zh.nuxtjs.org/guide">官网</a></p>
@@ -401,7 +402,7 @@
 <li>nuxtServerlint（store action）</li>
 <li>middleware</li>
 <li>validata()</li>
-<li>asyncData() 【获取组件】&amp; fetch() 【获取数据 store】</li>
+<li>asyncData() 【获取组件数据】/ fetch() 【获取数据 store】</li>
 <li>render() ==&gt; middleware</li>
 </ol>
 
@@ -418,6 +419,130 @@ $ yarn create nuxt-app &lt;项目名&gt;
 
 <pre><code class="language-bash">cd &lt;项目名&gt;
 yarn run dev
+</code></pre>
+
+<h4 id="3-目录讲解">3. 目录讲解</h4>
+
+<pre><code class="language-bash">目录
+├── assets（资源目录：用于组织未编译的静态资源如 LESS、SASS 或 JavaScript）
+├── components（组件目录： 用于组织应用的 Vue.js 组件。Nuxt.js 不会扩展增强该目录下 Vue.js 组件，即这些组件不会像页面组件那样有 asyncData 方法的特性。）
+├── layouts（布局目录：用于组织应用的布局组件。）
+├── middleware（中间件目录：目录用于存放应用的中间件。）
+├── node_modules
+├── pages（页面目录：用于组织应用的路由及视图。Nuxt.js 框架读取该目录下所有的 .vue 文件并自动生成对应的路由配置。）
+├── plugins（插件目录：用于组织那些需要在 根vue.js应用 实例化之前需要运行的 Javascript 插件。）
+├── server
+├── static（静态文件目录：用于存放应用的静态文件，此类文件不会被 Nuxt.js 调用 Webpack 进行构建编译处理。 服务器启动的时候，该目录下的文件会映射至应用的根路径 / 下）
+├── store（该目录用于组织应用的 Vuex 状态树 文件。 Nuxt.js 框架集成了 Vuex 状态树 的相关功能配置，在 store 目录下创建一个 index.js 文件可激活这些配置。）
+├── static
+├── .editorconfig
+├── .gitignore
+├── .eslintrc
+├── nuxt.config.js（ 文件用于组织Nuxt.js 应用的个性化配置，以便覆盖默认配置。该文件名为Nuxt.js保留的，不可更改。）
+├── package.json
+└── README.md
+</code></pre>
+
+<h4 id="4-路由">4. 路由</h4>
+
+<blockquote>
+<p>pages 下新建一个.vue 文件就会创建一个对应的路由 创建即配置</p>
+</blockquote>
+
+<h4 id="5-页面模板-layouts">5. 页面模板（layouts）</h4>
+
+<blockquote>
+<p>公共的模板（头部，尾部处理）可以自定义。
+default.vue 如果没有配置过，则默认是 default.vue</p>
+</blockquote>
+
+<h4 id="6-异步数据-ssr-讲解">6. 异步数据，SSR 讲解</h4>
+
+<p>server:</p>
+
+<pre><code class="language-bash">ctx.body = {
+  list: [{name: zhangsan}, {name: lisi}]
+}
+</code></pre>
+
+<p>client:</p>
+
+<pre><code class="language-bash">data() {
+  return {
+    list
+  }
+},
+// 在服务端render之前获取数据
+async asyncData() {
+  let {status, data: {list}} = await axios.get('http://localhost:3001/list')
+  if (status === 200) {
+    return {
+      list
+    }
+  }
+}
+</code></pre>
+
+<blockquote>
+<ol>
+<li>服务端下发的是模板和数据组合好的数据</li>
+<li>除了下发模板，也下发了数据，通过注入全局返回了请求的数据</li>
+</ol>
+</blockquote>
+
+<pre><code class="language-bash">window.__NUXT__={layout: xx, data: {list: [{name: zhangsan}, {name: lisi}]}}
+</code></pre>
+
+<h4 id="7-vuex-的应用">7. vuex 的应用</h4>
+
+<p>用法与正常的 vuex 一样。
+index.js</p>
+
+<pre><code class="language-bash">import Vue from 'vue'
+import Vuex from 'vuex'
+import module1 from './modules/module1.js'
+
+Vue.use(Vuex)
+
+const store = () =&gt; new Vuex.Store({
+  modules: {
+    module1
+  },
+  state: {},
+  mutations: {},
+  actions: {},
+})
+
+export default store
+</code></pre>
+
+<p>module1.js</p>
+
+<pre><code class="language-bash">const state = () =&gt; ({
+  list: ['11', '22']
+})
+
+const mutations = {
+  add(state, data) {
+    state.list.push(data)
+  }
+}
+
+const actions = {
+  add({
+    commit
+  }, data) {
+    commit('add', data)
+  }
+}
+
+export default {
+  namespaced: true,
+  state,
+  mutations,
+  actions,
+}
+
 </code></pre>
 
           </div>
@@ -679,6 +804,156 @@ yarn run dev
 										<li class="nav-item">
 						 					<a class="nav-link" href="#2-%e5%90%af%e5%8a%a8%e6%96%b9%e5%bc%8f">
 												 2. 启动方式：
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#3-%e7%9b%ae%e5%bd%95%e8%ae%b2%e8%a7%a3">
+												 3. 目录讲解
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#4-%e8%b7%af%e7%94%b1">
+												 4. 路由
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#5-%e9%a1%b5%e9%9d%a2%e6%a8%a1%e6%9d%bf-layouts">
+												 5. 页面模板（layouts）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#6-%e5%bc%82%e6%ad%a5%e6%95%b0%e6%8d%ae-ssr-%e8%ae%b2%e8%a7%a3">
+												 6. 异步数据，SSR 讲解
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#7-vuex-%e7%9a%84%e5%ba%94%e7%94%a8">
+												 7. vuex 的应用
 											</a>
 										</li>
 						 

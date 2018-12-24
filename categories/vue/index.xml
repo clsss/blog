@@ -17,7 +17,7 @@
       <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
       
       <guid>https://clsss.github.io/blog/blogs/2018-12/nuxt/</guid>
-      <description>一. Nuxt.js 介绍 vue + vuex + vue-router + SSR + vue-meta 官网 Nuxt.js 是一个基于 Vue.js 的通用应用框架。 通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI 渲染。 我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。 特性 基于 Vue.js 自动代码分层 服务端渲染 强大的路由功能，支持异步数据 静态文件服务 ES6/ES7 语法支持 打包和压缩 JS 和 CSS HTML 头部标签管理 本地开发支持热加载 集成 ESLint 支持各种</description>
+      <description>一. Nuxt.js 介绍 vue + vuex + vue-router + SSR + vue-meta 创建即配置。方便 官网 Nuxt.js 是一个基于 Vue.js 的通用应用框架。 通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI 渲染。 我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。 特性 基于 Vue.js 自动代码分层 服务端渲染 强大的路由功能，支持异步数据 静态文件服务 ES6/ES7 语法支持 打包和压缩 JS 和 CSS HTML 头部标签管理 本地开发支持热加</description>
     </item>
     
   </channel>
