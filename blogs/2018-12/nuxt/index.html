@@ -417,7 +417,48 @@ $ yarn create nuxt-app &lt;项目名&gt;
 yarn run dev
 </code></pre>
 
-<h4 id="3-目录讲解">3. 目录讲解</h4>
+<h4 id="3-添加-babel">3. 添加 babel</h4>
+
+<blockquote>
+<p>node 不支持 import/export 等 es6 语法</p>
+</blockquote>
+
+<ol>
+<li>如果没有安装 babel-cli，请先安装</li>
+</ol>
+
+<pre><code class="language-bash"># 因为babel-node是babel-cli工具自带的一个命令
+yarn add babel-cli
+</code></pre>
+
+<ol>
+<li>修改 package.json</li>
+</ol>
+
+<pre><code class="language-bash"># 使用babel启动脚本
+添加 --exec babel-node 修改为：
+&quot;dev&quot;: &quot;cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node&quot;,
+</code></pre>
+
+<ol>
+<li><p>yarn add babel-preset-2015</p></li>
+
+<li><p>新增.babelrc 文件</p></li>
+</ol>
+
+<pre><code class="language-bash">{
+  &quot;presets&quot;: [&quot;es2015&quot;]
+}
+</code></pre>
+
+<ol>
+<li>对 scss 文件的转译</li>
+</ol>
+
+<pre><code class="language-bash">yarn add sass-loader node-sass
+</code></pre>
+
+<h4 id="4-目录讲解">4. 目录讲解</h4>
 
 <pre><code class="language-bash">目录
 ├── assets（资源目录：用于组织未编译的静态资源如 LESS、SASS 或 JavaScript）
@@ -439,20 +480,20 @@ yarn run dev
 └── README.md
 </code></pre>
 
-<h4 id="4-路由">4. 路由</h4>
+<h4 id="5-路由">5. 路由</h4>
 
 <blockquote>
 <p>pages 下新建一个.vue 文件就会创建一个对应的路由 创建即配置</p>
 </blockquote>
 
-<h4 id="5-页面模板-layouts">5. 页面模板（layouts）</h4>
+<h4 id="6-页面模板-layouts">6. 页面模板（layouts）</h4>
 
 <blockquote>
 <p>公共的模板（头部，尾部处理）可以自定义。
 default.vue 如果没有配置过，则默认是 default.vue</p>
 </blockquote>
 
-<h4 id="6-异步数据-ssr-讲解">6. 异步数据，SSR 讲解</h4>
+<h4 id="7-异步数据-ssr-讲解">7. 异步数据，SSR 讲解</h4>
 
 <p>server:</p>
 
@@ -489,7 +530,7 @@ async asyncData() {
 <pre><code class="language-bash">window.__NUXT__={layout: xx, data: {list: [{name: zhangsan}, {name: lisi}]}}
 </code></pre>
 
-<h4 id="7-vuex-的应用">7. vuex 的应用</h4>
+<h4 id="8-vuex-的应用">8. vuex 的应用</h4>
 
 <p>用法与正常的 vuex 一样。
 index.js</p>
@@ -828,8 +869,8 @@ export default {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#3-%e7%9b%ae%e5%bd%95%e8%ae%b2%e8%a7%a3">
-												 3. 目录讲解
+						 					<a class="nav-link" href="#3-%e6%b7%bb%e5%8a%a0-babel">
+												 3. 添加 babel
 											</a>
 										</li>
 						 
@@ -858,8 +899,8 @@ export default {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#4-%e8%b7%af%e7%94%b1">
-												 4. 路由
+						 					<a class="nav-link" href="#4-%e7%9b%ae%e5%bd%95%e8%ae%b2%e8%a7%a3">
+												 4. 目录讲解
 											</a>
 										</li>
 						 
@@ -888,8 +929,8 @@ export default {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#5-%e9%a1%b5%e9%9d%a2%e6%a8%a1%e6%9d%bf-layouts">
-												 5. 页面模板（layouts）
+						 					<a class="nav-link" href="#5-%e8%b7%af%e7%94%b1">
+												 5. 路由
 											</a>
 										</li>
 						 
@@ -918,8 +959,8 @@ export default {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#6-%e5%bc%82%e6%ad%a5%e6%95%b0%e6%8d%ae-ssr-%e8%ae%b2%e8%a7%a3">
-												 6. 异步数据，SSR 讲解
+						 					<a class="nav-link" href="#6-%e9%a1%b5%e9%9d%a2%e6%a8%a1%e6%9d%bf-layouts">
+												 6. 页面模板（layouts）
 											</a>
 										</li>
 						 
@@ -948,8 +989,38 @@ export default {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#7-vuex-%e7%9a%84%e5%ba%94%e7%94%a8">
-												 7. vuex 的应用
+						 					<a class="nav-link" href="#7-%e5%bc%82%e6%ad%a5%e6%95%b0%e6%8d%ae-ssr-%e8%ae%b2%e8%a7%a3">
+												 7. 异步数据，SSR 讲解
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#8-vuex-%e7%9a%84%e5%ba%94%e7%94%a8">
+												 8. vuex 的应用
 											</a>
 										</li>
 						 
