@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on Collin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Sun, 23 Dec 2018 20:24:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2019 23:04:40 +0800</lastBuildDate>
     
 	<atom:link href="https://clsss.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nuxt.js 采坑点</title>
+      <link>https://clsss.github.io/blog/blogs/2019-3/nuxt_pit/</link>
+      <pubDate>Wed, 13 Mar 2019 23:04:40 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2019-3/nuxt_pit/</guid>
+      <description>记录一些nuxt开发中的坑 1. window is undefined 第一个坑就是 ssr 本身导致的。不管使用 element-ui 或者 mint-ui 或者其他的 UI 框架。都是基于 window 环境而非 node 环境。 # vue的情况下，我们是这样使用的 import Vue from &#39;vue&#39; import VueAwesomeSwiper from &#39;vue-awesome-swiper&#39; Vue.use(VueAwesomeSwiper) 修改为支持 ssr，否则就会出现 window is undefined # plugins/mint-ui/index.js import Vue from &#39;vue&#39; if (process.browser) { const VueAwesomeSwiper = require(&#39;vue-awesome-swiper/dist/ssr&#39;) Vue.use(VueAwesomeSwiper) } 2. [Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content. This is likely caused by incorrect HTML markup, for example nesting block-level elements inside, or missing . Bailing hydration and performing full client-side render. 服务端与客户端渲染的 DOM 结构不一样，HTML 结构嵌套不正确，但大多数情况下并不是嵌套结构</description>
+    </item>
     
     <item>
       <title>Nuxt.js</title>
