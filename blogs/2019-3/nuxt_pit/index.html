@@ -401,21 +401,16 @@ plugins: [
 <p>错误嵌套代码示例：</p>
 
 <pre><code class="language-bash"># 错误原因&lt;p&gt;&lt;div&gt;&lt;/div&gt;&lt;/p&gt; 或 &lt;span&gt;&lt;p&gt;&lt;/p&gt;&lt;/span&gt;
-&lt;p class=&quot;text&quot;&gt;
-    &lt;van-checkbox class=&quot;tour-checkbox&quot;
-      v-model=&quot;checked&quot;&gt;
-      &lt;span&gt;我已经阅读并同意《服务协议》&lt;/span&gt;
-    &lt;/van-checkbox&gt;
-&lt;/p&gt;
+&lt;span class=&quot;text&quot;&gt;
+  &lt;p&gt;我已经阅读并同意《服务协议》&lt;/p&gt;
+&lt;/span&gt;
 </code></pre>
 
 <p>修正：</p>
 
 <pre><code class="language-bash">&lt;div class=&quot;text&quot;&gt;
-    &lt;van-checkbox class=&quot;tour-checkbox&quot;
-      v-model=&quot;checked&quot;&gt;
-      &lt;span&gt;我已经阅读并同意《服务协议》&lt;/span&gt;
-    &lt;/van-checkbox&gt;
+  &lt;p&gt;我已经阅读并同意《服务协议》&lt;/p&gt;
+  &lt;span&gt;我已经阅读并同意《服务协议》&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -530,7 +525,7 @@ export default {
 
 <p>我的 store 目录结构（使用 Modules mode）：</p>
 
-<pre><code>├─state.js
+<pre><code class="language-bash">├─state.js
 ├─actions.js
 ├─getters.js
 ├─mutations.js
@@ -539,14 +534,13 @@ export default {
 
 </code></pre>
 
-<pre><code>// state.js 必须导出返回对象的方法，创建独立实例
+<pre><code class="language-bash">// state.js 必须导出返回对象的方法，创建独立实例
 import {
   getCookieByKey
 } from '@/assets/js/utils'
 
 export default () =&gt; ({
   deviceType: {},
-  currency: process.client ? (getCookieByKey('currency') ? getCookieByKey('currency') : 'CNY') : 'CNY', // 货币类型
 })
 
 // getters.js，actions.js，mutations.js都是直接导出对象
@@ -580,7 +574,7 @@ export const mutations = {}
 
 <p>官网所给的方式很气人: <a href="https://zh.nuxtjs.org/api/configuration-generate">https://zh.nuxtjs.org/api/configuration-generate</a></p>
 
-<pre><code>
+<pre><code class="language-bash">
 const axios = require('axios')
 
 module.exports = {
@@ -599,7 +593,7 @@ module.exports = {
 // 数据量大的话自己想象。不喜欢query传参，但目前我个人觉得打包成静态的文件的话，还是使用query是最好的方式了。
 </code></pre>
 
-<pre><code>打静态包要修改接口地址，神烦。仅参考
+<pre><code class="language-bash">打静态包要修改接口地址，神烦。仅参考
 &lt;!-- axios.js --&gt;
 let apiConfig = require('~/apiConf.env')
 // import {
