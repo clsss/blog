@@ -278,6 +278,12 @@
   </url>
   
   <url>
+    <loc>https://clsss.github.io/blog/series/hugo/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clsss.github.io/blog/categories/hugo/</loc>
     <lastmod>2017-10-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
@@ -290,8 +296,8 @@
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/series/hugo/</loc>
-    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+    <loc>https://clsss.github.io/blog/series/js/</loc>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -302,8 +308,8 @@
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/series/js/</loc>
-    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
+    <loc>https://clsss.github.io/blog/series/lift/</loc>
+    <lastmod>2016-10-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -320,14 +326,14 @@
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/series/lift/</loc>
+    <loc>https://clsss.github.io/blog/life/</loc>
     <lastmod>2016-10-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/life/</loc>
-    <lastmod>2016-10-25T20:54:11+08:00</lastmod>
+    <loc>https://clsss.github.io/blog/series/mobile/</loc>
+    <lastmod>2017-09-25T23:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -344,19 +350,13 @@
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/series/mobile/</loc>
-    <lastmod>2017-09-25T23:54:11+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://clsss.github.io/blog/tags/mocha/</loc>
+    <loc>https://clsss.github.io/blog/series/mocha/</loc>
     <lastmod>2018-04-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/series/mocha/</loc>
+    <loc>https://clsss.github.io/blog/tags/mocha/</loc>
     <lastmod>2018-04-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -446,6 +446,12 @@
   </url>
   
   <url>
+    <loc>https://clsss.github.io/blog/series/server/</loc>
+    <lastmod>2018-12-23T20:24:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clsss.github.io/blog/categories/server/</loc>
     <lastmod>2018-12-23T20:24:11+08:00</lastmod>
     <priority>0</priority>
@@ -454,12 +460,6 @@
   <url>
     <loc>https://clsss.github.io/blog/tags/server/</loc>
     <lastmod>2018-06-10T20:42:11+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://clsss.github.io/blog/series/server/</loc>
-    <lastmod>2018-12-23T20:24:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -494,6 +494,12 @@
   </url>
   
   <url>
+    <loc>https://clsss.github.io/blog/series/vue/</loc>
+    <lastmod>2019-03-13T23:04:40+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clsss.github.io/blog/categories/vue/</loc>
     <lastmod>2019-03-13T23:04:40+08:00</lastmod>
     <priority>0</priority>
@@ -501,12 +507,6 @@
   
   <url>
     <loc>https://clsss.github.io/blog/tags/vue/</loc>
-    <lastmod>2019-03-13T23:04:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://clsss.github.io/blog/series/vue/</loc>
     <lastmod>2019-03-13T23:04:40+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -524,6 +524,12 @@
   </url>
   
   <url>
+    <loc>https://clsss.github.io/blog/series/web/</loc>
+    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clsss.github.io/blog/categories/web/</loc>
     <lastmod>2017-09-25T23:54:11+08:00</lastmod>
     <priority>0</priority>
@@ -536,19 +542,13 @@
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/series/web/</loc>
-    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://clsss.github.io/blog/tags/webpack/</loc>
+    <loc>https://clsss.github.io/blog/series/webpack/</loc>
     <lastmod>2017-10-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://clsss.github.io/blog/series/webpack/</loc>
+    <loc>https://clsss.github.io/blog/tags/webpack/</loc>
     <lastmod>2017-10-25T20:54:11+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -614,6 +614,12 @@
   </url>
   
   <url>
+    <loc>https://clsss.github.io/blog/series/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</loc>
+    <lastmod>2018-07-15T20:42:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clsss.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</loc>
     <lastmod>2018-07-15T20:42:11+08:00</lastmod>
     <priority>0</priority>
@@ -621,12 +627,6 @@
   
   <url>
     <loc>https://clsss.github.io/blog/tags/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</loc>
-    <lastmod>2018-07-15T20:42:11+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://clsss.github.io/blog/series/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</loc>
     <lastmod>2018-07-15T20:42:11+08:00</lastmod>
     <priority>0</priority>
   </url>

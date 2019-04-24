@@ -7,10 +7,10 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Collin">
-  <meta name="description" content="记录一些nuxt开发中的坑 1. window is undefined 第一个坑就是 ssr 本身导致的。不管使用 element-ui 或者 mint-ui 或者其他的 UI 框架。都是基于 window 环境而非 node 环境。 # vue的情况下，我们是这样使用的 import Vue from &#39;vue&#39; import VueAwesomeSwiper from &#39;vue-awesome-swiper&#39; Vue.use(VueAwesomeSwiper) 修改为支持 ssr，否则就会出现 window is undefined # plugins/mint-ui/index.js import Vue from &#39;vue&#39; if (process.browser) { const VueAwesomeSwiper = require(&#39;vue-awesome-swiper/dist/ssr&#39;) Vue.use(VueAwesomeSwiper) } 2. [Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content. This is likely caused by incorrect HTML markup, for example nesting block-level elements inside, or missing . Bailing hydration and performing full client-side render. 服务端与客户端渲染的 DOM 结构不一样，HTML 结构嵌套不正确，但大多数情况下并不是嵌套结构">
+  <meta name="description" content="nuxt采坑合集 官网 github 社区 原因分析 内部原因： 调研时间不足。 撸起袖子就写代码是一个错误的方式，现在回头看m站会发现很多不对的实现方式，个别模块的优化不亚于重写。 技术了解不足，科学的使用方式后知后觉。 构建环境问题（不同环境相同代码，结果不同；打静态页面不可取等）。 插件使用问题(sentry竟会阻塞代码，有待研究)。 文档,API了解不足。 思维方式陈旧。 虽然是基于vue的框架但是使用方式与vue-cli构">
   
-  <meta property="og:title" content="Nuxt.js 采坑点" />
-<meta property="og:description" content="记录一些nuxt开发中的坑 1. window is undefined 第一个坑就是 ssr 本身导致的。不管使用 element-ui 或者 mint-ui 或者其他的 UI 框架。都是基于 window 环境而非 node 环境。 # vue的情况下，我们是这样使用的 import Vue from &#39;vue&#39; import VueAwesomeSwiper from &#39;vue-awesome-swiper&#39; Vue.use(VueAwesomeSwiper) 修改为支持 ssr，否则就会出现 window is undefined # plugins/mint-ui/index.js import Vue from &#39;vue&#39; if (process.browser) { const VueAwesomeSwiper = require(&#39;vue-awesome-swiper/dist/ssr&#39;) Vue.use(VueAwesomeSwiper) } 2. [Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content. This is likely caused by incorrect HTML markup, for example nesting block-level elements inside, or missing . Bailing hydration and performing full client-side render. 服务端与客户端渲染的 DOM 结构不一样，HTML 结构嵌套不正确，但大多数情况下并不是嵌套结构" />
+  <meta property="og:title" content="Nuxt.js 采坑" />
+<meta property="og:description" content="nuxt采坑合集 官网 github 社区 原因分析 内部原因： 调研时间不足。 撸起袖子就写代码是一个错误的方式，现在回头看m站会发现很多不对的实现方式，个别模块的优化不亚于重写。 技术了解不足，科学的使用方式后知后觉。 构建环境问题（不同环境相同代码，结果不同；打静态页面不可取等）。 插件使用问题(sentry竟会阻塞代码，有待研究)。 文档,API了解不足。 思维方式陈旧。 虽然是基于vue的框架但是使用方式与vue-cli构" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://clsss.github.io/blog/blogs/2019-3/nuxt_pit/" /><meta property="article:published_time" content="2019-03-13T23:04:40&#43;08:00"/>
 <meta property="article:modified_time" content="2019-03-13T23:04:40&#43;08:00"/><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-12/nuxt/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-6/v-distpicker/" />
@@ -19,7 +19,7 @@
 
   <title>
   
-       Nuxt.js 采坑点 | Collin&#39;s Blog 
+       Nuxt.js 采坑 | Collin&#39;s Blog 
   
   </title>
 
@@ -333,7 +333,7 @@
     
   </ul>
 
-  <div class="px-4 post-heading">Nuxt.js 采坑点</div>
+  <div class="px-4 post-heading">Nuxt.js 采坑</div>
 
   <ul class="post-meta li-x mt-1">
     
@@ -342,7 +342,7 @@
 
     
       <li class="middot"></li>
-      <li>5 minutes read</li>
+      <li>9 minutes read</li>
     
   </ul>
   
@@ -353,26 +353,137 @@
           <div class="post-content markdown">
             
 
-<h3 id="记录一些nuxt开发中的坑">记录一些nuxt开发中的坑</h3>
+<h2 id="nuxt采坑合集">nuxt采坑合集</h2>
+
+<p><a href="https://zh.nuxtjs.org/guide/">官网</a> <br/>
+<a href="https://github.com/nuxt/">github</a> <br/>
+<a href="https://github.com/nuxt-community">社区</a> <br/></p>
+
+<h3 id="原因分析">原因分析</h3>
+
+<ol>
+<li>内部原因：
+
+<ol>
+<li>调研时间不足。
+
+<ul>
+<li>撸起袖子就写代码是一个错误的方式，现在回头看m站会发现很多不对的实现方式，个别模块的优化不亚于重写。</li>
+</ul></li>
+<li>技术了解不足，科学的使用方式后知后觉。
+
+<ul>
+<li>构建环境问题（不同环境相同代码，结果不同；打静态页面不可取等）。</li>
+<li>插件使用问题(sentry竟会阻塞代码，有待研究)。</li>
+<li>文档,API了解不足。</li>
+</ul></li>
+<li>思维方式陈旧。
+
+<ul>
+<li>虽然是基于vue的框架但是使用方式与vue-cli构建的应用差别甚远，用vue的那套思想会让我们走入歧途。（比如axios请求，客户端与服务端不同）</li>
+</ul></li>
+</ol></li>
+<li>外部原因:
+
+<ol>
+<li>新兴技术，自带坑；尤其是升级大版本带来的问题。</li>
+<li>文档不全、文档更新不及时。
+
+<ul>
+<li>建议使用英文版的官网，版本高于中文版。</li>
+<li>官方的文档可能是旧的。</li>
+<li>到目前为止nuxt的谷歌分析统计都是错误的实例。nuxt2.0版本之后已加不适用，改用了analytics-module</li>
+</ul></li>
+<li>插件兼容导致的问题。
+
+<ul>
+<li>三方插件不支持ssr方式</li>
+<li>babel-pollify编译（babel只是将一些es6，es7-8的语法转换成符合目标的js代码，但是如果我们使用一些特性或方法，比如Generator, Set, 或者一些方法。babel并不能转换为低版本浏览器识别的代码。这时就需要babel-polifill）</li>
+</ul></li>
+</ol></li>
+</ol>
+
+<p><br/></p>
+
+<h3 id="一-nuxt是什么-为什么要使用nuxt">一、 nuxt是什么？为什么要使用nuxt？</h3>
+
+<blockquote>
+<p>2016 年 10 月 25 日，zeit.co 背后的团队对外发布了 Next.js，一个 React 的服务端渲染应用框架。几小时后，与 Next.js 异曲同工，一个基于 Vue.js 的服务端渲染应用框架应运而生，我们称之为：Nuxt.js。</p>
+
+<p>Nuxt.js 是一个基于 Vue.js 的通用应用框架。
+通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI渲染。
+其核心主要是通过vue-server-renderer模块来实现服务端渲染。 vue-server-renderer是Vue服务端Node.js渲染的一个模块，用来生成HTML内容。</p>
+
+<p>我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。
+Nuxt.js 预设了利用Vue.js开发服务端渲染的应用所需要的各种配置。
+除此之外，我们还提供了一种命令叫：nuxt generate，为基于 Vue.js 的应用提供生成对应的静态站点的功能。
+我们相信这个命令所提供的功能，是向开发集成各种微服务（microservices）的 Web 应用迈开的新一步。
+作为框架，Nuxt.js 为 客户端/服务端 这种典型的应用架构模式提供了许多有用的特性，例如异步数据加载、中间件支持、布局支持等。</p>
+</blockquote>
+
+<p>SSR意为 server-side rendering（服务端渲染）,目的是为了<strong>解决单页面应用的SEO的问题</strong>。</p>
+
+<ul>
+<li>客户端渲染和服务器端渲染的最重要的区别是html文件的返回是在服务端还是客户端。若是在服务器端完成的，就是服务器端渲染；反之前端完成了html的拼接，则就是客户端渲染(一般为首屏渲染: vue-meta-info + prerender-spa-plugin)。</li>
+<li>SEO对比：collinss.cn/ 和 <a href="http://en.dev.tourscool.net/">http://en.dev.tourscool.net/</a></li>
+</ul>
+
+<p><br/></p>
+
+<h3 id="二-优势与劣势">二、优势与劣势</h3>
+
+<h4 id="1-服务器端渲染的优缺点">1. 服务器端渲染的优缺点？</h4>
+
+<p><strong>优点：</strong>
+1. 更好的SEO 首屏加载快 由于搜索引擎爬虫抓取工具可以直接查看完全渲染的页面。
+2. 首屏加载快 快速地看到完整渲染的页面，从而提高用户体验。
+3. 后端生成静态化文件 即解析模板的工作完全交由Nuxt来做，客户端只要解析标准的html。</p>
+
+<p><strong>缺点：</strong>
+1. 开发条件受限，在服务端渲染中，created和beforeCreate之外的生命周期钩子不可用；其他生命周期均为客户端。
+2. 占用服务端资源，所以原则是不影响SEO数据展示的内容或者通过事件触发获取的数据还是通过客户端获取，以减轻服务端压力。
+3. 学习成本相对较高
+除了对webpack、Vue要熟悉，还需要掌握node、Express或者koa等相关技术。相对于客户端渲染，项目构建、部署过程更加复杂。</p>
+
+<h4 id="2-是否应该使用服务端渲染">2. 是否应该使用服务端渲染</h4>
+
+<ol>
+<li>首屏加载慢</li>
+<li>SEO优化</li>
+</ol>
+
+<h4 id="3-原理图">3. 原理图</h4>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/1/22/168713bb0c0b3934?imageslim" alt="image" /></p>
+
+<h4 id="4-指令背后的故事">4. 指令背后的故事</h4>
+
+<p><img src="https://image-static.segmentfault.com/176/176/1761766949-5878c1dfe96fa" alt="image" />
+<a href="https://segmentfault.com/a/1190000008114613">更多</a></p>
+
+<p><br/></p>
+
+<h3 id="三-使用过程中遇到的坑">三、使用过程中遇到的坑</h3>
 
 <h4 id="1-window-is-undefined">1. window is undefined</h4>
 
 <blockquote>
-<p>第一个坑就是 ssr 本身导致的。不管使用 element-ui 或者 mint-ui 或者其他的 UI 框架。都是基于 window 环境而非 node 环境。</p>
+<p>第一个“坑”就是ssr本身导致的。不管使用element-ui或者mint-ui或者其他的UI框架。都是基于window环境而非node环境。</p>
 </blockquote>
 
 <pre><code class="language-bash"># vue的情况下，我们是这样使用的
 import Vue from 'vue'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-
+# 插件注入
 Vue.use(VueAwesomeSwiper)
 </code></pre>
 
-<p>修改为支持 ssr，否则就会出现 window is undefined</p>
+<p>修改为支持ssr，否则就会出现window is undefined</p>
 
-<pre><code class="language-bash"># plugins/mint-ui/index.js
+<pre><code class="language-bash"># 做成服务端渲染需要注意引入时机
 import Vue from 'vue'
 
+# 判断环境——browser代表客户端
 if (process.browser) {
   const VueAwesomeSwiper = require('vue-awesome-swiper/dist/ssr')
   Vue.use(VueAwesomeSwiper)
@@ -380,73 +491,13 @@ if (process.browser) {
 
 </code></pre>
 
-<h4 id="2-vue-warn-the-client-side-rendered-virtual-dom-tree-is-not-matching-server-rendered-content-this-is-likely-caused-by-incorrect-html-markup-for-example-nesting-block-level-elements-inside-p-or-missing-tbody-bailing-hydration-and-performing-full-client-side-render">2. [Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content. This is likely caused by incorrect HTML markup, for example nesting block-level elements inside<p>, or missing <tbody>. Bailing hydration and performing full client-side render.</h4>
+<h4 id="2-移动端-因为调用app端的方法都是使用window下的android和webkit-messagehandlers方法-但是ssr下如果直接引入appbridge-js下的方法会报错-因为服务端没有window">2.【移动端】因为调用app端的方法都是使用window下的android和webkit.messageHandlers方法。但是ssr下如果直接引入appBridge.js下的方法会报错，因为服务端没有window</h4>
 
 <blockquote>
-<p>服务端与客户端渲染的 DOM 结构不一样，HTML 结构嵌套不正确，但大多数情况下并不是嵌套结构的问题，而是因为==服务端与客户端渲染的 DOM 结构不一样==</p>
+<p>这个问题还是因为ssr本身的“坑”，也属于是框架了解不足。在服务端运行时无window下的对象。我的处理方式是在mounted生命周期下才引入appBridge.js。<a href="https://nuxtjs.org/faq/window-document-undefined">官方还有处理方式是判断当前运行环境(通过process.client)</a>。【还没试过的方式，通过nuxt.config.js配置：plugins + ssr:false】</p>
 </blockquote>
 
-<pre><code class="language-bash"># nuxt.config.js
-plugins: [
-  {
-    src: '~/plugins/mint-ui',
-    ssr: true // 划重点！！！设为true后，ssr会进行初始化时前后dom比较，保证初始化前后一致
-  }, {
-    src: &quot;~/plugins/vue-swiper&quot;,
-    ssr: false
-  },
-],
-</code></pre>
-
-<p>错误嵌套代码示例：</p>
-
-<pre><code class="language-bash"># 错误原因&lt;p&gt;&lt;div&gt;&lt;/div&gt;&lt;/p&gt; 或 &lt;span&gt;&lt;p&gt;&lt;/p&gt;&lt;/span&gt;
-&lt;span class=&quot;text&quot;&gt;
-  &lt;p&gt;我已经阅读并同意《服务协议》&lt;/p&gt;
-&lt;/span&gt;
-</code></pre>
-
-<p>修正：</p>
-
-<pre><code class="language-bash">&lt;div class=&quot;text&quot;&gt;
-  &lt;p&gt;我已经阅读并同意《服务协议》&lt;/p&gt;
-  &lt;span&gt;我已经阅读并同意《服务协议》&lt;/span&gt;
-&lt;/div&gt;
-</code></pre>
-
-<p>这边以 <a href="https://github.com/surmon-china/vue-awesome-swiper">vue-awesome-swiper</a> 为例，官网也给出了明确的 ssr 使用方式，请仔细阅读，一定要用 ssr 的方式！</p>
-
-<blockquote>
-<p>例子中的类名.swiper-wrapper 不要修改啊。我就是修改成了 swiper-wrap 导致问题。</p>
-</blockquote>
-
-<h4 id="3-移动端-postcss-px2rem-会导致其他本身已支持自适应的-ui-库-vant-ui-样式缩小">3. 【移动端】postcss-px2rem 会导致其他本身已支持自适应的 UI 库（vant UI）样式缩小。</h4>
-
-<blockquote>
-<p>解决方式: postcss-px2rem-exclude 代替 postcss-px2rem，配置如下</p>
-</blockquote>
-
-<pre><code class="language-bash"># nuxt.config.js
-build:{
-    postcss: [
-      require('postcss-px2rem-exclude')({
-        remUnit: 75, // 转换基本单位
-        exclude: /vant/i
-      }),
-      require('autoprefixer')({
-        browsers: ['last 3 versions']
-      })
-    ],
-}
-</code></pre>
-
-<h4 id="4-移动端-因为调用-app-端的方法都是使用-window-下的-android-和-webkit-messagehandlers-方法-但是-ssr-下如果直接引入-appbridge-js-下的方法会报错-因为服务端没有-window">4.【移动端】因为调用 app 端的方法都是使用 window 下的 android 和 webkit.messageHandlers 方法。但是 ssr 下如果直接引入 appBridge.js 下的方法会报错，因为服务端没有 window</h4>
-
-<blockquote>
-<p>这个问题还是因为 ssr 本身。在服务端运行时无 window 下的对象。我的处理方式是在 mounted 生命周期下才引入 appBridge.js。<a href="https://nuxtjs.org/faq/window-document-undefined">官方还有处理方式是判断当前运行环境(通过 process.client)</a>。【还没试过的方式，通过 nuxt.config.js 配置：plugins + ssr:false】</p>
-</blockquote>
-
-<p>vue 里面这样用的（非 ssr）：</p>
+<p>vue里面这样用的（非ssr）：</p>
 
 <pre><code class="language-bash">import {hideNavigationBar} from '@/assets/js/appBridge'
 
@@ -466,7 +517,7 @@ export default {
     },
     mounted() {
       if (this.isApp) {
-        // 引入appBridge
+        // 引入appBridge，后面可以使用
         this.appBridge = require('@/assets/js/appBridge').default
         this.appBridge.hideNavigationBar()
       } else {
@@ -478,18 +529,87 @@ export default {
 </code></pre>
 
 <blockquote>
-<p>实际上在服务的已加是能获取到设备型号的，然后直接存 store。应该是更好的方式。至于引用 appBridge 的方式暂时没有想到好方法。
-可以使用 process.client 判断是客户端</p>
+<p>实际上在服务的已加是能获取到设备型号的，然后直接存store。应该是更好的方式。至于引用appBridge的方式暂时没有想到好方法。
+可以使用process.client判断是客户端</p>
 </blockquote>
+
+<h4 id="3-vue-warn-the-client-side-rendered-virtual-dom-tree-is-not-matching-server-rendered-content-this-is-likely-caused-by-incorrect-html-markup-for-example-nesting-block-level-elements-inside-p-or-missing-tbody-bailing-hydration-and-performing-full-client-side-render">3. [Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content. This is likely caused by incorrect HTML markup, for example nesting block-level elements inside<p>, or missing <tbody>. Bailing hydration and performing full client-side render.</h4>
+
+<blockquote>
+<p>服务端与客户端渲染的DOM结构不一样，HTML结构嵌套不正确，但大多数情况下并不是嵌套结构的问题，而是因为==服务端与客户端渲染的DOM结构不一样==</p>
+</blockquote>
+
+<ol>
+<li><p>错误嵌套代码示例：</p>
+
+<pre><code class="language-bash"># 错误原因&lt;p&gt;&lt;div&gt;&lt;/div&gt;&lt;/p&gt; 或 &lt;span&gt;&lt;p&gt;&lt;/p&gt;&lt;/span&gt;
+&lt;p class=&quot;text&quot;&gt;
+&lt;van-checkbox class=&quot;tour-checkbox&quot;
+  v-model=&quot;checked&quot;&gt;
+  &lt;span&gt;我已经阅读并同意《服务协议》&lt;/span&gt;
+&lt;/van-checkbox&gt;
+&lt;/p&gt;
+</code></pre>
+
+<p>修正：</p>
+
+<pre><code class="language-bash">&lt;div class=&quot;text&quot;&gt;
+&lt;van-checkbox class=&quot;tour-checkbox&quot;
+  v-model=&quot;checked&quot;&gt;
+  &lt;span&gt;我已经阅读并同意《服务协议》&lt;/span&gt;
+&lt;/van-checkbox&gt;
+&lt;/div&gt;
+</code></pre></li>
+
+<li><p>服务端与客户端渲染的DOM结构不一致</p></li>
+</ol>
+
+<pre><code class="language-bash"># nuxt.config.js配置
+plugins: [
+  {
+    src: '~/plugins/mint-ui',
+    ssr: true // 划重点！！！设为true后，ssr会进行初始化时前后dom比较，保证初始化前后一致
+  }, {
+    src: &quot;~/plugins/vue-swiper&quot;,
+    ssr: false // 禁用服务端渲染
+  }, 
+]
+</code></pre>
+
+<p>这边以 <a href="https://github.com/surmon-china/vue-awesome-swiper">vue-awesome-swiper</a> 为例，官网也给出了明确的ssr使用方式，请仔细阅读，一定要用ssr的方式！</p>
+
+<blockquote>
+<p>例子中的类名.swiper-wrapper类名千万不要修改。</p>
+</blockquote>
+
+<h4 id="4-移动端-postcss-px2rem会导致其他本身已支持自适应的ui库-vant-ui-样式缩小">4. 【移动端】postcss-px2rem会导致其他本身已支持自适应的UI库（vant UI）样式缩小。</h4>
+
+<blockquote>
+<p>解决方式: postcss-px2rem-exclude代替postcss-px2rem，配置如下</p>
+</blockquote>
+
+<pre><code class="language-bash"># nuxt.config.js
+build:{
+    postcss: [
+      require('postcss-px2rem-exclude')({
+        remUnit: 75, // 转换基本单位
+        exclude: /vant/i
+      }),
+      require('autoprefixer')({
+        browsers: ['last 3 versions']
+      })
+    ],
+}
+</code></pre>
 
 <p><br/></p>
 
-<h4 id="5-this-route-params-一直为空-但-query-是正常-郁闷了我一个小时">5. this.$route.params 一直为空，但 query 是正常。郁闷了我一个小时。</h4>
+<h4 id="5-this-route-params一直为空-但query是正常-郁闷了我一个小时">5. this.$route.params一直为空，但query是正常。郁闷了我一个小时。</h4>
 
 <blockquote>
-<p>这个坑我不想说什么了。可能是用 vue 就习惯了用 path 跳转，但在 nuxt 中可能要换成使用 name 了，因为用 params 传参这里就必须带上 name，但为什么必须带 name 我不清楚【或许是 nuxt 中的 pages 就是遍历出来的路由所以用了 pages 下的文件名作为 name,而自定义的 name 是失效的】。</p>
+<p>这个坑我不想说什么了。可能是用vue就习惯了用path跳转，但在nuxt中可能要换成使用name了，因为用params传参这里就必须带上name，但为什么必须带name我不清楚【或许是nuxt中的pages就是遍历出来的路由所以用了pages下的文件名作为name,而自定义的name是失效的】。</p>
 
-<p>有兴趣可以试试：自定义 name 不生效，而是使用创建好的 pages 下的页面名,比如 myDemo.vue(name 为&rsquo;my-demo&rsquo;)</p>
+<p>有兴趣可以试试：自定义name不生效，而是使用创建好的pages下的页面名,比如myDemo.vue(name为&rsquo;my-demo&rsquo;)</p>
 </blockquote>
 
 <p>错误代码：</p>
@@ -513,19 +633,19 @@ export default {
 })
 </code></pre>
 
-<h4 id="6-vuex-store-nuxt-js-提供了-2-种-store-modes">6. vuex store (nuxt.js 提供了 2 种 store modes)</h4>
+<h4 id="6-vuex-store-nuxt-js-提供了2种store-modes">6. vuex store (nuxt.js 提供了2种store modes)</h4>
 
 <blockquote>
-<p>Modules: every .js file inside the store directory is transformed as a namespaced module (index being the root module).（不需要 new Vuex.Store）</p>
+<p>Modules: every .js file inside the store directory is transformed as a namespaced module (index being the root module).（不需要new Vuex.Store）</p>
 
-<p>Classic (deprecated): store/index.js returns a method to create a store instance. 这个 2.4x 版本已经提示要作废了。nuxt3 将不存在此用法</p>
+<p>Classic (deprecated): store/index.js returns a method to create a store instance. 这个2.4x版本已经提示要作废了。nuxt3将不存在此用法</p>
 </blockquote>
 
 <p><a href="https://github.com/nuxt/nuxt.js/blob/dev/examples/vuex-store/store">官方示例</a></p>
 
-<p>我的 store 目录结构（使用 Modules mode）：</p>
+<p>我的store目录结构（使用Modules mode）：</p>
 
-<pre><code class="language-bash">├─state.js
+<pre><code>├─state.js
 ├─actions.js
 ├─getters.js
 ├─mutations.js
@@ -534,13 +654,9 @@ export default {
 
 </code></pre>
 
-<pre><code class="language-bash">// state.js 必须导出返回对象的方法，创建独立实例
-import {
-  getCookieByKey
-} from '@/assets/js/utils'
-
+<pre><code>// state.js 必须导出返回对象的方法，创建独立实例
 export default () =&gt; ({
-  deviceType: {},
+  profile: {},
 })
 
 // getters.js，actions.js，mutations.js都是直接导出对象
@@ -562,43 +678,14 @@ export const actions = {}
 export const mutations = {}
 </code></pre>
 
-<h4 id="7-工厂模式-api">7. 工厂模式 api</h4>
-
-<p>在nuxt的issue中有人提出了过相似的问题。<a href="https://github.com/nuxt-community/axios-module/pull/102">https://github.com/nuxt-community/axios-module/pull/102</a></p>
-
-<h3 id="yarn-generate-打静态包问题">yarn generate 打静态包问题</h3>
+<h4 id="7-工厂模式api">7. 工厂模式api</h4>
 
 <blockquote>
-<p>如果你想使用 nuxt generate 打静态文件的包，那么狠遗憾，动态路由无法静态打包；并且你将失去服务端渲染的一切优势。asyncData 等服务端能用的方式，都不能再使用。那你为什么还要用静态打包.但是如果你的项目只是静态页面的话，做静态化部署是完全 OK 的。但如果牵扯到请求，还是服务器端的部署吧</p>
+<p>issue中有人提出了<a href="https://github.com/nuxt-community/axios-module/pull/102">https://github.com/nuxt-community/axios-module/pull/102</a></p>
 </blockquote>
 
-<p>官网所给的方式很气人: <a href="https://zh.nuxtjs.org/api/configuration-generate">https://zh.nuxtjs.org/api/configuration-generate</a></p>
-
-<pre><code class="language-bash">
-const axios = require('axios')
-
-module.exports = {
-  generate: {
-    routes: function () {
-      return axios.get('https://my-api/users')
-      .then((res) =&gt; {
-        return res.data.map((user) =&gt; {
-          return '/users/' + user.id
-        })
-      })
-    }
-  }
-}
-// 实际上也是通过axios.get('https://my-api/users')请求，返回所有id的数组,类似：[{id: 1}, {id: 2}...]；
-// 数据量大的话自己想象。不喜欢query传参，但目前我个人觉得打包成静态的文件的话，还是使用query是最好的方式了。
-</code></pre>
-
-<pre><code class="language-bash">打静态包要修改接口地址，神烦。仅参考
-&lt;!-- axios.js --&gt;
+<pre><code class="language-bash"># 使用axios module
 let apiConfig = require('~/apiConf.env')
-// import {
-//   getCookieByKey
-// } from '@/assets/js/utils'
 
 export default function ({
   $axios,
@@ -620,30 +707,6 @@ export default function ({
   // 请求回调
   $axios.onRequest(config =&gt; {
     console.log('Making request to ' + config.url)
-    // 替换baseURL和代理字段
-    if (process.env.NODE_ENV === 'production') {
-      let realUrl = ''
-      if (config.url.indexOf('htwPay') &gt; 0) {
-        config.baseURL = apiConfig.payment
-        realUrl = config.url
-      } else {
-        config.baseURL = apiConfig.base
-        realUrl = config.url.replace(/api/, 'api/tour/v1')
-      }
-      config.url = realUrl
-    }
-    // post和get数据处理
-    if (config.method == 'post') {
-      config.data = {
-        ...config.data,
-        t: +(Date.parse(new Date()) / 1000),
-      }
-    } else if (config.method == 'get') {
-      config.params = {
-        t: +(Date.parse(new Date()) / 1000),
-        ...config.params
-      }
-    }
     return config
   })
 
@@ -664,7 +727,34 @@ export default function ({
 
 </code></pre>
 
-<p>在 nuxt.js 的 issues 找到了这个：<a href="https://github.com/nuxt/nuxt.js/issues/73">https://github.com/nuxt/nuxt.js/issues/73</a> 可以参考</p>
+<h4 id="8-yarn-generate-打静态包问题">8. yarn generate 打静态包问题</h4>
+
+<blockquote>
+<p>如果你想使用nuxt generate打静态文件的包，那么狠遗憾，动态路由无法静态打包；并且你将失去服务端渲染的一切优势。asyncData等服务端能用的方式，都不能再使用。那你为什么还要用静态打包.但是如果你的项目只是静态页面的话，做静态化部署是完全OK 的。但如果牵扯到请求，还是服务器端的部署吧</p>
+</blockquote>
+
+<p>官网所给的方式很气人: <a href="https://zh.nuxtjs.org/api/configuration-generate">https://zh.nuxtjs.org/api/configuration-generate</a></p>
+
+<pre><code class="language-bash">const axios = require('axios')
+
+module.exports = {
+  generate: {
+    routes: function () {
+      return axios.get('https://my-api/users')
+      .then((res) =&gt; {
+        return res.data.map((user) =&gt; {
+          return '/users/' + user.id
+        })
+      })
+    }
+  }
+}
+// 实际上也是通过axios.get('https://my-api/users')请求，返回所有id的数组,类似：[{id: 1}, {id: 2}...]；
+// 数据量大的话自己想象。不喜欢query传参，但目前我个人觉得打包成静态的文件的话，还是使用query是最好的方式了。
+</code></pre>
+
+<p>动态路由静态打包：
+在nuxt.js的issues找到了这个：<a href="https://github.com/nuxt/nuxt.js/issues/73">https://github.com/nuxt/nuxt.js/issues/73</a> 可以参考</p>
 
           </div>
 
@@ -752,13 +842,233 @@ export default function ({
 								
 									<ul class="nav">
 								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#nuxt%e9%87%87%e5%9d%91%e5%90%88%e9%9b%86">
+												 nuxt采坑合集
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
 									<ul class="nav">
 								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e8%ae%b0%e5%bd%95%e4%b8%80%e4%ba%9bnuxt%e5%bc%80%e5%8f%91%e4%b8%ad%e7%9a%84%e5%9d%91">
-												 记录一些nuxt开发中的坑
+						 					<a class="nav-link" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">
+												 原因分析
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%80-nuxt%e6%98%af%e4%bb%80%e4%b9%88-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e4%bd%bf%e7%94%a8nuxt">
+												 一、 nuxt是什么？为什么要使用nuxt？
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%ba%8c-%e4%bc%98%e5%8a%bf%e4%b8%8e%e5%8a%a3%e5%8a%bf">
+												 二、优势与劣势
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%ab%af%e6%b8%b2%e6%9f%93%e7%9a%84%e4%bc%98%e7%bc%ba%e7%82%b9">
+												 1. 服务器端渲染的优缺点？
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-%e6%98%af%e5%90%a6%e5%ba%94%e8%af%a5%e4%bd%bf%e7%94%a8%e6%9c%8d%e5%8a%a1%e7%ab%af%e6%b8%b2%e6%9f%93">
+												 2. 是否应该使用服务端渲染
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#3-%e5%8e%9f%e7%90%86%e5%9b%be">
+												 3. 原理图
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#4-%e6%8c%87%e4%bb%a4%e8%83%8c%e5%90%8e%e7%9a%84%e6%95%85%e4%ba%8b">
+												 4. 指令背后的故事
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%89-%e4%bd%bf%e7%94%a8%e8%bf%87%e7%a8%8b%e4%b8%ad%e9%81%87%e5%88%b0%e7%9a%84%e5%9d%91">
+												 三、使用过程中遇到的坑
 											</a>
 										</li>
 						 
@@ -815,8 +1125,8 @@ export default function ({
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#2-vue-warn-the-client-side-rendered-virtual-dom-tree-is-not-matching-server-rendered-content-this-is-likely-caused-by-incorrect-html-markup-for-example-nesting-block-level-elements-inside-p-or-missing-tbody-bailing-hydration-and-performing-full-client-side-render">
-												 2. [Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content. This is likely caused by incorrect HTML markup, for example nesting block-level elements inside, or missing . Bailing hydration and performing full client-side render.
+						 					<a class="nav-link" href="#2-%e7%a7%bb%e5%8a%a8%e7%ab%af-%e5%9b%a0%e4%b8%ba%e8%b0%83%e7%94%a8app%e7%ab%af%e7%9a%84%e6%96%b9%e6%b3%95%e9%83%bd%e6%98%af%e4%bd%bf%e7%94%a8window%e4%b8%8b%e7%9a%84android%e5%92%8cwebkit-messagehandlers%e6%96%b9%e6%b3%95-%e4%bd%86%e6%98%afssr%e4%b8%8b%e5%a6%82%e6%9e%9c%e7%9b%b4%e6%8e%a5%e5%bc%95%e5%85%a5appbridge-js%e4%b8%8b%e7%9a%84%e6%96%b9%e6%b3%95%e4%bc%9a%e6%8a%a5%e9%94%99-%e5%9b%a0%e4%b8%ba%e6%9c%8d%e5%8a%a1%e7%ab%af%e6%b2%a1%e6%9c%89window">
+												 2.【移动端】因为调用app端的方法都是使用window下的android和webkit.messageHandlers方法。但是ssr下如果直接引入appBridge.js下的方法会报错，因为服务端没有window
 											</a>
 										</li>
 						 
@@ -845,8 +1155,8 @@ export default function ({
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#3-%e7%a7%bb%e5%8a%a8%e7%ab%af-postcss-px2rem-%e4%bc%9a%e5%af%bc%e8%87%b4%e5%85%b6%e4%bb%96%e6%9c%ac%e8%ba%ab%e5%b7%b2%e6%94%af%e6%8c%81%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84-ui-%e5%ba%93-vant-ui-%e6%a0%b7%e5%bc%8f%e7%bc%a9%e5%b0%8f">
-												 3. 【移动端】postcss-px2rem 会导致其他本身已支持自适应的 UI 库（vant UI）样式缩小。
+						 					<a class="nav-link" href="#3-vue-warn-the-client-side-rendered-virtual-dom-tree-is-not-matching-server-rendered-content-this-is-likely-caused-by-incorrect-html-markup-for-example-nesting-block-level-elements-inside-p-or-missing-tbody-bailing-hydration-and-performing-full-client-side-render">
+												 3. [Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content. This is likely caused by incorrect HTML markup, for example nesting block-level elements inside, or missing . Bailing hydration and performing full client-side render.
 											</a>
 										</li>
 						 
@@ -875,8 +1185,8 @@ export default function ({
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#4-%e7%a7%bb%e5%8a%a8%e7%ab%af-%e5%9b%a0%e4%b8%ba%e8%b0%83%e7%94%a8-app-%e7%ab%af%e7%9a%84%e6%96%b9%e6%b3%95%e9%83%bd%e6%98%af%e4%bd%bf%e7%94%a8-window-%e4%b8%8b%e7%9a%84-android-%e5%92%8c-webkit-messagehandlers-%e6%96%b9%e6%b3%95-%e4%bd%86%e6%98%af-ssr-%e4%b8%8b%e5%a6%82%e6%9e%9c%e7%9b%b4%e6%8e%a5%e5%bc%95%e5%85%a5-appbridge-js-%e4%b8%8b%e7%9a%84%e6%96%b9%e6%b3%95%e4%bc%9a%e6%8a%a5%e9%94%99-%e5%9b%a0%e4%b8%ba%e6%9c%8d%e5%8a%a1%e7%ab%af%e6%b2%a1%e6%9c%89-window">
-												 4.【移动端】因为调用 app 端的方法都是使用 window 下的 android 和 webkit.messageHandlers 方法。但是 ssr 下如果直接引入 appBridge.js 下的方法会报错，因为服务端没有 window
+						 					<a class="nav-link" href="#4-%e7%a7%bb%e5%8a%a8%e7%ab%af-postcss-px2rem%e4%bc%9a%e5%af%bc%e8%87%b4%e5%85%b6%e4%bb%96%e6%9c%ac%e8%ba%ab%e5%b7%b2%e6%94%af%e6%8c%81%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84ui%e5%ba%93-vant-ui-%e6%a0%b7%e5%bc%8f%e7%bc%a9%e5%b0%8f">
+												 4. 【移动端】postcss-px2rem会导致其他本身已支持自适应的UI库（vant UI）样式缩小。
 											</a>
 										</li>
 						 
@@ -905,8 +1215,8 @@ export default function ({
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#5-this-route-params-%e4%b8%80%e7%9b%b4%e4%b8%ba%e7%a9%ba-%e4%bd%86-query-%e6%98%af%e6%ad%a3%e5%b8%b8-%e9%83%81%e9%97%b7%e4%ba%86%e6%88%91%e4%b8%80%e4%b8%aa%e5%b0%8f%e6%97%b6">
-												 5. this.$route.params 一直为空，但 query 是正常。郁闷了我一个小时。
+						 					<a class="nav-link" href="#5-this-route-params%e4%b8%80%e7%9b%b4%e4%b8%ba%e7%a9%ba-%e4%bd%86query%e6%98%af%e6%ad%a3%e5%b8%b8-%e9%83%81%e9%97%b7%e4%ba%86%e6%88%91%e4%b8%80%e4%b8%aa%e5%b0%8f%e6%97%b6">
+												 5. this.$route.params一直为空，但query是正常。郁闷了我一个小时。
 											</a>
 										</li>
 						 
@@ -935,8 +1245,8 @@ export default function ({
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#6-vuex-store-nuxt-js-%e6%8f%90%e4%be%9b%e4%ba%86-2-%e7%a7%8d-store-modes">
-												 6. vuex store (nuxt.js 提供了 2 种 store modes)
+						 					<a class="nav-link" href="#6-vuex-store-nuxt-js-%e6%8f%90%e4%be%9b%e4%ba%862%e7%a7%8dstore-modes">
+												 6. vuex store (nuxt.js 提供了2种store modes)
 											</a>
 										</li>
 						 
@@ -965,8 +1275,8 @@ export default function ({
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#7-%e5%b7%a5%e5%8e%82%e6%a8%a1%e5%bc%8f-api">
-												 7. 工厂模式 api
+						 					<a class="nav-link" href="#7-%e5%b7%a5%e5%8e%82%e6%a8%a1%e5%bc%8fapi">
+												 7. 工厂模式api
 											</a>
 										</li>
 						 
@@ -990,15 +1300,19 @@ export default function ({
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#yarn-generate-%e6%89%93%e9%9d%99%e6%80%81%e5%8c%85%e9%97%ae%e9%a2%98">
-												 yarn generate 打静态包问题
+						 					<a class="nav-link" href="#8-yarn-generate-%e6%89%93%e9%9d%99%e6%80%81%e5%8c%85%e9%97%ae%e9%a2%98">
+												 8. yarn generate 打静态包问题
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
