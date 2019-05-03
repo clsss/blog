@@ -7,10 +7,10 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Collin">
-  <meta name="description" content="nuxt采坑合集 官网 github 社区 原因分析 内部原因： 调研时间不足。 撸起袖子就写代码是一个错误的方式，现在回头看m站会发现很多不对的实现方式，个别模块的优化不亚于重写。 技术了解不足，科学的使用方式后知后觉。 构建环境问题（不同环境相同代码，结果不同；打静态页面不可取等）。 插件使用问题(sentry竟会阻塞代码，有待研究)。 文档,API了解不足。 思维方式陈旧。 虽然是基于vue的框架但是使用方式与vue-cli构">
+  <meta name="description" content="nuxt踩坑合集 官网 github 社区 原因分析 内部原因： 调研时间不足。 撸起袖子就写代码是一个错误的方式，现在回头看m站会发现很多不对的实现方式，个别模块的优化不亚于重写。 技术了解不足，科学的使用方式后知后觉。 构建环境问题（不同环境相同代码，结果不同；打静态页面不可取等）。 插件使用问题(sentry竟会阻塞代码，有待研究)。 文档,API了解不足。 思维方式陈旧。 虽然是基于vue的框架但是使用方式与vue-cli构">
   
   <meta property="og:title" content="Nuxt.js 采坑" />
-<meta property="og:description" content="nuxt采坑合集 官网 github 社区 原因分析 内部原因： 调研时间不足。 撸起袖子就写代码是一个错误的方式，现在回头看m站会发现很多不对的实现方式，个别模块的优化不亚于重写。 技术了解不足，科学的使用方式后知后觉。 构建环境问题（不同环境相同代码，结果不同；打静态页面不可取等）。 插件使用问题(sentry竟会阻塞代码，有待研究)。 文档,API了解不足。 思维方式陈旧。 虽然是基于vue的框架但是使用方式与vue-cli构" />
+<meta property="og:description" content="nuxt踩坑合集 官网 github 社区 原因分析 内部原因： 调研时间不足。 撸起袖子就写代码是一个错误的方式，现在回头看m站会发现很多不对的实现方式，个别模块的优化不亚于重写。 技术了解不足，科学的使用方式后知后觉。 构建环境问题（不同环境相同代码，结果不同；打静态页面不可取等）。 插件使用问题(sentry竟会阻塞代码，有待研究)。 文档,API了解不足。 思维方式陈旧。 虽然是基于vue的框架但是使用方式与vue-cli构" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://clsss.github.io/blog/blogs/2019-3/nuxt_pit/" /><meta property="article:published_time" content="2019-03-13T23:04:40&#43;08:00"/>
 <meta property="article:modified_time" content="2019-03-13T23:04:40&#43;08:00"/><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-12/nuxt/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-6/v-distpicker/" />
@@ -353,11 +353,14 @@
           <div class="post-content markdown">
             
 
-<h2 id="nuxt采坑合集">nuxt采坑合集</h2>
+<h2 id="nuxt踩坑合集">nuxt踩坑合集</h2>
 
-<p><a href="https://zh.nuxtjs.org/guide/">官网</a> <br/>
-<a href="https://github.com/nuxt/">github</a> <br/>
-<a href="https://github.com/nuxt-community">社区</a> <br/></p>
+<p><a href="https://zh.nuxtjs.org/guide/">官网</a>
+<br/>
+<a href="https://github.com/nuxt/">github</a>
+<br/>
+<a href="https://github.com/nuxt-community">社区</a>
+<br/></p>
 
 <h3 id="原因分析">原因分析</h3>
 
@@ -392,7 +395,7 @@
 <ul>
 <li>建议使用英文版的官网，版本高于中文版。</li>
 <li>官方的文档可能是旧的。</li>
-<li>到目前为止nuxt的谷歌分析统计都是错误的实例。nuxt2.0版本之后已加不适用，改用了analytics-module</li>
+<li>到目前为止nuxt的谷歌分析统计都是错误的实例。nuxt2.0版本之后已不适用，改用了analytics-module</li>
 </ul></li>
 <li>插件兼容导致的问题。
 
@@ -410,40 +413,51 @@
 <blockquote>
 <p>2016 年 10 月 25 日，zeit.co 背后的团队对外发布了 Next.js，一个 React 的服务端渲染应用框架。几小时后，与 Next.js 异曲同工，一个基于 Vue.js 的服务端渲染应用框架应运而生，我们称之为：Nuxt.js。</p>
 
-<p>Nuxt.js 是一个基于 Vue.js 的通用应用框架。
-通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI渲染。
+<p>Nuxt.js 是一个基于 Vue.js 的通用应用框架。</p>
+</blockquote>
+
+<p>通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI渲染。
 其核心主要是通过vue-server-renderer模块来实现服务端渲染。 vue-server-renderer是Vue服务端Node.js渲染的一个模块，用来生成HTML内容。</p>
 
-<p>我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。
-Nuxt.js 预设了利用Vue.js开发服务端渲染的应用所需要的各种配置。
+<blockquote>
+<p>我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。</p>
+</blockquote>
+
+<p>Nuxt.js 预设了利用Vue.js开发服务端渲染的应用所需要的各种配置。
 除此之外，我们还提供了一种命令叫：nuxt generate，为基于 Vue.js 的应用提供生成对应的静态站点的功能。
 我们相信这个命令所提供的功能，是向开发集成各种微服务（microservices）的 Web 应用迈开的新一步。
 作为框架，Nuxt.js 为 客户端/服务端 这种典型的应用架构模式提供了许多有用的特性，例如异步数据加载、中间件支持、布局支持等。</p>
-</blockquote>
 
 <p>SSR意为 server-side rendering（服务端渲染）,目的是为了<strong>解决单页面应用的SEO的问题</strong>。</p>
 
 <ul>
-<li>客户端渲染和服务器端渲染的最重要的区别是html文件的返回是在服务端还是客户端。若是在服务器端完成的，就是服务器端渲染；反之前端完成了html的拼接，则就是客户端渲染(一般为首屏渲染: vue-meta-info + prerender-spa-plugin)。</li>
-<li>SEO对比：collinss.cn/ 和 <a href="http://en.dev.tourscool.net/">http://en.dev.tourscool.net/</a></li>
+<li><p>客户端渲染和服务器端渲染的最重要的区别是html文件的返回是在服务端还是客户端。若是在服务器端完成的，就是服务器端渲染；反之前端完成了html的拼接，则就是客户端渲染(一般为首屏渲染: vue-meta-info + prerender-spa-plugin)。</p></li>
+
+<li><p>SEO对比：<a href="collinss.cn">collinss.cn</a> 和 <a href="en.tourscool.com">en.tourscool.com</a></p></li>
 </ul>
 
 <p><br/></p>
 
-<h3 id="二-优势与劣势">二、优势与劣势</h3>
+<h3 id="二-为什么选择nuxt">二、为什么选择nuxt</h3>
 
 <h4 id="1-服务器端渲染的优缺点">1. 服务器端渲染的优缺点？</h4>
 
-<p><strong>优点：</strong>
-1. 更好的SEO 首屏加载快 由于搜索引擎爬虫抓取工具可以直接查看完全渲染的页面。
-2. 首屏加载快 快速地看到完整渲染的页面，从而提高用户体验。
-3. 后端生成静态化文件 即解析模板的工作完全交由Nuxt来做，客户端只要解析标准的html。</p>
+<p><strong>优点：</strong></p>
 
-<p><strong>缺点：</strong>
-1. 开发条件受限，在服务端渲染中，created和beforeCreate之外的生命周期钩子不可用；其他生命周期均为客户端。
-2. 占用服务端资源，所以原则是不影响SEO数据展示的内容或者通过事件触发获取的数据还是通过客户端获取，以减轻服务端压力。
-3. 学习成本相对较高
-除了对webpack、Vue要熟悉，还需要掌握node、Express或者koa等相关技术。相对于客户端渲染，项目构建、部署过程更加复杂。</p>
+<ol>
+<li>更好的SEO 首屏加载快 由于搜索引擎爬虫抓取工具可以直接查看完全渲染的页面。</li>
+<li>首屏加载快 快速地看到完整渲染的页面，从而提高用户体验。</li>
+<li>后端生成静态化文件 即解析模板的工作完全交由Nuxt来做，客户端只要解析标准的html。</li>
+</ol>
+
+<p><strong>缺点：</strong></p>
+
+<ol>
+<li>开发条件受限，在服务端渲染中，created和beforeCreate之外的生命周期钩子不可用；其他生命周期均为客户端。</li>
+<li>占用服务端资源，所以原则是不影响SEO数据展示的内容或者通过事件触发获取的数据还是通过客户端获取，以减轻服务端压力。</li>
+<li>学习成本相对较高
+除了对webpack、Vue要熟悉，还需要掌握node、Express或者koa等相关技术。相对于客户端渲染，项目构建、部署过程更加复杂。</li>
+</ol>
 
 <h4 id="2-是否应该使用服务端渲染">2. 是否应该使用服务端渲染</h4>
 
@@ -609,24 +623,24 @@ build:{
 <blockquote>
 <p>这个坑我不想说什么了。可能是用vue就习惯了用path跳转，但在nuxt中可能要换成使用name了，因为用params传参这里就必须带上name，但为什么必须带name我不清楚【或许是nuxt中的pages就是遍历出来的路由所以用了pages下的文件名作为name,而自定义的name是失效的】。</p>
 
-<p>有兴趣可以试试：自定义name不生效，而是使用创建好的pages下的页面名,比如myDemo.vue(name为&rsquo;my-demo&rsquo;)</p>
+<p>有兴趣可以试试：自定义name不生效，而是使用创建好的pages下的页面名,比如demo/test.vue(name为&rsquo;demo-test&rsquo;)</p>
 </blockquote>
 
 <p>错误代码：</p>
 
 <pre><code class="language-bash">this.$router.push({
-  path: '/myDemo',
+  path: '/demo/test', // demo-test
   params: {
     type: this.type
   }
 })
 </code></pre>
 
-<p>正确代码、</p>
+<p>正确代码:</p>
 
 <pre><code class="language-bash">this.$router.push({
-  name: 'my-demo', // 划重点!!!,须用name!（pages/myDemo/index.vue）
-  path: '/myDemo',
+  name: 'demo-test', // 划重点!!!,params须用name!（pages/demo/test.vue）
+  path: '/demo/test',
   params: {
     type: this.type
   }
@@ -645,7 +659,7 @@ build:{
 
 <p>我的store目录结构（使用Modules mode）：</p>
 
-<pre><code>├─state.js
+<pre><code class="language-bash">├─state.js
 ├─actions.js
 ├─getters.js
 ├─mutations.js
@@ -654,7 +668,7 @@ build:{
 
 </code></pre>
 
-<pre><code>// state.js 必须导出返回对象的方法，创建独立实例
+<pre><code class="language-bash">// state.js 必须导出返回对象的方法，创建独立实例
 export default () =&gt; ({
   profile: {},
 })
@@ -845,8 +859,8 @@ module.exports = {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#nuxt%e9%87%87%e5%9d%91%e5%90%88%e9%9b%86">
-												 nuxt采坑合集
+						 					<a class="nav-link" href="#nuxt%e8%b8%a9%e5%9d%91%e5%90%88%e9%9b%86">
+												 nuxt踩坑合集
 											</a>
 										</li>
 						 
@@ -921,8 +935,8 @@ module.exports = {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%ba%8c-%e4%bc%98%e5%8a%bf%e4%b8%8e%e5%8a%a3%e5%8a%bf">
-												 二、优势与劣势
+						 					<a class="nav-link" href="#%e4%ba%8c-%e4%b8%ba%e4%bb%80%e4%b9%88%e9%80%89%e6%8b%a9nuxt">
+												 二、为什么选择nuxt
 											</a>
 										</li>
 						 
