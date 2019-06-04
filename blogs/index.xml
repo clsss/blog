@@ -6,10 +6,28 @@
     <description>Recent content in Blogs on Collin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Wed, 13 Mar 2019 23:04:40 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jun 2019 20:17:53 +0800</lastBuildDate>
     
 	<atom:link href="https://clsss.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Node.js</title>
+      <link>https://clsss.github.io/blog/blogs/2019-6/nodejs/</link>
+      <pubDate>Tue, 04 Jun 2019 20:17:53 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2019-6/nodejs/</guid>
+      <description>难点：不同环境下的问题，学习一门语言可能只要几天，但熟悉一门语言的时间可能要1-2年 一、Node与Js的区别 ECMAScript（语法） 定义变量，循环，判断，函数 原型链，作用域和闭包，异步 不能操DOM，不能监听事件，不能发送ajax 不能处理http请求，不能操作文件 javascript 使用ES规范 + web API (DOM,BOM,事件,Ajax) Node.js 使用ES规范 + Node.js API (http,文件等) 1. 服务稳定性 server端可能会遭受各种</description>
+    </item>
+    
+    <item>
+      <title>Typescript</title>
+      <link>https://clsss.github.io/blog/blogs/2019-5/typescript/</link>
+      <pubDate>Fri, 03 May 2019 17:17:53 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2019-5/typescript/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Nuxt.js 采坑</title>

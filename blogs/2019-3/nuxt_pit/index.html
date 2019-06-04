@@ -770,6 +770,51 @@ module.exports = {
 <p>动态路由静态打包：
 在nuxt.js的issues找到了这个：<a href="https://github.com/nuxt/nuxt.js/issues/73">https://github.com/nuxt/nuxt.js/issues/73</a> 可以参考</p>
 
+<p><br><br></p>
+
+<h4 id="构建">构建</h4>
+
+<ol>
+<li>core-js问题</li>
+</ol>
+
+<pre><code class="language-bash">https://github.com/nuxt/nuxt.js/pull/5317
+https://github.com/nuxt/nuxt.js/pull/5411
+解决方式：https://github.com/nuxt/nuxt.js/pull/5352
+</code></pre>
+
+<ol>
+<li>less3.0bug，iview主题色修改遇到</li>
+</ol>
+
+<pre><code class="language-bash">// https://github.com/ant-design/ant-motion/issues/44
+extend(config, ctx) {
+  config.module.rules.push({
+    test: /\.less$/,
+    loader: 'less-loader',
+    options: {
+      javascriptEnabled: true, 
+    }
+  })
+}
+</code></pre>
+
+<ol>
+<li>extractCSS与parallel不可并行;IE或者Edge下报错原因</li>
+</ol>
+
+<pre><code class="language-bash">// analyze: true,
+// extractCSS与parallel不可并行：https://github.com/nuxt/nuxt.js/pull/5004
+extractCSS: (process.env.NODE_ENV === 'production'), // 拆分css
+maxChunkSize: 30000,
+// parallel: true, // 多进程
+// IE或者Edge下报错原因：（https://github.com/Rich-Harris/devalue/issues/16）
+// 处理
+// https://github.com/nuxt/nuxt.js/issues/4432
+// https://github.com/nuxt/nuxt.js/issues/4643
+// https://github.com/nuxt/nuxt.js/pull/4600
+</code></pre>
+
           </div>
 
           
@@ -814,6 +859,13 @@ module.exports = {
             </div>
             
             <div class="col-md-6 text-right" >
+              
+                <a href=https://clsss.github.io/blog/blogs/2019-5/typescript/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>Typescript</span>
+                  </div>
+                </a>
               
             </div>
           </div>
@@ -1321,6 +1373,36 @@ module.exports = {
 										<li class="nav-item">
 						 					<a class="nav-link" href="#8-yarn-generate-%e6%89%93%e9%9d%99%e6%80%81%e5%8c%85%e9%97%ae%e9%a2%98">
 												 8. yarn generate 打静态包问题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%9e%84%e5%bb%ba">
+												 构建
 											</a>
 										</li>
 						 
