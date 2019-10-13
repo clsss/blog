@@ -7,23 +7,23 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Collin">
-  <meta name="description" content="RESTful API 这里我就直接把阮一峰老师的文章 copy 过来了。 引用：阮一峰 RESTful API 最佳实践 RESTful 是什么？ RESTful 是目前最流行的 API 设计规范，用于 Web 数据接口的设计。 它的大原则容易把握，但是细节不容易做对。本文总结 RESTful 的设计细节，介绍如何设计出易于理解和使用的 API。 RESTful 的核心思想就是，客户端发出的数据操作指令都是&rdquo;动词 &#43; 宾语&rdquo;的结构。比如，GET /articles 这个命令，GET 是动词，/articles 是宾语。 一、URL 设计 1.1">
+  <meta name="description" content="官网 文档 Docker Hub 架构和底层技术 docker提供了一个打包，开发，运行app的平台 把app和底层infrastructure隔离开来 Docker Engine 后台进程（dockerd） REST API Server CLI接口（docker） # 查看后台运行的dockor程序 ps -ef | grep docker Image 文件和 mate data 的集合（root filesystem） 分层的，并且每一层都可以添加改变，删除文件成为一个新的image 不同的image可以共享相同的layer Image本身是">
   
-  <meta property="og:title" content="RESTful" />
-<meta property="og:description" content="RESTful API 这里我就直接把阮一峰老师的文章 copy 过来了。 引用：阮一峰 RESTful API 最佳实践 RESTful 是什么？ RESTful 是目前最流行的 API 设计规范，用于 Web 数据接口的设计。 它的大原则容易把握，但是细节不容易做对。本文总结 RESTful 的设计细节，介绍如何设计出易于理解和使用的 API。 RESTful 的核心思想就是，客户端发出的数据操作指令都是&rdquo;动词 &#43; 宾语&rdquo;的结构。比如，GET /articles 这个命令，GET 是动词，/articles 是宾语。 一、URL 设计 1.1" />
+  <meta property="og:title" content="docker系统学习" />
+<meta property="og:description" content="官网 文档 Docker Hub 架构和底层技术 docker提供了一个打包，开发，运行app的平台 把app和底层infrastructure隔离开来 Docker Engine 后台进程（dockerd） REST API Server CLI接口（docker） # 查看后台运行的dockor程序 ps -ef | grep docker Image 文件和 mate data 的集合（root filesystem） 分层的，并且每一层都可以添加改变，删除文件成为一个新的image 不同的image可以共享相同的layer Image本身是" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://clsss.github.io/blog/blogs/2018-10/restful/" /><meta property="article:published_time" content="2018-08-25T23:54:11&#43;08:00"/>
-<meta property="article:modified_time" content="2018-08-25T23:54:11&#43;08:00"/><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_communicate_app/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-8/cross_domain/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_performance/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_useragent/" />
+<meta property="og:url" content="https://clsss.github.io/blog/blogs/2019-10/docker%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/" /><meta property="article:published_time" content="2019-10-13T11:12:19&#43;08:00"/>
+<meta property="article:modified_time" content="2019-10-13T11:12:19&#43;08:00"/><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-6/redis/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-6/mongodb/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-6/docker/" />
 
 
 
   <title>
   
-       RESTful | Collin&#39;s Blog 
+       docker系统学习 | Collin&#39;s Blog 
   
   </title>
 
-  <link rel="canonical" href="https://clsss.github.io/blog/blogs/2018-10/restful/">
+  <link rel="canonical" href="https://clsss.github.io/blog/blogs/2019-10/docker%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/">
 
   
   
@@ -321,32 +321,28 @@
   <ul class="post-meta li-x">
     
       
-        <li><a href="https://clsss.github.io/blog/categories/restful"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> RESTful </a></li>
+        <li><a href="https://clsss.github.io/blog/categories/docker"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> docker </a></li>
       
     
     
       
-        <li><a href="https://clsss.github.io/blog/series/web"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>web</a></li>
+        <li><a href="https://clsss.github.io/blog/series/server"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>server</a></li>
       
     
   </ul>
 
-  <div class="px-4 post-heading">RESTful</div>
+  <div class="px-4 post-heading">docker系统学习</div>
 
   <ul class="post-meta li-x mt-1">
     
-      <li>Aug 25, 2018</li>
+      <li>Oct 13, 2019</li>
     
 
     
       <li class="middot"></li>
-      <li>5 minutes read</li>
+      <li>4 minutes read</li>
     
   </ul>
-  
-    <div class="view">
-      <img src="https://clsss.github.io/blog/images/blog/img.jpg" />
-    </div>
   
 
 </div>
@@ -355,198 +351,463 @@
           <div class="post-content markdown">
             
 
-<h2 id="restful-api">RESTful API</h2>
+<p><a href="https://www.docker.com/">官网</a></p>
 
-<p>这里我就直接把阮一峰老师的文章 copy 过来了。</p>
+<p><a href="https://docs.docker.com/reference/">文档</a></p>
 
-<p>引用：<a href="http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html">阮一峰 RESTful API 最佳实践</a></p>
+<p><a href="https://hub.docker.com/">Docker Hub</a></p>
 
-<h2 id="restful-是什么">RESTful 是什么？</h2>
+<h4 id="架构和底层技术">架构和底层技术</h4>
 
-<p>RESTful 是目前最流行的 API 设计规范，用于 Web 数据接口的设计。</p>
+<blockquote>
+<ol>
+<li>docker提供了一个打包，开发，运行app的平台</li>
+<li>把app和底层infrastructure隔离开来</li>
+</ol>
+</blockquote>
 
-<p>它的大原则容易把握，但是细节不容易做对。本文总结 RESTful 的设计细节，介绍如何设计出易于理解和使用的 API。</p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1570289397760&amp;di=292a5716008a14c2643859e6046550fd&amp;imgtype=0&amp;src=http%3A%2F%2Faliyunzixunbucket.oss-cn-beijing.aliyuncs.com%2Fjpg%2F17c4de2ab18d053c6b95bbb6e5bce6de.jpg%3Fx-oss-process%3Dimage%2Fresize%2Cp_100%2Fauto-orient%2C1%2Fquality%2Cq_90%2Fformat%2Cjpg%2Fwatermark%2Cimage_eXVuY2VzaGk%3D%2Ct_100" alt="image" /></p>
 
-<p>RESTful 的核心思想就是，客户端发出的数据操作指令都是&rdquo;动词 + 宾语&rdquo;的结构。比如，GET /articles 这个命令，GET 是动词，/articles 是宾语。</p>
+<h4 id="docker-engine">Docker Engine</h4>
 
-<h3 id="一-url-设计">一、URL 设计</h3>
+<blockquote>
+<ol>
+<li>后台进程（dockerd）</li>
+<li>REST API Server</li>
+<li>CLI接口（docker）</li>
+</ol>
+</blockquote>
 
-<h4 id="1-1-动词-宾语">1.1 动词 + 宾语</h4>
-
-<p>(HTTP 规范，动词一律大写。)</p>
-
-<pre><code class="language-bash">-   GET：读取（Read）
--   POST：新建（Create）
--   PUT：更新（Update）
--   PATCH：更新（Update），通常是部分更新
--   DELETE：删除（Delete）
+<pre><code class="language-bash"># 查看后台运行的dockor程序
+ps -ef | grep docker
 </code></pre>
 
-<h4 id="1-2-动词的覆盖">1.2 动词的覆盖</h4>
+<p><br></p>
 
-<p>有些客户端只能使用 GET 和 POST 这两种方法。服务器必须接受 POST 模拟其他三个方法（PUT、PATCH、DELETE）。</p>
+<h4 id="image">Image</h4>
 
-<p>这时，客户端发出的 HTTP 请求，要加上 X-HTTP-Method-Override 属性，告诉服务器应该使用哪一个动词，覆盖 POST 方法。</p>
+<blockquote>
+<ol>
+<li>文件和 mate data 的集合（root filesystem）</li>
+<li>分层的，并且每一层都可以添加改变，删除文件成为一个新的image</li>
+<li>不同的image可以共享相同的layer</li>
+<li>Image本身是read-only的</li>
+</ol>
+</blockquote>
 
-<pre><code class="language-bash">POST /api/Person/4 HTTP/1.1
-X-HTTP-Method-Override: PUT
+<pre><code class="language-bash"># 查看已有的image
+docker image ls
+
+# 拉取官方demo
+docker pull hello-world
+# 执行
+docker run hello-world
 </code></pre>
 
-<h4 id="1-3-宾语必须是名词">1.3 宾语必须是名词</h4>
+<h5 id="1-获取image">1. 获取image</h5>
 
-<p>宾语就是 API 的 URL，是 HTTP 动词作用的对象。它应该是名词，不能是动词。比如，/articles 这个 URL 就是正确的，而下面的 URL 不是名词，所以都是错误的。</p>
+<ol>
+<li>Build from Dockerfile</li>
+<li>Pull from Registry(类似git)</li>
+<li>第三方images</li>
+</ol>
 
-<pre><code class="language-bash">/getAllCars
-/createNewCar
-/deleteAllRedCars
+<pre><code class="language-bash"># mak 解决 sodu 权限问题
+# 加入group
+sudo groupadd docker
+group docker
+docker version
+# 重启docker
+service docker restart
+# 重新登录ssh主机
+exit
+# 登录
 </code></pre>
 
-<h4 id="1-4-复数-url">1.4 复数 URL</h4>
+<h5 id="2-创建base-image-基于c语言的可执行文件和dockerfile-hello-world">2. 创建Base Image，基于c语言的可执行文件和Dockerfile（hello world）</h5>
 
-<p>既然 URL 是名词，那么应该使用复数，还是单数？</p>
+<ol>
+<li><p>新建hello-world文件夹</p>
 
-<p>这没有统一的规定，但是常见的操作是读取一个集合，比如 GET /articles（读取所有文章），这里明显应该是复数。</p>
+<pre><code class="language-bash">mkdir hello-world
+cd hello-world/
+</code></pre></li>
 
-<p>为了统一起见，建议都使用复数 URL，比如 GET /articles/2 要好于 GET /article/2。</p>
+<li><p>编写hello.c</p>
 
-<h4 id="1-5-避免多级-url">1.5 避免多级 URL</h4>
-
-<p>常见的情况是，资源需要多级分类，因此很容易写出多级的 URL，比如获取某个作者的某一类文章。</p>
-
-<pre><code class="language-bash">GET /authors/12/categories/2
-</code></pre>
-
-<p>这种 URL 不利于扩展，语义也不明确，往往要想一会，才能明白含义。</p>
-
-<p>更好的做法是，除了第一级，其他级别都用查询字符串表达。</p>
-
-<pre><code class="language-bash">GET /authors/12?categories=2
-</code></pre>
-
-<p>下面是另一个例子，查询已发布的文章。你可能会设计成下面的 URL。</p>
-
-<pre><code class="language-bash">GET /articles/published
-</code></pre>
-
-<p>查询字符串的写法明显更好。</p>
-
-<pre><code class="language-bash">GET /articles?published=true
-</code></pre>
-
-<h3 id="二-状态码">二、状态码</h3>
-
-<h4 id="2-1-状态码必须精确">2.1 状态码必须精确</h4>
-
-<p>客户端的每一次请求，服务器都必须给出回应。回应包括 HTTP 状态码和数据两部分。</p>
-
-<p>HTTP 状态码就是一个三位数，分成五个类别。</p>
-
-<pre><code class="language-bash">1xx：相关信息
-2xx：操作成功
-3xx：重定向
-4xx：客户端错误
-5xx：服务器错误
-</code></pre>
-
-<h4 id="2-2-2xx-状态码">2.2 2xx 状态码</h4>
-
-<p>200 状态码表示操作成功，但是不同的方法可以返回更精确的状态码。</p>
-
-<pre><code>GET: 200 OK
-POST: 201 Created
-PUT: 200 OK
-PATCH: 200 OK
-DELETE: 204 No Content
-</code></pre>
-
-<h4 id="2-3-3xx-状态码">2.3 3xx 状态码</h4>
-
-<pre><code class="language-bash">API 用不到301状态码（永久重定向）和302状态码（暂时重定向，307也是这个含义），因为它们可以由应用级别返回，浏览器会直接跳转，API 级别可以不考虑这两种情况。
-
-API 用到的3xx状态码，主要是303 See Other，表示参考另一个 URL。它与302和307的含义一样，也是&quot;暂时重定向&quot;，区别在于302和307用于GET请求，而303用于POST、PUT和DELETE请求。收到303以后，浏览器不会自动跳转，而会让用户自己决定下一步怎么办。下面是一个例子。
-</code></pre>
-
-<h4 id="4xx-状态码">4xx 状态码</h4>
-
-<pre><code class="language-bash">4xx状态码表示客户端错误，主要有下面几种。
-
-400 Bad Request：服务器不理解客户端的请求，未做任何处理。
-
-401 Unauthorized：用户未提供身份验证凭据，或者没有通过身份验证。
-
-403 Forbidden：用户通过了身份验证，但是不具有访问资源所需的权限。
-
-404 Not Found：所请求的资源不存在，或不可用。
-
-405 Method Not Allowed：用户已经通过身份验证，但是所用的 HTTP 方法不在他的权限之内。
-
-410 Gone：所请求的资源已从这个地址转移，不再可用。
-
-415 Unsupported Media Type：客户端要求的返回格式不支持。比如，API 只能返回 JSON 格式，但是客户端要求返回 XML 格式。
-
-422 Unprocessable Entity ：客户端上传的附件无法处理，导致请求失败。
-
-429 Too Many Requests：客户端的请求次数超过限额。
-</code></pre>
-
-<h4 id="2-5-5xx-状态码">2.5 5xx 状态码</h4>
-
-<pre><code class="language-bash">5xx状态码表示服务端错误。一般来说，API 不会向用户透露服务器的详细信息，所以只要两个状态码就够了。
-
-500 Internal Server Error：客户端请求有效，服务器处理时发生了意外。
-
-503 Service Unavailable：服务器无法处理请求，一般用于网站维护状态。
-</code></pre>
-
-<p>三、服务器回应</p>
-
-<h4 id="3-1-不要返回纯本文">3.1 不要返回纯本文</h4>
-
-<p>API 返回的数据格式，不应该是纯文本，而应该是一个 JSON 对象，因为这样才能返回标准的结构化数据。所以，服务器回应的 HTTP 头的 Content-Type 属性要设为 application/json。</p>
-
-<p>客户端请求时，也要明确告诉服务器，可以接受 JSON 格式，即请求的 HTTP 头的 ACCEPT 属性也要设成 application/json。下面是一个例子。</p>
-
-<pre><code class="language-bash">
-GET /orders/2 HTTP/1.1
-Accept: application/json
-</code></pre>
-
-<h4 id="3-2-发生错误时-不要返回-200-状态码">3.2 发生错误时，不要返回 200 状态码</h4>
-
-<h4 id="3-3-提供链接">3.3 提供链接</h4>
-
-<p>API 的使用者未必知道，URL 是怎么设计的。一个解决方法就是，在回应中，给出相关链接，便于下一步操作。这样的话，用户只要记住一个 URL，就可以发现其他的 URL。这种方法叫做 HATEOAS。</p>
-
-<p>举例来说，GitHub 的 API 都在 api.github.com 这个域名。访问它，就可以得到其他 URL。</p>
-
-<pre><code class="language-bash">{
-  ...
-  &quot;feeds_url&quot;: &quot;https://api.github.com/feeds&quot;,
-  &quot;followers_url&quot;: &quot;https://api.github.com/user/followers&quot;,
-  &quot;following_url&quot;: &quot;https://api.github.com/user/following{/target}&quot;,
-  &quot;gists_url&quot;: &quot;https://api.github.com/gists{/gist_id}&quot;,
-  &quot;hub_url&quot;: &quot;https://api.github.com/hub&quot;,
-  ...
-}
-</code></pre>
-
-<p>上面的回应中，挑一个 URL 访问，又可以得到别的 URL。对于用户来说，不需要记住 URL 设计，只要从 api.github.com 一步步查找就可以了。</p>
-
-<p>HATEOAS 的格式没有统一规定，上面例子中，GitHub 将它们与其他属性放在一起。更好的做法应该是，将相关链接与其他属性分开。</p>
-
-<pre><code class="language-bash">HTTP/1.1 200 OK
-Content-Type: application/json
-
+<pre><code class="language-bash">vim hello.c
+#include&lt;stdio.h&gt;
+int main()
 {
-  &quot;status&quot;: &quot;In progress&quot;,
-   &quot;links&quot;: {[
-    { &quot;rel&quot;:&quot;cancel&quot;, &quot;method&quot;: &quot;delete&quot;, &quot;href&quot;:&quot;/api/status/12345&quot; } ,
-    { &quot;rel&quot;:&quot;edit&quot;, &quot;method&quot;: &quot;put&quot;, &quot;href&quot;:&quot;/api/status/12345&quot; }
-  ]}
+printf(&quot;hello docker\n&quot;);
 }
+:wq
+</code></pre></li>
+
+<li><p>编译c语言 需要安装插件</p>
+
+<pre><code class="language-bash">yum install gcc
+yum install glibc-static
+</code></pre></li>
+
+<li><p>生成可执行文件hello</p>
+
+<pre><code class="language-bash">gcc -static hello.c -o hello
+</code></pre></li>
+
+<li><p>编写Dockerfile
+```bash
+vim Dockerfile</p></li>
+</ol>
+
+<p>FROM scratch // 没有FROM
+ADD hello /
+CMD [&ldquo;/hello&rdquo;]
+:wq</p>
+
+<pre><code>
+6. build 一个 Image
+```bash
+docker build -t 【docker hub的id/hello-world】 .
+
+# 执行
+docker run 【docker hub的id/hello-world】
 </code></pre>
 
-<p>引用：<a href="https://blog.florimondmanca.com/restful-api-design-13-best-practices-to-make-your-users-happy">RESTful 好文章</a></p>
+<ol>
+<li><p>查看image的分层</p>
+
+<pre><code># docker image ls 可见 image ID
+docker history 【image ID】
+</code></pre></li>
+
+<li><p>移除image</p>
+
+<pre><code class="language-bash">docker image rm 【image ID】
+或
+docker rmi 【image ID】
+</code></pre></li>
+</ol>
+
+<h5 id="3-image发布">3.Image发布</h5>
+
+<blockquote>
+<ul>
+<li>往docker hub去上传image。需要创建一个docker hub账号</li>
+</ul>
+</blockquote>
+
+<ol>
+<li>登录
+<code>
+docker login
+</code></li>
+<li>push
+<code>
+docker push 【你要push的image名字:latest】
+</code></li>
+</ol>
+
+<p><br></p>
+
+<h4 id="container">container</h4>
+
+<blockquote>
+<ol>
+<li>通過Image创建（copy）</li>
+<li>在Image layer之上建立一个container layer（可读写）</li>
+<li>类比面向对象： 类（image）和实例（container）</li>
+<li>Image负责app的存储和分发，Container负责运行app</li>
+</ol>
+</blockquote>
+
+<pre><code># 查看可执行的命令有哪些
+docker image
+docker container
+</code></pre>
+
+<ol>
+<li><p>执行docker container</p>
+
+<pre><code class="language-bash"># 由于执行的不是一个常驻内存的进程，所以无结果
+docker container ls
+# 执行，可查看退出的container
+docker container ls -a
+或
+docker ps -a
+</code></pre></li>
+
+<li><p>交互式运行
+```bash
+docker run -it centos</p>
+
+<h1 id="查看运行的">查看运行的</h1>
+
+<p>docker container ls</p></li>
+</ol>
+
+<h1 id="退出-centos">退出 centos</h1>
+
+<p>exit</p>
+
+<h1 id="查看已退出的container">查看已退出的container</h1>
+
+<p>docker container ls -a
+docker container ls -aq
+或
+docker ps -a    # 列出容器</p>
+
+<h1 id="移除">移除</h1>
+
+<p>docker container rm 【container ID】
+或
+docker rm 【container ID】</p>
+
+<h1 id="批量移除">批量移除</h1>
+
+<p>docker rm $(docker container ls -aq)
+或
+docker rm $(docker ps -aq)</p>
+
+<h1 id="按状态移除-有up-有exited">按状态移除(有up 有exited)</h1>
+
+<p>docker rm $(docker container ls -f &ldquo;status=exited&rdquo; -q)</p>
+
+<pre><code>
+3. 操作运行中的容器
+```bash
+# 进入已运行的容器，里面执行shell
+docker exec -it 【CONTAINER ID】/bin/bash
+# 运行
+pwd
+或
+ls
+# 退出
+exit 
+
+docker exec -it 【CONTAINER ID】python
+# 运行
+print &quot;hello py&quot;
+# 退出
+exit
+
+docker ps
+
+# 打印正在运行的容器的ip地址
+# -it: 让容器可以接受标准输入并分配一个伪tty
+docker exec -it 【CONTAINER ID】ip a
+</code></pre>
+
+<ol>
+<li><p>开启/停止container</p>
+
+<pre><code class="language-bash">docker start demo
+docker stop 【CONTAINER ID】
+</code></pre></li>
+
+<li><p>查看container详细信息</p>
+
+<pre><code class="language-bash">docker ps -a
+docker inspect 【CONTAINER ID】
+</code></pre></li>
+</ol>
+
+<p><br></p>
+
+<h4 id="构建自己的docker镜像">构建自己的Docker镜像</h4>
+
+<p>方式一、 基于image产生新的image。（不提倡，容易下毒）</p>
+
+<pre><code class="language-bash"># 【拷贝的iamge Names】可以使用docker container ls -a 查看
+docker commit 【拷贝的iamge Names】 【你自己命名的Names】
+例如：
+docker commit image-name cl/image-name-new
+# 查看layer
+docker history 【image ID】
+</code></pre>
+
+<p>方式二、 通过Dockerfile生成</p>
+
+<ol>
+<li><p>创建一个目录</p>
+
+<pre><code>mkdir centos-demo
+cd centos-demo
+vim Dockerfile
+</code></pre></li>
+
+<li><p>编写Dockerfile
+```
+FROM centos</p>
+
+<h1 id="image是只读的-如何运行安装指令">image是只读的，如何运行安装指令</h1>
+
+<p>RUN yum install -y vim
+:wq</p></li>
+</ol>
+
+<h1 id="查看dockerfile">查看Dockerfile</h1>
+
+<p>cd centos-demo
+more Dockerfile</p>
+
+<pre><code>
+3. build
+```bash
+# . 代表当前目录， t：代表tag
+docker build -t cl/contos-vim .
+</code></pre>
+
+<p><br></p>
+
+<h4 id="dockerfile详解">Dockerfile详解</h4>
+
+<p><a href="https://github.com/docker-library">docker-library</a></p>
+
+<ol>
+<li>FROM</li>
+</ol>
+
+<blockquote>
+<p>尽量使用官方的image，因为安全</p>
+</blockquote>
+
+<pre><code class="language-bash">FROM scratch        # 制作base image
+FROM centos         # 使用base image
+FROM ubuntu:14.04
+</code></pre>
+
+<ol>
+<li>LABEL</li>
+</ol>
+
+<blockquote>
+<p>类似注释</p>
+</blockquote>
+
+<pre><code class="language-bash">LABEL maintainer=&quot;670199384@qq.com&quot;
+LABEL version=&quot;1.0&quot;
+LABEL description=&quot;描述&quot;
+</code></pre>
+
+<ol>
+<li>RUN</li>
+</ol>
+
+<blockquote>
+<p>执行命令，反斜线换行</p>
+</blockquote>
+
+<pre><code class="language-bash">RUN yum install &amp;&amp; yum install -y vim \
+    python-dev
+
+RUN apt-get update &amp;&amp; apt-get install -y perl \
+    pwgen...
+    
+RUN /bin/bash -c 'source $HOME/.bashrc;echo $HOME'
+</code></pre>
+
+<ol>
+<li>WORKDIR</li>
+</ol>
+
+<blockquote>
+<p>设定当前工作目录
+1. 用WORKDIR，不要用RUN cd
+2. 尽量使用绝对目录</p>
+</blockquote>
+
+<pre><code class="language-bash">WORKDIR /test   # 如果没有,会自动创建test目录
+WORKDIR demo
+RUN pwd         # 输出结果应该是/test/demo
+</code></pre>
+
+<ol>
+<li>ADD &amp;&amp; COPY</li>
+</ol>
+
+<blockquote>
+<p>添加和复制文件
+1. 大部分情况，COPY优于ADD
+2. ADD除了COPY还有额外功能（解压）
+3. 添加远程文件/目录请使用curl或者wget</p>
+</blockquote>
+
+<pre><code class="language-bash">ADD hello /
+ADD test.tar.gz /   # 添加到根目录并解压
+
+WORKDIR /root
+ADD hello test/     # /root/test/hello
+
+WORKDIR /root
+COPY hello test/     # /root/test/hello
+</code></pre>
+
+<ol>
+<li>ENV</li>
+</ol>
+
+<blockquote>
+<p>多用，可增加可维护性</p>
+</blockquote>
+
+<pre><code class="language-bash">ENV NODE_ENV product        # 设置环境变量
+RUN git push ${NODE_ENV}    # 引用常量
+</code></pre>
+
+<ol>
+<li>VOLUME 和 EXPOSE</li>
+</ol>
+
+<blockquote>
+<ul>
+<li>存储</li>
+<li>EXPOSE（网络端口暴露）</li>
+</ul>
+</blockquote>
+
+<ol>
+<li>CMD 和 ENTRYPOINT</li>
+</ol>
+
+<blockquote>
+<ul>
+<li>CMD:
+
+<ul>
+<li>设置容器启动后默认执行的命令和参数；</li>
+<li>docker run指定了其他命令，CMD命令会被忽略；</li>
+<li>如果指定了多个CMD，只有最后一个会执行</li>
+</ul></li>
+<li>ENTRYPOINT：
+
+<ul>
+<li>设置容器启动时运行的命令</li>
+<li>让容器以应用程序或服务的形式运行</li>
+<li>不会被忽略，一定会执行</li>
+</ul></li>
+</ul>
+</blockquote>
+
+<ol>
+<li>Shell格式和Exec格式</li>
+</ol>
+
+<pre><code class="language-bash">FROM centos
+ENV name Docker
+
+# Shell格式
+ENTRYPOINT echo &quot;hello $name&quot;
+// 输出：hello Docker
+
+
+# Exec格式
+ENTRYPOINT [&quot;/bin/echo&quot;, &quot;hello $name&quot;]
+// 输出：hello $name
+ENTRYPOINT [&quot;/bin/echo&quot;, &quot;-c&quot;, &quot;echo hello $name&quot;]
+// 输出：hello Docker
+
+</code></pre>
 
           </div>
 
@@ -560,10 +821,7 @@ Content-Type: application/json
   <li class="pr-0"><a href="https://clsss.github.io/blog/tags/"><i class="fas fa-tags"></i></a></li>
   <div class="tags-sm">
     
-      <li><a href="https://clsss.github.io/blog/tags/restful" role="button">RESTful </a></li>
-      
-    
-      <li><a href="https://clsss.github.io/blog/tags/web" role="button">web </a></li>
+      <li><a href="https://clsss.github.io/blog/tags/docker" role="button">docker </a></li>
       
     
   </div>
@@ -579,10 +837,10 @@ Content-Type: application/json
           <div class="row pt-3">
             <div class="col-md-6">
               
-                <a href=https://clsss.github.io/blog/blogs/2018-8/cross_domain/ class="post-meta">Previous
+                <a href=https://clsss.github.io/blog/blogs/2019-6/nodejs/ class="post-meta">Previous
                   <div class="pt-2 pb-5 d-flex">
                     <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                    <span>jsonp跨域原理</span>
+                    <span>Node.js</span>
                   </div>
                 </a>
               
@@ -590,10 +848,10 @@ Content-Type: application/json
             
             <div class="col-md-6 text-right" >
               
-                <a href=https://clsss.github.io/blog/blogs/2017-9/m_communicate_app/ class="post-meta">Next
+                <a href=https://clsss.github.io/blog/blogs/2019-9/jenkins/ class="post-meta">Next
                   <div class="pt-2 pb-5 flex-reverse">
                     <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                    <span>移动端_Web如何调起App</span>
+                    <span>Jenkins</span>
                   </div>
                 </a>
               
@@ -638,74 +896,6 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#restful-api">
-												 RESTful API
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#restful-%e6%98%af%e4%bb%80%e4%b9%88">
-												 RESTful 是什么？
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%b8%80-url-%e8%ae%be%e8%ae%a1">
-												 一、URL 设计
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
 									<ul class="nav">
 								
 									<ul class="nav">
@@ -715,12 +905,14 @@ Content-Type: application/json
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#1-1-%e5%8a%a8%e8%af%8d-%e5%ae%be%e8%af%ad">
-												 1.1 动词 &#43; 宾语
+						 					<a class="nav-link" href="#%e6%9e%b6%e6%9e%84%e5%92%8c%e5%ba%95%e5%b1%82%e6%8a%80%e6%9c%af">
+												 架构和底层技术
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -742,15 +934,19 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#1-2-%e5%8a%a8%e8%af%8d%e7%9a%84%e8%a6%86%e7%9b%96">
-												 1.2 动词的覆盖
+						 					<a class="nav-link" href="#docker-engine">
+												 Docker Engine
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -772,15 +968,19 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#1-3-%e5%ae%be%e8%af%ad%e5%bf%85%e9%a1%bb%e6%98%af%e5%90%8d%e8%af%8d">
-												 1.3 宾语必须是名词
+						 					<a class="nav-link" href="#image">
+												 Image
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -802,15 +1002,19 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#1-4-%e5%a4%8d%e6%95%b0-url">
-												 1.4 复数 URL
+						 					<a class="nav-link" href="#container">
+												 container
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -828,23 +1032,15 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#1-5-%e9%81%bf%e5%85%8d%e5%a4%9a%e7%ba%a7-url">
-												 1.5 避免多级 URL
+						 					<a class="nav-link" href="#%e6%9f%a5%e7%9c%8b%e8%bf%90%e8%a1%8c%e7%9a%84">
+												 查看运行的
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
-								
-									</ul>
 								
 									</ul>
 								
@@ -858,19 +1054,15 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%ba%8c-%e7%8a%b6%e6%80%81%e7%a0%81">
-												 二、状态码
+						 					<a class="nav-link" href="#%e9%80%80%e5%87%ba-centos">
+												 退出 centos
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
 								
 									</ul>
 								
@@ -884,23 +1076,15 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#2-1-%e7%8a%b6%e6%80%81%e7%a0%81%e5%bf%85%e9%a1%bb%e7%b2%be%e7%a1%ae">
-												 2.1 状态码必须精确
+						 					<a class="nav-link" href="#%e6%9f%a5%e7%9c%8b%e5%b7%b2%e9%80%80%e5%87%ba%e7%9a%84container">
+												 查看已退出的container
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
-								
-									</ul>
 								
 									</ul>
 								
@@ -914,23 +1098,15 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#2-2-2xx-%e7%8a%b6%e6%80%81%e7%a0%81">
-												 2.2 2xx 状态码
+						 					<a class="nav-link" href="#%e7%a7%bb%e9%99%a4">
+												 移除
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
-								
-									</ul>
 								
 									</ul>
 								
@@ -944,15 +1120,11 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#2-3-3xx-%e7%8a%b6%e6%80%81%e7%a0%81">
-												 2.3 3xx 状态码
+						 					<a class="nav-link" href="#%e6%89%b9%e9%87%8f%e7%a7%bb%e9%99%a4">
+												 批量移除
 											</a>
 										</li>
 						 
@@ -960,7 +1132,25 @@ Content-Type: application/json
 								
 									</ul>
 								
-									</ul>
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%8c%89%e7%8a%b6%e6%80%81%e7%a7%bb%e9%99%a4-%e6%9c%89up-%e6%9c%89exited">
+												 按状态移除(有up 有exited)
+											</a>
+										</li>
+						 
+								
 								
 									</ul>
 								
@@ -978,15 +1168,19 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#4xx-%e7%8a%b6%e6%80%81%e7%a0%81">
-												 4xx 状态码
+						 					<a class="nav-link" href="#%e6%9e%84%e5%bb%ba%e8%87%aa%e5%b7%b1%e7%9a%84docker%e9%95%9c%e5%83%8f">
+												 构建自己的Docker镜像
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -1004,15 +1198,11 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#2-5-5xx-%e7%8a%b6%e6%80%81%e7%a0%81">
-												 2.5 5xx 状态码
+						 					<a class="nav-link" href="#image%e6%98%af%e5%8f%aa%e8%af%bb%e7%9a%84-%e5%a6%82%e4%bd%95%e8%bf%90%e8%a1%8c%e5%ae%89%e8%a3%85%e6%8c%87%e4%bb%a4">
+												 image是只读的，如何运行安装指令
 											</a>
 										</li>
 						 
@@ -1020,7 +1210,25 @@ Content-Type: application/json
 								
 									</ul>
 								
-									</ul>
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%9f%a5%e7%9c%8bdockerfile">
+												 查看Dockerfile
+											</a>
+										</li>
+						 
+								
 								
 									</ul>
 								
@@ -1038,75 +1246,19 @@ Content-Type: application/json
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#3-1-%e4%b8%8d%e8%a6%81%e8%bf%94%e5%9b%9e%e7%ba%af%e6%9c%ac%e6%96%87">
-												 3.1 不要返回纯本文
+						 					<a class="nav-link" href="#dockerfile%e8%af%a6%e8%a7%a3">
+												 Dockerfile详解
 											</a>
 										</li>
 						 
 								
 								
 									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#3-2-%e5%8f%91%e7%94%9f%e9%94%99%e8%af%af%e6%97%b6-%e4%b8%8d%e8%a6%81%e8%bf%94%e5%9b%9e-200-%e7%8a%b6%e6%80%81%e7%a0%81">
-												 3.2 发生错误时，不要返回 200 状态码
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#3-3-%e6%8f%90%e4%be%9b%e9%93%be%e6%8e%a5">
-												 3.3 提供链接
-											</a>
-										</li>
-						 
-								
 								
 									</ul>
 								

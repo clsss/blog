@@ -7,23 +7,22 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Collin">
-  <meta name="description" content="测试&amp;持续构建 一. api 测试 频繁地将代码集成到主干 每次集成都通过自动化的构建来验证 优点： 1. 尽早发现错误 防止分支大幅度偏离主干 工具 egg—— https://github.com/eggjs/egg 持续构建： https://travis-ci.org/eggjs/egg 文档： https://docs.travis-ci.com/ benchmark 性能测试 benchmark.js suite .add(&#39;parseInt()&#39;, () =&gt; { num1(&#39;123465&#39;); }) .add(&#39;Number&#39;, () =&gt; { num2(&#39;123456&#39;); }) .on(&#39;cycle&#39;, event =&gt; { console.log(String(event.target)); }) .on(&#39;complete&#39;, function() { console.log(&#39;Fastest is &#39; &#43; this.filter(&#39;fastest&#39;).map(&#39;name&#39;)); }) .run({async: true}); 二. UI 测试 jest 三 爬虫 爬虫: 按照一定的需求自动抓取网络信息 反爬虫: user-agent，referer, 验证码 单位时间访问次数 关键信息用图片混淆 异步加载 使用：suppe">
+  <meta name="description" content="centos下搭建Jenkins持续集成环境(安装jenkins) 1. 前提条件 # 安装JDK yum install -y java # 安装jenkins # 方式1（说实话：慢！） wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key yum install -y jenkins # 方式2（如果不能安装就到官网下载jenkis的rmp包） wget http://pkg.jenkins-ci.org/redhat-stable/jenkins-2.7.3-1.1.noarch.rpm rpm -ivh jenkins-2.7.3-1.1.noarch.rpm 2. 配置jenkins vi /etc/sysconfig/jenkins # 修改端口号，改成你想要设置的端口号（默认为8080）。 JENKINS_PORT=&quot;8080&quot; JENKINS_USER=&quot;jenkins&quot; JENKINS_HOME=&quot;/var/lib/jenkins&quot; 3. 启动jenkins service jenkins start/stop/restart 安装成功后Jenkins将作为一个守护进程随系统启动 系统会">
   
-  <meta property="og:title" content="测试&amp;持续构建" />
-<meta property="og:description" content="测试&amp;持续构建 一. api 测试 频繁地将代码集成到主干 每次集成都通过自动化的构建来验证 优点： 1. 尽早发现错误 防止分支大幅度偏离主干 工具 egg—— https://github.com/eggjs/egg 持续构建： https://travis-ci.org/eggjs/egg 文档： https://docs.travis-ci.com/ benchmark 性能测试 benchmark.js suite .add(&#39;parseInt()&#39;, () =&gt; { num1(&#39;123465&#39;); }) .add(&#39;Number&#39;, () =&gt; { num2(&#39;123456&#39;); }) .on(&#39;cycle&#39;, event =&gt; { console.log(String(event.target)); }) .on(&#39;complete&#39;, function() { console.log(&#39;Fastest is &#39; &#43; this.filter(&#39;fastest&#39;).map(&#39;name&#39;)); }) .run({async: true}); 二. UI 测试 jest 三 爬虫 爬虫: 按照一定的需求自动抓取网络信息 反爬虫: user-agent，referer, 验证码 单位时间访问次数 关键信息用图片混淆 异步加载 使用：suppe" />
+  <meta property="og:title" content="Jenkins" />
+<meta property="og:description" content="centos下搭建Jenkins持续集成环境(安装jenkins) 1. 前提条件 # 安装JDK yum install -y java # 安装jenkins # 方式1（说实话：慢！） wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key yum install -y jenkins # 方式2（如果不能安装就到官网下载jenkis的rmp包） wget http://pkg.jenkins-ci.org/redhat-stable/jenkins-2.7.3-1.1.noarch.rpm rpm -ivh jenkins-2.7.3-1.1.noarch.rpm 2. 配置jenkins vi /etc/sysconfig/jenkins # 修改端口号，改成你想要设置的端口号（默认为8080）。 JENKINS_PORT=&quot;8080&quot; JENKINS_USER=&quot;jenkins&quot; JENKINS_HOME=&quot;/var/lib/jenkins&quot; 3. 启动jenkins service jenkins start/stop/restart 安装成功后Jenkins将作为一个守护进程随系统启动 系统会" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://clsss.github.io/blog/blogs/2018-4/mocka/" /><meta property="article:published_time" content="2018-04-25T20:54:11&#43;08:00"/>
-<meta property="article:modified_time" content="2018-04-25T20:54:11&#43;08:00"/>
-
+<meta property="og:url" content="https://clsss.github.io/blog/blogs/2019-9/jenkins/" /><meta property="article:published_time" content="2019-10-13T11:12:19&#43;08:00"/>
+<meta property="article:modified_time" content="2019-10-13T11:12:19&#43;08:00"/>
 
 
   <title>
   
-       测试&amp;持续构建 | Collin&#39;s Blog 
+       Jenkins | Collin&#39;s Blog 
   
   </title>
 
-  <link rel="canonical" href="https://clsss.github.io/blog/blogs/2018-4/mocka/">
+  <link rel="canonical" href="https://clsss.github.io/blog/blogs/2019-9/jenkins/">
 
   
   
@@ -320,27 +319,19 @@
           <div class="post-header text-center" >
   <ul class="post-meta li-x">
     
-      
-        <li><a href="https://clsss.github.io/blog/categories/test"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> test </a></li>
-      
-    
-    
-      
-        <li><a href="https://clsss.github.io/blog/series/mocha"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>mocha</a></li>
-      
     
   </ul>
 
-  <div class="px-4 post-heading">测试&amp;持续构建</div>
+  <div class="px-4 post-heading">Jenkins</div>
 
   <ul class="post-meta li-x mt-1">
     
-      <li>Apr 25, 2018</li>
+      <li>Oct 13, 2019</li>
     
 
     
       <li class="middot"></li>
-      <li>One minute read</li>
+      <li>2 minutes read</li>
     
   </ul>
   
@@ -351,92 +342,99 @@
           <div class="post-content markdown">
             
 
-<h2 id="测试-持续构建">测试&amp;持续构建</h2>
+<h3 id="centos下搭建jenkins持续集成环境-安装jenkins">centos下搭建Jenkins持续集成环境(安装jenkins)</h3>
 
-<h4 id="一-api-测试">一. api 测试</h4>
+<h4 id="1-前提条件">1. 前提条件</h4>
 
-<ol>
-<li>频繁地将代码集成到主干</li>
-<li>每次集成都通过自动化的构建来验证</li>
-</ol>
+<pre><code class="language-bash"># 安装JDK
+yum install -y java
 
-<ul>
-<li>优点：</li>
-<li>1. 尽早发现错误</li>
+# 安装jenkins
+# 方式1（说实话：慢！）
+wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+yum install -y jenkins
 
-<li><ol>
-<li>防止分支大幅度偏离主干</li>
-</ol></li>
-
-<li><p>工具
-egg—— <a href="https://github.com/eggjs/egg">https://github.com/eggjs/egg</a>
-持续构建： <a href="https://travis-ci.org/eggjs/egg">https://travis-ci.org/eggjs/egg</a>
-文档： <a href="https://docs.travis-ci.com/">https://docs.travis-ci.com/</a></p></li>
-</ul>
-
-<p>benchmark 性能测试
-benchmark.js
-suite</p>
-
-<pre><code class="language-bash">.add('parseInt()', () =&gt; {
-	num1('123465');
-})
-.add('Number', () =&gt; {
-	num2('123456');
-})
-.on('cycle', event =&gt; {
-	console.log(String(event.target));
-})
-.on('complete', function() {
-	console.log('Fastest is ' + this.filter('fastest').map('name'));
-})
-.run({async: true});
+# 方式2（如果不能安装就到官网下载jenkis的rmp包）
+wget http://pkg.jenkins-ci.org/redhat-stable/jenkins-2.7.3-1.1.noarch.rpm
+rpm -ivh jenkins-2.7.3-1.1.noarch.rpm
 </code></pre>
 
-<h4 id="二-ui-测试">二. UI 测试</h4>
+<h4 id="2-配置jenkins">2. 配置jenkins</h4>
 
-<p>jest</p>
+<pre><code class="language-bash">vi /etc/sysconfig/jenkins
 
-<p>三 爬虫
-爬虫:
-按照一定的需求自动抓取网络信息
-反爬虫:</p>
+# 修改端口号，改成你想要设置的端口号（默认为8080）。
+JENKINS_PORT=&quot;8080&quot;
+JENKINS_USER=&quot;jenkins&quot;
+JENKINS_HOME=&quot;/var/lib/jenkins&quot;
 
+</code></pre>
+
+<h4 id="3-启动jenkins">3. 启动jenkins</h4>
+
+<pre><code class="language-bash">service jenkins start/stop/restart
+</code></pre>
+
+<blockquote>
 <ol>
-<li>user-agent，referer, 验证码</li>
-<li>单位时间访问次数</li>
-<li>关键信息用图片混淆</li>
-<li>异步加载</li>
+<li>安装成功后Jenkins将作为一个守护进程随系统启动</li>
+<li>系统会创建一个“jenkins”用户来允许这个服务，如果改变服务所有者，同时需 要修改/var/log/jenkins, /var/lib/jenkins, 和/var/cache/jenkins的所有者</li>
+<li>启动的时候将从/etc/sysconfig/jenkins获取配置参数</li>
+<li>默认情况下，Jenkins运行在8080端口，在浏览器中直接访问该端进行服务配置</li>
+<li>Jenkins的RPM仓库配置被加到/etc/yum.repos.d/jenkins.repo</li>
 </ol>
+</blockquote>
 
-<p>使用：suppeteer+cheerio</p>
+<h4 id="4-打开jenkins">4. 打开jenkins</h4>
 
-<p>through2,
-express, koa, egg
-SSP &amp; 同构
-NodeJS 源码</p>
+<pre><code class="language-bash">访问：
+{主机ip}:{配置的端口号}
+例如：
+127.0.0.1:8080
+
+初始密码在：
+/var/lib/jenkins/secrets/initialAdminPassword 
+</code></pre>
+
+<h4 id="5-安装插件-install-suggested-plugins-新手版">5. 安装插件（Install suggested plugins-新手版）</h4>
+
+<h4 id="6-创建管理员账号">6. 创建管理员账号</h4>
+
+<pre><code class="language-bash">访问: http://59.110.224.63:8080/
+账号: caolin
+密码: ***
+</code></pre>
+
+<h4 id="7-创建秘钥">7. 创建秘钥</h4>
+
+<pre><code class="language-bash">cd ~
+ssh-keygen -t rsa
+
+
+# /root/.ssh/id_rsa
+# /root/.ssh/id_rsa.pub
+</code></pre>
+
+<h4 id="8-jenkins-软连接设置">8. jenkins 软连接设置</h4>
+
+<pre><code class="language-bash"># 查看pm2安装路径
+which pm2   # 输出/usr/local/n/versions/node/10.16.3/bin/pm2
+# 设置软连接
+ln -s /usr/local/n/versions/node/10.16.3/bin/pm2 /usr/local/bin/pm2
+</code></pre>
+
+<p><br><br><br><br></p>
+
+<p>参考：
+1. <a href="https://www.cnblogs.com/loveyouyou616/p/8717177.html">https://www.cnblogs.com/loveyouyou616/p/8717177.html</a>
+2. <a href="https://www.cnblogs.com/reblue520/p/7130914.html">https://www.cnblogs.com/reblue520/p/7130914.html</a></p>
 
           </div>
 
           
           <div class="row">
             <div class="col-md-8">
-            
-              <div class="mb-5">
-                
-<div class="li-x div-x post-meta">
-  <li class="pr-0"><a href="https://clsss.github.io/blog/tags/"><i class="fas fa-tags"></i></a></li>
-  <div class="tags-sm">
-    
-      <li><a href="https://clsss.github.io/blog/tags/mocha" role="button">mocha </a></li>
-      
-    
-      <li><a href="https://clsss.github.io/blog/tags/web" role="button">web </a></li>
-      
-    
-  </div>
-</div>
-              </div>
             
             </div>
             
@@ -447,23 +445,16 @@ NodeJS 源码</p>
           <div class="row pt-3">
             <div class="col-md-6">
               
-                <a href=https://clsss.github.io/blog/blogs/2017-10/hugo/ class="post-meta">Previous
+                <a href=https://clsss.github.io/blog/blogs/2019-10/docker%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/ class="post-meta">Previous
                   <div class="pt-2 pb-5 d-flex">
                     <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                    <span>Hugo 搭建博客</span>
+                    <span>docker系统学习</span>
                   </div>
                 </a>
               
             </div>
             
             <div class="col-md-6 text-right" >
-              
-                <a href=https://clsss.github.io/blog/blogs/2018-5/design/designmode1/ class="post-meta">Next
-                  <div class="pt-2 pb-5 flex-reverse">
-                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                    <span>设计模式-设计原则</span>
-                  </div>
-                </a>
               
             </div>
           </div>
@@ -506,43 +497,17 @@ NodeJS 源码</p>
 								
 									<ul class="nav">
 								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e6%b5%8b%e8%af%95-%e6%8c%81%e7%bb%ad%e6%9e%84%e5%bb%ba">
-												 测试&amp;持续构建
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
 									<ul class="nav">
 								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%b8%80-api-%e6%b5%8b%e8%af%95">
-												 一. api 测试
+						 					<a class="nav-link" href="#centos%e4%b8%8b%e6%90%ad%e5%bb%bajenkins%e6%8c%81%e7%bb%ad%e9%9b%86%e6%88%90%e7%8e%af%e5%a2%83-%e5%ae%89%e8%a3%85jenkins">
+												 centos下搭建Jenkins持续集成环境(安装jenkins)
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
 								
 									</ul>
 								
@@ -565,8 +530,218 @@ NodeJS 源码</p>
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%ba%8c-ui-%e6%b5%8b%e8%af%95">
-												 二. UI 测试
+						 					<a class="nav-link" href="#1-%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6">
+												 1. 前提条件
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-%e9%85%8d%e7%bd%aejenkins">
+												 2. 配置jenkins
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#3-%e5%90%af%e5%8a%a8jenkins">
+												 3. 启动jenkins
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#4-%e6%89%93%e5%bc%80jenkins">
+												 4. 打开jenkins
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#5-%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6-install-suggested-plugins-%e6%96%b0%e6%89%8b%e7%89%88">
+												 5. 安装插件（Install suggested plugins-新手版）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#6-%e5%88%9b%e5%bb%ba%e7%ae%a1%e7%90%86%e5%91%98%e8%b4%a6%e5%8f%b7">
+												 6. 创建管理员账号
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#7-%e5%88%9b%e5%bb%ba%e7%a7%98%e9%92%a5">
+												 7. 创建秘钥
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#8-jenkins-%e8%bd%af%e8%bf%9e%e6%8e%a5%e8%ae%be%e7%bd%ae">
+												 8. jenkins 软连接设置
 											</a>
 										</li>
 						 
