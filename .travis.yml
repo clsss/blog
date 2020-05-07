@@ -13,7 +13,7 @@ env:
     # Github Pages
     - GITHUB_ADDR: github.com/clsss/blog.git
     # Coding Pages
-    - CODING_USER: pt76t97zsh80
+    - CODING_USER: DWujZUogZN
     - CODING_ADDR: e.coding.net/c_illusion/hugo_blog.git
 
 # 指定dev分支触发钩子
