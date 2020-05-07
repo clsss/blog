@@ -13,6 +13,7 @@ env:
     # Github Pages
     - GITHUB_ADDR: github.com/clsss/blog.git
     # Coding Pages
+    - CODING_USER: pt76t97zsh80
     - CODING_ADDR: e.coding.net/c_illusion/hugo_blog.git
 
 # 指定dev分支触发钩子
@@ -51,11 +52,11 @@ after_script:
   # Github Pages
   - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_ADDR}" master:master
   # Coding Pages
-  - git push --force --quiet "https://c_illusion:${CODING_TOKEN}@${CODING_ADDR}" master:master
+  - git push --force --quiet "https://${CODING_USER}:${CODING_TOKEN}@${CODING_ADDR}" master:master
   # set tag
   - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "tag $TRAVIS_BUILD_NUMBER"
   # Github Pages
   - git push --quiet "https://${GITHUB_TOKEN}@${GITHUB_ADDR}" master:master --tags
   # Coding Pages
-  - git push --quiet "https://c_illusion:${CODING_TOKEN}@${CODING_ADDR}" master:master --tags
+  - git push --quiet "https://${CODING_USER}:${CODING_TOKEN}@${CODING_ADDR}" master:master --tags
 # End: Build LifeCycle
