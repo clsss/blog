@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="Collin">
+  <meta name="description" content="This is nuxt.js mining pit">
+  
+  <meta property="og:title" content="Nuxt.js 采坑" />
+<meta property="og:description" content="This is nuxt.js mining pit" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://clsss.github.io/blog/blogs/nuxt/nuxt%E8%B8%A9%E5%9D%91/" />
+<meta property="article:published_time" content="2019-03-13T23:04:40+08:00" />
+<meta property="article:modified_time" content="2019-03-13T23:04:40+08:00" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/nuxt/nuxt/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/front-end/v-distpicker/" />
+
+
+
+  <title>
+  
+       Nuxt.js 采坑 | Collin&#39;s Blog 
+  
+  </title>
+
+  <link rel="canonical" href="https://clsss.github.io/blog/blogs/nuxt/nuxt%E8%B8%A9%E5%9D%91/">
+
+  
+  
+
+  
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://clsss.github.io/blog/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://clsss.github.io/blog/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://clsss.github.io/blog/images/favicon_cl.ico"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://clsss.github.io/blog/">
+          
+        <img class="avatar" src="https://clsss.github.io/blog/images/favicon_cl.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        
+        
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://clsss.github.io/blog/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/blogs/" >Blogs  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/life/" >Life  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides/banner1.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner2.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner3.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner4.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://clsss.github.io/blog/">
+          
+            <img class="pull-right avatar avatar-md" src="https://clsss.github.io/blog/images/avatar.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://clsss.github.io/blog/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Collin&#39;s Blog</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/clsss" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+    
+            
+    
+        
+            
+                <a href="mailto:670199384@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://clsss.github.io/blog/categories/vue"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> vue </a></li>
+      
+        <li><a href="https://clsss.github.io/blog/categories/nuxt.js"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Nuxt.js </a></li>
+      
+    
+    
+      
+        <li><a href="https://clsss.github.io/blog/series/vue"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>vue</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">Nuxt.js 采坑</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Mar 13, 2019</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>9 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <h2 id="nuxt踩坑合集">nuxt踩坑合集</h2>
+<p><a href="https://zh.nuxtjs.org/guide/">官网</a>
+<!-- raw HTML omitted -->
+<a href="https://github.com/nuxt/">github</a>
+<!-- raw HTML omitted -->
+<a href="https://github.com/nuxt-community">社区</a>
+<!-- raw HTML omitted --></p>
+<h3 id="原因分析">原因分析</h3>
+<ol>
+<li>内部原因：
+<ol>
+<li>调研时间不足。
+<ul>
+<li>撸起袖子就写代码是一个错误的方式，现在回头看m站会发现很多不对的实现方式，个别模块的优化不亚于重写。</li>
+</ul>
+</li>
+<li>技术了解不足，科学的使用方式后知后觉。
+<ul>
+<li>构建环境问题（不同环境相同代码，结果不同；打静态页面不可取等）。</li>
+<li>插件使用问题(sentry竟会阻塞代码，有待研究)。</li>
+<li>文档,API了解不足。</li>
+</ul>
+</li>
+<li>思维方式陈旧。
+<ul>
+<li>虽然是基于vue的框架但是使用方式与vue-cli构建的应用差别甚远，用vue的那套思想会让我们走入歧途。（比如axios请求，客户端与服务端不同）</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>外部原因:
+<ol>
+<li>新兴技术，自带坑；尤其是升级大版本带来的问题。</li>
+<li>文档不全、文档更新不及时。
+<ul>
+<li>建议使用英文版的官网，版本高于中文版。</li>
+<li>官方的文档可能是旧的。</li>
+<li>到目前为止nuxt的谷歌分析统计都是错误的实例。nuxt2.0版本之后已不适用，改用了analytics-module</li>
+</ul>
+</li>
+<li>插件兼容导致的问题。
+<ul>
+<li>三方插件不支持ssr方式</li>
+<li>babel-pollify编译（babel只是将一些es6，es7-8的语法转换成符合目标的js代码，但是如果我们使用一些特性或方法，比如Generator, Set, 或者一些方法。babel并不能转换为低版本浏览器识别的代码。这时就需要babel-polifill）</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<h3 id="一-nuxt是什么为什么要使用nuxt">一、 nuxt是什么？为什么要使用nuxt？</h3>
+<blockquote>
+<p>2016 年 10 月 25 日，zeit.co 背后的团队对外发布了 Next.js，一个 React 的服务端渲染应用框架。几小时后，与 Next.js 异曲同工，一个基于 Vue.js 的服务端渲染应用框架应运而生，我们称之为：Nuxt.js。</p>
+</blockquote>
+<blockquote>
+<p>Nuxt.js 是一个基于 Vue.js 的通用应用框架。</p>
+</blockquote>
+<p>通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI渲染。
+其核心主要是通过vue-server-renderer模块来实现服务端渲染。 vue-server-renderer是Vue服务端Node.js渲染的一个模块，用来生成HTML内容。</p>
+<blockquote>
+<p>我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。</p>
+</blockquote>
+<p>Nuxt.js 预设了利用Vue.js开发服务端渲染的应用所需要的各种配置。
+除此之外，我们还提供了一种命令叫：nuxt generate，为基于 Vue.js 的应用提供生成对应的静态站点的功能。
+我们相信这个命令所提供的功能，是向开发集成各种微服务（microservices）的 Web 应用迈开的新一步。
+作为框架，Nuxt.js 为 客户端/服务端 这种典型的应用架构模式提供了许多有用的特性，例如异步数据加载、中间件支持、布局支持等。</p>
+<p>SSR意为 server-side rendering（服务端渲染）,目的是为了<strong>解决单页面应用的SEO的问题</strong>。</p>
+<ul>
+<li>
+<p>客户端渲染和服务器端渲染的最重要的区别是html文件的返回是在服务端还是客户端。若是在服务器端完成的，就是服务器端渲染；反之前端完成了html的拼接，则就是客户端渲染(一般为首屏渲染: vue-meta-info + prerender-spa-plugin)。</p>
+</li>
+<li>
+<p>SEO对比：<a href="collinss.cn">collinss.cn</a> 和 <a href="en.tourscool.com">en.tourscool.com</a></p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h3 id="二为什么选择nuxt">二、为什么选择nuxt</h3>
+<h4 id="1-服务器端渲染的优缺点">1. 服务器端渲染的优缺点？</h4>
+<p><strong>优点：</strong></p>
+<ol>
+<li>更好的SEO 首屏加载快 由于搜索引擎爬虫抓取工具可以直接查看完全渲染的页面。</li>
+<li>首屏加载快 快速地看到完整渲染的页面，从而提高用户体验。</li>
+<li>后端生成静态化文件 即解析模板的工作完全交由Nuxt来做，客户端只要解析标准的html。</li>
+</ol>
+<p><strong>缺点：</strong></p>
+<ol>
+<li>开发条件受限，在服务端渲染中，created和beforeCreate之外的生命周期钩子不可用；其他生命周期均为客户端。</li>
+<li>占用服务端资源，所以原则是不影响SEO数据展示的内容或者通过事件触发获取的数据还是通过客户端获取，以减轻服务端压力。</li>
+<li>学习成本相对较高
+除了对webpack、Vue要熟悉，还需要掌握node、Express或者koa等相关技术。相对于客户端渲染，项目构建、部署过程更加复杂。</li>
+</ol>
+<h4 id="2-是否应该使用服务端渲染">2. 是否应该使用服务端渲染</h4>
+<ol>
+<li>首屏加载慢</li>
+<li>SEO优化</li>
+</ol>
+<h4 id="3-原理图">3. 原理图</h4>
+<p><img src="https://user-gold-cdn.xitu.io/2019/1/22/168713bb0c0b3934?imageslim" alt="image"></p>
+<h4 id="4-指令背后的故事">4. 指令背后的故事</h4>
+<p><img src="https://image-static.segmentfault.com/176/176/1761766949-5878c1dfe96fa" alt="image">
+<a href="https://segmentfault.com/a/1190000008114613">更多</a></p>
+<!-- raw HTML omitted -->
+<h3 id="三使用过程中遇到的坑">三、使用过程中遇到的坑</h3>
+<h4 id="1-window-is-undefined">1. window is undefined</h4>
+<blockquote>
+<p>第一个“坑”就是ssr本身导致的。不管使用element-ui或者mint-ui或者其他的UI框架。都是基于window环境而非node环境。</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># vue的情况下，我们是这样使用的</span>
+import Vue from <span class="s1">&#39;vue&#39;</span>
+import VueAwesomeSwiper from <span class="s1">&#39;vue-awesome-swiper&#39;</span>
+<span class="c1"># 插件注入</span>
+Vue.use<span class="o">(</span>VueAwesomeSwiper<span class="o">)</span>
+</code></pre></div><p>修改为支持ssr，否则就会出现window is undefined</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 做成服务端渲染需要注意引入时机</span>
+import Vue from <span class="s1">&#39;vue&#39;</span>
+
+<span class="c1"># 判断环境——browser代表客户端</span>
+<span class="k">if</span> <span class="o">(</span>process.browser<span class="o">)</span> <span class="o">{</span>
+  const <span class="nv">VueAwesomeSwiper</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;vue-awesome-swiper/dist/ssr&#39;</span><span class="o">)</span>
+  Vue.use<span class="o">(</span>VueAwesomeSwiper<span class="o">)</span>
+<span class="o">}</span>
+
+</code></pre></div><h4 id="2移动端因为调用app端的方法都是使用window下的android和webkitmessagehandlers方法但是ssr下如果直接引入appbridgejs下的方法会报错因为服务端没有window">2.【移动端】因为调用app端的方法都是使用window下的android和webkit.messageHandlers方法。但是ssr下如果直接引入appBridge.js下的方法会报错，因为服务端没有window</h4>
+<blockquote>
+<p>这个问题还是因为ssr本身的“坑”，也属于是框架了解不足。在服务端运行时无window下的对象。我的处理方式是在mounted生命周期下才引入appBridge.js。<a href="https://nuxtjs.org/faq/window-document-undefined">官方还有处理方式是判断当前运行环境(通过process.client)</a>。【还没试过的方式，通过nuxt.config.js配置：plugins + ssr:false】</p>
+</blockquote>
+<p>vue里面这样用的（非ssr）：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">import <span class="o">{</span>hideNavigationBar<span class="o">}</span> from <span class="s1">&#39;@/assets/js/appBridge&#39;</span>
+
+<span class="nb">export</span> default <span class="o">{</span>
+  // code...
+<span class="o">}</span>
+</code></pre></div><p>ssr：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 在需要调用app端的页面</span>
+<span class="nb">export</span> default <span class="o">{</span>
+    data<span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="o">{</span>
+        isApp: this.<span class="nv">$route</span>.query.platform <span class="o">||</span> null,
+      <span class="o">}</span>
+    <span class="o">}</span>,
+    mounted<span class="o">()</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span>this.isApp<span class="o">)</span> <span class="o">{</span>
+        // 引入appBridge，后面可以使用
+        this.appBridge <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;@/assets/js/appBridge&#39;</span><span class="o">)</span>.default
+        this.appBridge.hideNavigationBar<span class="o">()</span>
+      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        console.log<span class="o">(</span><span class="s1">&#39;web操作&#39;</span><span class="o">)</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div><blockquote>
+<p>实际上在服务的已加是能获取到设备型号的，然后直接存store。应该是更好的方式。至于引用appBridge的方式暂时没有想到好方法。
+可以使用process.client判断是客户端</p>
+</blockquote>
+<h4 id="3-vue-warn-the-client-side-rendered-virtual-dom-tree-is-not-matching-server-rendered-content-this-is-likely-caused-by-incorrect-html-markup-for-example-nesting-block-level-elements-insidep-or-missing-tbody-bailing-hydration-and-performing-full-client-side-render">3. [Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content. This is likely caused by incorrect HTML markup, for example nesting block-level elements inside<!-- raw HTML omitted -->, or missing <!-- raw HTML omitted -->. Bailing hydration and performing full client-side render.</h4>
+<blockquote>
+<p>服务端与客户端渲染的DOM结构不一样，HTML结构嵌套不正确，但大多数情况下并不是嵌套结构的问题，而是因为==服务端与客户端渲染的DOM结构不一样==</p>
+</blockquote>
+<ol>
+<li>错误嵌套代码示例：</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 错误原因&lt;p&gt;&lt;div&gt;&lt;/div&gt;&lt;/p&gt; 或 &lt;span&gt;&lt;p&gt;&lt;/p&gt;&lt;/span&gt;</span>
+&lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">&#34;text&#34;</span>&gt;
+    &lt;van-checkbox <span class="nv">class</span><span class="o">=</span><span class="s2">&#34;tour-checkbox&#34;</span>
+      v-model<span class="o">=</span><span class="s2">&#34;checked&#34;</span>&gt;
+      &lt;span&gt;我已经阅读并同意《服务协议》&lt;/span&gt;
+    &lt;/van-checkbox&gt;
+&lt;/p&gt;
+</code></pre></div><p>修正：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">&#34;text&#34;</span>&gt;
+    &lt;van-checkbox <span class="nv">class</span><span class="o">=</span><span class="s2">&#34;tour-checkbox&#34;</span>
+      v-model<span class="o">=</span><span class="s2">&#34;checked&#34;</span>&gt;
+      &lt;span&gt;我已经阅读并同意《服务协议》&lt;/span&gt;
+    &lt;/van-checkbox&gt;
+&lt;/div&gt;
+</code></pre></div><ol start="2">
+<li>服务端与客户端渲染的DOM结构不一致</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># nuxt.config.js配置</span>
+plugins: <span class="o">[</span>
+  <span class="o">{</span>
+    src: <span class="s1">&#39;~/plugins/mint-ui&#39;</span>,
+    ssr: <span class="nb">true</span> // 划重点！！！设为true后，ssr会进行初始化时前后dom比较，保证初始化前后一致
+  <span class="o">}</span>, <span class="o">{</span>
+    src: <span class="s2">&#34;~/plugins/vue-swiper&#34;</span>,
+    ssr: <span class="nb">false</span> // 禁用服务端渲染
+  <span class="o">}</span>, 
+<span class="o">]</span>
+</code></pre></div><p>这边以 <a href="https://github.com/surmon-china/vue-awesome-swiper">vue-awesome-swiper</a> 为例，官网也给出了明确的ssr使用方式，请仔细阅读，一定要用ssr的方式！</p>
+<blockquote>
+<p>例子中的类名.swiper-wrapper类名千万不要修改。</p>
+</blockquote>
+<h4 id="4-移动端postcss-px2rem会导致其他本身已支持自适应的ui库vant-ui样式缩小">4. 【移动端】postcss-px2rem会导致其他本身已支持自适应的UI库（vant UI）样式缩小。</h4>
+<blockquote>
+<p>解决方式: postcss-px2rem-exclude代替postcss-px2rem，配置如下</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># nuxt.config.js</span>
+build:<span class="o">{</span>
+    postcss: <span class="o">[</span>
+      require<span class="o">(</span><span class="s1">&#39;postcss-px2rem-exclude&#39;</span><span class="o">)({</span>
+        remUnit: 75, // 转换基本单位
+        exclude: /vant/i
+      <span class="o">})</span>,
+      require<span class="o">(</span><span class="s1">&#39;autoprefixer&#39;</span><span class="o">)({</span>
+        browsers: <span class="o">[</span><span class="s1">&#39;last 3 versions&#39;</span><span class="o">]</span>
+      <span class="o">})</span>
+    <span class="o">]</span>,
+<span class="o">}</span>
+</code></pre></div><!-- raw HTML omitted -->
+<h4 id="5-thisrouteparams一直为空但query是正常郁闷了我一个小时">5. this.$route.params一直为空，但query是正常。郁闷了我一个小时。</h4>
+<blockquote>
+<p>这个坑我不想说什么了。可能是用vue就习惯了用path跳转，但在nuxt中可能要换成使用name了，因为用params传参这里就必须带上name，但为什么必须带name我不清楚【或许是nuxt中的pages就是遍历出来的路由所以用了pages下的文件名作为name,而自定义的name是失效的】。</p>
+</blockquote>
+<blockquote>
+<p>有兴趣可以试试：自定义name不生效，而是使用创建好的pages下的页面名,比如demo/test.vue(name为&rsquo;demo-test&rsquo;)</p>
+</blockquote>
+<p>错误代码：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">this.<span class="nv">$router</span>.push<span class="o">({</span>
+  path: <span class="s1">&#39;/demo/test&#39;</span>, // demo-test
+  params: <span class="o">{</span>
+    type: this.type
+  <span class="o">}</span>
+<span class="o">})</span>
+</code></pre></div><p>正确代码:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">this.<span class="nv">$router</span>.push<span class="o">({</span>
+  name: <span class="s1">&#39;demo-test&#39;</span>, // 划重点!!!,params须用name!（pages/demo/test.vue）
+  path: <span class="s1">&#39;/demo/test&#39;</span>,
+  params: <span class="o">{</span>
+    type: this.type
+  <span class="o">}</span>
+<span class="o">})</span>
+</code></pre></div><h4 id="6-vuex-store-nuxtjs-提供了2种store-modes">6. vuex store (nuxt.js 提供了2种store modes)</h4>
+<blockquote>
+<p>Modules: every .js file inside the store directory is transformed as a namespaced module (index being the root module).（不需要new Vuex.Store）</p>
+</blockquote>
+<blockquote>
+<p>Classic (deprecated): store/index.js returns a method to create a store instance. 这个2.4x版本已经提示要作废了。nuxt3将不存在此用法</p>
+</blockquote>
+<p><a href="https://github.com/nuxt/nuxt.js/blob/dev/examples/vuex-store/store">官方示例</a></p>
+<p>我的store目录结构（使用Modules mode）：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">├─state.js
+├─actions.js
+├─getters.js
+├─mutations.js
+├─login<span class="o">(</span>login模块<span class="o">)</span>
+   ├─index.js
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">// state.js 必须导出返回对象的方法，创建独立实例
+<span class="nb">export</span> default <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">({</span>
+  profile: <span class="o">{}</span>,
+<span class="o">})</span>
+
+// getters.js，actions.js，mutations.js都是直接导出对象
+<span class="nb">export</span> default <span class="o">{</span>
+    // 方法
+<span class="o">}</span>
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">// login/index.js
+<span class="nb">export</span> const <span class="nv">state</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=</span>&gt; <span class="o">({</span>
+  loginData: <span class="o">{</span>
+    time: new Date<span class="o">()</span>
+  <span class="o">}</span>
+<span class="o">})</span>
+
+<span class="nb">export</span> const <span class="nv">actions</span> <span class="o">=</span> <span class="o">{}</span>
+
+<span class="nb">export</span> const <span class="nv">mutations</span> <span class="o">=</span> <span class="o">{}</span>
+</code></pre></div><h4 id="7-工厂模式api">7. 工厂模式api</h4>
+<blockquote>
+<p>issue中有人提出了<a href="https://github.com/nuxt-community/axios-module/pull/102">https://github.com/nuxt-community/axios-module/pull/102</a></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 使用axios module</span>
+<span class="nb">let</span> <span class="nv">apiConfig</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;~/apiConf.env&#39;</span><span class="o">)</span>
+
+<span class="nb">export</span> default <span class="k">function</span> <span class="o">({</span>
+  <span class="nv">$axios</span>,
+  redirect
+<span class="o">})</span> <span class="o">{</span>
+  // 设置基础配置
+  <span class="nv">$axios</span>.defaults.timeout <span class="o">=</span> <span class="m">10000</span>
+  <span class="nv">$axios</span>.defaults.withCredentials <span class="o">=</span> <span class="nb">true</span>
+  <span class="nv">$axios</span>.defaults.headers <span class="o">=</span> <span class="o">{</span>
+    <span class="s1">&#39;Content-Type&#39;</span>: <span class="s1">&#39;application/json; charset=utf-8&#39;</span>, // json格式通信
+    <span class="s1">&#39;platform&#39;</span>: <span class="s1">&#39;pc&#39;</span>,
+  <span class="o">}</span>
+  <span class="k">if</span> <span class="o">(</span>process.env.NODE_ENV <span class="o">===</span> <span class="s1">&#39;production&#39;</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nv">$axios</span>.defaults.baseURL <span class="o">=</span> apiConfig.base
+  <span class="o">}</span>
+  // post请求头设置
+  // <span class="nv">$axios</span>.defaults.headers.post<span class="o">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;application/x-www-form-urlencoded;charset=UTF-8&#39;</span><span class="p">;</span>
+
+  // 请求回调
+  <span class="nv">$axios</span>.onRequest<span class="o">(</span><span class="nv">config</span> <span class="o">=</span>&gt; <span class="o">{</span>
+    console.log<span class="o">(</span><span class="s1">&#39;Making request to &#39;</span> + config.url<span class="o">)</span>
+    <span class="k">return</span> config
+  <span class="o">})</span>
+
+  // 响应回调
+  <span class="nv">$axios</span>.onResponse<span class="o">(</span><span class="nv">res</span> <span class="o">=</span>&gt; <span class="o">{</span>
+    console.log<span class="o">(</span><span class="s1">&#39;Making response to &#39;</span> + res.url<span class="o">)</span>
+    <span class="k">return</span> res.data
+  <span class="o">})</span>
+
+  // 错误回调
+  <span class="nv">$axios</span>.onError<span class="o">(</span><span class="nv">error</span> <span class="o">=</span>&gt; <span class="o">{</span>
+    const <span class="nv">code</span> <span class="o">=</span> parseInt<span class="o">(</span>error.response <span class="o">&amp;&amp;</span> error.response.status<span class="o">)</span>
+    <span class="k">if</span> <span class="o">(</span><span class="nv">code</span> <span class="o">===</span> 400<span class="o">)</span> <span class="o">{</span>
+      console.log<span class="o">(</span><span class="s1">&#39;400&#39;</span><span class="o">)</span>
+    <span class="o">}</span>
+  <span class="o">})</span>
+<span class="o">}</span>
+
+</code></pre></div><h4 id="8-yarn-generate-打静态包问题">8. yarn generate 打静态包问题</h4>
+<blockquote>
+<p>如果你想使用nuxt generate打静态文件的包，那么狠遗憾，动态路由无法静态打包；并且你将失去服务端渲染的一切优势。asyncData等服务端能用的方式，都不能再使用。那你为什么还要用静态打包.但是如果你的项目只是静态页面的话，做静态化部署是完全OK 的。但如果牵扯到请求，还是服务器端的部署吧</p>
+</blockquote>
+<p>官网所给的方式很气人: <a href="https://zh.nuxtjs.org/api/configuration-generate">https://zh.nuxtjs.org/api/configuration-generate</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">const <span class="nv">axios</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;axios&#39;</span><span class="o">)</span>
+
+module.exports <span class="o">=</span> <span class="o">{</span>
+  generate: <span class="o">{</span>
+    routes: <span class="k">function</span> <span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> axios.get<span class="o">(</span><span class="s1">&#39;https://my-api/users&#39;</span><span class="o">)</span>
+      .then<span class="o">((</span>res<span class="o">)</span> <span class="o">=</span>&gt; <span class="o">{</span>
+        <span class="k">return</span> res.data.map<span class="o">((</span>user<span class="o">)</span> <span class="o">=</span>&gt; <span class="o">{</span>
+          <span class="k">return</span> <span class="s1">&#39;/users/&#39;</span> + user.id
+        <span class="o">})</span>
+      <span class="o">})</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+// 实际上也是通过axios.get<span class="o">(</span><span class="s1">&#39;https://my-api/users&#39;</span><span class="o">)</span>请求，返回所有id的数组,类似：<span class="o">[{</span>id: 1<span class="o">}</span>, <span class="o">{</span>id: 2<span class="o">}</span>...<span class="o">]</span>；
+// 数据量大的话自己想象。不喜欢query传参，但目前我个人觉得打包成静态的文件的话，还是使用query是最好的方式了。
+</code></pre></div><p>动态路由静态打包：
+在nuxt.js的issues找到了这个：<a href="https://github.com/nuxt/nuxt.js/issues/73">https://github.com/nuxt/nuxt.js/issues/73</a> 可以参考</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h4 id="构建">构建</h4>
+<ol>
+<li>core-js问题</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">https://github.com/nuxt/nuxt.js/pull/5317
+https://github.com/nuxt/nuxt.js/pull/5411
+解决方式：https://github.com/nuxt/nuxt.js/pull/5352
+</code></pre></div><ol start="2">
+<li>less3.0bug，iview主题色修改遇到</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">// https://github.com/ant-design/ant-motion/issues/44
+extend<span class="o">(</span>config, ctx<span class="o">)</span> <span class="o">{</span>
+  config.module.rules.push<span class="o">({</span>
+    test: /<span class="se">\.</span>less$/,
+    loader: <span class="s1">&#39;less-loader&#39;</span>,
+    options: <span class="o">{</span>
+      javascriptEnabled: true, 
+    <span class="o">}</span>
+  <span class="o">})</span>
+<span class="o">}</span>
+</code></pre></div><ol start="3">
+<li>extractCSS与parallel不可并行;IE或者Edge下报错原因</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">// analyze: true,
+// extractCSS与parallel不可并行：https://github.com/nuxt/nuxt.js/pull/5004
+extractCSS: <span class="o">(</span>process.env.NODE_ENV <span class="o">===</span> <span class="s1">&#39;production&#39;</span><span class="o">)</span>, // 拆分css
+maxChunkSize: 30000,
+// parallel: true, // 多进程
+// IE或者Edge下报错原因：（https://github.com/Rich-Harris/devalue/issues/16）
+// 处理
+// https://github.com/nuxt/nuxt.js/issues/4432
+// https://github.com/nuxt/nuxt.js/issues/4643
+// https://github.com/nuxt/nuxt.js/pull/4600
+</code></pre></div>
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://clsss.github.io/blog/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://clsss.github.io/blog/tags/vue" role="button">vue </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/nuxt.js" role="button">Nuxt.js </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/blog" role="button">blog </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://clsss.github.io/blog/blogs/nuxt/nuxt/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>Nuxt.js</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://clsss.github.io/blog/blogs/typescript/%E5%85%A5%E9%97%A8typescript/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>Typescript</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#nuxt%e8%b8%a9%e5%9d%91%e5%90%88%e9%9b%86">
+												 nuxt踩坑合集
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">
+												 原因分析
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%80-nuxt%e6%98%af%e4%bb%80%e4%b9%88%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e4%bd%bf%e7%94%a8nuxt">
+												 一、 nuxt是什么？为什么要使用nuxt？
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%ba%8c%e4%b8%ba%e4%bb%80%e4%b9%88%e9%80%89%e6%8b%a9nuxt">
+												 二、为什么选择nuxt
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%ab%af%e6%b8%b2%e6%9f%93%e7%9a%84%e4%bc%98%e7%bc%ba%e7%82%b9">
+												 1. 服务器端渲染的优缺点？
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2-%e6%98%af%e5%90%a6%e5%ba%94%e8%af%a5%e4%bd%bf%e7%94%a8%e6%9c%8d%e5%8a%a1%e7%ab%af%e6%b8%b2%e6%9f%93">
+												 2. 是否应该使用服务端渲染
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#3-%e5%8e%9f%e7%90%86%e5%9b%be">
+												 3. 原理图
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#4-%e6%8c%87%e4%bb%a4%e8%83%8c%e5%90%8e%e7%9a%84%e6%95%85%e4%ba%8b">
+												 4. 指令背后的故事
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%89%e4%bd%bf%e7%94%a8%e8%bf%87%e7%a8%8b%e4%b8%ad%e9%81%87%e5%88%b0%e7%9a%84%e5%9d%91">
+												 三、使用过程中遇到的坑
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-window-is-undefined">
+												 1. window is undefined
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#2%e7%a7%bb%e5%8a%a8%e7%ab%af%e5%9b%a0%e4%b8%ba%e8%b0%83%e7%94%a8app%e7%ab%af%e7%9a%84%e6%96%b9%e6%b3%95%e9%83%bd%e6%98%af%e4%bd%bf%e7%94%a8window%e4%b8%8b%e7%9a%84android%e5%92%8cwebkitmessagehandlers%e6%96%b9%e6%b3%95%e4%bd%86%e6%98%afssr%e4%b8%8b%e5%a6%82%e6%9e%9c%e7%9b%b4%e6%8e%a5%e5%bc%95%e5%85%a5appbridgejs%e4%b8%8b%e7%9a%84%e6%96%b9%e6%b3%95%e4%bc%9a%e6%8a%a5%e9%94%99%e5%9b%a0%e4%b8%ba%e6%9c%8d%e5%8a%a1%e7%ab%af%e6%b2%a1%e6%9c%89window">
+												 2.【移动端】因为调用app端的方法都是使用window下的android和webkit.messageHandlers方法。但是ssr下如果直接引入appBridge.js下的方法会报错，因为服务端没有window
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#3-vue-warn-the-client-side-rendered-virtual-dom-tree-is-not-matching-server-rendered-content-this-is-likely-caused-by-incorrect-html-markup-for-example-nesting-block-level-elements-insidep-or-missing-tbody-bailing-hydration-and-performing-full-client-side-render">
+												 3. [Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content. This is likely caused by incorrect HTML markup, for example nesting block-level elements inside, or missing . Bailing hydration and performing full client-side render.
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#4-%e7%a7%bb%e5%8a%a8%e7%ab%afpostcss-px2rem%e4%bc%9a%e5%af%bc%e8%87%b4%e5%85%b6%e4%bb%96%e6%9c%ac%e8%ba%ab%e5%b7%b2%e6%94%af%e6%8c%81%e8%87%aa%e9%80%82%e5%ba%94%e7%9a%84ui%e5%ba%93vant-ui%e6%a0%b7%e5%bc%8f%e7%bc%a9%e5%b0%8f">
+												 4. 【移动端】postcss-px2rem会导致其他本身已支持自适应的UI库（vant UI）样式缩小。
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#5-thisrouteparams%e4%b8%80%e7%9b%b4%e4%b8%ba%e7%a9%ba%e4%bd%86query%e6%98%af%e6%ad%a3%e5%b8%b8%e9%83%81%e9%97%b7%e4%ba%86%e6%88%91%e4%b8%80%e4%b8%aa%e5%b0%8f%e6%97%b6">
+												 5. this.$route.params一直为空，但query是正常。郁闷了我一个小时。
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#6-vuex-store-nuxtjs-%e6%8f%90%e4%be%9b%e4%ba%862%e7%a7%8dstore-modes">
+												 6. vuex store (nuxt.js 提供了2种store modes)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#7-%e5%b7%a5%e5%8e%82%e6%a8%a1%e5%bc%8fapi">
+												 7. 工厂模式api
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#8-yarn-generate-%e6%89%93%e9%9d%99%e6%80%81%e5%8c%85%e9%97%ae%e9%a2%98">
+												 8. yarn generate 打静态包问题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%9e%84%e5%bb%ba">
+												 构建
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/clsss " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+      <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+    
+
+    
+      <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+    <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus-g mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+
+    
+        <a href="mailto:670199384@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2020 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/main.js"></script>
+
+
+
+  
+  <script src="https://clsss.github.io/blog/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://clsss.github.io/blog/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://clsss.github.io/blog/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>
