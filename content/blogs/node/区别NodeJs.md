@@ -1,12 +1,12 @@
 ---
-title: "Node.js"
+title: "Node与Js的区别"
 date: 2019-06-04T20:17:53+08:00
 publishdate: 2019-06-04T20:17:53+08:00
 lastmod: 2019-06-04T20:17:53+08:00
 draft: false
 img: ""
 toc: true
-summary: "This is node.js"
+summary: "Node与Js的区别"
 ---
 
 > 难点：不同环境下的问题，学习一门语言可能只要几天，但熟悉一门语言的时间可能要1-2年
