@@ -1,0 +1,36 @@
+[[series]]
+name = "web"
+img = "images/series/web.jpg"
+summary = "This is a web series"
+
+[[series]]
+name = "webpack"
+img = "images/series/webpack.jpg"
+summary = "This is a webpack series"
+
+[[series]]
+name = "blog"
+img = "images/series/blog.jpg"
+summary = "Blog posts"
+
+[[series]]
+name = "hugo"
+img = "images/blog/hugo-logo.png"
+summary = "This is a hugo series"
+
+[[series]]
+name = "js"
+img = "images/series/js.jpg"
+summary = "This is a js series"
+
+[[series]]
+name = "vue"
+img = "images/series/vue.png"
+summary = "This is a vue series"
+
+[[series]]
+name = "编程思想"
+img = "images/series/programmingIdeas.jpg"
+summary = "This is a programmingIdeas series"
+
+

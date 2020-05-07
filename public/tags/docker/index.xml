@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/tags/docker/</link>
+    <description>Recent content in docker on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Sun, 13 Oct 2019 11:12:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>docker系统学习</title>
+      <link>https://clsss.github.io/blog/blogs/2019-10/docker%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 13 Oct 2019 11:12:19 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2019-10/docker%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/</guid>
+      <description>This is docker</description>
+    </item>
+    
+    <item>
+      <title>docker探索</title>
+      <link>https://clsss.github.io/blog/blogs/2018-6/docker/</link>
+      <pubDate>Sun, 10 Jun 2018 20:42:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-6/docker/</guid>
+      <description>This is an example of adding an intro picture to the post.</description>
+    </item>
+    
+  </channel>
+</rss>

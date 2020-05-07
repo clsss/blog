@@ -1,0 +1,95 @@
+# AllinOne
+baseURL                    = "https://clsss.github.io/blog/"
+builddrafts                = false
+languageCode               = "zn-Hans"
+canonifyurls               = true
+contentdir                 = "content"
+layoutdir                  = "layouts"
+publishdir                 = "public"
+enableEmoji                = true
+hasCJKLanguage             = true
+summaryLength              = 200
+Paginate                   = 3
+
+theme                      = "AllinOne"
+title                      = "Collin's Blog"
+
+pygmentsuseclasses         = true
+
+
+[permalinks]
+  blog                     = "blog/:year-:month/:slug/"
+
+
+[taxonomies]
+  tag                      = "tags"
+  series                   = "series"
+  category                 = "categories"
+
+
+[menu]
+  [[menu.main]]
+    name                   = "Blogs"
+    weight                 = -120
+    identifier             = "blogs"
+    url                    = "blogs/"  
+
+  [[menu.main]]
+    name                   = "Life"
+    weight                 = -110
+    identifier             = "life"
+    url                    = "life/" 
+
+  [[menu.main]]
+    name                   = "About"
+    weight                 = -100
+    identifier             = "about"
+    url                    = "about/"  
+
+ 
+
+[params]
+  # from static/
+  faviconfile              = "images/favicon_cl.ico"
+  # path to image in static dir e.g img/avatar.png             
+  avatar                   = "images/avatar.jpg"             
+  author                   = "Collin"
+  # appears in the site header when set to a non-empty string
+  description              = ["The art is outside", "The wonderful in the heart", "Unique fireworks are also dust",]           
+  welcome_head             = "Watch the view, Feel the mind"
+  welcome_word             = "Just do it"
+  # how many posts to display on the home page
+  latestpostscount         = 5                             
+  bloggroupby              = 'month'
+  dateform                 = ""
+  dateformfull             = ""
+  # if true, don't show "<x> minutes read" in posts
+  noshowreadtime           = false                         
+
+  # slides
+  # path to image in local dir (path for hugo), [banner]图
+  slidesDirPath            = "themes/AllinOne/static/img/header-slides"   
+  # path to image in static dir (for static pages)
+  slidesDirPathURL         = "img/header-slides"
+
+  # highlighting 
+  highlightjs              = true
+
+  # latex
+  katex                    = true
+
+  # links
+  email                    = "670199384@qq.com"
+  github                   = "//github.com/clsss"
+  linkedin                 = "//linkedin.com/in/you"
+  facebook                 = "//facebook.com/you"
+  googleplus               = "//google.com/you"
+  twitter                  = "//twitter.com/you" 
+  # px500                    = "//px500"
+  # instagram                = "//instagram.com/you"
+  # include RSS <link> tag in <head> and show RSS icon
+  include_rss              = false                          
+  
+  # analytics
+  googleAnalytics          = "your-google-analytic-id"
+    

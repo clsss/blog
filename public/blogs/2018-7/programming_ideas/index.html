@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="Collin">
+  <meta name="description" content="编程思想-函数式编程">
+  
+  <meta property="og:title" content="编程思想-函数式编程" />
+<meta property="og:description" content="编程思想-函数式编程" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://clsss.github.io/blog/blogs/2018-7/programming_ideas/" />
+<meta property="article:published_time" content="2018-07-15T20:42:11+08:00" />
+<meta property="article:modified_time" content="2018-07-15T20:42:11+08:00" />
+
+
+
+  <title>
+  
+       编程思想-函数式编程 | Collin&#39;s Blog 
+  
+  </title>
+
+  <link rel="canonical" href="https://clsss.github.io/blog/blogs/2018-7/programming_ideas/">
+
+  
+  
+
+  
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://clsss.github.io/blog/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://clsss.github.io/blog/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://clsss.github.io/blog/images/favicon_cl.ico"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://clsss.github.io/blog/">
+          
+        <img class="avatar" src="https://clsss.github.io/blog/images/favicon_cl.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        
+        
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://clsss.github.io/blog/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/blogs/" >Blogs  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/life/" >Life  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides/banner1.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner2.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner3.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner4.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://clsss.github.io/blog/">
+          
+            <img class="pull-right avatar avatar-md" src="https://clsss.github.io/blog/images/avatar.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://clsss.github.io/blog/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Collin&#39;s Blog</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/clsss" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+    
+            
+    
+        
+            
+                <a href="mailto:670199384@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://clsss.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 编程思想 </a></li>
+      
+    
+    
+      
+        <li><a href="https://clsss.github.io/blog/series/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>编程思想</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">编程思想-函数式编程</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Jul 15, 2018</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>4 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <h2 id="编程的思想">编程的思想</h2>
+<blockquote>
+<p>函数式编程,所属于声明式编程</p>
+</blockquote>
+<blockquote>
+<p>面向对象编程(OOP)通过封装变化使得代码更易理解。 函数式编程(FP)通过最小化变化使得代码更易理解。 &ndash; Michacel Feathers（Twitter）</p>
+</blockquote>
+<p>设计原则：</p>
+<ol>
+<li>可扩展性&ndash;添加新功能是否需要修改以前的代码？</li>
+<li>易模块化&ndash;修改了一个模块，另一个模块是否会受到影响？</li>
+<li>可重用性&ndash;是否有很多重复的代码？</li>
+<li>可测性&ndash;给函数添加单元测试是否让你难受？</li>
+<li>易推理性&ndash;代码是否非结构化严重并难以推理？</li>
+</ol>
+<h4 id="什么是函数式编程">什么是函数式编程？</h4>
+<blockquote>
+<p>函数式编程是种编程方式，它将电脑运算视为函数的计算。函数编程语言最重要的基础是 λ 演算（lambda calculus），而且 λ 演算的函数可以接受函数当作输入（参数）和输出（返回值）。</p>
+</blockquote>
+<p>嗯..百度就是这么说的。那么你能懂吗？不能就看下面</p>
+<blockquote>
+<p>&ldquo;函数式编程&quot;是一种&quot;编程范式&rdquo;（programming paradigm），也就是如何编写程序的方法论。是一种强调以函数使用为主的软件开发风格
+再举个栗子说，在页面显示一句话&rsquo;你好&rsquo;</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 一般情况</span>
+document.querySelector<span class="o">(</span><span class="s1">&#39;#div1&#39;</span><span class="o">)</span>.innerHtml <span class="o">=</span> <span class="s1">&#39;你好&#39;</span>
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 封装一下</span>
+<span class="k">function</span> printMessage<span class="o">(</span>eleId, msg<span class="o">)</span> <span class="o">{</span>
+    document.querySelector<span class="o">(</span>eleId<span class="o">)</span>.innerHTML <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nv">msg</span><span class="si">}</span><span class="sb">`</span>
+<span class="o">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 函数式开发者</span>
+const <span class="nv">printMessage</span> <span class="o">=</span> compose<span class="o">(</span>addToDom<span class="o">(</span><span class="s1">&#39;msg&#39;</span>, <span class="nb">echo</span><span class="o">))</span>  // addToDom，echo都是函数
+printMessage<span class="o">(</span><span class="s1">&#39;你好&#39;</span><span class="o">)</span>
+// compose 简单解释一下，他会让函数从最后一个参数顺序执行到第一个参数，compose 的每个参数都是函数。
+这样的方式是不是很像组件化，里面的函数就是一个一个的小组件。组合在一起就实现了最终的效果
+
+</code></pre></div><blockquote>
+<p>函数式编程属于声明是编程范式：这种范式会描述一系列的操作，但并不会暴露它们是如何实现的或是数据流如何传过它们。</p>
+</blockquote>
+<h4 id="compose-补充">compose 补充：</h4>
+<ol>
+<li>compose 的参数是函数，返回的也是一个函数。</li>
+<li>因为除了第一个函数的接受参数，其他函数的接受参数都是上一个函数的返回值，所以初始函数的参数是多元的（本题只讨论了一元参数的情况），而其他函数的接受值是一元的。</li>
+<li>compsoe 函数可以接受任意的参数，所有的参数都是函数，且执行方向是自右向左的，初始函数一定放到参数的最右面。</li>
+</ol>
+<p>lodash.js 实现方式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">var <span class="nv">flow</span> <span class="o">=</span> <span class="k">function</span><span class="o">(</span>funcs<span class="o">)</span> <span class="o">{</span>
+    var <span class="nv">length</span> <span class="o">=</span> funcs.length
+    var <span class="nv">index</span> <span class="o">=</span> length
+    <span class="k">while</span> <span class="o">(</span>index--<span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span>typeof funcs<span class="o">[</span>index<span class="o">]</span> !<span class="o">==</span> <span class="s1">&#39;function&#39;</span><span class="o">)</span> <span class="o">{</span>
+            throw new TypeError<span class="o">(</span><span class="s1">&#39;Expected a function&#39;</span><span class="o">)</span><span class="p">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">function</span><span class="o">(</span>...args<span class="o">)</span> <span class="o">{</span>
+        var <span class="nv">index</span> <span class="o">=</span> <span class="m">0</span>
+        var <span class="nv">result</span> <span class="o">=</span> length ? funcs<span class="o">[</span>index<span class="o">]</span>.apply<span class="o">(</span>this, args<span class="o">)</span> : args<span class="o">[</span>0<span class="o">]</span>
+        <span class="k">while</span> <span class="o">(</span>++index &lt; length<span class="o">)</span> <span class="o">{</span>
+            <span class="nv">result</span> <span class="o">=</span> funcs<span class="o">[</span>index<span class="o">]</span>.call<span class="o">(</span>this, result<span class="o">)</span>
+        <span class="o">}</span>
+        <span class="k">return</span> result
+    <span class="o">}</span>
+<span class="o">}</span>
+var <span class="nv">flowRight</span> <span class="o">=</span> <span class="k">function</span><span class="o">(</span>funcs<span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> flow<span class="o">(</span>funcs.reverse<span class="o">())</span>
+<span class="o">}</span>
+</code></pre></div><h4 id="对比命令式编程和声明式编程">对比命令式编程和声明式编程：</h4>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">// 命令式方式<span class="o">(</span>命令式很具体的告诉计算机如何执行某个任务。<span class="o">)</span>
+var <span class="nv">array</span> <span class="o">=</span> <span class="o">[</span>0, 1, 2, 3<span class="o">]</span>
+<span class="k">for</span><span class="o">(</span><span class="nb">let</span> <span class="nv">i</span> <span class="o">=</span> 0<span class="p">;</span> i &lt; array.length<span class="p">;</span> i++<span class="o">)</span> <span class="o">{</span>
+    array<span class="o">[</span>i<span class="o">]</span> <span class="o">=</span> Math.pow<span class="o">(</span>array<span class="o">[</span>i<span class="o">]</span>, 2<span class="o">)</span>
+<span class="o">}</span>
+array<span class="p">;</span> // <span class="o">[</span>0, 1, 4, 9<span class="o">]</span>
+
+// 声明式方式<span class="o">(</span>将程序的描述与求值分离开来。它关注如何用各种表达式来描述程序逻辑，而不一定要指明其控制流或状态关系的变化。<span class="o">)</span>
+<span class="o">[</span>0, 1, 2, 3<span class="o">]</span>.map<span class="o">(</span><span class="nv">num</span> <span class="o">=</span>&gt; Math.pow<span class="o">(</span>num, 2<span class="o">))</span>
+</code></pre></div><p>为什么我们要去掉代码循环呢？
+循环是一种重要的命令控制结构，但很难重用，并且很难插入其他操作中。而函数式编程旨在尽可能的提高代码的无状态性和不变性。要做到这一点，就要学会使用无副作用的函数&ndash;也称纯函数</p>
+<h4 id="纯函数">纯函数</h4>
+<blockquote>
+<p>纯函数指没有副作用的函数。所谓&quot;副作用&rdquo;（side effect），指的是函数内部与外部互动（最典型的情况，就是修改全局变量的值），产生运算以外的其他结果。
+函数式编程强调没有&quot;副作用&rdquo;，意味着函数要保持独立，所有功能就是返回一个新的值，没有其他行为，尤其是不得修改外部变量的值。</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">// 不纯
+var <span class="nv">count</span> <span class="o">=</span> <span class="m">0</span>
+<span class="k">function</span> increment<span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> ++count<span class="p">;</span>
+<span class="o">}</span>
+<span class="c1"># 这个函数就是不纯的，它读取了外部的变量，可能会觉得这段代码没有什么问题，但是我们要知道这种依赖外部变量来进行的计算，计算结果很难预测，你也有可能在其他地方修改了 counter 的值，导致你 increment 出来的值不是你预期的。</span>
+
+// 纯函数
+<span class="k">function</span> increment<span class="o">(</span>num<span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> ++num<span class="p">;</span>
+<span class="o">}</span>
+纯函数特点：
+1. 仅取决于提供的输入，而不依赖于任何在函数求值或调用间隔时可能变化的隐藏状态和外部状态。
+2. 不会造成超出作用域的变化，例如修改全局变量或引用传递的参数。
+</code></pre></div><p>场景例子：
+根据用户 id 查询用户，并显示在页面上</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">// 命令式代码
+
+<span class="k">function</span> showUser<span class="o">(</span>id<span class="o">)</span> <span class="o">{</span>
+    // 这里假如是同步查询
+    const <span class="nv">user</span> <span class="o">=</span> axios.get<span class="o">(</span>id<span class="o">)</span>
+    <span class="k">if</span><span class="o">(</span>user !<span class="o">==</span> null<span class="o">)</span> <span class="o">{</span>
+          // 读取外部的 eleId
+          document.querySelector<span class="o">(</span><span class="sb">`</span><span class="si">${</span><span class="nv">eleId</span><span class="si">}</span><span class="sb">`</span><span class="o">)</span>.innerHTML <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nv">user</span><span class="p">.id</span><span class="si">}</span>,<span class="si">${</span><span class="nv">user</span><span class="p">.name</span><span class="si">}</span><span class="sb">`</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        throw new Error<span class="o">(</span><span class="s1">&#39;not found&#39;</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+showUser<span class="o">(</span>10<span class="o">)</span> // 10, xxx
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">// 函数式编程
+
+<span class="k">function</span> findUser<span class="o">(</span>id<span class="o">)</span> <span class="o">{</span>
+    // 这里假如是同步查询
+    const <span class="nv">user</span> <span class="o">=</span> axios.get<span class="o">(</span>id<span class="o">)</span>
+    <span class="k">if</span><span class="o">(</span>user !<span class="o">==</span> null<span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> user
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        throw new Error<span class="o">(</span><span class="s1">&#39;not found&#39;</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+// 将用户format
+<span class="k">function</span> format<span class="o">(</span>user<span class="o">)</span> <span class="o">=</span>&gt; <span class="sb">`</span><span class="si">${</span><span class="nv">user</span><span class="p">.id</span><span class="si">}</span>,<span class="si">${</span><span class="nv">user</span><span class="p">.name</span><span class="si">}</span><span class="sb">`</span>
+// 显示用户信息
+<span class="k">function</span> showUser<span class="o">(</span>eleId, info<span class="o">)</span> <span class="o">{</span>
+    document.querySelector<span class="o">(</span>eleId<span class="o">)</span>.innerHTML <span class="o">=</span> info
+<span class="o">})</span>
+const <span class="nv">showStudent</span> <span class="o">=</span> compose<span class="o">(</span>showUser<span class="o">(</span><span class="s1">&#39;#user&#39;</span><span class="o">)</span>, format, findUser<span class="o">(</span>id<span class="o">))</span>
+showStudent<span class="o">(</span>10<span class="o">)</span>
+</code></pre></div><h4 id="优点">优点</h4>
+<ol>
+<li>代码简洁，开发快速</li>
+<li>接近自然语言，易于理解</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    前文曾经将表达式<span class="o">(</span><span class="m">1</span> + 2<span class="o">)</span> * <span class="m">3</span> - 4，写成函数式语言：
+    subtract<span class="o">(</span>multiply<span class="o">(</span>add<span class="o">(</span>1,2<span class="o">)</span>, 3<span class="o">)</span>, 4<span class="o">)</span>
+    对它进行变形，不难得到另一种写法：
+    add<span class="o">(</span>1,2<span class="o">)</span>.multiply<span class="o">(</span>3<span class="o">)</span>.subtract<span class="o">(</span>4<span class="o">)</span>
+    这基本就是自然语言的表达了。
+</code></pre></div><ol start="3">
+<li>灵活, 方便的代码管理。</li>
+<li>组件化思想。</li>
+<li>声明式的风格，给高阶步骤提供了一个清晰视图，增强了代码的可读性</li>
+<li>另外是将纯函数与不纯的行为分离出来。</li>
+</ol>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://clsss.github.io/blog/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://clsss.github.io/blog/tags/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3" role="button">编程思想 </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B" role="button">函数式编程 </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://clsss.github.io/blog/blogs/2018-6/mongodb/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>mongoDB环境搭建，服务器端</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://clsss.github.io/blog/blogs/2018-10/restful/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>RESTful</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%bc%96%e7%a8%8b%e7%9a%84%e6%80%9d%e6%83%b3">
+												 编程的思想
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%87%bd%e6%95%b0%e5%bc%8f%e7%bc%96%e7%a8%8b">
+												 什么是函数式编程？
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#compose-%e8%a1%a5%e5%85%85">
+												 compose 补充：
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%af%b9%e6%af%94%e5%91%bd%e4%bb%a4%e5%bc%8f%e7%bc%96%e7%a8%8b%e5%92%8c%e5%a3%b0%e6%98%8e%e5%bc%8f%e7%bc%96%e7%a8%8b">
+												 对比命令式编程和声明式编程：
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%ba%af%e5%87%bd%e6%95%b0">
+												 纯函数
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%bc%98%e7%82%b9">
+												 优点
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/clsss " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+      <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+    
+
+    
+      <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+    <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus-g mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+
+    
+        <a href="mailto:670199384@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2020 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/main.js"></script>
+
+
+
+  
+  <script src="https://clsss.github.io/blog/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://clsss.github.io/blog/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://clsss.github.io/blog/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

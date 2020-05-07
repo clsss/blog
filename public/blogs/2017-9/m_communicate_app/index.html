@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="Collin">
+  <meta name="description" content="This is an example">
+  
+  <meta property="og:title" content="移动端_Web如何调起App" />
+<meta property="og:description" content="This is an example" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://clsss.github.io/blog/blogs/2017-9/m_communicate_app/" />
+<meta property="article:published_time" content="2018-09-25T23:54:11+08:00" />
+<meta property="article:modified_time" content="2018-09-25T23:54:11+08:00" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-8/cross_domain/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-10/restful/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_performance/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/2017-9/m_useragent/" />
+
+
+
+  <title>
+  
+       移动端_Web如何调起App | Collin&#39;s Blog 
+  
+  </title>
+
+  <link rel="canonical" href="https://clsss.github.io/blog/blogs/2017-9/m_communicate_app/">
+
+  
+  
+
+  
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://clsss.github.io/blog/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://clsss.github.io/blog/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://clsss.github.io/blog/images/favicon_cl.ico"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://clsss.github.io/blog/">
+          
+        <img class="avatar" src="https://clsss.github.io/blog/images/favicon_cl.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        
+        
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://clsss.github.io/blog/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/blogs/" >Blogs  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/life/" >Life  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides/banner1.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner2.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner3.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner4.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://clsss.github.io/blog/">
+          
+            <img class="pull-right avatar avatar-md" src="https://clsss.github.io/blog/images/avatar.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://clsss.github.io/blog/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Collin&#39;s Blog</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/clsss" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+    
+            
+    
+        
+            
+                <a href="mailto:670199384@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://clsss.github.io/blog/categories/mobile"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> mobile </a></li>
+      
+    
+    
+      
+        <li><a href="https://clsss.github.io/blog/series/web"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>web</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">移动端_Web如何调起App</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Sep 25, 2018</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>2 minutes read</li>
+    
+  </ul>
+  
+    <div class="view">
+      <img src="https://clsss.github.io/blog/images/blog/img.jpg" />
+    </div>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <h2 id="一-判断机型iosandroid">一. 判断机型（Ios/Android）</h2>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/*
+ * 设备检测
+ * @return <span class="o">{{</span>isIos:Function, isAndroid:Function<span class="o">}}</span>
+ */
+<span class="nb">export</span> <span class="k">function</span> getBrowserVersion<span class="o">()</span> <span class="o">{</span>
+    const <span class="nv">ua</span> <span class="o">=</span> navigator.userAgent <span class="o">||</span> navigator.vendor <span class="o">||</span> window.opera
+    const <span class="nv">uaInfo</span> <span class="o">=</span> <span class="o">{</span>
+        ios: /<span class="se">\(</span>i<span class="o">[</span>^<span class="p">;</span><span class="o">]</span>+<span class="p">;</span><span class="o">(</span> U<span class="p">;</span><span class="o">)</span>? CPU.+Mac OS X/i.test<span class="o">(</span>ua<span class="o">)</span>,
+        android: /Android/i.test<span class="o">(</span>ua<span class="o">)</span> <span class="o">||</span> /Linux/i.test<span class="o">(</span>ua<span class="o">)</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="o">{</span>
+        isIos<span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> uaInfo.ios
+        <span class="o">}</span>,
+        isAndroid<span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> uaInfo.android
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h2 id="二-分类套路">二. 分类套路</h2>
+<h3 id="1-android">1. Android</h3>
+<p>安卓有 2 种常用方式：
+a.自定义 Scheme
+b.Chrome Intent</p>
+<h4 id="自定义-scheme">自定义 Scheme</h4>
+<p>scheme 协议在 app 注册之后，与前端进行统一约定，通过 H5 页面访问某个具体的协议地址，即可打开对应的 app 客户端页面。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">1. 通过a标签打开，点击标签是启动
+&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;m://app.com?openid=123&#34;</span>&gt;打开app &lt;/a&gt;&lt;br/&gt;
+
+2. 通过iframe打开，设置iframe.src即会启动
+&lt;iframe <span class="nv">src</span><span class="o">=</span><span class="s2">&#34;m://app.com?openid=123&#34;</span>&gt;&lt;/iframe&gt;
+
+3. 直接通过window.location进行跳转
+window.location.href<span class="o">=</span><span class="s2">&#34; m://http://app.com?openid=123&#34;</span>
+</code></pre></div><blockquote>
+<p>微信的白名单限制会导致法通过 scheme 来唤醒本地 app，只有白名单内的 app 才能通过微信浏览器唤醒，等微信出方案好了</p>
+</blockquote>
+<h4 id="chrome-intent">Chrome Intent</h4>
+<p>自定义的 scheme 可以搞定很多浏览器，但是 Chrome 除外。原因是为了更有序的打通浏览器页面和本地应用，Chrome 25 后不再支持自定义的 scheme，比如通过设置 window.location.href=&rdquo; m://http://zyl.com &ldquo;将无法唤醒本地客户端。</p>
+<p>而推出了 Chrome Intent，作为标准协议进行推广，其格式如下：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">intent:
+   	HOST/URI-path // Optional host
+   	<span class="c1">#Intent;</span>
+	<span class="nv">package</span><span class="o">=[</span>string<span class="o">]</span><span class="p">;</span>
+	<span class="nv">action</span><span class="o">=[</span>string<span class="o">]</span><span class="p">;</span>
+	<span class="nv">category</span><span class="o">=[</span>string<span class="o">]</span><span class="p">;</span>
+	<span class="nv">component</span><span class="o">=[</span>string<span class="o">]</span><span class="p">;</span>
+	<span class="nv">scheme</span><span class="o">=[</span>string<span class="o">]</span><span class="p">;</span>
+S.browser_fallback_ur<span class="o">=[</span>encoded_full_url<span class="o">]</span><span class="p">;</span>end<span class="p">;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;intent://zyl.com?arg0=Jason&amp;arg1=Zhao#Intent;scheme=m;package=com.zyl.demo.htmlcallapp1;S.browser_fallback_url=https%3A%2F%2Fwww.baidu.com;end&#34;</span>&gt;打开app by Intent&lt;/a&gt;&lt;br/&gt;
+</code></pre></div><h3 id="1-ios">1. IOS</h3>
+<p>方式：</p>
+<ol>
+<li>
+<p>自定义 Scheme</p>
+</li>
+<li>
+<p>Universal links</p>
+<blockquote>
+<p>Universal links 为 iOS9 上一个所谓通用链接的深层链接特性，一种能够方便的通过传统 HTTP 链接来启动 app，使用相同的网址打开网站和 app；通过唯一的网址，就可以链接一个特定的视图到你的 app 里面，不需要特别的 scheme。</p>
+</blockquote>
+</li>
+</ol>
+<p>对比 scheme 的方式 Universal links 有以下优点：</p>
+<ol>
+<li>通过 scheme 启动 app 时，浏览器会弹出确认框提示用户是否打开，而 Universal links 不会提示，体验更好</li>
+<li>Universal links 可在微信浏览器中打开外部 app</li>
+</ol>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://clsss.github.io/blog/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://clsss.github.io/blog/tags/mobile" role="button">mobile </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/web" role="button">web </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://clsss.github.io/blog/blogs/2018-8/cross_domain/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>jsonp跨域原理</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://clsss.github.io/blog/blogs/2018-6/redis/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>Redis</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%80-%e5%88%a4%e6%96%ad%e6%9c%ba%e5%9e%8biosandroid">
+												 一. 判断机型（Ios/Android）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%ba%8c-%e5%88%86%e7%b1%bb%e5%a5%97%e8%b7%af">
+												 二. 分类套路
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-android">
+												 1. Android
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e8%87%aa%e5%ae%9a%e4%b9%89-scheme">
+												 自定义 Scheme
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#chrome-intent">
+												 Chrome Intent
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-ios">
+												 1. IOS
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/clsss " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+      <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+    
+
+    
+      <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+    <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus-g mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+
+    
+        <a href="mailto:670199384@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2020 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/main.js"></script>
+
+
+
+  
+  <script src="https://clsss.github.io/blog/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://clsss.github.io/blog/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://clsss.github.io/blog/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

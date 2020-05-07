@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/tags/blog/</link>
+    <description>Recent content in blog on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Wed, 13 Mar 2019 23:04:40 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nuxt.js 采坑</title>
+      <link>https://clsss.github.io/blog/blogs/2019-3/nuxt_pit/</link>
+      <pubDate>Wed, 13 Mar 2019 23:04:40 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2019-3/nuxt_pit/</guid>
+      <description>This is nuxt.js mining pit</description>
+    </item>
+    
+    <item>
+      <title>Nuxt.js</title>
+      <link>https://clsss.github.io/blog/blogs/2018-12/nuxt/</link>
+      <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-12/nuxt/</guid>
+      <description>This is nuxt.js</description>
+    </item>
+    
+    <item>
+      <title>Redis</title>
+      <link>https://clsss.github.io/blog/blogs/2018-6/redis/</link>
+      <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-6/redis/</guid>
+      <description>This is redis.</description>
+    </item>
+    
+    <item>
+      <title>mongoDB环境搭建，服务器端</title>
+      <link>https://clsss.github.io/blog/blogs/2018-6/mongodb/</link>
+      <pubDate>Wed, 20 Jun 2018 20:24:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-6/mongodb/</guid>
+      <description>This is an example of adding an intro picture to the post.</description>
+    </item>
+    
+    <item>
+      <title>docker探索</title>
+      <link>https://clsss.github.io/blog/blogs/2018-6/docker/</link>
+      <pubDate>Sun, 10 Jun 2018 20:42:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-6/docker/</guid>
+      <description>This is an example of adding an intro picture to the post.</description>
+    </item>
+    
+    <item>
+      <title>设计模式-设计原则</title>
+      <link>https://clsss.github.io/blog/blogs/2018-5/design/designmode1/</link>
+      <pubDate>Sat, 05 May 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-5/design/designmode1/</guid>
+      <description>设计原则（五大原则），这是一种思想</description>
+    </item>
+    
+    <item>
+      <title>Hugo 搭建博客</title>
+      <link>https://clsss.github.io/blog/blogs/2017-10/hugo/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-10/hugo/</guid>
+      <description>This was Hugo&amp;rsquo;s attempt</description>
+    </item>
+    
+  </channel>
+</rss>

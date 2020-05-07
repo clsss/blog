@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/</loc>
+    <lastmod>2020-04-10T08:36:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/</loc>
+    <lastmod>2020-04-10T08:36:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/</loc>
+    <lastmod>2020-04-10T08:36:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/http/</loc>
+    <lastmod>2020-04-10T08:36:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/http/</loc>
+    <lastmod>2020-04-10T08:36:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/http/</loc>
+    <lastmod>2020-04-10T08:36:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2020-5/http%E5%8F%91%E5%B1%95/</loc>
+    <lastmod>2020-04-10T08:36:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/</loc>
+    <lastmod>2020-04-10T08:36:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/</loc>
+    <lastmod>2020-04-10T08:36:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/docker/</loc>
+    <lastmod>2019-10-13T11:12:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/docker/</loc>
+    <lastmod>2019-10-13T11:12:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2019-10/docker%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2019-10-13T11:12:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2019-9/jenkins/</loc>
+    <lastmod>2019-10-13T11:12:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/server/</loc>
+    <lastmod>2019-10-13T11:12:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2019-6/nodejs/</loc>
+    <lastmod>2019-06-04T20:17:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2019-5/typescript/</loc>
+    <lastmod>2019-05-03T17:17:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/blog/</loc>
+    <lastmod>2019-03-13T23:04:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/nuxt.js/</loc>
+    <lastmod>2019-03-13T23:04:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/nuxt.js/</loc>
+    <lastmod>2019-03-13T23:04:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2019-3/nuxt_pit/</loc>
+    <lastmod>2019-03-13T23:04:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/vue/</loc>
+    <lastmod>2019-03-13T23:04:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/vue/</loc>
+    <lastmod>2019-03-13T23:04:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/vue/</loc>
+    <lastmod>2019-03-13T23:04:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-12/nuxt/</loc>
+    <lastmod>2018-12-23T20:24:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-6/redis/</loc>
+    <lastmod>2018-12-23T20:24:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/redis/</loc>
+    <lastmod>2018-12-23T20:24:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/redis/</loc>
+    <lastmod>2018-12-23T20:24:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/server/</loc>
+    <lastmod>2018-12-23T20:24:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/aboutme/</loc>
+    <lastmod>2018-12-05T22:02:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/about/</loc>
+    <lastmod>2018-12-05T22:02:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/about/myself/</loc>
+    <lastmod>2018-12-05T22:02:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/mobile/</loc>
+    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/mobile/</loc>
+    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/web/</loc>
+    <lastmod>2019-05-03T23:54:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/web/</loc>
+    <lastmod>2019-05-03T23:54:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-9/m_communicate_app/</loc>
+    <lastmod>2018-09-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-8/cross_domain/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/restful/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/restful/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-10/restful/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/%E8%B7%A8%E5%9F%9F/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/%E8%B7%A8%E5%9F%9F/</loc>
+    <lastmod>2018-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2018-07-15T20:42:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</loc>
+    <lastmod>2018-07-15T20:42:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</loc>
+    <lastmod>2018-07-15T20:42:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</loc>
+    <lastmod>2018-07-15T20:42:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-7/programming_ideas/</loc>
+    <lastmod>2018-07-15T20:42:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/mongodb/</loc>
+    <lastmod>2018-06-20T20:24:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/mongodb/</loc>
+    <lastmod>2018-06-20T20:24:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-6/mongodb/</loc>
+    <lastmod>2018-06-20T20:24:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-6/docker/</loc>
+    <lastmod>2018-06-10T20:42:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/server/</loc>
+    <lastmod>2018-06-10T20:42:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/design-patterns/</loc>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/design-patterns/</loc>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/js/</loc>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/js/</loc>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-5/design/designmode3/</loc>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-5/design/designmode2/</loc>
+    <lastmod>2018-05-07T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/model/</loc>
+    <lastmod>2018-05-05T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-5/design/designmode1/</loc>
+    <lastmod>2018-05-05T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/mocha/</loc>
+    <lastmod>2018-04-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/mocha/</loc>
+    <lastmod>2018-04-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/test/</loc>
+    <lastmod>2018-04-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-4/mocka/</loc>
+    <lastmod>2018-04-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/css/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/hugo/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/hugo/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/hugo/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-10/hugo/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/prerenderer/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/puppeteer/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/ssr/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/ssr/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/update/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/vue-cli/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/vue-cli/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/web/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/webpack/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/webpack/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-4/webpack/css/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack-prerendererpuppeteer%E7%89%88/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack-ssr/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/webpack4/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/webpack4/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-4/webpack/webpack4%E5%8D%87%E7%BA%A7/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2018-4/webpack/vue-cli/</loc>
+    <lastmod>2017-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/css/</loc>
+    <lastmod>2017-09-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/mobile/</loc>
+    <lastmod>2017-09-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-9/m_performance/</loc>
+    <lastmod>2017-09-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-9/m_useragent/</loc>
+    <lastmod>2017-09-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-9/m_no_portrait/</loc>
+    <lastmod>2017-09-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-9/m_adapter/</loc>
+    <lastmod>2017-09-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/%E5%BE%AE%E4%BF%A1/</loc>
+    <lastmod>2017-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/%E5%BE%AE%E4%BF%A1/</loc>
+    <lastmod>2017-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/</loc>
+    <lastmod>2017-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-8/wx/</loc>
+    <lastmod>2017-08-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-7/http/</loc>
+    <lastmod>2019-05-03T23:54:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/amd/</loc>
+    <lastmod>2017-06-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/cmd/</loc>
+    <lastmod>2017-06-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/commonjs/</loc>
+    <lastmod>2017-06-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/es6/</loc>
+    <lastmod>2017-06-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-6/v-distpicker/</loc>
+    <lastmod>2017-06-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-6/module/</loc>
+    <lastmod>2017-06-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2017-06-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2017-06-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/</loc>
+    <lastmod>2017-06-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/%E6%A8%A1%E5%9D%97%E5%8C%96/</loc>
+    <lastmod>2017-06-25T23:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/pm2/</loc>
+    <lastmod>2017-05-25T22:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/pm2/</loc>
+    <lastmod>2017-05-25T22:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-5/pm2/</loc>
+    <lastmod>2017-05-25T22:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/gulp/</loc>
+    <lastmod>2017-04-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/gulp/</loc>
+    <lastmod>2017-04-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/blogs/2017-4/gulp/</loc>
+    <lastmod>2017-04-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/tags/lift/</loc>
+    <lastmod>2016-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/series/lift/</loc>
+    <lastmod>2016-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/categories/lift/</loc>
+    <lastmod>2016-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/life/</loc>
+    <lastmod>2016-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://clsss.github.io/blog/life/life/</loc>
+    <lastmod>2016-10-25T20:54:11+08:00</lastmod>
+  </url>
+  
+</urlset>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>js on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/series/js/</link>
+    <description>Recent content in js on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Mon, 07 May 2018 20:54:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/series/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>设计模式-设计模式（不常用）</title>
+      <link>https://clsss.github.io/blog/blogs/2018-5/design/designmode3/</link>
+      <pubDate>Mon, 07 May 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-5/design/designmode3/</guid>
+      <description>设计模式，这是一种模板</description>
+    </item>
+    
+    <item>
+      <title>设计模式-设计模式（常用）</title>
+      <link>https://clsss.github.io/blog/blogs/2018-5/design/designmode2/</link>
+      <pubDate>Mon, 07 May 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-5/design/designmode2/</guid>
+      <description>设计模式，这是一种模板</description>
+    </item>
+    
+    <item>
+      <title>设计模式-设计原则</title>
+      <link>https://clsss.github.io/blog/blogs/2018-5/design/designmode1/</link>
+      <pubDate>Sat, 05 May 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-5/design/designmode1/</guid>
+      <description>设计原则（五大原则），这是一种思想</description>
+    </item>
+    
+  </channel>
+</rss>

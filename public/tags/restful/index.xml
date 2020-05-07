@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RESTful on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/tags/restful/</link>
+    <description>Recent content in RESTful on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Sat, 25 Aug 2018 23:12:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/tags/restful/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RESTful</title>
+      <link>https://clsss.github.io/blog/blogs/2018-10/restful/</link>
+      <pubDate>Sat, 25 Aug 2018 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2018-10/restful/</guid>
+      <description>This is a RESTful API</description>
+    </item>
+    
+  </channel>
+</rss>

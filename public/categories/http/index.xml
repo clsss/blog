@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>http on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/categories/http/</link>
+    <description>Recent content in http on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Fri, 10 Apr 2020 08:36:54 -0700</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/categories/http/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTTP发展</title>
+      <link>https://clsss.github.io/blog/blogs/2020-5/http%E5%8F%91%E5%B1%95/</link>
+      <pubDate>Fri, 10 Apr 2020 08:36:54 -0700</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2020-5/http%E5%8F%91%E5%B1%95/</guid>
+      <description>This is http</description>
+    </item>
+    
+    <item>
+      <title>HTTP定义</title>
+      <link>https://clsss.github.io/blog/blogs/2017-7/http/</link>
+      <pubDate>Tue, 25 Jul 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/2017-7/http/</guid>
+      <description>This is an example</description>
+    </item>
+    
+  </channel>
+</rss>
