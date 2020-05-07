@@ -33,8 +33,7 @@ install:
   - rm -rf public
   - git log -p -2 | cat
   - commit_msg=$(git log -n1 --pretty=format:"%s")
-  - ls
-  - pwd
+  - echo 'install done!'
 
 # 执行 hugo 生成静态页面
 script:
@@ -52,13 +51,14 @@ after_script:
   # Github Pages
   - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_ADDR}" master:master
   # Coding Pages
-  - git push --force --quiet "https://c_illusion:${CODING_TOKEN}@${CODING_ADDR}" master:master
-  - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  # - git push --force --quiet "https://c_illusion:${CODING_TOKEN}@${CODING_ADDR}" master:master
+  # - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
 
   # Github Pages
   - git push --quiet "https://${GITHUB_TOKEN}@${GITHUB_ADDR}" master:master --tags
   # Coding Pages
-  - git push --quiet "https://c_illusion:${CODING_TOKEN}@${CODING_ADDR}" master:master --tags
+  #- git push --quiet "https://c_illusion:${CODING_TOKEN}@${CODING_ADDR}" master:master --tags
+
   # Build Salver Repository(Github Pages)
   #- git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_ADDR}" master:master
   # Build Salver Repository(Github Pages)
