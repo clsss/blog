@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://coding.net/u/c_illusion/p/vue-cli3/setting -->
+<html lang="zh-cmn-Hans"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="Keywords" content="项目管理、需求管理、缺陷管理、Bug Tracking、Bug管理、代码托管、代码评审、Code Review、敏捷开发、看板、迭代、流水线、Wiki、DevOps、Git、SVN、持续集成、CI、Jenkins、CD、测试管理、自动构建、Pages 服务、网页搭建、任务系统、研发管理"><meta name="Description" content="Coding.net 是一个面向开发者的云端开发平台，提供 Git/SVN 代码托管、任务管理、在线 WebIDE、Cloud Studio、开发协作、文件管理、Wiki 管理、提供个人服务及企业版本的服务"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"><link rel="icon" type="image/x-icon" href="https://dn-coding-net-production-static.codehub.cn/platform/favicon.ico"><link rel="shortcut icon" type="image/x-icon" href="https://dn-coding-net-production-static.codehub.cn/platform/favicon.ico"><title>项目设置 - vue-cli3 - c_illusion</title><script async="" src="./项目设置 - vue-cli3 - c_illusion_files/analytics.js.下载"></script><script>window.PDFJS_WORKER_SRC=void 0</script><link href="./项目设置 - vue-cli3 - c_illusion_files/index.3b7a8e95.chunk.css" rel="stylesheet"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/26.dd7382f5.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/69.5e0bb39e.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/182.097e05b3.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/95.a0dac5e6.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/95.8806dcf4.chunk.js.下载"></script><style type="text/css">/* neo theme for codemirror */
+
+/* Color scheme */
+
+.cm-s-neo.CodeMirror {
+  background-color:#ffffff;
+  color:#2e383c;
+  line-height:1.4375;
+}
+.cm-s-neo .cm-comment { color:#75787b; }
+.cm-s-neo .cm-keyword, .cm-s-neo .cm-property { color:#1d75b3; }
+.cm-s-neo .cm-atom,.cm-s-neo .cm-number { color:#75438a; }
+.cm-s-neo .cm-node,.cm-s-neo .cm-tag { color:#9c3328; }
+.cm-s-neo .cm-string { color:#b35e14; }
+.cm-s-neo .cm-variable,.cm-s-neo .cm-qualifier { color:#047d65; }
+
+
+/* Editor styling */
+
+.cm-s-neo pre {
+  padding:0;
+}
+
+.cm-s-neo .CodeMirror-gutters {
+  border:none;
+  border-right:10px solid transparent;
+  background-color:transparent;
+}
+
+.cm-s-neo .CodeMirror-linenumber {
+  padding:0;
+  color:#e0e2e5;
+}
+
+.cm-s-neo .CodeMirror-guttermarker { color: #1d75b3; }
+.cm-s-neo .CodeMirror-guttermarker-subtle { color: #e0e2e5; }
+
+.cm-s-neo .CodeMirror-cursor {
+  width: auto;
+  border: 0;
+  background: rgba(155,157,162,0.37);
+  z-index: 1;
+}
+</style><style type="text/css">/* BASICS */
+
+.CodeMirror {
+  /* Set height, width, borders, and global font properties here */
+  font-family: monospace;
+  height: 300px;
+  color: black;
+  direction: ltr;
+}
+
+/* PADDING */
+
+.CodeMirror-lines {
+  padding: 4px 0; /* Vertical padding around content */
+}
+.CodeMirror pre {
+  padding: 0 4px; /* Horizontal padding of content */
+}
+
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  background-color: white; /* The little square between H and V scrollbars */
+}
+
+/* GUTTER */
+
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7;
+  white-space: nowrap;
+}
+.CodeMirror-linenumbers {}
+.CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  min-width: 20px;
+  text-align: right;
+  color: #999;
+  white-space: nowrap;
+}
+
+.CodeMirror-guttermarker { color: black; }
+.CodeMirror-guttermarker-subtle { color: #999; }
+
+/* CURSOR */
+
+.CodeMirror-cursor {
+  border-left: 1px solid black;
+  border-right: none;
+  width: 0;
+}
+/* Shown when moving in bi-directional text */
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 1px solid silver;
+}
+.cm-fat-cursor .CodeMirror-cursor {
+  width: auto;
+  border: 0 !important;
+  background: #7e7;
+}
+.cm-fat-cursor div.CodeMirror-cursors {
+  z-index: 1;
+}
+.cm-fat-cursor-mark {
+  background-color: rgba(20, 255, 20, 0.5);
+  -webkit-animation: blink 1.06s steps(1) infinite;
+  -moz-animation: blink 1.06s steps(1) infinite;
+  animation: blink 1.06s steps(1) infinite;
+}
+.cm-animate-fat-cursor {
+  width: auto;
+  border: 0;
+  -webkit-animation: blink 1.06s steps(1) infinite;
+  -moz-animation: blink 1.06s steps(1) infinite;
+  animation: blink 1.06s steps(1) infinite;
+  background-color: #7e7;
+}
+@-moz-keyframes blink {
+  0% {}
+  50% { background-color: transparent; }
+  100% {}
+}
+@-webkit-keyframes blink {
+  0% {}
+  50% { background-color: transparent; }
+  100% {}
+}
+@keyframes blink {
+  0% {}
+  50% { background-color: transparent; }
+  100% {}
+}
+
+/* Can style cursor different in overwrite (non-insert) mode */
+.CodeMirror-overwrite .CodeMirror-cursor {}
+
+.cm-tab { display: inline-block; text-decoration: inherit; }
+
+.CodeMirror-rulers {
+  position: absolute;
+  left: 0; right: 0; top: -50px; bottom: -20px;
+  overflow: hidden;
+}
+.CodeMirror-ruler {
+  border-left: 1px solid #ccc;
+  top: 0; bottom: 0;
+  position: absolute;
+}
+
+/* DEFAULT THEME */
+
+.cm-s-default .cm-header {color: blue;}
+.cm-s-default .cm-quote {color: #090;}
+.cm-negative {color: #d44;}
+.cm-positive {color: #292;}
+.cm-header, .cm-strong {font-weight: bold;}
+.cm-em {font-style: italic;}
+.cm-link {text-decoration: underline;}
+.cm-strikethrough {text-decoration: line-through;}
+
+.cm-s-default .cm-keyword {color: #708;}
+.cm-s-default .cm-atom {color: #219;}
+.cm-s-default .cm-number {color: #164;}
+.cm-s-default .cm-def {color: #00f;}
+.cm-s-default .cm-variable,
+.cm-s-default .cm-punctuation,
+.cm-s-default .cm-property,
+.cm-s-default .cm-operator {}
+.cm-s-default .cm-variable-2 {color: #05a;}
+.cm-s-default .cm-variable-3, .cm-s-default .cm-type {color: #085;}
+.cm-s-default .cm-comment {color: #a50;}
+.cm-s-default .cm-string {color: #a11;}
+.cm-s-default .cm-string-2 {color: #f50;}
+.cm-s-default .cm-meta {color: #555;}
+.cm-s-default .cm-qualifier {color: #555;}
+.cm-s-default .cm-builtin {color: #30a;}
+.cm-s-default .cm-bracket {color: #997;}
+.cm-s-default .cm-tag {color: #170;}
+.cm-s-default .cm-attribute {color: #00c;}
+.cm-s-default .cm-hr {color: #999;}
+.cm-s-default .cm-link {color: #00c;}
+
+.cm-s-default .cm-error {color: #f00;}
+.cm-invalidchar {color: #f00;}
+
+.CodeMirror-composing { border-bottom: 2px solid; }
+
+/* Default styles for common addons */
+
+div.CodeMirror span.CodeMirror-matchingbracket {color: #0b0;}
+div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
+.CodeMirror-matchingtag { background: rgba(255, 150, 0, .3); }
+.CodeMirror-activeline-background {background: #e8f2ff;}
+
+/* STOP */
+
+/* The rest of this file contains styles related to the mechanics of
+   the editor. You probably shouldn't touch them. */
+
+.CodeMirror {
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+.CodeMirror-scroll {
+  overflow: scroll !important; /* Things will break if this is overridden */
+  /* 30px is the magic margin used to hide the element's real scrollbars */
+  /* See overflow: hidden in .CodeMirror */
+  margin-bottom: -30px; margin-right: -30px;
+  padding-bottom: 30px;
+  height: 100%;
+  outline: none; /* Prevent dragging from highlighting the element */
+  position: relative;
+}
+.CodeMirror-sizer {
+  position: relative;
+  border-right: 30px solid transparent;
+}
+
+/* The fake, visible scrollbars. Used to force redraw during scrolling
+   before actual scrolling happens, thus preventing shaking and
+   flickering artifacts. */
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  position: absolute;
+  z-index: 6;
+  display: none;
+}
+.CodeMirror-vscrollbar {
+  right: 0; top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.CodeMirror-hscrollbar {
+  bottom: 0; left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.CodeMirror-scrollbar-filler {
+  right: 0; bottom: 0;
+}
+.CodeMirror-gutter-filler {
+  left: 0; bottom: 0;
+}
+
+.CodeMirror-gutters {
+  position: absolute; left: 0; top: 0;
+  min-height: 100%;
+  z-index: 3;
+}
+.CodeMirror-gutter {
+  white-space: normal;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: -30px;
+}
+.CodeMirror-gutter-wrapper {
+  position: absolute;
+  z-index: 4;
+  background: none !important;
+  border: none !important;
+}
+.CodeMirror-gutter-background {
+  position: absolute;
+  top: 0; bottom: 0;
+  z-index: 4;
+}
+.CodeMirror-gutter-elt {
+  position: absolute;
+  cursor: default;
+  z-index: 4;
+}
+.CodeMirror-gutter-wrapper ::selection { background-color: transparent }
+.CodeMirror-gutter-wrapper ::-moz-selection { background-color: transparent }
+
+.CodeMirror-lines {
+  cursor: text;
+  min-height: 1px; /* prevents collapsing before first draw */
+}
+.CodeMirror pre {
+  /* Reset some styles that the rest of the page might have set */
+  -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+  border-width: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-variant-ligatures: contextual;
+  font-variant-ligatures: contextual;
+}
+.CodeMirror-wrap pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}
+
+.CodeMirror-linebackground {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  z-index: 0;
+}
+
+.CodeMirror-linewidget {
+  position: relative;
+  z-index: 2;
+  padding: 0.1px; /* Force widget margins to stay inside of the container */
+}
+
+.CodeMirror-widget {}
+
+.CodeMirror-rtl pre { direction: rtl; }
+
+.CodeMirror-code {
+  outline: none;
+}
+
+/* Force content-box sizing for the elements where we expect it */
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.CodeMirror-measure {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.CodeMirror-cursor {
+  position: absolute;
+  pointer-events: none;
+}
+.CodeMirror-measure pre { position: static; }
+
+div.CodeMirror-cursors {
+  visibility: hidden;
+  position: relative;
+  z-index: 3;
+}
+div.CodeMirror-dragcursors {
+  visibility: visible;
+}
+
+.CodeMirror-focused div.CodeMirror-cursors {
+  visibility: visible;
+}
+
+.CodeMirror-selected { background: #d9d9d9; }
+.CodeMirror-focused .CodeMirror-selected { background: #d7d4f0; }
+.CodeMirror-crosshair { cursor: crosshair; }
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: #d7d4f0; }
+.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: #d7d4f0; }
+
+.cm-searching {
+  background-color: #ffa;
+  background-color: rgba(255, 255, 0, .4);
+}
+
+/* Used to force a border model for a node */
+.cm-force-border { padding-right: .1px; }
+
+@media print {
+  /* Hide the cursor when printing */
+  .CodeMirror div.CodeMirror-cursors {
+    visibility: hidden;
+  }
+}
+
+/* See issue #2901 */
+.cm-tab-wrap-hack:after { content: ''; }
+
+/* Help users use markselection to safely style text background */
+span.CodeMirror-selectedtext { background: none; }
+</style><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/135.c94b7976.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/135.ae4d3ed2.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/vendors_HOCEditor_MarkEditor.62298511.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/HOCEditor.411d572d.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/HOCEditor.63369c18.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/3.5fe2210d.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/0.0157fae6.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/0.6ca53910.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/24.0b01c52b.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/24.b56d5d31.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/97.04f1b109.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/29.8850bad5.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/23.31988b30.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/23.5802b2a0.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/19.a02ecae2.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/136.c5b13944.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/136.60dbb5de.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/18.cd64396e.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/28.ca14852a.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/25.d0df24da.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/25.26d76462.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/GitContainer.b65f62c7.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/GitContainer.29888673.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/20.8afd7ebb.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/20.b533ff21.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/68.a4a28b1a.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/68.e0278efc.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/GitIndex.a783353d.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/vendors_GitChild.2a9586f3.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/72.9e84bc0e.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/72.26ff861a.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/GitChild.28f7f9f7.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/GitChild.2c7d5c5e.chunk.js.下载"></script><style type="text/css">.CodeMirror-merge {
+  position: relative;
+  border: 1px solid #ddd;
+  white-space: pre;
+}
+
+.CodeMirror-merge, .CodeMirror-merge .CodeMirror {
+  height: 350px;
+}
+
+.CodeMirror-merge-2pane .CodeMirror-merge-pane { width: 47%; }
+.CodeMirror-merge-2pane .CodeMirror-merge-gap { width: 6%; }
+.CodeMirror-merge-3pane .CodeMirror-merge-pane { width: 31%; }
+.CodeMirror-merge-3pane .CodeMirror-merge-gap { width: 3.5%; }
+
+.CodeMirror-merge-pane {
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+}
+.CodeMirror-merge-pane-rightmost {
+  position: absolute;
+  right: 0px;
+  z-index: 1;
+}
+
+.CodeMirror-merge-gap {
+  z-index: 2;
+  display: inline-block;
+  height: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  position: relative;
+  background: #f8f8f8;
+}
+
+.CodeMirror-merge-scrolllock-wrap {
+  position: absolute;
+  bottom: 0; left: 50%;
+}
+.CodeMirror-merge-scrolllock {
+  position: relative;
+  left: -50%;
+  cursor: pointer;
+  color: #555;
+  line-height: 1;
+}
+.CodeMirror-merge-scrolllock:after {
+  content: "\21DB\A0\A0\21DA";
+}
+.CodeMirror-merge-scrolllock.CodeMirror-merge-scrolllock-enabled:after {
+  content: "\21DB\21DA";
+}
+
+.CodeMirror-merge-copybuttons-left, .CodeMirror-merge-copybuttons-right {
+  position: absolute;
+  left: 0; top: 0;
+  right: 0; bottom: 0;
+  line-height: 1;
+}
+
+.CodeMirror-merge-copy {
+  position: absolute;
+  cursor: pointer;
+  color: #44c;
+  z-index: 3;
+}
+
+.CodeMirror-merge-copy-reverse {
+  position: absolute;
+  cursor: pointer;
+  color: #44c;
+}
+
+.CodeMirror-merge-copybuttons-left .CodeMirror-merge-copy { left: 2px; }
+.CodeMirror-merge-copybuttons-right .CodeMirror-merge-copy { right: 2px; }
+
+.CodeMirror-merge-r-inserted, .CodeMirror-merge-l-inserted {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAGUlEQVQI12MwuCXy3+CWyH8GBgYGJgYkAABZbAQ9ELXurwAAAABJRU5ErkJggg==);
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+.CodeMirror-merge-r-deleted, .CodeMirror-merge-l-deleted {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAGUlEQVQI12M4Kyb2/6yY2H8GBgYGJgYkAABURgPz6Ks7wQAAAABJRU5ErkJggg==);
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+.CodeMirror-merge-r-chunk { background: #ffffe0; }
+.CodeMirror-merge-r-chunk-start { border-top: 1px solid #ee8; }
+.CodeMirror-merge-r-chunk-end { border-bottom: 1px solid #ee8; }
+.CodeMirror-merge-r-connect { fill: #ffffe0; stroke: #ee8; stroke-width: 1px; }
+
+.CodeMirror-merge-l-chunk { background: #eef; }
+.CodeMirror-merge-l-chunk-start { border-top: 1px solid #88e; }
+.CodeMirror-merge-l-chunk-end { border-bottom: 1px solid #88e; }
+.CodeMirror-merge-l-connect { fill: #eef; stroke: #88e; stroke-width: 1px; }
+
+.CodeMirror-merge-l-chunk.CodeMirror-merge-r-chunk { background: #dfd; }
+.CodeMirror-merge-l-chunk-start.CodeMirror-merge-r-chunk-start { border-top: 1px solid #4e4; }
+.CodeMirror-merge-l-chunk-end.CodeMirror-merge-r-chunk-end { border-bottom: 1px solid #4e4; }
+
+.CodeMirror-merge-collapsed-widget:before {
+  content: "(...)";
+}
+.CodeMirror-merge-collapsed-widget {
+  cursor: pointer;
+  color: #88b;
+  background: #eef;
+  border: 1px solid #ddf;
+  font-size: 90%;
+  padding: 0 3px;
+  border-radius: 4px;
+}
+.CodeMirror-merge-collapsed-line .CodeMirror-gutter-elt { display: none; }
+</style><style type="text/css">.cm-s-eclipse span.cm-meta { color: #FF1717; }
+.cm-s-eclipse span.cm-keyword { line-height: 1em; font-weight: bold; color: #7F0055; }
+.cm-s-eclipse span.cm-atom { color: #219; }
+.cm-s-eclipse span.cm-number { color: #164; }
+.cm-s-eclipse span.cm-def { color: #00f; }
+.cm-s-eclipse span.cm-variable { color: black; }
+.cm-s-eclipse span.cm-variable-2 { color: #0000C0; }
+.cm-s-eclipse span.cm-variable-3, .cm-s-eclipse span.cm-type { color: #0000C0; }
+.cm-s-eclipse span.cm-property { color: black; }
+.cm-s-eclipse span.cm-operator { color: black; }
+.cm-s-eclipse span.cm-comment { color: #3F7F5F; }
+.cm-s-eclipse span.cm-string { color: #2A00FF; }
+.cm-s-eclipse span.cm-string-2 { color: #f50; }
+.cm-s-eclipse span.cm-qualifier { color: #555; }
+.cm-s-eclipse span.cm-builtin { color: #30a; }
+.cm-s-eclipse span.cm-bracket { color: #cc7; }
+.cm-s-eclipse span.cm-tag { color: #170; }
+.cm-s-eclipse span.cm-attribute { color: #00c; }
+.cm-s-eclipse span.cm-link { color: #219; }
+.cm-s-eclipse span.cm-error { color: #f00; }
+
+.cm-s-eclipse .CodeMirror-activeline-background { background: #e8f2ff; }
+.cm-s-eclipse .CodeMirror-matchingbracket { outline:1px solid grey; color:black !important; }
+</style><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/190.a2b7fd6c.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/189.044eaf7f.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/SettingChild.1599db73.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/SettingChild.94d3f867.chunk.js.下载"></script><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/156.404b8e5b.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/157.74d55cc8.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/157.ec685367.chunk.js.下载"></script><link rel="stylesheet" type="text/css" href="./项目设置 - vue-cli3 - c_illusion_files/146.acba1987.chunk.css"><script charset="utf-8" src="./项目设置 - vue-cli3 - c_illusion_files/146.019803a0.chunk.js.下载"></script></head><body><div id="container"><div data-reactroot="" class="app-2Tg"><div></div><!-- react-empty: 8 --><!-- react-empty: 5 --><!-- react-empty: 6 --><div style="padding-top: 60px; min-height: 100%; overflow-x: hidden;"><header class="header-2b0"><div class="container-3My"><a target="_self" class="logo-1XE" href="https://coding.net/"><img src="./项目设置 - vue-cli3 - c_illusion_files/coding_logo_128-128.adddcfb3.png"></a><div tabindex="0" class="cuk-dropdown container-3jy search-input-Sas cuk-dropdown-size-default"><div class="cuk-dropdown-trigger-container"><span class="cuk-label cuk-label-small cuk-label-color-dark label-2vB" style="background-color: rgb(242, 244, 246);"><span>本项目</span></span><div class="cuk-input input-2PZ with-label-g0n"><input type="text" class="cuk-input-control cuk-input-size-small" value="" placeholder="搜索"></div></div><div class="cuk-dropdown-menu-container cuk-hide"></div></div><ul class="menu-RYC "><li class="new-li-Tca"><a target="_blank" href="https://studio.coding.net/"><span>Cloud Studio</span></a></li><li><a href="https://coding.net/help" target="_blank"><span>帮助</span></a></li><li><a href="https://coding.net/pp" target="_blank"><span>冒泡</span></a></li><li><a href="https://e.coding.net/" target="_blank">企业版</a></li><li class="new-li-Tca"><a target="_blank" href="https://feedback.coding.net/topics/7257"><!-- react-text: 12351 -->升级公告<!-- /react-text --><img src="./项目设置 - vue-cli3 - c_illusion_files/21815a71-027b-4954-afe8-04cbd9c0a5ae.png"></a></li></ul><div class="right-1Id"><div class="right-zone-1Mr"><div class="menus-CKO"><div tabindex="0" class="cuk-dropdown plus-menu-dropdown-3HW cuk-dropdown-size-default"><div class="cuk-dropdown-trigger-container"><div class="item-3po"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 24 24" class="cuk-icon cuk-icon-pixel-plus fs-20" style="vertical-align: middle;"><g><g fill-rule="evenodd"><rect width="16" height="4" x="4" y="10"></rect><rect width="4" height="16" x="10" y="4"></rect></g></g></svg></div></div><div class="cuk-dropdown-menu-container cuk-hide"><ul class="cuk-list plus-menu-ykQ cuk-list-type-block" style="padding: 0px;"><li class="cuk-list-item cuk-list-item-hover" style="padding: 0px;"><a class="plus-menu-item-3G8"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-tasks plus-menu-icon-OQm" style="vertical-align: middle;"><g><path d="m22.9 31.4h14.2v-2.8h-14.2v2.8z m-8.6-11.4h22.8v-2.9h-22.8v2.9z m14.3-11.4h8.5v-2.9h-8.5v2.9z m11.4 18.5v5.8q0 0.5-0.4 1t-1 0.4h-37.2q-0.6 0-1-0.4t-0.4-1v-5.8q0-0.5 0.4-1t1-0.4h37.2q0.5 0 1 0.4t0.4 1z m0-11.4v5.7q0 0.6-0.4 1t-1 0.5h-37.2q-0.6 0-1-0.5t-0.4-1v-5.7q0-0.6 0.4-1t1-0.4h37.2q0.5 0 1 0.4t0.4 1z m0-11.4v5.7q0 0.6-0.4 1t-1 0.4h-37.2q-0.6 0-1-0.4t-0.4-1v-5.7q0-0.6 0.4-1t1-0.4h37.2q0.5 0 1 0.4t0.4 1z"></path></g></svg><span>任务</span></a></li><li class="cuk-list-item cuk-list-item-hover" style="padding: 0px;"><a class="plus-menu-item-3G8" href="https://coding.net/user/projects/create"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 1024 1024" class="cuk-icon cuk-icon-coding-project plus-menu-icon-OQm" style="vertical-align: middle;"><g><title></title><g><g><path d="M926.61,237.45c-1.218-30.212-10.964-37.278-36.79-37.278c0,0-295.784,0-348.899,0 c-53.115,0-59.449,0.731-99.651-42.394c-33.379-36.059-20.223-35.572-89.174-35.572c-55.064,0-183.464,0-183.464,0 c-42.394,0-57.5-3.655-61.398,40.445c-3.655,40.689-12.182,139.365-13.4,154.471h836.675L926.61,237.45z"></path></g><path d="M936.112,356.105H87.742c-43.125,0-45.318,22.415-42.882,49.947l31.674,445.869 c2.193,27.288,8.528,49.947,51.409,49.947h33.992L288.221,674.49l97.222,53.997l-96.295,173.38h609.199 c43.856,0,48.972-22.415,51.409-49.947l29.481-451.473C981.43,373.16,979.237,356.105,936.112,356.105z M611.718,635.204 l-23.121,41.63l-1.667,3.001l-23.121,41.63c-5.916,10.652-19.348,14.491-30,8.575l-42.433-23.567 c-18.954-8.284-4.48-34.596-21.292-45.475l-36.115-19.795l-28.156,50.695l-97.296-54.038l18.449-33.218 c3.333-6.001,2.673-15.864-1.931-23.786c-13.48-23.19-62.485-57.138-101.965-72.895c-39.479-15.758-120.064-17.082-120.064-17.082 s192.296-54.405,237.869-31.443c21.892,11.031,52.291,29.042,52.291,29.042l76.722,42.611c10.652,5.916,14.491,19.348,8.575,30 l-3.504,6.309l35.892,20.198c18.121,8.522,32.809-17.671,49.858-5.959l42.433,23.567 C613.795,611.121,617.635,624.552,611.718,635.204z"></path></g></g></svg><span>项目</span></a></li><li class="cuk-list-item cuk-list-item-hover" style="padding: 0px;"><a class="plus-menu-item-3G8"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-envelope plus-menu-icon-OQm" style="vertical-align: middle;"><g><path d="m40 15.8v17.8q0 1.4-1 2.5t-2.6 1h-32.8q-1.5 0-2.6-1t-1-2.5v-17.8q1 1.1 2.3 2 8 5.5 11 7.7 1.3 0.9 2.1 1.5t2.1 1 2.5 0.6h0q1.2 0 2.5-0.6t2.1-1 2.1-1.5q3.7-2.8 11.1-7.7 1.2-0.9 2.2-1.9z m0-6.5q0 1.7-1.1 3.4t-2.7 2.7q-8.4 5.8-10.5 7.3-0.2 0.1-0.9 0.6t-1.2 0.9-1.2 0.7-1.3 0.6-1.1 0.2h0q-0.5 0-1.1-0.2t-1.3-0.6-1.2-0.7-1.2-0.9-0.9-0.6q-2.1-1.5-5.9-4.1t-4.6-3.2q-1.3-0.9-2.6-2.6t-1.2-3q0-1.8 0.9-2.9t2.7-1.2h32.8q1.5 0 2.5 1.1t1.1 2.5z"></path></g></svg><span>私信</span></a></li></ul></div></div><div tabindex="0" class="cuk-dropdown dropdown-JwF project-menu-dropdown-Ozo cuk-dropdown-size-default"><div class="cuk-dropdown-trigger-container"><a class="item-3po" href="https://coding.net/user/projects"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 24 24" class="cuk-icon cuk-icon-pixel-project fs-20" style="vertical-align: middle;"><g><path fill-rule="evenodd" d="M18,6 L6,6 L6,4 L20,4 L20,6 L20,18 L18,18 L18,6 Z M4,8 L16,8 L16,20 L4,20 L4,8 Z"></path></g></svg></a></div><div class="cuk-dropdown-menu-container cuk-hide"><div><div class="cuk-search"><div class="cuk-input cuk-search-input"><div class="cuk-input-icon"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-search null" style="vertical-align: middle; font-size: 1em;"><g><path d="m27.2 18.6q0-4.2-2.9-7.1t-7.1-2.9-7 2.9-3 7.1 2.9 7 7.1 3 7.1-3 2.9-7z m11.4 18.5q0 1.2-0.8 2.1t-2 0.8q-1.2 0-2-0.8l-7.7-7.7q-4 2.8-8.9 2.8-3.2 0-6.1-1.3t-5-3.3-3.4-5-1.2-6.1 1.2-6.1 3.4-5.1 5-3.3 6.1-1.2 6.1 1.2 5 3.3 3.4 5.1 1.2 6.1q0 4.9-2.7 8.9l7.6 7.6q0.8 0.9 0.8 2z"></path></g></svg></div><input type="text" class="cuk-input-control" value="" placeholder="筛选项目"></div></div></div><ul class="cuk-list list-1zh cuk-list-type-block" style="padding: 0px;"><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/1125"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/f6f724af-f9b2-4319-8b98-4099734ffeb9.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12408 -->1125<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/air_drop"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-23.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12417 -->air_drop<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/baby_duliru"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-19.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12426 -->baby_duliru<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/Back-stage-management"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-8.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12435 -->Back-stage-management<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/CD_zs_technical_school"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/bb62f505-4f9c-4ee0-a5ff-2d6a9a357885.jpg"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12444 -->CD_zs_technical_school<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/cl_gulp_v5"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/33c8db46-c437-4b33-b4b5-b651bb974e5b.jpg"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12453 -->cl_gulp_v5<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/cli-3"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-23.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12462 -->cli-3<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/webees/p/cmd"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/36f748df-18ad-4dd4-8558-01f2a7c55a1f.jpg"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12471 -->cmd<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/collin"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-23.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12480 -->collin<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/dayi_phone"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/13179833-2ab1-4bd7-9a0d-71c9be462ef9.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12489 -->dayi_phone<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/DreamForever"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/f0d13800-78d3-4e1b-9940-c6df96794bf8.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12498 -->DreamForever<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/email"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/c041b460-0204-4456-883e-b7259e3c2997.jpg"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12507 -->email<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/f_email"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/b3f58750-fbe6-48b9-866e-c8368a815ff4.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12516 -->f_email<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/foundation"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-8.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12525 -->foundation<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/webees/p/gulp"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/a2859a7a-4419-4012-a860-8c97daab8127.jpg"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12534 -->gulp<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/gulp_es5"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/9d254122-f36f-428a-8be6-c6811b998957.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12543 -->gulp_es5<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/hugo_blog"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-2.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12552 -->hugo_blog<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/las_demo"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/05d669cd-ac7c-4bf8-8513-e600321bcf89.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12561 -->las_demo<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/lashag"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-8.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12570 -->lashag<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/luxy_uc"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-11.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12579 -->luxy_uc<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/mpvue"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-12.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12588 -->mpvue<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/node-web"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-11.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12597 -->node-web<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/node_primer"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-2.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12606 -->node_primer<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/nuxt"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-19.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12615 -->nuxt<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/prospr"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/eadb9fc4-d8a8-489e-9b3b-069623d84aa9.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12624 -->prospr<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/show-cl"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-17.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12633 -->show-cl<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/show_pro"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-2.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12642 -->show_pro<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/show_test"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-9.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12651 -->show_test<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/shuangchuang"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/9748f2d2-bbf3-4829-870b-0cf66f63ef55.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12660 -->shuangchuang<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/yumenghui/p/Template-Vequn"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-2.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12669 -->Template-Vequn<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/test_tree"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-2.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12678 -->test_tree<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/v_music"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/24c1e262-7040-42a5-9b85-513962ab815e.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12687 -->v_music<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/v_webpack"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-6.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12696 -->v_webpack<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/Vr360"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-23.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12705 -->Vr360<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/vue"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/e9051846-4f25-428f-8678-cafeaacaf251.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12714 -->vue<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP item-selected-1km"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/vue-cli3"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-13.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12723 -->vue-cli3<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/wb_vue"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-16.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12732 -->wb_vue<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div><div class="item-3qP"><a class="project-path-3kC" href="https://coding.net/u/c_illusion/p/web_371703140"><img class="cuk-avatar cuk-avatar-square cuk-avatar-tiny project-item-avatar-k8J" src="./项目设置 - vue-cli3 - c_illusion_files/8dc2cab5-cfc4-4f80-bbe2-c4cdb6a1a6bd.png"><span class="ellipsis project-path-name-2Y2"><!-- react-text: 12741 -->web_371703140<!-- /react-text --></span></a><div class="tooltip-trigger-area-3Kc unpinned-project-9Rd"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-thumb-tack thumb-tack-icon-9fB" style="vertical-align: middle;"><g><path d="m17.7 19.3v-10q0-0.3-0.2-0.5t-0.5-0.2-0.5 0.2-0.2 0.5v10q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5z m15 7.8q0 0.6-0.4 1t-1 0.5h-9.6l-1.1 10.8q-0.1 0.2-0.3 0.4t-0.4 0.2h0q-0.6 0-0.8-0.6l-1.7-10.8h-9q-0.6 0-1-0.5t-0.4-1q0-2.7 1.8-4.9t3.9-2.2v-11.4q-1.1 0-2-0.9t-0.8-2 0.8-2 2-0.8h14.3q1.2 0 2 0.8t0.9 2-0.9 2-2 0.9v11.4q2.2 0 4 2.2t1.7 4.9z"></path></g></svg></div></div></ul></div></div><div tabindex="0" class="cuk-dropdown task-menu-dropdown-3mE cuk-dropdown-size-default"><div class="cuk-dropdown-trigger-container"><a class="item-3po" href="https://coding.net/user/tasks?owner=195779"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 24 24" class="cuk-icon cuk-icon-pixel-tasks fs-20" style="vertical-align: middle;"><g><path fill-rule="evenodd" d="M17,7 L20,7 L20,20 L4,20 L4,7 L7,7 L7,4 L10,4 L10,7 L14,7 L14,4 L17,4 L17,7 Z M8,12 L8,14 L10,14 L10,12 L8,12 Z M10,14 L10,16 L12,16 L12,14 L10,14 Z M12,12 L12,14 L14,14 L14,12 L12,12 Z M14,10 L14,12 L16,12 L16,10 L14,10 Z"></path></g></svg></a></div><div class="cuk-dropdown-menu-container cuk-hide"><div class="task-menu-1cV"><ul class="cuk-list cuk-list-empty task-menu-list-1AE cuk-list-type-block" style="padding: 0px;"><div class="empty-holder-container-1S_"><div class="empty-holder-content-2I9"><div class="text-Sfa" style="font-size: 12px;"><div><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-coffee null" style="vertical-align: middle;"><g><path d="m36.2 14.4q0-1.7-1.2-2.9t-2.9-1.3h-1.4v8.4h1.4q1.7 0 2.9-1.2t1.2-3z m-36.2 16.8h39q0 2.3-1.6 3.9t-4 1.6h-27.8q-2.3 0-4-1.6t-1.6-3.9z m40.4-16.8q0 3.5-2.4 5.9t-5.9 2.5h-1.4v0.7q0 2-1.5 3.4t-3.4 1.5h-15.3q-2.1 0-3.5-1.5t-1.4-3.4v-16q0-0.6 0.4-1t1-0.4h25.1q3.4 0 5.9 2.4t2.4 5.9z"></path></g></svg><span><span>没有未完成的任务</span></span></div></div></div></div></ul><a class="bottom-link-qR4" href="https://coding.net/user/tasks?owner=195779"><span>查看全部任务</span><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-angle-double-right null" style="vertical-align: middle;"><g><path d="m22.3 21.4q0 0.3-0.2 0.5l-10.4 10.4q-0.3 0.3-0.6 0.3t-0.5-0.3l-1.1-1.1q-0.2-0.2-0.2-0.5t0.2-0.5l8.8-8.8-8.8-8.7q-0.2-0.3-0.2-0.6t0.2-0.5l1.1-1.1q0.3-0.2 0.5-0.2t0.6 0.2l10.4 10.4q0.2 0.2 0.2 0.5z m8.6 0q0 0.3-0.3 0.5l-10.4 10.4q-0.2 0.3-0.5 0.3t-0.5-0.3l-1.1-1.1q-0.2-0.2-0.2-0.5t0.2-0.5l8.8-8.8-8.8-8.7q-0.2-0.3-0.2-0.6t0.2-0.5l1.1-1.1q0.2-0.2 0.5-0.2t0.5 0.2l10.4 10.4q0.3 0.2 0.3 0.5z"></path></g></svg></a></div></div></div><div tabindex="0" class="cuk-dropdown notification-message-dropdown-2Sk cuk-dropdown-size-default"><div class="cuk-dropdown-trigger-container"><a class="item-34J" href="https://coding.net/user"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 24 24" class="cuk-icon cuk-icon-pixel-workspace fs-20" style="vertical-align: middle;"><g><path fill-rule="evenodd" d="M4,4 L20,4 L20,16 L4,16 L4,4 Z M9,9 L9,13 L11,13 L11,9 L9,9 Z M13,7 L13,13 L15,13 L15,7 L13,7 Z M6,18 L18,18 L18,20 L6,20 L6,18 Z"></path></g></svg><span style="opacity: 0; transform: scale(0) translateZ(0px);"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-check-circle check-1x6" style="vertical-align: middle;"><g><path d="m31.7 16.4q0-0.6-0.4-1l-2.1-2.1q-0.4-0.4-1-0.4t-1 0.4l-9.1 9.1-5-5q-0.5-0.4-1-0.4t-1 0.4l-2.1 2q-0.4 0.4-0.4 1 0 0.6 0.4 1l8.1 8.1q0.4 0.4 1 0.4 0.6 0 1-0.4l12.2-12.1q0.4-0.4 0.4-1z m5.6 3.6q0 4.7-2.3 8.6t-6.3 6.2-8.6 2.3-8.6-2.3-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3 8.6 2.3 6.3 6.2 2.3 8.6z"></path></g></svg></span></a></div><div class="cuk-dropdown-menu-container cuk-hide"><div class="container-3w_"><div class="cuk-tab tab-3lv"><div class="cuk-tab-bar-nav"><div class="cuk-tab-bar cuk-tab-bar-active"><span><span>通知</span></span></div><div class="cuk-tab-bar"><span><span>待办</span></span></div><div class="cuk-tab-bar"><span><span>私信</span></span></div></div><div class="cuk-tab-panes"><div class="cuk-tab-pane"><div><ul class="cuk-list pane-3Jh cuk-list-type-block" style="padding: 0px;"><li class="cuk-list-item cuk-list-item-hover list-item-1hQ" style="padding: 0px;"><a class="link-Itm"><span class="notification-item-3nM">您通过 App首次登录 获得了 0.1 码币</span></a></li><li class="cuk-list-item cuk-list-item-hover list-item-1hQ" style="padding: 0px;"><a class="link-Itm"><span class="notification-item-3nM">Coding 系统赠送您黄金会员3个月，有效期 2019年02月25日 至 2019年05月26日，
+<a href="https://coding.net/user/account/upgrade" target="_blank">点击了解权益</a></span></a></li><li class="cuk-list-item cuk-list-item-hover list-item-1hQ" style="padding: 0px;"><a class="link-Itm"><span class="notification-item-3nM">Coding 系统赠送您黄金会员3个月，有效期 2018年11月26日 至 2019年02月24日，
+<a href="https://coding.net/user/account/upgrade" target="_blank">点击了解权益</a></span></a></li><li class="cuk-list-item cuk-list-item-hover list-item-1hQ" style="padding: 0px;"><a class="link-Itm"><span class="notification-item-3nM">Coding 系统赠送您黄金会员3个月，有效期 2018年08月27日 至 2018年11月25日，
+<a href="https://coding.net/user/account/upgrade" target="_blank">点击了解权益</a></span></a></li><li class="cuk-list-item cuk-list-item-hover list-item-1hQ" style="padding: 0px;"><a class="link-Itm"><span class="notification-item-3nM">今天是您的生日,系统赠送 0.1 码币,祝您生日快乐!</span></a></li><li class="cuk-list-item cuk-list-item-hover list-item-1hQ" style="padding: 0px;"><a class="link-Itm"><span class="notification-item-3nM"><a href="https://coding.net/u/c_illusion">_collin</a> 删除了项目 
+<a href="https://coding.net/u/c_illusion/p/show_test" target="_blank">show_test</a>。</span></a></li><li class="cuk-list-item cuk-list-item-hover list-item-1hQ" style="padding: 0px;"><a class="link-Itm"><span class="notification-item-3nM"><a href="https://coding.net/u/c_illusion">_collin</a> 删除了项目 
+<a href="https://coding.net/u/c_illusion/p/nuxt_test" target="_blank">nuxt_test</a>。</span></a></li><li class="cuk-list-item cuk-list-item-hover list-item-1hQ" style="padding: 0px;"><a class="link-Itm"><span class="notification-item-3nM"><a href="https://coding.net/u/c_illusion">_collin</a> 删除了项目 
+<a href="https://coding.net/u/c_illusion/p/vue-demo2.0" target="_blank">vue-demo2.0</a>。</span></a></li><li class="cuk-list-item cuk-list-item-hover list-item-1hQ" style="padding: 0px;"><a class="link-Itm"><span class="notification-item-3nM"><a href="https://coding.net/u/lingyue">lingyue</a> 将你从项目 
+<a href="https://coding.net/u/lingyue/p/lemo_chip_web" target="_blank">lemo_chip_web</a> 移除</span></a></li><li class="cuk-list-item cuk-list-item-hover list-item-1hQ" style="padding: 0px;"><a class="link-Itm"><span class="notification-item-3nM"><a href="https://coding.net/u/lingyue">lingyue</a> 将你设置为项目 
+<a href="https://coding.net/u/lingyue/p/lemo_chip_web" target="_blank">lemo_chip_web</a> 的受限成员</span></a></li></ul><a class="bottom-link-qR4" href="https://coding.net/user/notifications/basic"><span>查看所有通知</span><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-angle-double-right null" style="vertical-align: middle;"><g><path d="m22.3 21.4q0 0.3-0.2 0.5l-10.4 10.4q-0.3 0.3-0.6 0.3t-0.5-0.3l-1.1-1.1q-0.2-0.2-0.2-0.5t0.2-0.5l8.8-8.8-8.8-8.7q-0.2-0.3-0.2-0.6t0.2-0.5l1.1-1.1q0.3-0.2 0.5-0.2t0.6 0.2l10.4 10.4q0.2 0.2 0.2 0.5z m8.6 0q0 0.3-0.3 0.5l-10.4 10.4q-0.2 0.3-0.5 0.3t-0.5-0.3l-1.1-1.1q-0.2-0.2-0.2-0.5t0.2-0.5l8.8-8.8-8.8-8.7q-0.2-0.3-0.2-0.6t0.2-0.5l1.1-1.1q0.2-0.2 0.5-0.2t0.5 0.2l10.4 10.4q0.3 0.2 0.3 0.5z"></path></g></svg></a></div></div></div></div></div></div></div></div><div tabindex="0" class="cuk-dropdown user-menu-dropdown-19r cuk-dropdown-size-default"><div class="cuk-dropdown-trigger-container"><div class="user-3hE"><a href="https://coding.net/user"><div class="vip-gold-1Ji vip-sizeregular-7Oa"><img class="cuk-avatar cuk-avatar-circle cuk-avatar-regular" src="./项目设置 - vue-cli3 - c_illusion_files/87322ae1-c17a-486b-976b-ef5829d5190a.jpg"></div></a><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 24 24" class="cuk-icon cuk-icon-pixel-angle-down angle-hpP fs-24" style="vertical-align: middle;"><g><path fill-rule="evenodd" d="M7,9 L9,9 L9,11 L7,11 L7,9 Z M9,11 L11,11 L11,13 L9,13 L9,11 Z M11,13 L13,13 L13,15 L11,15 L11,13 Z M13,11 L15,11 L15,13 L13,13 L13,11 Z M15,9 L17,9 L17,11 L15,11 L15,9 Z"></path></g></svg></div></div><div class="cuk-dropdown-menu-container cuk-hide"><ul class="cuk-list user-menu-qjO cuk-list-type-block" style="padding: 0px;"><li class="cuk-list-item cuk-list-item-hover user-menu-border-bottom-3R5" style="padding: 0px;"><a href="https://coding.net/user/account/upgrade"><span class="vip-item-3Ss"><img src="./项目设置 - vue-cli3 - c_illusion_files/medal-gold@2x.8dfd755c.png"><span><span>黄金会员</span></span></span></a></li><li class="cuk-list-item cuk-list-item-hover" style="padding: 0px;"><a href="https://coding.net/user/account"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-dashboard user-menu-icon-1iR" style="vertical-align: middle;"><g><path d="m8.6 25.7q0-1.2-0.9-2t-2-0.8-2 0.8-0.8 2 0.8 2 2 0.9 2-0.9 0.9-2z m4.3-10q0-1.2-0.9-2t-2-0.8-2 0.8-0.9 2 0.9 2 2 0.9 2-0.9 0.9-2z m9.5 10.7l2.3-8.5q0.1-0.6-0.2-1.1t-0.9-0.6-1 0.1-0.7 0.9l-2.3 8.5q-1.3 0.1-2.3 1t-1.5 2.2q-0.4 1.7 0.5 3.3t2.6 2 3.3-0.5 2-2.6q0.3-1.3-0.2-2.6t-1.6-2z m14.7-0.7q0-1.2-0.8-2t-2-0.8-2 0.8-0.9 2 0.9 2 2 0.9 2-0.9 0.8-2z m-14.2-14.3q0-1.2-0.9-2t-2-0.8-2 0.8-0.9 2 0.9 2 2 0.9 2-0.9 0.9-2z m10 4.3q0-1.2-0.9-2t-2-0.8-2 0.8-0.9 2 0.9 2 2 0.9 2-0.9 0.9-2z m7.1 10q0 5.8-3.1 10.8-0.5 0.6-1.3 0.6h-31.2q-0.8 0-1.3-0.6-3.1-4.9-3.1-10.8 0-4 1.6-7.8t4.2-6.3 6.4-4.3 7.8-1.6 7.8 1.6 6.4 4.3 4.2 6.3 1.6 7.8z"></path></g></svg><span>我的帐号</span></a></li><li class="cuk-list-item cuk-list-item-hover" style="padding: 0px;"><a href="https://coding.net/user/account/setting/basic"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-user user-menu-icon-1iR" style="vertical-align: middle;"><g><path d="m35.9 31.4q0 2.6-1.6 4.2t-4.3 1.5h-19.5q-2.7 0-4.4-1.5t-1.6-4.2q0-1.2 0.1-2.3t0.3-2.5 0.6-2.4 0.9-2.2 1.4-1.8 1.9-1.2 2.5-0.4q0.2 0 1 0.5t1.6 1 2.4 1.1 3 0.5 3-0.5 2.4-1.1 1.7-1 0.9-0.5q1.4 0 2.5 0.4t1.9 1.2 1.4 1.8 0.9 2.2 0.6 2.4 0.4 2.5 0 2.3z m-7.1-20q0 3.6-2.5 6.1t-6.1 2.5-6-2.5-2.6-6.1 2.6-6 6-2.5 6.1 2.5 2.5 6z"></path></g></svg><span>个人设置</span></a></li><li class="cuk-list-item cuk-list-item-hover user-menu-border-bottom-3R5" style="padding: 0px;"><a target="_self" href="https://coding.net/u/c_illusion"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-magic user-menu-icon-1iR" style="vertical-align: middle;"><g><path d="m27.6 13l6.5-6.6-2.4-2.4-6.5 6.6z m9.9-6.6q0 0.6-0.4 1l-28.7 28.7q-0.4 0.4-1 0.4t-1-0.4l-4.4-4.4q-0.4-0.4-0.4-1t0.4-1l28.7-28.7q0.4-0.4 1-0.4t1 0.4l4.4 4.4q0.4 0.4 0.4 1z m-30.1-4.2l2.2 0.7-2.2 0.6-0.7 2.2-0.7-2.2-2.1-0.6 2.1-0.7 0.7-2.2z m7.8 3.6l4.4 1.3-4.4 1.4-1.3 4.4-1.4-4.4-4.4-1.4 4.4-1.3 1.4-4.4z m20.8 10.7l2.1 0.6-2.1 0.7-0.7 2.2-0.7-2.2-2.2-0.7 2.2-0.6 0.7-2.2z m-14.3-14.3l2.2 0.7-2.2 0.6-0.7 2.2-0.7-2.2-2.2-0.6 2.2-0.7 0.7-2.2z"></path></g></svg><span>我的主页</span></a></li><li class="cuk-list-item cuk-list-item-hover" style="padding: 0px;"><a href="https://blog.coding.net/" target="_blank"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-lightbulb-o user-menu-icon-1iR" style="vertical-align: middle;"><g><path d="m24.9 12.9q0 0.2-0.2 0.5t-0.5 0.2-0.5-0.2-0.2-0.5q0-1.1-1.2-1.6t-2.4-0.6q-0.3 0-0.5-0.2t-0.2-0.5 0.2-0.5 0.5-0.2q1.1 0 2.2 0.3t2 1.2 0.8 2.1z m3.6 0q0-1.6-0.8-3t-2-2.3-2.7-1.4-3.1-0.5-3 0.5-2.8 1.4-2 2.3-0.7 3q0 2.2 1.5 4 0.2 0.2 0.7 0.7t0.6 0.7q2.9 3.5 3.2 6.7h5.1q0.3-3.2 3.1-6.6 0.2-0.3 0.7-0.8t0.7-0.7q1.5-1.8 1.5-4z m2.9 0q0 3.4-2.3 5.9-1 1.1-1.7 2t-1.3 2.1-0.8 2.4q1.1 0.6 1.1 1.8 0 0.9-0.6 1.5 0.6 0.6 0.6 1.4 0 1.2-1 1.8 0.2 0.5 0.2 1.1 0 1-0.7 1.5t-1.7 0.6q-0.4 1-1.3 1.6t-2 0.5-1.9-0.5-1.4-1.6q-1 0-1.7-0.6t-0.7-1.5q0-0.6 0.3-1.1-1-0.6-1-1.8 0-0.8 0.6-1.4-0.6-0.6-0.6-1.5 0-1.2 1.1-1.8-0.1-1.1-0.8-2.4t-1.3-2.1-1.7-2q-2.3-2.5-2.3-5.9 0-2.3 1-4.2t2.6-3.1 3.7-2 4.1-0.7 4.2 0.7 3.7 2 2.6 3.1 1 4.2z"></path></g></svg><span>博客</span></a></li><li class="cuk-list-item cuk-list-item-hover user-menu-border-bottom-3R5" style="padding: 0px;"><a href="https://coding.net/app" target="_blank"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-download user-menu-icon-1iR" style="vertical-align: middle;"><g><path d="m30.1 30q0-0.6-0.5-1t-1-0.4-1 0.4-0.4 1 0.4 1 1 0.4 1-0.4 0.5-1z m5.7 0q0-0.6-0.4-1t-1-0.4-1 0.4-0.5 1 0.5 1 1 0.4 1-0.4 0.4-1z m2.8-5v7.1q0 0.9-0.6 1.6t-1.5 0.6h-32.9q-0.8 0-1.5-0.6t-0.6-1.6v-7.1q0-0.9 0.6-1.5t1.5-0.6h10.4l3 3q1.3 1.2 3.1 1.2t3-1.2l3-3h10.4q0.9 0 1.5 0.6t0.6 1.5z m-7.2-12.7q0.4 0.9-0.3 1.6l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.7-0.7-0.3-1.6 0.3-0.9 1.3-0.9h5.7v-10q0-0.6 0.4-1t1-0.4h5.7q0.6 0 1 0.4t0.5 1v10h5.7q0.9 0 1.3 0.9z"></path></g></svg><span>APP 下载</span></a></li><li class="cuk-list-item cuk-list-item-hover" style="padding: 0px;"><a><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-sign-out user-menu-icon-1iR" style="vertical-align: middle;"><g><path d="m16.8 32.1q0 0.1 0 0.5t0 0.6 0 0.5-0.3 0.4-0.4 0.2h-7.2q-2.6 0-4.5-1.9t-1.9-4.5v-15.8q0-2.6 1.9-4.5t4.5-1.9h7.2q0.3 0 0.5 0.2t0.2 0.5q0 0.1 0 0.5t0 0.6 0 0.5-0.3 0.4-0.4 0.2h-7.2q-1.4 0-2.5 1t-1 2.5v15.8q0 1.4 1 2.5t2.5 1h7l0.2 0.1 0.3 0 0.2 0.1 0.1 0.2 0.1 0.3z m20.7-12.1q0 0.6-0.4 1l-12.2 12.1q-0.4 0.5-1 0.5t-1-0.5-0.4-1v-6.4h-10q-0.6 0-1-0.4t-0.4-1v-8.6q0-0.6 0.4-1t1-0.4h10v-6.4q0-0.6 0.4-1t1-0.5 1 0.5l12.2 12.1q0.4 0.4 0.4 1z"></path></g></svg><span>退出</span></a></li></ul></div></div></div></div><!-- react-empty: 12884 --></div></header><div class="cuk-layout cuk-layout-full-size container-2nK"><div class="cuk-layout-aside project-aside-Eic" style="padding: 0px; width: 240px; flex-basis: 240px; transition: width 0.3s ease 0s;"><div class="inner" id="sideBarMenu"><a class="project-header-2JA expanded-2yB" title="vue-cli3 项目首页" href="https://coding.net/u/c_illusion/p/vue-cli3"><img class="cuk-avatar cuk-avatar-square cuk-avatar-small project-avatar-3s-" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-13.png"><span class="project-name-37N">vue-cli3</span></a><ul class="side-menu cuk-menu clearfix cuk-menu-theme-dark" style="padding-bottom: 50px;"><li class="cuk-sub-menu cuk-sub-menu-with-icon submenu-19b"><div class="cuk-sub-menu-title cuk-sub-menu-title-outer"><span class="cuk-menu-icon"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-tasks null" style="vertical-align: middle;"><g><path d="m22.9 31.4h14.2v-2.8h-14.2v2.8z m-8.6-11.4h22.8v-2.9h-22.8v2.9z m14.3-11.4h8.5v-2.9h-8.5v2.9z m11.4 18.5v5.8q0 0.5-0.4 1t-1 0.4h-37.2q-0.6 0-1-0.4t-0.4-1v-5.8q0-0.5 0.4-1t1-0.4h37.2q0.5 0 1 0.4t0.4 1z m0-11.4v5.7q0 0.6-0.4 1t-1 0.5h-37.2q-0.6 0-1-0.5t-0.4-1v-5.7q0-0.6 0.4-1t1-0.4h37.2q0.5 0 1 0.4t0.4 1z m0-11.4v5.7q0 0.6-0.4 1t-1 0.4h-37.2q-0.6 0-1-0.4t-0.4-1v-5.7q0-0.6 0.4-1t1-0.4h37.2q0.5 0 1 0.4t0.4 1z"></path></g></svg></span><span class="submenu-title-3_q"><a href="https://coding.net/u/c_illusion/p/vue-cli3/milestone">任务</a></span><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-caret-down submenu-title-caret" style="vertical-align: middle;"><g><path d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"></path></g></svg></div><ul class="cuk-sub-menu-list cuk-sub-menu-list-theme-dark"><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/milestone"><span>里程碑</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/tasks?status=1&amp;owner=195779"><span>任务列表</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/tasks/board"><span>任务看板</span></a></li></ul></li><li class="cuk-sub-menu cuk-sub-menu-active cuk-sub-menu-with-icon submenu-19b"><div class="cuk-sub-menu-title cuk-sub-menu-title-outer"><span class="cuk-menu-icon"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-code null" style="vertical-align: middle;"><g><path d="m12.8 30.4l-1 1.1q-0.2 0.2-0.5 0.2t-0.5-0.2l-9.7-9.7q-0.2-0.2-0.2-0.5t0.2-0.4l9.7-9.7q0.2-0.2 0.5-0.2t0.5 0.2l1 1q0.2 0.2 0.2 0.5t-0.2 0.5l-8.1 8.1 8.1 8.2q0.2 0.2 0.2 0.5t-0.2 0.4z m12.3-22.1l-7.8 26.8q0 0.3-0.3 0.4t-0.5 0.1l-1.3-0.4q-0.2-0.1-0.4-0.3t0-0.5l7.7-26.8q0.1-0.3 0.4-0.4t0.4-0.1l1.3 0.4q0.3 0 0.4 0.3t0.1 0.5z m13.6 13.5l-9.7 9.7q-0.2 0.2-0.4 0.2t-0.5-0.2l-1-1.1q-0.3-0.2-0.3-0.4t0.3-0.5l8.1-8.2-8.1-8.1q-0.3-0.2-0.3-0.5t0.3-0.5l1-1q0.2-0.2 0.5-0.2t0.4 0.2l9.7 9.7q0.2 0.2 0.2 0.4t-0.2 0.5z"></path></g></svg></span><span class="submenu-title-3_q"><a href="https://coding.net/u/c_illusion/p/vue-cli3/git">代码</a></span><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-caret-down submenu-title-caret" style="vertical-align: middle;"><g><path d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"></path></g></svg></div><ul class="cuk-sub-menu-list cuk-sub-menu-list-theme-dark"><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/git"><span>代码浏览</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/git/branches"><span>分支管理</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/git/releases"><span>发布管理</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/git/compare"><span>版本对比</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/git/merges"><span>合并请求</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/git/plot"><span>项目网络</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/git/pages"><span>Pages 服务</span></a></li></ul></li><li class="cuk-sub-menu cuk-sub-menu-with-icon submenu-19b"><div class="cuk-sub-menu-title cuk-sub-menu-title-outer"><span class="cuk-menu-icon"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-file null" style="vertical-align: middle;"><g><path d="m25.9 11.4v-10.5q0.4 0.3 0.8 0.6l9.1 9.1q0.3 0.3 0.6 0.8h-10.5z m-2.9 0.7q0 0.9 0.6 1.6t1.5 0.6h12.2v23.6q0 0.9-0.6 1.5t-1.6 0.6h-30q-0.8 0-1.5-0.6t-0.6-1.5v-35.8q0-0.8 0.6-1.5t1.5-0.6h17.9v12.1z"></path></g></svg></span><span class="submenu-title-3_q"><a href="https://coding.net/u/c_illusion/p/vue-cli3/attachment">文件</a></span><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-caret-down submenu-title-caret" style="vertical-align: middle;"><g><path d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"></path></g></svg></div><ul class="cuk-sub-menu-list cuk-sub-menu-list-theme-dark"><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/attachment"><span>所有文件</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/attachment/share"><span>分享中</span></a></li></ul></li><li class="cuk-menu-item cuk-menu-item-outer"><span class="cuk-menu-icon"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-file-word-o null" style="vertical-align: middle;"><g><path d="m35.8 8.5q0.6 0.6 1 1.7t0.5 1.9v25.8q0 0.8-0.6 1.5t-1.6 0.6h-30q-0.9 0-1.5-0.6t-0.6-1.5v-35.8q0-0.8 0.6-1.5t1.5-0.6h20q0.9 0 2 0.4t1.7 1.1z m-9.9-5.5v8.4h8.4q-0.3-0.6-0.5-0.9l-7-7q-0.3-0.2-0.9-0.5z m8.5 34.1v-22.8h-9.3q-0.9 0-1.5-0.6t-0.6-1.6v-9.2h-17.1v34.2h28.5z m-26.2-20v2.4h1.6l3.6 14.8h3.6l2.8-10.8q0.2-0.5 0.3-1.1 0-0.3 0-0.5h0.1l0.1 0.5q0 0.1 0 0.5t0.2 0.6l2.8 10.8h3.6l3.6-14.8h1.6v-2.4h-6.7v2.4h2l-2.2 9.8q-0.1 0.5-0.2 1l0 0.5h-0.1l-0.1-0.5q0-0.1-0.1-0.4t-0.1-0.6l-3.2-12.2h-2.5l-3.2 12.2q-0.1 0.2-0.1 0.6t-0.1 0.4l-0.1 0.5h-0.1l0-0.5q-0.1-0.5-0.2-1l-2.2-9.8h2v-2.4h-6.7z"></path></g></svg></span><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/wiki"><span>Wiki</span></a></li><li class="cuk-menu-item cuk-menu-item-outer"><span class="cuk-menu-icon"><img src="./项目设置 - vue-cli3 - c_illusion_files/infinity.3fa45c39.svg" style="margin-left: -2px;"></span><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/ci"><span>持续集成</span></a></li><li class="cuk-sub-menu cuk-sub-menu-active cuk-sub-menu-with-icon submenu-19b"><div class="cuk-sub-menu-title cuk-sub-menu-title-outer"><span class="cuk-menu-icon"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-cogs null" style="vertical-align: middle;"><g><path d="m18.6 20q0-2.2-1.6-3.8t-3.7-1.5-3.8 1.5-1.5 3.8 1.5 3.8 3.8 1.5 3.7-1.5 1.6-3.8z m16 10.6q0-1-0.8-1.8t-1.9-0.8-1.9 0.8-0.8 1.8q0 1.1 0.8 1.9t1.9 0.8 1.9-0.8 0.8-1.9z m0-21.2q0-1.1-0.8-1.9t-1.9-0.8-1.9 0.8-0.8 1.9q0 1.1 0.8 1.8t1.9 0.8 1.9-0.8 0.8-1.8z m-8 8.7v3.9q0 0.2-0.2 0.4t-0.3 0.2l-3.2 0.5q-0.2 0.7-0.7 1.6 0.7 0.9 1.9 2.3 0.1 0.2 0.1 0.5 0 0.2-0.1 0.3-0.5 0.7-1.7 1.9t-1.7 1.2q-0.2 0-0.4-0.1l-2.4-1.9q-0.7 0.4-1.6 0.7-0.2 2.2-0.5 3.2-0.1 0.5-0.6 0.5h-3.8q-0.3 0-0.5-0.2t-0.2-0.3l-0.4-3.2q-0.7-0.2-1.6-0.7l-2.4 1.9q-0.2 0.1-0.5 0.1-0.2 0-0.4-0.1-3-2.8-3-3.3 0-0.2 0.2-0.4 0.2-0.3 0.8-1.1t1-1.3q-0.5-0.9-0.7-1.7l-3.2-0.5q-0.2 0-0.4-0.2t-0.1-0.4v-3.9q0-0.2 0.1-0.4t0.4-0.2l3.2-0.5q0.2-0.7 0.7-1.6-0.7-0.9-1.9-2.3-0.2-0.3-0.2-0.5 0-0.2 0.2-0.4 0.4-0.6 1.7-1.8t1.6-1.2q0.3 0 0.5 0.1l2.4 1.9q0.7-0.4 1.6-0.7 0.2-2.2 0.4-3.2 0.2-0.5 0.7-0.5h3.8q0.2 0 0.4 0.2t0.2 0.3l0.5 3.2q0.7 0.2 1.6 0.7l2.4-1.9q0.2-0.1 0.4-0.1 0.3 0 0.5 0.1 3 2.8 3 3.3 0 0.2-0.2 0.4-0.2 0.4-0.8 1.2t-1 1.2q0.5 1 0.7 1.7l3.2 0.5q0.2 0 0.3 0.2t0.2 0.4z m13.3 11.1v2.9q0 0.3-3.1 0.6-0.3 0.6-0.6 1.1 1 2.4 1 2.9 0 0.1-0.1 0.1-2.5 1.5-2.5 1.5-0.2 0-1-1t-1.1-1.4q-0.4 0-0.6 0t-0.6 0q-0.3 0.4-1.1 1.4t-1 1q0 0-2.5-1.5-0.1 0-0.1-0.1 0-0.5 1-2.9-0.3-0.5-0.6-1.1-3.1-0.3-3.1-0.6v-2.9q0-0.4 3.1-0.7 0.3-0.6 0.6-1-1-2.4-1-2.9 0-0.1 0.1-0.2 0 0 0.7-0.4t1.2-0.7 0.6-0.3q0.2 0 1 1t1.1 1.4q0.4-0.1 0.6-0.1t0.6 0.1q1.1-1.5 1.9-2.4l0.2 0q0 0 2.5 1.4 0.1 0.1 0.1 0.2 0 0.5-1.1 2.9 0.4 0.4 0.7 1 3.1 0.3 3.1 0.7z m0-21.3v2.9q0 0.4-3.1 0.7-0.3 0.5-0.6 1 1 2.4 1 2.9 0 0.1-0.1 0.2-2.5 1.4-2.5 1.4-0.2 0-1-0.9t-1.1-1.5q-0.4 0.1-0.6 0.1t-0.6-0.1q-0.3 0.5-1.1 1.5t-1 0.9q0 0-2.5-1.4-0.1-0.1-0.1-0.2 0-0.5 1-2.9-0.3-0.5-0.6-1-3.1-0.3-3.1-0.7v-2.9q0-0.3 3.1-0.6 0.3-0.6 0.6-1.1-1-2.4-1-2.9 0-0.1 0.1-0.1 0-0.1 0.7-0.4t1.2-0.7 0.6-0.4q0.2 0 1 1t1.1 1.4q0.4 0 0.6 0t0.6 0q1.1-1.5 1.9-2.3l0.2-0.1q0 0 2.5 1.5 0.1 0 0.1 0.1 0 0.5-1.1 2.9 0.4 0.5 0.7 1.1 3.1 0.3 3.1 0.6z"></path></g></svg></span><span class="submenu-title-3_q"><a href="https://coding.net/u/c_illusion/p/vue-cli3/setting/summary">设置</a></span><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-caret-down submenu-title-caret" style="vertical-align: middle;"><g><path d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"></path></g></svg></div><ul class="cuk-sub-menu-list cuk-sub-menu-list-theme-dark"><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/setting/summary"><span>项目概览</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/setting/notice"><span>项目公告</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/setting/member"><span>成员管理</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/setting/label"><span>分类标签</span></a></li><li class="cuk-menu-item cuk-menu-item-active"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/setting"><span>项目设置</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/setting/depot"><span>仓库设置</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/setting/webhook"><span>WebHook</span></a></li><li class="cuk-menu-item"><a class="item-link-3DE" href="https://coding.net/u/c_illusion/p/vue-cli3/setting/deploy_key"><span>部署公钥</span></a></li></ul></li></ul></div><a class="expanded-toggle-1pr" style="width: 240px; text-align: left; padding-left: 30px;"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-angle-double-left null" style="vertical-align: middle;"><g><path d="m22 30.7q0 0.3-0.2 0.5l-1.1 1.1q-0.3 0.3-0.6 0.3t-0.5-0.3l-10.4-10.4q-0.2-0.2-0.2-0.5t0.2-0.5l10.4-10.4q0.3-0.2 0.5-0.2t0.6 0.2l1.1 1.1q0.2 0.3 0.2 0.5t-0.2 0.6l-8.8 8.7 8.8 8.8q0.2 0.2 0.2 0.5z m8.6 0q0 0.3-0.3 0.5l-1.1 1.1q-0.2 0.3-0.5 0.3t-0.5-0.3l-10.4-10.4q-0.2-0.2-0.2-0.5t0.2-0.5l10.4-10.4q0.2-0.2 0.5-0.2t0.5 0.2l1.1 1.1q0.3 0.3 0.3 0.5t-0.3 0.6l-8.7 8.7 8.7 8.8q0.3 0.2 0.3 0.5z"></path></g></svg><span style="padding-left: 10px;">收起</span></a></div><div id="menu-popup-container" style="position: fixed; top: 60px; left: 0px; bottom: 0px; z-index: 1100;"></div><aside class="cuk-layout-content"><div class="inner" style="padding-left: 240px;"><div><div><div class="container-3sj"><div class="title-2Jb"><span>基本设置</span></div><div class="basic-DRT"><div class="container-arX"><img src="./项目设置 - vue-cli3 - c_illusion_files/setting" style="display: none;"><div class="mask-31U square-1sv"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-pencil icon-4lQ" style="vertical-align: middle;"><g><path d="m11.1 34.3l2-2-5.2-5.3-2 2v2.4h2.8v2.9h2.4z m11.7-20.7q0-0.5-0.5-0.5-0.2 0-0.4 0.1l-12.1 12.1q-0.1 0.2-0.1 0.4 0 0.5 0.4 0.5 0.3 0 0.4-0.2l12.1-12.1q0.2-0.1 0.2-0.3z m-1.2-4.3l9.3 9.3-18.6 18.5h-9.3v-9.2z m15.2 2.1q0 1.2-0.8 2l-3.7 3.7-9.3-9.2 3.7-3.7q0.8-0.9 2-0.9 1.2 0 2 0.9l5.3 5.2q0.8 0.9 0.8 2z"></path></g></svg></div><img class="cuk-avatar cuk-avatar-square cuk-avatar-large avatar-2ME" src="./项目设置 - vue-cli3 - c_illusion_files/scenery-13.png"><input type="file" accept="image/*" style="display: none;"></div><div class="basic-form-2r9"><span>项目名</span><div class="cuk-input cuk-input-block name-input-2fE"><input type="text" class="cuk-input-control cuk-input-size-large" value="my_project"></div><span class="name-tip-yLw"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-exclamation-triangle mr-5" style="vertical-align: middle;"><g><path d="m22.9 30.7v-4.2q0-0.4-0.3-0.6t-0.5-0.2h-4.2q-0.3 0-0.5 0.2t-0.3 0.6v4.2q0 0.3 0.3 0.5t0.5 0.2h4.2q0.3 0 0.5-0.2t0.3-0.5z m-0.1-8.4l0.4-10.2q0-0.3-0.2-0.4-0.3-0.3-0.5-0.3h-5q-0.2 0-0.5 0.3-0.2 0.1-0.2 0.4l0.4 10.2q0 0.3 0.2 0.4t0.5 0.2h4.2q0.3 0 0.5-0.2t0.2-0.4z m-0.3-20.8l17.1 31.4q0.8 1.4 0 2.8-0.4 0.7-1 1.1t-1.5 0.3h-34.2q-0.8 0-1.5-0.3t-1-1.1q-0.8-1.4 0-2.8l17.1-31.4q0.4-0.7 1.1-1.1t1.4-0.4 1.4 0.4 1.1 1.1z"></path></g></svg><span>注意：修改项目名将导致项目的访问 URL（包含 Git 仓库的 URL）改变，在此之前的 URL 地址将失效。Git 仓库地址修改方法：git remote set-url origin [NEW_URL]</span></span><span>项目描述</span><div class="cuk-input cuk-textarea cuk-textarea-block mt-10"><textarea class="cuk-input-control" rows="5">vue 多页脚手架
+vue-cli 3.0
+webpack 4</textarea></div><button class="cuk-button cuk-button-size-medium mt-15" type="button"><span>更新</span></button></div></div></div><div class="container-3sj"><!-- react-empty: 14855 --><div class="title-2Jb"><span>项目转让</span></div><div class="cuk-alert cuk-alert-warning"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-exclamation-triangle cuk-alert-icon" style="vertical-align: middle;"><g><path d="m22.9 30.7v-4.2q0-0.4-0.3-0.6t-0.5-0.2h-4.2q-0.3 0-0.5 0.2t-0.3 0.6v4.2q0 0.3 0.3 0.5t0.5 0.2h4.2q0.3 0 0.5-0.2t0.3-0.5z m-0.1-8.4l0.4-10.2q0-0.3-0.2-0.4-0.3-0.3-0.5-0.3h-5q-0.2 0-0.5 0.3-0.2 0.1-0.2 0.4l0.4 10.2q0 0.3 0.2 0.4t0.5 0.2h4.2q0.3 0 0.5-0.2t0.2-0.4z m-0.3-20.8l17.1 31.4q0.8 1.4 0 2.8-0.4 0.7-1 1.1t-1.5 0.3h-34.2q-0.8 0-1.5-0.3t-1-1.1q-0.8-1.4 0-2.8l17.1-31.4q0.4-0.7 1.1-1.1t1.4-0.4 1.4 0.4 1.1 1.1z"></path></g></svg><span> 项目转让后，你将不再是“项目所有者”，你将失去某些管理权限（如添加成员、删除项目等）。同时，项目转让后，项目的 Git 仓库地址会发生变化，例如：用户 Coding 将项目转给用户 Demo 后， Git 仓库访问路径将由 https://git.coding.net/coding/test.git 变成 https://git.coding.net/demo/test.git</span></div><div style="margin-top: 20px;"><div class="cuk-alert cuk-alert-info"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-info cuk-alert-icon" style="vertical-align: middle;"><g><path d="m27.3 30v2.9q0 0.5-0.4 1t-1 0.4h-11.5q-0.6 0-1-0.4t-0.4-1v-2.9q0-0.6 0.4-1t1-0.4h1.5v-8.6h-1.5q-0.6 0-1-0.4t-0.4-1v-2.9q0-0.6 0.4-1t1-0.4h8.6q0.6 0 1 0.4t0.4 1v12.9h1.5q0.5 0 1 0.4t0.4 1z m-2.9-25.7v4.3q0 0.6-0.4 1t-1 0.4h-5.7q-0.6 0-1-0.4t-0.4-1v-4.3q0-0.6 0.4-1t1-0.4h5.7q0.6 0 1 0.4t0.4 1z"></path></g></svg><span>您的项目还没添加成员</span></div></div></div><div class="container-3sj"><!-- react-empty: 14870 --><div class="title-2Jb"><span>项目归档</span></div><div class="cuk-alert cuk-alert-warning"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-exclamation-triangle cuk-alert-icon" style="vertical-align: middle;"><g><path d="m22.9 30.7v-4.2q0-0.4-0.3-0.6t-0.5-0.2h-4.2q-0.3 0-0.5 0.2t-0.3 0.6v4.2q0 0.3 0.3 0.5t0.5 0.2h4.2q0.3 0 0.5-0.2t0.3-0.5z m-0.1-8.4l0.4-10.2q0-0.3-0.2-0.4-0.3-0.3-0.5-0.3h-5q-0.2 0-0.5 0.3-0.2 0.1-0.2 0.4l0.4 10.2q0 0.3 0.2 0.4t0.5 0.2h4.2q0.3 0 0.5-0.2t0.2-0.4z m-0.3-20.8l17.1 31.4q0.8 1.4 0 2.8-0.4 0.7-1 1.1t-1.5 0.3h-34.2q-0.8 0-1.5-0.3t-1-1.1q-0.8-1.4 0-2.8l17.1-31.4q0.4-0.7 1.1-1.1t1.4-0.4 1.4 0.4 1.1 1.1z"></path></g></svg><span>项目归档后，该项目将会移到“项目所有者”的归档项目中，并且不能对该项目做任何操作，直到解除归档。同时该项目将从所有项目成员的项目列表中移除。“项目所有者”可以在项目-&gt;归档项目中进行解除归档操作，解除归档后，项目成员仍保留。</span></div><button class="cuk-button cuk-button-size-medium mt-20" type="button"><span>项目归档</span></button></div><div class="container-3sj"><!-- react-empty: 14881 --><div class="title-2Jb"><span>删除项目</span></div><div class="cuk-alert cuk-alert-warning"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" class="cuk-icon cuk-icon-exclamation-triangle cuk-alert-icon" style="vertical-align: middle;"><g><path d="m22.9 30.7v-4.2q0-0.4-0.3-0.6t-0.5-0.2h-4.2q-0.3 0-0.5 0.2t-0.3 0.6v4.2q0 0.3 0.3 0.5t0.5 0.2h4.2q0.3 0 0.5-0.2t0.3-0.5z m-0.1-8.4l0.4-10.2q0-0.3-0.2-0.4-0.3-0.3-0.5-0.3h-5q-0.2 0-0.5 0.3-0.2 0.1-0.2 0.4l0.4 10.2q0 0.3 0.2 0.4t0.5 0.2h4.2q0.3 0 0.5-0.2t0.2-0.4z m-0.3-20.8l17.1 31.4q0.8 1.4 0 2.8-0.4 0.7-1 1.1t-1.5 0.3h-34.2q-0.8 0-1.5-0.3t-1-1.1q-0.8-1.4 0-2.8l17.1-31.4q0.4-0.7 1.1-1.1t1.4-0.4 1.4 0.4 1.1 1.1z"></path></g></svg><span>删除项目将会连同其相关的所有数据（包括任务、合并请求、动态等）一起删除，此操作无法恢复！</span></div><button class="cuk-button cuk-button-type-danger cuk-button-size-medium mt-20" type="button"><span>删除项目</span></button></div></div></div></div></aside></div></div></div></div><script type="text/javascript" src="./项目设置 - vue-cli3 - c_illusion_files/runtime_index.3bf2c2c3.js.下载"></script><script type="text/javascript" src="./项目设置 - vue-cli3 - c_illusion_files/index.987c1cfb.chunk.js.下载"></script><st-div id="__selection-translator__"> <st-div class="__st-box__" style="display: none; position: fixed; z-index: 99999; left: 0px; top: 0px; transform: translateX(512px) translateY(335px);"> <st-header> <st-span class="st-icon-pin" title="固定"></st-span> <st-span class="st-icon-down-open" title="展开"></st-span> <st-span class="st-icon-cog" title="设置"></st-span> </st-header> <st-div class="__query-form__" style="display: none;"> <st-div> <textarea placeholder="输入要翻译的句子或单词"></textarea> </st-div> <st-div> <select> <option value="">自动判断</option> <option value="zh">中文</option><option value="zh-CN">中文(简体)</option><option value="zh-HK">中文(香港)</option><option value="zh-TW">中文(繁体)</option><option value="en">英语</option><option value="ja">日语</option><option value="ko">朝鲜语</option><option value="de">德语</option><option value="fr">法语</option><option value="ru">俄语</option><option value="th">泰语</option><option value="af">南非语</option><option value="ar">阿拉伯语</option><option value="az">阿塞拜疆语</option><option value="be">比利时语</option><option value="bg">保加利亚语</option><option value="ca">加泰隆语</option><option value="cs">捷克语</option><option value="cy">威尔士语</option><option value="da">丹麦语</option><option value="dv">第维埃语</option><option value="el">希腊语</option><option value="eo">世界语</option><option value="es">西班牙语</option><option value="et">爱沙尼亚语</option><option value="eu">巴士克语</option><option value="fa">法斯语</option><option value="fi">芬兰语</option><option value="fo">法罗语</option><option value="gl">加里西亚语</option><option value="gu">古吉拉特语</option><option value="he">希伯来语</option><option value="hi">印地语</option><option value="hr">克罗地亚语</option><option value="hu">匈牙利语</option><option value="hy">亚美尼亚语</option><option value="id">印度尼西亚语</option><option value="is">冰岛语</option><option value="it">意大利语</option><option value="ka">格鲁吉亚语</option><option value="kk">哈萨克语</option><option value="kn">卡纳拉语</option><option value="kok">孔卡尼语</option><option value="ky">吉尔吉斯语</option><option value="lt">立陶宛语</option><option value="lv">拉脱维亚语</option><option value="mi">毛利语</option><option value="mk">马其顿语</option><option value="mn">蒙古语</option><option value="mr">马拉地语</option><option value="ms">马来语</option><option value="mt">马耳他语</option><option value="nb">挪威语(伯克梅尔)</option><option value="nl">荷兰语</option><option value="ns">北梭托语</option><option value="pa">旁遮普语</option><option value="pl">波兰语</option><option value="pt">葡萄牙语</option><option value="qu">克丘亚语</option><option value="ro">罗马尼亚语</option><option value="sa">梵文</option><option value="se">北萨摩斯语</option><option value="sk">斯洛伐克语</option><option value="sl">斯洛文尼亚语</option><option value="sq">阿尔巴尼亚语</option><option value="sv">瑞典语</option><option value="sw">斯瓦希里语</option><option value="syr">叙利亚语</option><option value="ta">泰米尔语</option><option value="te">泰卢固语</option><option value="tl">塔加路语</option><option value="tn">茨瓦纳语</option><option value="tr">土耳其语</option><option value="ts">宗加语</option><option value="tt">鞑靼语</option><option value="uk">乌克兰语</option><option value="ur">乌都语</option><option value="uz">乌兹别克语</option><option value="vi">越南语</option><option value="xh">班图语</option><option value="zu">祖鲁语</option> </select> <st-div class="__exchange__"> <st-span class="st-icon-exchange"></st-span> </st-div> <select> <option value="">自动选择</option> <option value="zh">中文</option><option value="zh-CN">中文(简体)</option><option value="zh-HK">中文(香港)</option><option value="zh-TW">中文(繁体)</option><option value="en">英语</option><option value="ja">日语</option><option value="ko">朝鲜语</option><option value="de">德语</option><option value="fr">法语</option><option value="ru">俄语</option><option value="th">泰语</option><option value="af">南非语</option><option value="ar">阿拉伯语</option><option value="az">阿塞拜疆语</option><option value="be">比利时语</option><option value="bg">保加利亚语</option><option value="ca">加泰隆语</option><option value="cs">捷克语</option><option value="cy">威尔士语</option><option value="da">丹麦语</option><option value="dv">第维埃语</option><option value="el">希腊语</option><option value="eo">世界语</option><option value="es">西班牙语</option><option value="et">爱沙尼亚语</option><option value="eu">巴士克语</option><option value="fa">法斯语</option><option value="fi">芬兰语</option><option value="fo">法罗语</option><option value="gl">加里西亚语</option><option value="gu">古吉拉特语</option><option value="he">希伯来语</option><option value="hi">印地语</option><option value="hr">克罗地亚语</option><option value="hu">匈牙利语</option><option value="hy">亚美尼亚语</option><option value="id">印度尼西亚语</option><option value="is">冰岛语</option><option value="it">意大利语</option><option value="ka">格鲁吉亚语</option><option value="kk">哈萨克语</option><option value="kn">卡纳拉语</option><option value="kok">孔卡尼语</option><option value="ky">吉尔吉斯语</option><option value="lt">立陶宛语</option><option value="lv">拉脱维亚语</option><option value="mi">毛利语</option><option value="mk">马其顿语</option><option value="mn">蒙古语</option><option value="mr">马拉地语</option><option value="ms">马来语</option><option value="mt">马耳他语</option><option value="nb">挪威语(伯克梅尔)</option><option value="nl">荷兰语</option><option value="ns">北梭托语</option><option value="pa">旁遮普语</option><option value="pl">波兰语</option><option value="pt">葡萄牙语</option><option value="qu">克丘亚语</option><option value="ro">罗马尼亚语</option><option value="sa">梵文</option><option value="se">北萨摩斯语</option><option value="sk">斯洛伐克语</option><option value="sl">斯洛文尼亚语</option><option value="sq">阿尔巴尼亚语</option><option value="sv">瑞典语</option><option value="sw">斯瓦希里语</option><option value="syr">叙利亚语</option><option value="ta">泰米尔语</option><option value="te">泰卢固语</option><option value="tl">塔加路语</option><option value="tn">茨瓦纳语</option><option value="tr">土耳其语</option><option value="ts">宗加语</option><option value="tt">鞑靼语</option><option value="uk">乌克兰语</option><option value="ur">乌都语</option><option value="uz">乌兹别克语</option><option value="vi">越南语</option><option value="xh">班图语</option><option value="zu">祖鲁语</option> </select> </st-div> <st-div> <select> <option value="YouDao">有道翻译</option> <option value="BaiDu">百度翻译</option> <option value="Google">谷歌翻译</option> <option value="GoogleCN">谷歌翻译（国内）</option> </select> <st-div class="__action-list__"> <st-div class="__button__ __btn-translate__">翻译 <st-span class="st-icon-down-dir"></st-span> </st-div> <st-div class="__expand__"> <st-div class="__button__">朗读</st-div> <st-div class="__button__">复制</st-div> </st-div> </st-div> </st-div> </st-div> <st-div class="__translate-result__" style="display: none;">正在查询，请稍候……</st-div> <st-div class="__translate-result__"> <st-div style="display: none;"> <st-span></st-span> <st-span class="__retry__">重试</st-span> </st-div> <st-div> <st-div class="__phonetic__"> <st-span style="display: none;"></st-span> <st-span class="__copy-and-read__"> <st-span>朗读</st-span> <st-span style="display: none;">复制</st-span> </st-span> </st-div> <st-div style="display: none;"> <st-ul>  </st-ul> <st-div class="__copy-and-read__"> <st-span class="__copy-and-read__">复制</st-span> </st-div> </st-div> <st-div style="display: none;">  <st-div class="__copy-and-read__"> <st-span class="__copy-and-read__">朗读</st-span> <st-span class="__copy-and-read__">复制</st-span> </st-div> </st-div> </st-div> </st-div> <st-footer> <st-span style="">via <a target="_blank" href="https://coding.net/u/c_illusion/p/vue-cli3/setting">谷歌翻译（国内）</a></st-span> </st-footer> </st-div> <st-div class="__st-btn__" style="display: none; position: fixed; z-index: 99999; left: 0px; top: 0px; transform: translateX(512px) translateY(335px);">译</st-div> </st-div></body></html>
