@@ -21,13 +21,13 @@ branches:
     - blog # build dev branch only
 
 before_install:
-  - export TZ='Asia/Shanghai' # 设置时区
+  - export TZ='Asia/Beijing' # 设置时区
 
 # Start: Build Lifecycle
 install:
   - wget https://github.com/gohugoio/hugo/releases/download/v0.70.0/hugo_0.70.0_Linux-64bit.tar.gz
   - tar -xzvf hugo_0.70.0_Linux-64bit.tar.gz
-  - chmod +x hugo
+  - chmod +x hugo   # 给执行权限
   - export PATH=$PATH:$PWD
   - hugo version
   - rm -rf public
@@ -50,17 +50,17 @@ after_script:
   - git add .
   - git commit -m "自动部署：${commit_msg} "
   # Github Pages
-  - git push --force --quiet "https://${githubToken}@${GITHUB_ADDR}" master:master
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_ADDR}" master:master
   # Coding Pages
-  - git push --force --quiet "https://c_illusion:${codingToken}@${CODING_ADDR}" master:master
+  - git push --force --quiet "https://c_illusion:${CODING_TOKEN}@${CODING_ADDR}" master:master
   - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
 
   # Github Pages
-  - git push --quiet "https://${githubToken}@${GITHUB_ADDR}" master:master --tags
+  - git push --quiet "https://${GITHUB_TOKEN}@${GITHUB_ADDR}" master:master --tags
   # Coding Pages
-  - git push --quiet "https://c_illusion:${codingToken}@${CODING_ADDR}" master:master --tags
+  - git push --quiet "https://c_illusion:${CODING_TOKEN}@${CODING_ADDR}" master:master --tags
   # Build Salver Repository(Github Pages)
-  #- git push --force --quiet "https://${githubToken}@${GITHUB_ADDR}" master:master
+  #- git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_ADDR}" master:master
   # Build Salver Repository(Github Pages)
-  #- git push --force --quiet "https://${githubToken}@${GITHUB_ADDR}" master:master
+  #- git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_ADDR}" master:master
 # End: Build LifeCycle
