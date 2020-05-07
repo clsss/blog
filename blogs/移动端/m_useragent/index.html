@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="Collin">
+  <meta name="description" content="This is an example">
+  
+  <meta property="og:title" content="移动端_机型判断" />
+<meta property="og:description" content="This is an example" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_useragent/" />
+<meta property="article:published_time" content="2017-09-25T23:54:11+08:00" />
+<meta property="article:modified_time" content="2017-09-25T23:54:11+08:00" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_communicate_app/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/%E8%B7%A8%E5%9F%9F/jsonp/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/%E8%A7%84%E8%8C%83/restful/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/vue-cli/" /><meta property="og:see_also" content="https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_performance/" />
+
+
+
+  <title>
+  
+       移动端_机型判断 | Collin&#39;s Blog 
+  
+  </title>
+
+  <link rel="canonical" href="https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_useragent/">
+
+  
+  
+
+  
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://clsss.github.io/blog/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://clsss.github.io/blog/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://clsss.github.io/blog/images/favicon_cl.ico"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://clsss.github.io/blog/">
+          
+        <img class="avatar" src="https://clsss.github.io/blog/images/favicon_cl.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        
+        
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://clsss.github.io/blog/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/blogs/" >Blogs  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/life/" >Life  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides/banner1.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner2.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner3.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner4.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://clsss.github.io/blog/">
+          
+            <img class="pull-right avatar avatar-md" src="https://clsss.github.io/blog/images/avatar.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://clsss.github.io/blog/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Collin&#39;s Blog</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/clsss" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+    
+            
+    
+        
+            
+                <a href="mailto:670199384@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://clsss.github.io/blog/categories/mobile"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> mobile </a></li>
+      
+    
+    
+      
+        <li><a href="https://clsss.github.io/blog/series/web"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>web</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">移动端_机型判断</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Sep 25, 2017</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>One minute read</li>
+    
+  </ul>
+  
+    <div class="view">
+      <img src="https://clsss.github.io/blog/images/blog/img.jpg" />
+    </div>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <ol>
+<li>判断机型（Ios/Android）</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">function</span> getBrowserVersion<span class="o">()</span> <span class="o">{</span>
+	var <span class="nv">ua</span> <span class="o">=</span> navigator.userAgent <span class="o">||</span> navigator.vendor <span class="o">||</span> window.opera<span class="p">;</span>
+	var <span class="nv">uaInfo</span> <span class="o">=</span> <span class="o">{</span>
+	ios: !!ua.match<span class="o">(</span>/<span class="se">\(</span>i<span class="o">[</span>^<span class="p">;</span><span class="o">]</span>+<span class="p">;</span><span class="o">(</span> U<span class="p">;</span><span class="o">)</span>? CPU.+Mac OS X/i<span class="o">)</span>,
+	android: ua.match<span class="o">(</span>/Android/i<span class="o">)</span> <span class="o">||</span> ua.match<span class="o">(</span>/Linux/i<span class="o">)</span>
+	<span class="o">}</span><span class="p">;</span>
+	var <span class="nv">browserVersion</span> <span class="o">=</span> <span class="o">{</span>
+	isIos: <span class="k">function</span> <span class="o">()</span> <span class="o">{</span>
+	<span class="k">return</span> uaInfo.ios<span class="p">;</span>
+	<span class="o">}</span>,
+	isAndroid: <span class="k">function</span> <span class="o">()</span> <span class="o">{</span>
+	<span class="k">return</span> uaInfo.android<span class="p">;</span>
+	<span class="o">}</span>
+	<span class="o">}</span><span class="p">;</span>
+	<span class="k">return</span> browserVersion<span class="p">;</span>
+<span class="o">}</span>
+</code></pre></div><ol start="2">
+<li>相应的机型发送相应的请求</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">if</span> <span class="o">(</span>openId<span class="o">)</span> <span class="o">{</span>
+	<span class="k">if</span> <span class="o">(</span>browserVersion.isIos<span class="o">())</span> <span class="o">{</span>
+	window.webkit.messageHandlers.jumpToVerify.postMessage<span class="o">(</span><span class="s1">&#39;verifyProspr&#39;</span><span class="o">)</span><span class="p">;</span>
+	<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>browserVersion.isAndroid<span class="o">())</span> <span class="o">{</span>
+	android.jumpPage<span class="o">(</span>-9<span class="o">)</span><span class="p">;</span>
+	<span class="o">}</span>
+	<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+	goDownload<span class="o">()</span><span class="p">;</span>
+<span class="o">}</span>
+</code></pre></div><ol start="3">
+<li>相应的机型跳转相应的链接</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">if</span> <span class="o">(</span>browserVersion.isIos<span class="o">())</span> <span class="o">{</span>
+	location.href <span class="o">=</span> <span class="s1">&#39;http://app.appsflyer.com/id873518909?pid=web&amp;c=index&#39;</span><span class="p">;</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>browserVersion.isAndroid<span class="o">())</span> <span class="o">{</span>
+	location.href <span class="o">=</span> <span class="s1">&#39;http://app.appsflyer.com/com.luxy?pid=web&amp;c=index&#39;</span><span class="p">;</span>
+<span class="o">}</span>
+</code></pre></div><ol start="4">
+<li>通知客户端修改右上角 feedback 图标</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">if</span> <span class="o">(</span>browserVersion.isIos<span class="o">())</span> <span class="o">{</span>
+	window.webkit.messageHandlers.JSMessage_shouldShowFeedbackButton.postMessage<span class="o">()</span><span class="p">;</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>browserVersion.isAndroid<span class="o">())</span> <span class="o">{</span>
+	android.forceShowFeedbackOnTitleBar<span class="o">()</span><span class="p">;</span>
+<span class="o">}</span>
+</code></pre></div><ol start="5">
+<li>包括电脑跳转链接</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">$(</span><span class="s1">&#39;.btn&#39;</span><span class="k">)</span>.click<span class="o">(</span><span class="k">function</span><span class="o">(){</span>
+	var <span class="nv">ua</span> <span class="o">=</span> navigator.userAgent.toLowerCase<span class="o">()</span><span class="p">;</span>
+	var <span class="nv">userAgent</span> <span class="o">=</span> navigator.userAgent
+	var <span class="nv">t</span> <span class="o">=</span> Date.now<span class="o">()</span><span class="p">;</span>
+	var <span class="nv">info</span> <span class="o">=</span> window.location.search.substr<span class="o">(</span>1<span class="o">)</span><span class="p">;</span>
+	var <span class="nv">info2</span> <span class="o">=</span> window.location.search.substr<span class="o">(</span>1<span class="o">)</span><span class="p">;</span>
+	<span class="k">if</span> <span class="o">(</span>/ipad<span class="p">|</span>iphone<span class="p">|</span>mac/i.test<span class="o">(</span>ua<span class="o">)){</span>
+		<span class="k">if</span> <span class="o">(</span>userAgent.indexOf<span class="o">(</span><span class="s2">&#34;Safari&#34;</span><span class="o">)</span> &gt; -1<span class="o">)</span> <span class="o">{</span>
+			window.location <span class="o">=</span> <span class="s2">&#34;OMGmart://&#34;</span> + info<span class="p">;</span>
+			setTimeout<span class="o">(</span><span class="s2">&#34;window.location.href = &#39; &#39;,3000);
+</span><span class="s2">		} else {
+</span><span class="s2">			alert(&#39;请在 safari 中打开次链接&#39;)
+</span><span class="s2">		}
+</span><span class="s2">	} else if (/android/i.test(ua)){
+</span><span class="s2">		window.location.href = &#34;&#34;;
+</span><span class="s2">		window.setTimeout(function(){
+</span><span class="s2">		window.location.href = &#34;</span> <span class="s2">&#34;; /**_打开 app 的协议，有安卓同事提供_**/
+</span><span class="s2">		},3000);
+</span><span class="s2">	} else if (/windows/.test(ua)){
+</span><span class="s2">		setTimeout(&#34;</span>window.location.href <span class="o">=</span> <span class="err">&#39;</span><span class="s2">&#34;,3000);//电脑跳转地址
+</span><span class="s2">	}
+</span><span class="s2">});
+</span></code></pre></div><ol start="6">
+<li>调起 prospr 头像：</li>
+</ol>
+<p>&mdash;&mdash;定义&mdash;&mdash;&mdash;&ndash;</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">var <span class="nv">browserVersion</span> <span class="o">=</span> getBrowserVersion<span class="o">()</span><span class="p">;</span>
+<span class="k">function</span> getBrowserVersion<span class="o">()</span> <span class="o">{</span>
+	var <span class="nv">ua</span> <span class="o">=</span> navigator.userAgent <span class="o">||</span> navigator.vendor <span class="o">||</span> window.opera<span class="p">;</span>
+	var <span class="nv">uaInfo</span> <span class="o">=</span> <span class="o">{</span>
+		ios: !!ua.match<span class="o">(</span>/<span class="se">\(</span>i<span class="o">[</span>^<span class="p">;</span><span class="o">]</span>+<span class="p">;</span><span class="o">(</span> U<span class="p">;</span><span class="o">)</span>? CPU.+Mac OS X/i<span class="o">)</span>,
+		android: ua.match<span class="o">(</span>/Android/i<span class="o">)</span> <span class="o">||</span> ua.match<span class="o">(</span>/Linux/i<span class="o">)</span>
+	<span class="o">}</span><span class="p">;</span>
+	var <span class="nv">browserVersion</span> <span class="o">=</span> <span class="o">{</span>
+		isIos: <span class="k">function</span><span class="o">()</span> <span class="o">{</span>
+			<span class="k">return</span> uaInfo.ios<span class="p">;</span>
+		<span class="o">}</span>,
+		isAndroid: <span class="k">function</span><span class="o">()</span> <span class="o">{</span>
+			<span class="k">return</span> uaInfo.android<span class="p">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span><span class="p">;</span>
+	<span class="k">return</span> browserVersion<span class="p">;</span>
+<span class="o">}</span>
+--------使用-------
+<span class="k">if</span> <span class="o">(</span>!pageStatus.isProspr<span class="o">)</span> <span class="o">{</span>
+	initPayPage<span class="o">(</span>1<span class="o">)</span><span class="p">;</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+	<span class="k">if</span> <span class="o">(</span>browserVersion.isAndroid<span class="o">())</span> <span class="o">{</span>
+		android.openProfile<span class="o">(</span>openid<span class="o">)</span><span class="p">;</span>
+	<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span>browserVersion.isIos<span class="o">())</span> <span class="o">{</span>
+		window.webkit.messageHandlers.JSMessage_jumpToProfileByOpenID.postMessage<span class="o">(</span>openid<span class="o">)</span><span class="p">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://clsss.github.io/blog/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://clsss.github.io/blog/tags/mobile" role="button">mobile </a></li>
+      
+    
+      <li><a href="https://clsss.github.io/blog/tags/web" role="button">web </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_no_portrait/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>移动端_禁止竖屏</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_performance/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>移动端_性能优化</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/clsss " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+      <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+    
+
+    
+      <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+    <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus-g mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+
+    
+        <a href="mailto:670199384@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2020 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/main.js"></script>
+
+
+
+  
+  <script src="https://clsss.github.io/blog/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://clsss.github.io/blog/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://clsss.github.io/blog/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>
