@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[97],{3148:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var o={};n.default=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:o;return arguments[1].type,e}},3149:function(e,n){e.exports={"zh-CN":{},"en-US":{}}}}]);
