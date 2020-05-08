@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="Collin">
+  <meta name="description" content="Travis CI 提供的是持续集成服务（Continuous Integration，简称 CI）。它绑定 Github 上面的项目，只要有新的代码，就会自动抓取。然后，提供一个运行环境，执行测试，完成构建，还能部署到服务器。">
+  
+  <meta property="og:title" content="TravisCI 自动部署 blog" />
+<meta property="og:description" content="Travis CI 提供的是持续集成服务（Continuous Integration，简称 CI）。它绑定 Github 上面的项目，只要有新的代码，就会自动抓取。然后，提供一个运行环境，执行测试，完成构建，还能部署到服务器。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://clsss.github.io/blog/blogs/ci/travisci%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" />
+<meta property="article:published_time" content="2020-05-02T09:27:45+08:00" />
+<meta property="article:modified_time" content="2020-05-02T09:27:45+08:00" />
+
+
+  <title>
+  
+       TravisCI 自动部署 blog | Collin&#39;s Blog 
+  
+  </title>
+
+  <link rel="canonical" href="https://clsss.github.io/blog/blogs/ci/travisci%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/">
+
+  
+  
+
+  
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://clsss.github.io/blog/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://clsss.github.io/blog/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://clsss.github.io/blog/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://clsss.github.io/blog/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://clsss.github.io/blog/images/favicon_cl.ico"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://clsss.github.io/blog/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://clsss.github.io/blog/">
+          
+        <img class="avatar" src="https://clsss.github.io/blog/images/favicon_cl.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        
+        
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://clsss.github.io/blog/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/blogs/" >Blogs  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/life/" >Life  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://clsss.github.io/blog/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides/banner1.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner2.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner3.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://clsss.github.io/blog/img/header-slides//banner4.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://clsss.github.io/blog/">
+          
+            <img class="pull-right avatar avatar-md" src="https://clsss.github.io/blog/images/avatar.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://clsss.github.io/blog/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Collin&#39;s Blog</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/clsss" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+    
+            
+    
+        
+            
+                <a href="mailto:670199384@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+    
+  </ul>
+
+  <div class="px-4 post-heading">TravisCI 自动部署 blog</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>May 2, 2020</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>2 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <p>持续集成指的是只要代码有变更，就自动运行构建和测试，反馈运行结果。确保符合预期以后，再将新代码&quot;集成&quot;到主干。</p>
+<p>持续集成的好处在于，每次代码的小幅变更，就能看到运行结果，从而不断累积小的变更，而不是在开发周期结束时，一下子合并一大块代码。</p>
+<h4 id="思路">思路</h4>
+<pre><code>项目（blog分支）跟目录编写.travis.yml 
+==&gt; 提交github触发CI 
+==&gt; 打包出public静态资源文件夹 
+==&gt; 提交到master分支、同步到其他厂库master分支
+</code></pre><pre><code>// 个人访问令牌方式（coding文档查阅）
+git push --quiet &quot;https://${TOKEN_NAME}
+:${TOKEN}@e.coding.net/c_illusion/hugo_blog.git&quot; master:master
+</code></pre><h4 id="步骤">步骤：</h4>
+<ul>
+<li>
+<p>1 github中的项目（我的是hugo的blog项目）</p>
+</li>
+<li>
+<p>2.1 coding》个人设置》访问令牌》新建令牌（备用）：</p>
+</li>
+</ul>
+<pre><code># 令牌的作用是为了API访问/读取（充当用户名、密码的作用）
+cd4xxxxxxxxxxxxxxxxxxd16c49a
+</code></pre><ul>
+<li>2.2 github》Settings》Developer settings 》Personal access tokens》Generate new token（备用）</li>
+</ul>
+<pre><code>48exxxxxxxxxxxxxxxxx0af98882
+</code></pre><ul>
+<li>3 登录TravisCI <a href="https://www.travis-ci.org/">https://www.travis-ci.org/</a> ，目前好像仅支持github，使用github账号登录</li>
+<li>4 选中需要CI的项目进行设置（codingToken和githubToken）</li>
+</ul>
+<pre><code>Environment Variables 下添加
+添加
+GITHUB_TOKEN
+CODING_TOKEN
+</code></pre><ul>
+<li>5 blog项目下新建.travis.yml</li>
+</ul>
+<pre><code>language: node_js
+node_js:
+  - 10
+
+# 指定缓存模块，可选。缓存可加快编译速度
+cache:
+  directories:
+    - themes
+
+# 指定仓库地址
+env:
+  global:
+    # Github Pages
+    - GITHUB_ADDR: github.com/clsss/blog.git
+    # Coding Pages
+    - CODING_USER: pt76t97zsh80
+    - CODING_ADDR: e.coding.net/c_illusion/hugo_blog.git
+
+# 指定dev分支触发钩子
+branches:
+  only:
+    - blog # build dev branch only
+
+before_install:
+  - export TZ='Asia/Beijing' # 设置时区
+
+# Start: Build Lifecycle
+install:
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.70.0/hugo_0.70.0_Linux-64bit.tar.gz
+  - tar -xzvf hugo_0.70.0_Linux-64bit.tar.gz
+  - chmod +x hugo   # 给执行权限
+  - export PATH=$PATH:$PWD
+  - hugo version
+  - rm -rf public
+  - git log -p -2 | cat
+  - commit_msg=$(git log -n1 --pretty=format:&quot;%s&quot;)
+  - echo 'install done!'
+
+# 执行 hugo 生成静态页面
+script:
+  - hugo
+  - echo 'Hugo build done !'
+
+# 提交，邮箱；替换真实token到_config.yml文件，最后depoy部署
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name &quot;c_illusion&quot;
+  - git config user.email &quot;670199384@qq.com&quot;
+  - git add .
+  - git commit -m &quot;自动部署：${commit_msg} &quot;
+  # Github Pages
+  - git push --force --quiet &quot;https://${GITHUB_TOKEN}@${GITHUB_ADDR}&quot; master:master
+  # Coding Pages
+  - git push --force --quiet &quot;https://c_illusion:${CODING_TOKEN}@${CODING_ADDR}&quot; master:master
+  # set tag
+  - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m &quot;tag $TRAVIS_BUILD_NUMBER&quot;
+  # Github Pages
+  - git push --quiet &quot;https://${GITHUB_TOKEN}@${GITHUB_ADDR}&quot; master:master --tags
+  # Coding Pages
+  - git push --quiet &quot;https://c_illusion:${CODING_TOKEN}@${CODING_ADDR}&quot; master:master --tags
+# End: Build LifeCycle
+
+</code></pre><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://clsss.github.io/blog/blogs/http/http%E5%8F%91%E5%B1%95/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>HTTP发展</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%80%9d%e8%b7%af">
+												 思路
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e6%ad%a5%e9%aa%a4">
+												 步骤：
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/clsss " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+      <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+    
+
+    
+      <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+    <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus-g mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+
+    
+        <a href="mailto:670199384@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2020 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://clsss.github.io/blog/js/main.js"></script>
+
+
+
+  
+  <script src="https://clsss.github.io/blog/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://clsss.github.io/blog/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://clsss.github.io/blog/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>
