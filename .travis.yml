@@ -32,7 +32,7 @@ install:
   - export PATH=$PATH:$PWD
   - hugo version
   - rm -rf public
-  - git log -p -2 | cat
+  # - git log -p -2 | cat
   - commit_msg=$(git log -n1 --pretty=format:"%s")
   - echo 'install done!'
 
