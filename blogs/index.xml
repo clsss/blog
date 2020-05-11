@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Collin&#39;s Blog</title>
+    <link>https://clsss.github.io/blog/blogs/</link>
+    <description>Recent content in Blogs on Collin&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Sat, 02 May 2020 09:27:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://clsss.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TravisCI 自动部署 blog</title>
+      <link>https://clsss.github.io/blog/blogs/ci/travisci%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Sat, 02 May 2020 09:27:45 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/ci/travisci%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</guid>
+      <description>Travis CI 提供的是持续集成服务（Continuous Integration，简称 CI）。它绑定 Github 上面的项目，只要有新的代码，就会自动抓取。然后，提供一个运行环境，执行测试，完成构建，还能部署到服务器。</description>
+    </item>
+    
+    <item>
+      <title>HTTP发展</title>
+      <link>https://clsss.github.io/blog/blogs/http/http%E5%8F%91%E5%B1%95/</link>
+      <pubDate>Fri, 10 Apr 2020 08:36:54 -0700</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/http/http%E5%8F%91%E5%B1%95/</guid>
+      <description>This is http</description>
+    </item>
+    
+    <item>
+      <title>docker系统学习</title>
+      <link>https://clsss.github.io/blog/blogs/docker/docker%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 13 Oct 2019 11:12:19 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/docker/docker%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/</guid>
+      <description>This is docker</description>
+    </item>
+    
+    <item>
+      <title>Jenkins</title>
+      <link>https://clsss.github.io/blog/blogs/ci/jenkins%E7%8E%A9%E8%80%8D/</link>
+      <pubDate>Sun, 13 Oct 2019 11:12:19 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/ci/jenkins%E7%8E%A9%E8%80%8D/</guid>
+      <description>This is Jenkins</description>
+    </item>
+    
+    <item>
+      <title>Node与Js的区别</title>
+      <link>https://clsss.github.io/blog/blogs/node/%E5%8C%BA%E5%88%ABnodejs/</link>
+      <pubDate>Tue, 04 Jun 2019 20:17:53 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/node/%E5%8C%BA%E5%88%ABnodejs/</guid>
+      <description>Node与Js的区别</description>
+    </item>
+    
+    <item>
+      <title>Typescript</title>
+      <link>https://clsss.github.io/blog/blogs/typescript/%E5%85%A5%E9%97%A8typescript/</link>
+      <pubDate>Fri, 03 May 2019 17:17:53 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/typescript/%E5%85%A5%E9%97%A8typescript/</guid>
+      <description>Typescript从入门到了解</description>
+    </item>
+    
+    <item>
+      <title>Nuxt.js 采坑</title>
+      <link>https://clsss.github.io/blog/blogs/nuxt/nuxt%E8%B8%A9%E5%9D%91/</link>
+      <pubDate>Wed, 13 Mar 2019 23:04:40 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/nuxt/nuxt%E8%B8%A9%E5%9D%91/</guid>
+      <description>This is nuxt.js mining pit</description>
+    </item>
+    
+    <item>
+      <title>Nuxt.js</title>
+      <link>https://clsss.github.io/blog/blogs/nuxt/nuxt/</link>
+      <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/nuxt/nuxt/</guid>
+      <description>This is nuxt.js</description>
+    </item>
+    
+    <item>
+      <title>Redis</title>
+      <link>https://clsss.github.io/blog/blogs/back-end/redis/</link>
+      <pubDate>Sun, 23 Dec 2018 20:24:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/back-end/redis/</guid>
+      <description>This is redis.</description>
+    </item>
+    
+    <item>
+      <title>移动端_Web如何调起App</title>
+      <link>https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_communicate_app/</link>
+      <pubDate>Tue, 25 Sep 2018 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_communicate_app/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>jsonp跨域原理</title>
+      <link>https://clsss.github.io/blog/blogs/%E8%B7%A8%E5%9F%9F/jsonp/</link>
+      <pubDate>Sat, 25 Aug 2018 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E8%B7%A8%E5%9F%9F/jsonp/</guid>
+      <description>This is a cross domain</description>
+    </item>
+    
+    <item>
+      <title>RESTful</title>
+      <link>https://clsss.github.io/blog/blogs/%E8%A7%84%E8%8C%83/restful/</link>
+      <pubDate>Sat, 25 Aug 2018 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E8%A7%84%E8%8C%83/restful/</guid>
+      <description>This is a RESTful API</description>
+    </item>
+    
+    <item>
+      <title>编程思想-函数式编程</title>
+      <link>https://clsss.github.io/blog/blogs/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sun, 15 Jul 2018 20:42:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
+      <description>编程思想-函数式编程</description>
+    </item>
+    
+    <item>
+      <title>mongoDB环境搭建，服务器端</title>
+      <link>https://clsss.github.io/blog/blogs/back-end/mongodb/</link>
+      <pubDate>Wed, 20 Jun 2018 20:24:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/back-end/mongodb/</guid>
+      <description>This is an example of adding an intro picture to the post.</description>
+    </item>
+    
+    <item>
+      <title>docker探索</title>
+      <link>https://clsss.github.io/blog/blogs/docker/docker%E6%8E%A2%E7%B4%A2/</link>
+      <pubDate>Sun, 10 Jun 2018 20:42:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/docker/docker%E6%8E%A2%E7%B4%A2/</guid>
+      <description>This is an example of adding an intro picture to the post.</description>
+    </item>
+    
+    <item>
+      <title>设计模式-设计模式（不常用）</title>
+      <link>https://clsss.github.io/blog/blogs/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/designmode3/</link>
+      <pubDate>Mon, 07 May 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/designmode3/</guid>
+      <description>设计模式，这是一种模板</description>
+    </item>
+    
+    <item>
+      <title>设计模式-设计模式（常用）</title>
+      <link>https://clsss.github.io/blog/blogs/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/designmode2/</link>
+      <pubDate>Mon, 07 May 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/designmode2/</guid>
+      <description>设计模式，这是一种模板</description>
+    </item>
+    
+    <item>
+      <title>设计模式-设计原则</title>
+      <link>https://clsss.github.io/blog/blogs/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/designmode1/</link>
+      <pubDate>Sat, 05 May 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/designmode1/</guid>
+      <description>设计原则（五大原则），这是一种思想</description>
+    </item>
+    
+    <item>
+      <title>测试&amp;持续构建</title>
+      <link>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/mocka/</link>
+      <pubDate>Wed, 25 Apr 2018 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/mocka/</guid>
+      <description>mocha test</description>
+    </item>
+    
+    <item>
+      <title>Hugo 搭建博客</title>
+      <link>https://clsss.github.io/blog/blogs/hugo/hugo/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/hugo/hugo/</guid>
+      <description>This was Hugo&amp;rsquo;s attempt</description>
+    </item>
+    
+    <item>
+      <title>webpack-css处理</title>
+      <link>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/css/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/css/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>webpack-prerenderer</title>
+      <link>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/webpack-prerendererpuppeteer%E7%89%88/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/webpack-prerendererpuppeteer%E7%89%88/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>webpack-ssr</title>
+      <link>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/webpack-ssr/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/webpack-ssr/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>webpack4升级</title>
+      <link>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/webpack4%E5%8D%87%E7%BA%A7/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/webpack4%E5%8D%87%E7%BA%A7/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>前端构建分享（入门篇）</title>
+      <link>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/vue-cli/</link>
+      <pubDate>Wed, 25 Oct 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/webpack/vue-cli/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>移动端_性能优化</title>
+      <link>https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_performance/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_performance/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>移动端_机型判断</title>
+      <link>https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_useragent/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_useragent/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>移动端_禁止竖屏</title>
+      <link>https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_no_portrait/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_no_portrait/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>移动端——响应式布局</title>
+      <link>https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_adapter/</link>
+      <pubDate>Mon, 25 Sep 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E7%A7%BB%E5%8A%A8%E7%AB%AF/m_adapter/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>第三方登录——微信登录</title>
+      <link>https://clsss.github.io/blog/blogs/wx/wx/</link>
+      <pubDate>Fri, 25 Aug 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/wx/wx/</guid>
+      <description>第三方登录</description>
+    </item>
+    
+    <item>
+      <title>HTTP定义</title>
+      <link>https://clsss.github.io/blog/blogs/http/http/</link>
+      <pubDate>Tue, 25 Jul 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/http/http/</guid>
+      <description>This is an example</description>
+    </item>
+    
+    <item>
+      <title>v-distpicker城市插件</title>
+      <link>https://clsss.github.io/blog/blogs/front-end/v-distpicker/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/front-end/v-distpicker/</guid>
+      <description>This is an example of module</description>
+    </item>
+    
+    <item>
+      <title>前端模块化</title>
+      <link>https://clsss.github.io/blog/blogs/front-end/module/</link>
+      <pubDate>Sun, 25 Jun 2017 23:12:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/front-end/module/</guid>
+      <description>This is an example of module</description>
+    </item>
+    
+    <item>
+      <title>pm2</title>
+      <link>https://clsss.github.io/blog/blogs/back-end/pm2/</link>
+      <pubDate>Thu, 25 May 2017 22:13:01 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/back-end/pm2/</guid>
+      <description>What is PM2</description>
+    </item>
+    
+    <item>
+      <title>Gulp工具</title>
+      <link>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/gulp/</link>
+      <pubDate>Tue, 25 Apr 2017 20:54:11 +0800</pubDate>
+      
+      <guid>https://clsss.github.io/blog/blogs/%E6%9E%84%E5%BB%BA/gulp/</guid>
+      <description>This is a Gulp stream article</description>
+    </item>
+    
+  </channel>
+</rss>
